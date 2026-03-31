@@ -6,6 +6,13 @@ def obtener_pokemon(nombre):
     respuesta = requests.get(url)
     datos = respuesta.json()
 
+    # Filtramos solo movimientos aprendibles en Scarlet/Violet
+    movimientos_sv = []
+    for movimiento in datos["moves"]:
+        versiones = [v["version_group"]["name"] for v in movimiento["version_group_details"]]
+        if "scarlet-violet" in versiones:
+            movimientos_sv.append(movimiento["move"]["name"])
+
     pokemon = {
         "nombre": datos["name"],
         "tipos": [t["type"]["name"] for t in datos["types"]],
@@ -17,7 +24,7 @@ def obtener_pokemon(nombre):
             }
             for a in datos["abilities"]
         ],
-        "movimientos": [m["move"]["name"] for m in datos["moves"]],
+        "movimientos": movimientos_sv,
         "sprite": datos["sprites"]["other"]["official-artwork"]["front_default"],
         "peso": datos["weight"]
     }
@@ -26,3 +33,4 @@ def obtener_pokemon(nombre):
 
 garchomp = obtener_pokemon("garchomp")
 print(json.dumps(garchomp, indent=2))
+print(f"\nTotal movimientos: {len(garchomp['movimientos'])}")
