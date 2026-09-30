@@ -3,4 +3,5 @@ export const FormatsData: import('../../../sim/dex-species').SpeciesFormatsDataT
   mew: { tier: "Champions" },
   missingno: { tier: "Illegal" },
   salamencemega: { tier: "Champions" },
+  floettemega: { tier: "Champions" },
 };

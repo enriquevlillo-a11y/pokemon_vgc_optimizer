@@ -16,4 +16,10 @@ export const Pokedex: import('../../../sim/dex-species').SpeciesDataTable = {
     types: ["Dragon", "Flying"], baseStats: {hp: 95, atk: 145, def: 130, spa: 120, spd: 90, spe: 120},
     abilities: { 0: "Aerilate" }, weightkg: 112.6,
   },
+  floettemega: {
+    name: "Floette-Mega", baseSpecies: "Floette", forme: "Mega", battleOnly: "Floette-Eternal",
+    requiredItem: "Floettite", types: ["Fairy"],
+    baseStats: {hp: 74, atk: 85, def: 87, spa: 155, spd: 128, spe: 101},
+    abilities: { 0: "Magic Guard" }, weightkg: 0.9,
+  },
 };

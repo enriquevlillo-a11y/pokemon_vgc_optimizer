@@ -32,7 +32,7 @@ def test_filtra_illegal_y_mythical():
 
     assert "missing-no" not in permitidos
     assert "mew" not in permitidos
-    assert permitidos == ["pikachu", "salamence-mega"]
+    assert permitidos == ["floette-mega", "pikachu", "salamence-mega"]
 
 
 def test_mega_hereda_movimientos_de_especie_base():
@@ -49,5 +49,23 @@ def test_mega_hereda_movimientos_de_especie_base():
 
 
 def test_normaliza_nombres_con_espacios_y_mayusculas():
-    assert normalizar_nombre("Indeedee F") == "indeedee-f"
-    assert normalizar_nombre("Salamence-Mega") == "salamence-mega"
+    casos = {
+        "Mr. Mime": "mr-mime",
+        "Mr. Rime": "mr-rime",
+        "Farfetch’d": "farfetchd",
+        "Sirfetch’d": "sirfetchd",
+        "Flabébé": "flabebe",
+        "Indeedee-F": "indeedee-f",
+    }
+
+    assert {nombre: normalizar_nombre(nombre) for nombre in casos} == casos
+
+
+def test_mega_busca_battle_only_antes_que_especie_base():
+    _, datos = generar_datos(
+        cargar_fixture("pokedex.ts"),
+        cargar_fixture("formats-data.ts"),
+        cargar_fixture("learnsets.ts"),
+    )
+
+    assert datos["floette-mega"]["movimientos"] == ["lightofruin", "moonblast"]

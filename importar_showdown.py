@@ -3,6 +3,7 @@
 import argparse
 import json
 import re
+import unicodedata
 from pathlib import Path
 
 import json5
@@ -49,22 +50,40 @@ def leer_typescript(ruta):
 
 def normalizar_nombre(nombre):
     """Normaliza los nombres visibles como los identificadores del proyecto."""
-    return nombre.lower().replace(" ", "-")
+    nombre = unicodedata.normalize("NFKD", nombre.lower())
+    nombre = "".join(
+        caracter for caracter in nombre if not unicodedata.combining(caracter)
+    )
+    nombre = re.sub(r"\s+", "-", nombre)
+    nombre = re.sub(r"[^a-z0-9-]", "", nombre)
+    return re.sub(r"-+", "-", nombre).strip("-")
 
 
 def normalizar_id(nombre):
     """Crea un id al estilo Showdown para buscar especies relacionadas."""
-    return re.sub(r"[^a-z0-9]", "", nombre.lower())
+    return normalizar_nombre(nombre).replace("-", "")
 
 
 def _movimientos_para(showdown_id, especie, learnsets):
-    entrada = learnsets.get(showdown_id)
-    if not entrada and especie.get("baseSpecies"):
-        entrada = learnsets.get(normalizar_id(especie["baseSpecies"]))
-    if not entrada:
-        print(f"⚠️  Sin learnset para {especie.get('name', showdown_id)}")
-        return []
-    return sorted(entrada.get("learnset", {}).keys())
+    battle_only = especie.get("battleOnly")
+    if isinstance(battle_only, list):
+        battle_only = battle_only[0] if battle_only else None
+
+    candidatos = (
+        showdown_id,
+        battle_only,
+        especie.get("changesFrom"),
+        especie.get("baseSpecies"),
+    )
+    for candidato in candidatos:
+        if not candidato:
+            continue
+        entrada = learnsets.get(normalizar_id(candidato))
+        if entrada and "learnset" in entrada:
+            return sorted(entrada["learnset"].keys())
+
+    print(f"⚠️  Sin learnset para {especie.get('name', showdown_id)}")
+    return []
 
 
 def generar_datos(pokedex, formats_data, learnsets):
