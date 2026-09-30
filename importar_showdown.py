@@ -6,9 +6,6 @@ import re
 import unicodedata
 from pathlib import Path
 
-import json5
-import requests
-
 from config import ruta_cache_showdown, ruta_reg_m_c
 
 
@@ -22,6 +19,8 @@ ARCHIVOS_SHOWDOWN = {
 
 def descargar_archivos(actualizar=False):
     """Descarga las fuentes que no estén en caché y devuelve sus rutas."""
+    import requests
+
     rutas = {}
     for clave, ruta_remota in ARCHIVOS_SHOWDOWN.items():
         destino = ruta_cache_showdown(Path(ruta_remota).name)
@@ -39,6 +38,8 @@ def descargar_archivos(actualizar=False):
 
 def leer_typescript(ruta):
     """Convierte una constante TypeScript de Showdown en un objeto Python."""
+    import json5
+
     texto = Path(ruta).read_text(encoding="utf-8")
     texto = re.sub(
         r"^export const \w+[^=]*=\s*", "", texto, count=1, flags=re.M

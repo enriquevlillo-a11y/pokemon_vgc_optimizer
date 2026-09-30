@@ -1,0 +1,35 @@
+{
+  "info": {
+    "metagame": "gen9championsvgc2026regmc",
+    "cutoff": 1760,
+    "number of battles": 1234
+  },
+  "data": {
+    "Mr. Mime": {
+      "usage": 0.125,
+      "Raw count": 200,
+      "Abilities": {"Screen Cleaner": 30, "Soundproof": 10},
+      "Items": {"Safety Goggles": 3, "Sitrus Berry": 1},
+      "Moves": {
+        "Move 01": 12, "Move 02": 11, "Move 03": 10, "Move 04": 9,
+        "Move 05": 8, "Move 06": 7, "Move 07": 6, "Move 08": 5,
+        "Move 09": 4, "Move 10": 3, "Move 11": 2, "Move 12": 1
+      },
+      "Teammates": {"Flabébé": 3, "Indeedee-F": 1},
+      "Spreads": {
+        "Timid:0/0/0/252/4/252": 5,
+        "Calm:252/0/4/0/252/0": 4,
+        "Bold:252/0/252/0/4/0": 3,
+        "Modest:0/0/0/252/4/252": 2,
+        "Quiet:252/0/0/252/4/0": 1,
+        "Hardy:0/0/0/0/0/0": 0.5
+      },
+      "Checks and Counters": {"Pikachu": [10, 0, 0]}
+    },
+    "Farfetch’d": {
+      "usage": 0.0049,
+      "Abilities": {"Keen Eye": 1},
+      "Items": {}, "Moves": {}, "Teammates": {}, "Spreads": {}
+    }
+  }
+}
