@@ -1,0 +1,11 @@
+{
+  "nombre": "Regulation M-C",
+  "juego": "Pokémon Champions",
+  "fecha_inicio": "2026-09-09",
+  "fecha_fin": "2026-12-02",
+  "max_restringidos": 0,
+  "nivel": 50,
+  "item_clause": true,
+  "formato_showdown": "gen9championsvgc2026regmc",
+  "formato_pikalytics": "gen9championsvgc2026regmc"
+}
