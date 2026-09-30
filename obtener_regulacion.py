@@ -15,24 +15,21 @@ def obtener_lista_regulacion(path_regulacion):
     regulacion = cargar_regulacion(path_regulacion)
     print(f"Cargando regulación: {regulacion['nombre']}")
 
-    ids_pokedex = [27, 28, 29]
+    # Usar nombres en lugar de IDs numéricos
+    pokedexes = ["paldea", "kitakami", "blueberry"]
     todos = set()
-    for pid in ids_pokedex:
+    for pid in pokedexes:
         lista = obtener_pokemon_pokedex(pid)
         print(f"  Pokédex {pid}: {len(lista)} Pokémon")
         todos.update(lista)
 
-    # Añadir restringidos (vienen de HOME, no están en los Pokédex)
     restringidos = set(regulacion["restringidos"])
     todos.update(restringidos)
 
     print(f"Total con restringidos: {len(todos)}")
 
-    # Los míticos no están en ningún Pokédex de SV ni en restringidos
-    # así que no hace falta filtrarlos — simplemente no aparecen
     permitidos = sorted(todos)
-
-    print(f"\n✅ Total Pokémon permitidos en {regulacion['nombre']}: {len(permitidos)}")
+    print(f"✅ Total Pokémon permitidos en {regulacion['nombre']}: {len(permitidos)}")
     print(f"   De los cuales {len(restringidos)} son restringidos (máx {regulacion['max_restringidos']} por equipo)")
 
     return permitidos

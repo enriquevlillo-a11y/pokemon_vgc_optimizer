@@ -5,26 +5,40 @@ import os
 # Correcciones de nombres para formas especiales
 CORRECCIONES = {
     "aegislash": "aegislash-shield",
+    "basculegion": "basculegion-male",
     "basculin": "basculin-red-striped",
     "darmanitan": "darmanitan-standard",
     "eiscue": "eiscue-ice",
+    "frillish": "frillish-male",
     "gourgeist": "gourgeist-average",
     "indeedee": "indeedee-male",
+    "indeedee-female": "indeedee-female",
+    "jellicent": "jellicent-male",
+    "landorus-incarnate": "landorus-incarnate",
+    "landorus-therian": "landorus-therian",
     "lycanroc": "lycanroc-midday",
     "meowstic": "meowstic-male",
     "mimikyu": "mimikyu-disguised",
     "morpeko": "morpeko-full-belly",
-    "necrozma-dawn-wings": "necrozma-dawn-wings",
-    "necrozma-dusk-mane": "necrozma-dusk-mane",
+    "necrozma-dusk-mane": "necrozma-dusk",
+    "necrozma-dawn-wings": "necrozma-dawn",
+    "ogerpon-hearthflame-mask": "ogerpon-hearthflame-mask",
+    "ogerpon-wellspring-mask": "ogerpon-wellspring-mask",
+    "ogerpon-cornerstone-mask": "ogerpon-cornerstone-mask",
+    "oricorio": "oricorio-baile",
     "pumpkaboo": "pumpkaboo-average",
+    "tornadus-incarnate": "tornadus-incarnate",
+    "tornadus-therian": "tornadus-therian",
     "toxtricity": "toxtricity-amped",
-    "urshifu": "urshifu-single-strike",
+    "urshifu-rapid-strike": "urshifu-rapid-strike",
+    "urshifu-single-strike": "urshifu-single-strike",
     "wishiwashi": "wishiwashi-solo",
     "frillish": "frillish-male",
     "jellicent": "jellicent-male",
     "necrozma-dusk-mane": "necrozma-dusk",
     "necrozma-dawn-wings": "necrozma-dawn",
 }
+
 def obtener_pokemon(nombre):
     # Aplicar corrección si existe
     nombre_api = CORRECCIONES.get(nombre, nombre)
