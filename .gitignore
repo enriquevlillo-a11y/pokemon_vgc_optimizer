@@ -208,3 +208,6 @@ __marimo__/
 
 # Caché descargada de Pokémon Showdown
 data/cache_showdown/
+
+# Estadísticas mensuales descargadas de Smogon
+data/cache_smogon/

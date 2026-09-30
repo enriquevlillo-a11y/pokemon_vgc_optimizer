@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-REGULACION_ACTIVA = "reg_g"
+REGULACION_ACTIVA = "reg_m_c"
 
 DIRECTORIO_PROYECTO = Path(__file__).resolve().parent
 DIRECTORIO_DATOS = DIRECTORIO_PROYECTO / "data"
@@ -23,13 +23,23 @@ def ruta_uso_pikalytics():
     return DIRECTORIO_DATOS / REGULACION_ACTIVA / "uso_pikalytics.json"
 
 
+def ruta_uso_smogon():
+    return DIRECTORIO_DATOS / REGULACION_ACTIVA / "uso_smogon.json"
+
+
 DIRECTORIO_CACHE_SHOWDOWN = DIRECTORIO_DATOS / "cache_showdown"
+DIRECTORIO_CACHE_SMOGON = DIRECTORIO_DATOS / "cache_smogon"
 DIRECTORIO_REG_M_C = DIRECTORIO_DATOS / "reg_m_c"
 
 
 def ruta_cache_showdown(nombre_archivo):
     """Devuelve la ruta de un archivo descargado de Pokémon Showdown."""
     return DIRECTORIO_CACHE_SHOWDOWN / nombre_archivo
+
+
+def ruta_cache_smogon(nombre_archivo):
+    """Devuelve la ruta de una estadística descargada de Smogon."""
+    return DIRECTORIO_CACHE_SMOGON / nombre_archivo
 
 
 def ruta_reg_m_c(nombre_archivo):
