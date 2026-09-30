@@ -2,6 +2,7 @@
   "nombre": "Regulation G",
   "descripcion": "Single restricted. Todos los Pokémon disponibles en SV excepto míticos.",
   "max_restringidos": 1,
+  "formato_pikalytics": "gen9vgc2026regg",
   "restringidos": [
     "mewtwo",
     "lugia",
@@ -78,7 +79,7 @@
     "oricorio-sensu",
     "palafin-hero",
     "basculegion-male",
-    "basculegion-female"
+    "basculegion-female",
     "tornadus-incarnate",
     "tornadus-therian",
     "landorus-incarnate",

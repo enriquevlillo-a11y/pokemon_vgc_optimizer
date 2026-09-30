@@ -1,6 +1,8 @@
 import requests
 import json
 
+from config import ruta_pokemon_permitidos, ruta_regulacion
+
 def cargar_regulacion(path):
     with open(path, "r") as f:
         return json.load(f)
@@ -34,9 +36,15 @@ def obtener_lista_regulacion(path_regulacion):
 
     return permitidos
 
-lista = obtener_lista_regulacion("data/regulaciones/reg_g.json")
+def main():
+    lista = obtener_lista_regulacion(ruta_regulacion())
+    ruta_salida = ruta_pokemon_permitidos()
 
-with open("data/pokemon_reg_g.json", "w") as f:
-    json.dump(lista, f, indent=2)
+    with open(ruta_salida, "w") as f:
+        json.dump(lista, f, indent=2)
 
-print(f"💾 Lista guardada en data/pokemon_reg_g.json")
+    print(f"💾 Lista guardada en {ruta_salida}")
+
+
+if __name__ == "__main__":
+    main()

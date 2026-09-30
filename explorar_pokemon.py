@@ -31,6 +31,11 @@ def obtener_pokemon(nombre):
 
     return pokemon
 
-garchomp = obtener_pokemon("garchomp")
-print(json.dumps(garchomp, indent=2))
-print(f"\nTotal movimientos: {len(garchomp['movimientos'])}")
+def main():
+    garchomp = obtener_pokemon("garchomp")
+    print(json.dumps(garchomp, indent=2))
+    print(f"\nTotal movimientos: {len(garchomp['movimientos'])}")
+
+
+if __name__ == "__main__":
+    main()

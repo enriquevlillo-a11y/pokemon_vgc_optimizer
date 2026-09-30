@@ -3,6 +3,8 @@ import json
 import re
 from bs4 import BeautifulSoup
 
+from config import ruta_regulacion, ruta_uso_pikalytics
+
 EQUIVALENCIAS = {
     "tornadus": "tornadus-incarnate",
     "landorus": "landorus-incarnate",
@@ -13,7 +15,7 @@ EQUIVALENCIAS = {
     "ogerpon-cornerstone": "ogerpon-cornerstone-mask",
 }
 
-def scraper_pikalytics(formato="gen9vgc2026regf"):
+def scraper_pikalytics(formato):
     url = f"https://www.pikalytics.com/pokedex/{formato}"
     headers = {"User-Agent": "Mozilla/5.0"}
 
@@ -43,12 +45,21 @@ def scraper_pikalytics(formato="gen9vgc2026regf"):
 
     return uso
 
-uso = scraper_pikalytics()
-print(f"Pokémon encontrados: {len(uso)}")
-for nombre, porcentaje in sorted(uso.items(), key=lambda x: -x[1])[:20]:
-    print(f"  {nombre:<30} {porcentaje}%")
+def main():
+    with open(ruta_regulacion(), "r") as f:
+        regulacion = json.load(f)
 
-with open("data/uso_pikalytics.json", "w") as f:
-    json.dump(uso, f, indent=2)
+    uso = scraper_pikalytics(regulacion["formato_pikalytics"])
+    print(f"Pokémon encontrados: {len(uso)}")
+    for nombre, porcentaje in sorted(uso.items(), key=lambda x: -x[1])[:20]:
+        print(f"  {nombre:<30} {porcentaje}%")
 
-print("\n✅ Guardado en data/uso_pikalytics.json")
+    ruta_salida = ruta_uso_pikalytics()
+    with open(ruta_salida, "w") as f:
+        json.dump(uso, f, indent=2)
+
+    print(f"\n✅ Guardado en {ruta_salida}")
+
+
+if __name__ == "__main__":
+    main()
