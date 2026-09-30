@@ -21,3 +21,17 @@ def ruta_pokemon_datos():
 
 def ruta_uso_pikalytics():
     return DIRECTORIO_DATOS / REGULACION_ACTIVA / "uso_pikalytics.json"
+
+
+DIRECTORIO_CACHE_SHOWDOWN = DIRECTORIO_DATOS / "cache_showdown"
+DIRECTORIO_REG_M_C = DIRECTORIO_DATOS / "reg_m_c"
+
+
+def ruta_cache_showdown(nombre_archivo):
+    """Devuelve la ruta de un archivo descargado de Pokémon Showdown."""
+    return DIRECTORIO_CACHE_SHOWDOWN / nombre_archivo
+
+
+def ruta_reg_m_c(nombre_archivo):
+    """Devuelve la ruta de un archivo generado para Regulation M-C."""
+    return DIRECTORIO_REG_M_C / nombre_archivo
