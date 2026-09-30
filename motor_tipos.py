@@ -1,3 +1,8 @@
+import json
+
+from config import ruta_pokemon_datos
+
+
 # Tabla de efectividad de tipos
 # TABLA[atacante][defensor] = multiplicador
 TABLA_TIPOS = {
@@ -64,17 +69,13 @@ def analizar_pokemon(nombre, tipos):
 
     return defensas
 
-# Prueba con Garchomp
-analizar_pokemon("garchomp", ["dragon", "ground"])
-import json
-
 def analizar_equipo(nombres_equipo):
     """
     Dado una lista de nombres de Pokémon,
     muestra el análisis de tipos de cada uno
     y un resumen de amenazas del equipo completo.
     """
-    with open("data/pokemon_datos.json", "r") as f:
+    with open(ruta_pokemon_datos(), "r") as f:
         todos = json.load(f)
 
     print("\n" + "="*40)
@@ -102,6 +103,11 @@ def analizar_equipo(nombres_equipo):
         if cuenta >= 3:
             print(f"⚠️  {tipo}: amenaza a {cuenta}/{len(nombres_equipo)} Pokémon")
 
-# Prueba con un equipo de ejemplo
-equipo = ["garchomp", "incineroar", "flutter-mane", "raging-bolt", "urshifu", "amoonguss"]
-analizar_equipo(equipo)
+def main():
+    analizar_pokemon("garchomp", ["dragon", "ground"])
+    equipo = ["garchomp", "incineroar", "flutter-mane", "raging-bolt", "urshifu", "amoonguss"]
+    analizar_equipo(equipo)
+
+
+if __name__ == "__main__":
+    main()

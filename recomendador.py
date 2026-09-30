@@ -1,4 +1,5 @@
 import json
+from config import ruta_pokemon_datos, ruta_uso_pikalytics
 from motor_tipos import calcular_defensas, TODOS_LOS_TIPOS
 
 def calcular_debilidades_equipo(equipo_defensas):
@@ -23,10 +24,10 @@ def puntuar_candidato(defensas_candidato, debilidades_equipo):
     return puntuacion
 
 def recomendar(equipo_nombres, top_n=10):
-    with open("data/pokemon_datos.json", "r") as f:
+    with open(ruta_pokemon_datos(), "r") as f:
         todos = json.load(f)
 
-    with open("data/uso_pikalytics.json", "r") as f:
+    with open(ruta_uso_pikalytics(), "r") as f:
         uso = json.load(f)
 
     # Calcular defensas del equipo actual
@@ -72,22 +73,10 @@ def recomendar(equipo_nombres, top_n=10):
 
     return candidatos[:top_n]
 
-equipo = ["garchomp", "incineroar", "flutter-mane", "raging-bolt", "amoonguss"]
-recomendar(equipo)
-# Debug temporal
-with open("data/uso_pikalytics.json", "r") as f:
-    uso = json.load(f)
+def main():
+    equipo = ["garchomp", "incineroar", "flutter-mane", "raging-bolt", "amoonguss"]
+    recomendar(equipo)
 
-with open("data/pokemon_datos.json", "r") as f:
-    todos = json.load(f)
 
-# ¿Cómo se llaman en cada archivo?
-print("\nNombres en uso_pikalytics (top 10):")
-for nombre in list(uso.keys())[:10]:
-    print(f"  '{nombre}'")
-
-print("\nNombres en pokemon_datos (muestra):")
-for nombre in ["incineroar", "flutter-mane", "raging-bolt", "urshifu-rapid-strike"]:
-    en_uso = nombre in uso
-    en_datos = nombre in todos
-    print(f"  '{nombre}' → uso: {en_uso}, datos: {en_datos}")
+if __name__ == "__main__":
+    main()

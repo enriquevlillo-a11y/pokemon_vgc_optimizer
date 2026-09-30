@@ -2,6 +2,8 @@ import requests
 import json
 import time
 import os
+
+from config import ruta_pokemon_datos, ruta_pokemon_permitidos
 # Correcciones de nombres para formas especiales
 CORRECCIONES = {
     "aegislash": "aegislash-shield",
@@ -110,4 +112,9 @@ def descargar_todos(path_lista, path_salida):
     
     print(f"\n✅ Descarga completada — {len(resultado)} Pokémon guardados en {path_salida}")
 
-descargar_todos("data/pokemon_reg_g.json", "data/pokemon_datos.json")
+def main():
+    descargar_todos(ruta_pokemon_permitidos(), ruta_pokemon_datos())
+
+
+if __name__ == "__main__":
+    main()
