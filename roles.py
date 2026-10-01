@@ -13,6 +13,10 @@ HABILIDADES_APOYO = {
     "electric-surge", "misty-surge", "drought", "drizzle", "sand-stream",
     "snow-warning",
 }
+HABILIDADES_CLIMA_TERRENO = {
+    "drought", "drizzle", "sand-stream", "snow-warning", "grassy-surge",
+    "psychic-surge", "electric-surge", "misty-surge",
+}
 HABILIDADES_ANTI_INTIMIDATE = {
     "defiant", "competitive", "clear-body", "inner-focus", "oblivious",
     "own-tempo", "scrappy", "guard-dog", "mirror-armor",
@@ -75,6 +79,10 @@ def roles_de(nombre, datos, uso_smogon=None):
         "apoyo": len(movimientos & MOVIMIENTOS_APOYO)
         + len(habilidades & apoyo_habilidades),
         "ofensivo": max([_ofensivo(pokemon)] + [_ofensivo(mega) for mega in megas]),
+        "ofensivo_base": _ofensivo(pokemon),
+        "pone_clima_terreno": bool(
+            habilidades & {_sin_guiones(h) for h in HABILIDADES_CLIMA_TERRENO}
+        ),
         "tiene_mega": bool(megas),
         "fuente": fuente,
     }

@@ -9,7 +9,7 @@ from importar_showdown import normalizar_nombre
 
 
 URL_BASE = "https://www.smogon.com/stats/{mes}/chaos/{formato}-{rating}.json"
-EQUIVALENCIAS_BASE = {"floette": "floette-eternal"}
+EQUIVALENCIAS_BASE = {"floette": "floette-eternal", "meowstic-f": "meowstic"}
 SUFIJO_MEGA = re.compile(r"-mega(?:-[xy z])?$".replace(" ", ""))
 
 

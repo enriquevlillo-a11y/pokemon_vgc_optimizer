@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from importar_uso_smogon import elegir_formato, nombres_desconocidos, transformar_estadisticas
+from importar_uso_smogon import elegir_formato, nombre_base, nombres_desconocidos, transformar_estadisticas
 
 
 FIXTURE = Path(__file__).parent / "fixtures" / "uso_smogon.json"
@@ -72,3 +72,7 @@ def test_formato_smogon_y_sobrescritura():
     assert elegir_formato(regulacion) == "smogon-bo3"
     assert elegir_formato(regulacion, "manual") == "manual"
     assert elegir_formato({"formato_showdown": "showdown"}) == "showdown"
+
+
+def test_meowstic_f_mega_se_agrupa_en_meowstic():
+    assert nombre_base("Meowstic-F-Mega") == "meowstic"

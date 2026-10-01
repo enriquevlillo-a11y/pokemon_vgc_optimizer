@@ -24,6 +24,18 @@ Los scripts se ejecutan en este orden:
 Los tres primeros pasos acceden a servicios externos. No es necesario repetirlos
 para usar los datos que ya están incluidos en el repositorio.
 
+## Interfaz web
+
+Instala las dependencias y arranca la interfaz local:
+
+```bash
+pip3 install -r requirements.txt
+streamlit run app.py
+```
+
+La aplicación permite elegir hasta cinco Pokémon, inspeccionar sus roles y datos
+de uso, y comparar recomendaciones, afinidades y debilidades del equipo.
+
 ## Cambiar de regulación
 
 Cada regulación tiene su definición en `data/regulaciones/<regulacion>.json` y
