@@ -14,6 +14,8 @@ ARCHIVOS_SHOWDOWN = {
     "pokedex": "data/pokedex.ts",
     "formats_data": "data/mods/champions/formats-data.ts",
     "learnsets": "data/mods/champions/learnsets.ts",
+    "moves": "data/moves.ts",
+    "items": "data/items.ts",
 }
 
 
@@ -47,6 +49,32 @@ def leer_typescript(ruta):
     texto = re.sub(r"([{,]\s*)(\d+):", r'\1"\2":', texto)
     texto = re.sub(r";\s*$", "", texto.strip())
     return json5.loads(texto)
+
+
+def extraer_nombres(ruta):
+    """Obtiene ``id: name`` incluso si el TypeScript contiene funciones."""
+    try:
+        entradas = leer_typescript(ruta)
+        return {
+            identificador: entrada["name"]
+            for identificador, entrada in entradas.items()
+            if isinstance(entrada, dict) and isinstance(entrada.get("name"), str)
+        }
+    except (ValueError, TypeError):
+        texto = Path(ruta).read_text(encoding="utf-8")
+        inicios = list(re.finditer(
+            r"^\s*(?:['\"](?P<id_q>[^'\"]+)['\"]|(?P<id>\w+))\s*:\s*\{",
+            texto,
+            flags=re.M,
+        ))
+        resultado = {}
+        for indice, bloque in enumerate(inicios):
+            fin = inicios[indice + 1].start() if indice + 1 < len(inicios) else len(texto)
+            cuerpo = texto[bloque.end():fin]
+            nombre = re.search(r"\bname\s*:\s*(['\"])(.*?)\1", cuerpo)
+            if nombre:
+                resultado[bloque.group("id_q") or bloque.group("id")] = nombre.group(2)
+        return resultado
 
 
 def normalizar_nombre(nombre):
@@ -160,6 +188,17 @@ def guardar_datos(permitidos, datos):
         print(f"Generado: {ruta}")
 
 
+def guardar_nombres(movimientos, objetos):
+    """Genera el catálogo de nombres visibles usado por la interfaz."""
+    ruta = ruta_reg_m_c("nombres.json")
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+    contenido = {"movimientos": movimientos, "objetos": objetos}
+    ruta.write_text(
+        json.dumps(contenido, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+    print(f"Generado: {ruta}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -173,6 +212,10 @@ def main():
         leer_typescript(rutas["learnsets"]),
     )
     guardar_datos(permitidos, datos)
+    guardar_nombres(
+        extraer_nombres(rutas["moves"]),
+        extraer_nombres(rutas["items"]),
+    )
 
 
 if __name__ == "__main__":

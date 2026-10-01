@@ -4,7 +4,7 @@ import pytest
 
 pytest.importorskip("json5")
 
-from importar_showdown import generar_datos, leer_typescript, normalizar_nombre
+from importar_showdown import extraer_nombres, generar_datos, leer_typescript, normalizar_nombre
 
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -70,3 +70,19 @@ def test_mega_busca_battle_only_antes_que_especie_base():
 
     assert datos["floette-mega"]["movimientos"] == ["lightofruin", "moonblast"]
     assert datos["floette-mega"]["solo_combate"] is False
+
+
+def test_extrae_nombres_aunque_haya_funciones(tmp_path):
+    archivo = tmp_path / "moves.ts"
+    archivo.write_text(
+        """export const Moves = {
+        fakeout: { name: "Fake Out", onTry() { return true; } },
+        'u-turn': { name: 'U-turn', basePower: 70 },
+        };""",
+        encoding="utf-8",
+    )
+
+    assert extraer_nombres(archivo) == {
+        "fakeout": "Fake Out",
+        "u-turn": "U-turn",
+    }

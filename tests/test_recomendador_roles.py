@@ -36,6 +36,15 @@ def test_roles_reales_aplican_umbrales_y_no_el_learnset():
     assert roles["apoyo"] == 0
 
 
+def test_redireccion_exige_veinte_por_ciento_de_uso_real():
+    uso = {"pokemon": {"volcarona": {
+        "movimientos": {"ragepowder": 20, "followme": 19.9},
+        "habilidades": {},
+    }}}
+
+    assert roles_de("volcarona", cargar_datos(), uso)["redireccion"]
+
+
 def test_megas_y_formas_solo_combate_no_son_candidatos():
     equipo = []
 

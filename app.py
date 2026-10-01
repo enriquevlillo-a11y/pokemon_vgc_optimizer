@@ -6,6 +6,7 @@ import pandas as pd
 import streamlit as st
 
 from config import REGULACION_ACTIVA, ruta_pokemon_datos, ruta_regulacion, ruta_uso_smogon
+from config import ruta_reg_m_c
 from interfaz import construir_filas_recomendaciones, frases_afinidad, opciones_selector
 from motor_tipos import calcular_defensas
 from recomendador import obtener_recomendaciones
@@ -31,7 +32,14 @@ def cargar_regulacion():
     return json.loads(ruta_regulacion().read_text(encoding="utf-8"))
 
 
+@st.cache_data
+def cargar_nombres():
+    ruta = ruta_reg_m_c("nombres.json")
+    return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
+
+
 datos, uso, regulacion = cargar_datos(), cargar_uso(), cargar_regulacion()
+nombres = cargar_nombres()
 info = uso.get("info", {})
 st.set_page_config(page_title="Optimizador VGC", page_icon="⚔️", layout="wide")
 st.title("Optimizador de equipos Pokémon VGC")
@@ -65,9 +73,17 @@ if equipo:
     entrada_uso = uso.get("pokemon", {})
     for columna, nombre in zip(columnas, equipo):
         pokemon, rol, estadisticas = datos[nombre], roles_de(nombre, datos, uso), entrada_uso.get(nombre, {})
-        roles = [clave.replace("_", " ") for clave in (
-            "fake_out", "control_velocidad", "intimidate", "anti_intimidate", "pone_clima_terreno"
-        ) if rol.get(clave)]
+        etiquetas_roles = {
+            "fake_out": "Fake Out",
+            "control_velocidad": "control de velocidad",
+            "intimidate": "Intimidate",
+            "anti_intimidate": "anti-Intimidate",
+            "redireccion": "redirección",
+            "pone_clima_terreno": "pone clima/terreno",
+        }
+        roles = [etiqueta for clave, etiqueta in etiquetas_roles.items() if rol.get(clave)]
+        if rol["apoyo"] > 0:
+            roles.append("apoyo")
         if rol["ofensivo"] >= 120:
             roles.append("atacante")
         with columna.container(border=True):
@@ -77,12 +93,17 @@ if equipo:
             if estadisticas:
                 movimientos = list(estadisticas.get("movimientos", {}))[:3]
                 objeto = next(iter(estadisticas.get("objetos", {})), "—")
-                st.write("**Movimientos:** " + ", ".join(movimientos))
-                st.write("**Objeto:** " + objeto)
+                movimientos_visibles = [
+                    nombres.get("movimientos", {}).get(movimiento, movimiento)
+                    for movimiento in movimientos
+                ]
+                objeto_visible = nombres.get("objetos", {}).get(objeto, objeto)
+                st.write("**Movimientos:** " + ", ".join(movimientos_visibles))
+                st.write("**Objeto:** " + objeto_visible)
 
     recomendaciones = obtener_recomendaciones(equipo, datos, uso)
     st.header("Recomendaciones")
-    st.dataframe(construir_filas_recomendaciones(recomendaciones, uso), hide_index=True, use_container_width=True)
+    st.dataframe(construir_filas_recomendaciones(recomendaciones, uso), hide_index=True, width="stretch")
     for recomendacion in recomendaciones[:5]:
         with st.expander(f"Desglose: {recomendacion['nombre'].title()}"):
             for componente, valor in recomendacion["puntuacion"].items():
@@ -93,12 +114,19 @@ if equipo:
     st.header("Debilidades del equipo")
     defensas = {nombre: calcular_defensas(datos[nombre]["tipos"]) for nombre in equipo}
     debilidades = calcular_debilidades_equipo(defensas)
-    tabla = pd.DataFrame([{"Tipo atacante": tipo, "Miembros débiles": cantidad} for tipo, cantidad in debilidades.items()])
+    tabla = pd.DataFrame(
+        [
+            {"Tipo atacante": tipo, "Miembros débiles": cantidad}
+            for tipo, cantidad in sorted(
+                debilidades.items(), key=lambda elemento: (-elemento[1], elemento[0])
+            )
+        ]
+    )
     if tabla.empty:
         st.info("El equipo no tiene debilidades de tipo.")
     else:
         st.dataframe(
             tabla.style.map(lambda valor: "background-color: #ff8f8f; font-weight: bold" if isinstance(valor, int) and valor >= 3 else "", subset=["Miembros débiles"]),
             hide_index=True,
-            use_container_width=True,
+            width="stretch",
         )

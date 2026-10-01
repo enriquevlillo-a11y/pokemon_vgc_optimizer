@@ -74,6 +74,7 @@ def roles_de(nombre, datos, uso_smogon=None):
         "fake_out": bool(movimientos & MOVIMIENTOS_FAKE_OUT),
         "control_velocidad": bool(movimientos & MOVIMIENTOS_VELOCIDAD),
         "control_velocidad_debil": bool(movimientos & MOVIMIENTOS_VELOCIDAD_DEBIL),
+        "redireccion": bool(movimientos & {"followme", "ragepowder"}),
         "intimidate": "intimidate" in habilidades,
         "anti_intimidate": bool(habilidades & {_sin_guiones(h) for h in HABILIDADES_ANTI_INTIMIDATE}),
         "apoyo": len(movimientos & MOVIMIENTOS_APOYO)
