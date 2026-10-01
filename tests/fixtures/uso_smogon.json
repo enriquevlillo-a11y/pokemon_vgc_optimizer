@@ -30,6 +30,21 @@
       "usage": 0.0049,
       "Abilities": {"Keen Eye": 1},
       "Items": {}, "Moves": {}, "Teammates": {}, "Spreads": {}
+    },
+    "Charizard": {
+      "usage": 0.01, "Raw count": 30,
+      "Abilities": {"Blaze": 30}, "Items": {}, "Moves": {},
+      "Teammates": {"Floette-Mega": 15}, "Spreads": {}
+    },
+    "Charizard-Mega-Y": {
+      "usage": 0.02, "Raw count": 70,
+      "Abilities": {"Drought": 70}, "Items": {}, "Moves": {"Heat Wave": 50},
+      "Teammates": {"Floette": 35}, "Spreads": {}
+    },
+    "Floette-Mega": {
+      "usage": 0.01, "Raw count": 20,
+      "Abilities": {"Flower Veil": 20}, "Items": {}, "Moves": {},
+      "Teammates": {"Charizard-Mega-Y": 10}, "Spreads": {}
     }
   }
 }

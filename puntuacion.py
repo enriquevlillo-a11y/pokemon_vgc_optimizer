@@ -10,10 +10,11 @@ PESOS = {
     "velocidad": 3,
     "apoyo": 0.5,
     "intimidate": 2,
+    "anti_intimidate": 1.5,
     "ofensivo": 1.0,
     "mega": 1.0,
     "tipos": 0.3,
-    "companeros": 2.0,
+    "companeros": 4,
     "uso": 0.5,
 }
 
@@ -26,17 +27,23 @@ def _entrada_uso(nombre, uso_smogon):
     return entrada if isinstance(entrada, dict) else None
 
 
-def _puntuacion_companeros(equipo, entrada):
-    if not equipo or not entrada:
+def _puntuacion_companeros(equipo, candidato, uso_smogon):
+    if not equipo or not uso_smogon:
         return 0
-    companeros = entrada.get("companeros", {})
-    return PESOS["companeros"] * sum(companeros.get(n, 0) for n in equipo) / len(equipo) / 10
+    afinidades = []
+    for miembro in equipo:
+        entrada_miembro = _entrada_uso(miembro, uso_smogon)
+        afinidades.append(
+            entrada_miembro.get("companeros", {}).get(candidato, 0) / 100 * 10
+            if entrada_miembro else 0
+        )
+    return PESOS["companeros"] * sum(afinidades) / len(afinidades)
 
 
 def puntuar(equipo, candidato, datos, uso_smogon=None):
     """Desglosa la puntuación de ``candidato`` para completar ``equipo``."""
-    roles_equipo = [roles_de(nombre, datos) for nombre in equipo]
-    rol = roles_de(candidato, datos)
+    roles_equipo = [roles_de(nombre, datos, uso_smogon) for nombre in equipo]
+    rol = roles_de(candidato, datos, uso_smogon)
     componentes = {}
     componentes["fake"] = PESOS["fake"] * (0.5 if any(r["fake_out"] for r in roles_equipo) else 1) if rol["fake_out"] else 0
     if rol["control_velocidad_debil"] and not rol["control_velocidad"]:
@@ -47,6 +54,7 @@ def puntuar(equipo, candidato, datos, uso_smogon=None):
         componentes["velocidad"] = 0
     componentes["apoyo"] = PESOS["apoyo"] * min(rol["apoyo"], 2)
     componentes["intimidate"] = PESOS["intimidate"] if rol["intimidate"] else 0
+    componentes["anti_intimidate"] = PESOS["anti_intimidate"] if rol["anti_intimidate"] else 0
     ofensivo = PESOS["ofensivo"] * max(0, rol["ofensivo"] - 100) / 30
     if sum(r["ofensivo"] >= 120 for r in roles_equipo) >= 2:
         ofensivo /= 2
@@ -58,7 +66,7 @@ def puntuar(equipo, candidato, datos, uso_smogon=None):
         calcular_debilidades_equipo(defensas),
     )
     entrada = _entrada_uso(candidato, uso_smogon)
-    componentes["companeros"] = _puntuacion_companeros(equipo, entrada)
+    componentes["companeros"] = _puntuacion_companeros(equipo, candidato, uso_smogon)
     componentes["uso"] = PESOS["uso"] * entrada.get("uso", 0) / 10 if entrada else 0
     componentes["total"] = sum(componentes.values())
     return componentes

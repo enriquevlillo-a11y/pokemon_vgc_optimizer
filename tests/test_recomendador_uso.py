@@ -1,6 +1,7 @@
 import json
 
 import recomendador
+from puntuacion import _puntuacion_companeros
 
 
 def test_prefiere_uso_smogon(monkeypatch, tmp_path):
@@ -28,3 +29,16 @@ def test_sin_fuentes_devuelve_uso_vacio(monkeypatch, tmp_path, capsys):
 
     assert recomendador.cargar_uso() == {}
     assert "se usará uso 0" in capsys.readouterr().out
+
+
+def test_companeros_se_consultan_desde_cada_miembro_del_equipo():
+    uso = {"pokemon": {
+        "incineroar": {"companeros": {"rillaboom": 30}},
+        "amoonguss": {"companeros": {"rillaboom": 10}},
+        "rillaboom": {"companeros": {"incineroar": 99}},
+    }}
+
+    # 4 * media(0.30 * 10, 0.10 * 10)
+    assert _puntuacion_companeros(
+        ["incineroar", "amoonguss"], "rillaboom", uso
+    ) == 8

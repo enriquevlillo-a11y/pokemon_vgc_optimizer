@@ -35,16 +35,19 @@ def es_candidato(nombre, datos_pokemon, equipo):
 
 def _aportes(rol):
     aportes = []
+    fuente = rol["fuente"]
     if rol["fake_out"]:
-        aportes.append("Fake Out")
+        aportes.append(f"Fake Out ({fuente})")
     if rol["intimidate"]:
-        aportes.append("Intimidate")
+        aportes.append(f"Intimidate ({fuente})")
+    if rol["anti_intimidate"]:
+        aportes.append(f"anti-Intimidate ({fuente})")
     if rol["control_velocidad"]:
-        aportes.append("Tailwind/Trick Room")
+        aportes.append(f"Tailwind/Trick Room ({fuente})")
     elif rol["control_velocidad_debil"]:
-        aportes.append("control velocidad débil")
+        aportes.append(f"control velocidad débil ({fuente})")
     if rol["apoyo"]:
-        aportes.append(f"apoyo ({rol['apoyo']})")
+        aportes.append(f"apoyo {rol['apoyo']} ({fuente})")
     if rol["tiene_mega"]:
         aportes.append("Mega")
     return ", ".join(aportes) or "daño/cobertura"
@@ -60,7 +63,7 @@ def obtener_recomendaciones(equipo, datos, uso_smogon=None):
         recomendaciones.append({
             "nombre": nombre,
             "tipos": pokemon["tipos"],
-            "aporta": _aportes(roles_de(nombre, datos)),
+            "aporta": _aportes(roles_de(nombre, datos, uso_smogon)),
             "puntuacion": componentes,
         })
     return sorted(recomendaciones, key=lambda r: (-r["puntuacion"]["total"], r["nombre"]))

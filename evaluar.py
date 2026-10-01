@@ -39,7 +39,7 @@ def _puesto(nombre, recomendaciones):
 
 
 def evaluar_equipo(equipo, datos, uso_smogon=None):
-    """Calcula los puestos v1 y v2 de cada integrante ocultado del equipo."""
+    """Calcula v1, v2 y, cuando procede, v2 enriquecido con Smogon."""
     resultados = []
     for quitado in equipo:
         parcial = equipo.copy()
@@ -47,15 +47,16 @@ def evaluar_equipo(equipo, datos, uso_smogon=None):
         v1 = obtener_recomendaciones_v1(parcial, datos)
         v2 = [
             recomendacion["nombre"]
-            for recomendacion in obtener_recomendaciones(parcial, datos, uso_smogon)
+            for recomendacion in obtener_recomendaciones(parcial, datos)
         ]
-        resultados.append(
-            {
-                "pokemon": quitado,
-                "puesto_v1": _puesto(quitado, v1),
-                "puesto_v2": _puesto(quitado, v2),
-            }
-        )
+        resultado = {"pokemon": quitado, "puesto_v1": _puesto(quitado, v1), "puesto_v2": _puesto(quitado, v2)}
+        if uso_smogon:
+            v2_smogon = [
+                recomendacion["nombre"]
+                for recomendacion in obtener_recomendaciones(parcial, datos, uso_smogon)
+            ]
+            resultado["puesto_v2_smogon"] = _puesto(quitado, v2_smogon)
+        resultados.append(resultado)
     return resultados
 
 
@@ -91,10 +92,14 @@ def imprimir_resumen(por_regulacion, todos):
     )
     print("-" * 49)
     for regulacion, resultados in por_regulacion.items():
-        for version in ("v1", "v2"):
+        versiones = ["v1", "v2"]
+        if resultados and "puesto_v2_smogon" in resultados[0]:
+            versiones.append("v2_smogon")
+        for version in versiones:
             resumen = resumir(resultados, version)
+            etiqueta = "v2 + Smogon" if version == "v2_smogon" else version
             print(
-                f"{regulacion:<12} {version:<8} {resumen['puesto_medio']:>8.2f} "
+                f"{regulacion:<12} {etiqueta:<12} {resumen['puesto_medio']:>8.2f} "
                 f"{resumen['mediana']:>9.1f} {resumen['top_10']:>8}"
             )
 
