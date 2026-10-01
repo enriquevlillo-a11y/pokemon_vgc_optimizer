@@ -1,102 +1,89 @@
+"""Recomendador de Pokémon basado en los roles necesarios en VGC."""
+
 import json
+
 from config import ruta_pokemon_datos, ruta_uso_pikalytics, ruta_uso_smogon
-from motor_tipos import calcular_defensas, TODOS_LOS_TIPOS
-
-def calcular_debilidades_equipo(equipo_defensas):
-    debilidades = {}
-    for tipo in TODOS_LOS_TIPOS:
-        cuenta = sum(1 for d in equipo_defensas.values() if d[tipo] >= 2)
-        if cuenta > 0:
-            debilidades[tipo] = cuenta
-    return debilidades
-
-def puntuar_candidato(defensas_candidato, debilidades_equipo):
-    puntuacion = 0
-    for tipo, cuenta in debilidades_equipo.items():
-        valor = defensas_candidato[tipo]
-        peso = cuenta
-        if valor == 0:
-            puntuacion += 3 * peso
-        elif valor <= 0.5:
-            puntuacion += 1 * peso
-        elif valor >= 2:
-            puntuacion -= 1 * peso
-    return puntuacion
+from puntuacion import puntuar
+from recomendador_tipos import calcular_debilidades_equipo, puntuar_candidato
+from roles import roles_de
 
 
 def cargar_uso():
-    """Carga la mejor fuente de uso disponible sin impedir la recomendación."""
-    ruta_smogon = ruta_uso_smogon()
-    if ruta_smogon.exists():
-        with open(ruta_smogon, "r", encoding="utf-8") as archivo:
-            return {
-                nombre: datos["uso"]
-                for nombre, datos in json.load(archivo).get("pokemon", {}).items()
-            }
-
-    ruta_pikalytics = ruta_uso_pikalytics()
-    if ruta_pikalytics.exists():
-        with open(ruta_pikalytics, "r", encoding="utf-8") as archivo:
-            return json.load(archivo)
-
-    print(
-        "⚠️  No se encontró uso_smogon.json ni uso_pikalytics.json; "
-        "se usará uso 0 para todos."
-    )
+    """Carga porcentajes simples, manteniendo la interfaz de la versión anterior."""
+    uso = cargar_uso_smogon()
+    if uso:
+        return {nombre: entrada.get("uso", 0) for nombre, entrada in uso["pokemon"].items()}
+    ruta = ruta_uso_pikalytics()
+    if ruta.exists():
+        return json.loads(ruta.read_text(encoding="utf-8"))
+    print("⚠️  No se encontró uso_smogon.json ni uso_pikalytics.json; se usará uso 0 para todos.")
     return {}
 
-def recomendar(equipo_nombres, top_n=10):
-    with open(ruta_pokemon_datos(), "r") as f:
-        todos = json.load(f)
 
-    uso = cargar_uso()
+def cargar_uso_smogon():
+    ruta = ruta_uso_smogon()
+    return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
 
-    # Calcular defensas del equipo actual
-    equipo_defensas = {}
-    for nombre in equipo_nombres:
-        if nombre in todos:
-            equipo_defensas[nombre] = calcular_defensas(todos[nombre]["tipos"])
 
-    debilidades = calcular_debilidades_equipo(equipo_defensas)
+def es_candidato(nombre, datos_pokemon, equipo):
+    return (
+        nombre not in equipo
+        and not datos_pokemon.get("es_mega", False)
+        and not datos_pokemon.get("solo_combate", False)
+    )
 
-    print("\nDebilidades del equipo:")
-    for tipo, cuenta in sorted(debilidades.items(), key=lambda x: -x[1]):
-        print(f"  {tipo}: {cuenta} Pokémon débiles")
 
-    # Puntuar candidatos
-    candidatos = []
-    for nombre, datos in todos.items():
-        if nombre in equipo_nombres:
+def _aportes(rol):
+    aportes = []
+    if rol["fake_out"]:
+        aportes.append("Fake Out")
+    if rol["intimidate"]:
+        aportes.append("Intimidate")
+    if rol["control_velocidad"]:
+        aportes.append("Tailwind/Trick Room")
+    elif rol["control_velocidad_debil"]:
+        aportes.append("control velocidad débil")
+    if rol["apoyo"]:
+        aportes.append(f"apoyo ({rol['apoyo']})")
+    if rol["tiene_mega"]:
+        aportes.append("Mega")
+    return ", ".join(aportes) or "daño/cobertura"
+
+
+def obtener_recomendaciones(equipo, datos, uso_smogon=None):
+    """Devuelve todos los candidatos ordenados; es la API reutilizable y testeable."""
+    recomendaciones = []
+    for nombre, pokemon in datos.items():
+        if not es_candidato(nombre, pokemon, equipo):
             continue
+        componentes = puntuar(equipo, nombre, datos, uso_smogon)
+        recomendaciones.append({
+            "nombre": nombre,
+            "tipos": pokemon["tipos"],
+            "aporta": _aportes(roles_de(nombre, datos)),
+            "puntuacion": componentes,
+        })
+    return sorted(recomendaciones, key=lambda r: (-r["puntuacion"]["total"], r["nombre"]))
 
-        defensas = calcular_defensas(datos["tipos"])
-        puntuacion_tipos = puntuar_candidato(defensas, debilidades)
 
-        # Factor de viabilidad — uso real en el meta (0 si no aparece)
-        uso_real = uso.get(nombre, 0)
-
-        # Puntuación final: combinamos cobertura y viabilidad
-        # Normalizamos el uso a escala 0-5 para que sea comparable
-        factor_uso = (uso_real / 100) * 20
-        puntuacion_final = puntuacion_tipos + factor_uso
-
-        candidatos.append((nombre, puntuacion_final, puntuacion_tipos, uso_real, datos["tipos"]))
-
-    candidatos.sort(key=lambda x: -x[1])
-
+def recomendar(equipo_nombres, top_n=10):
+    datos = json.loads(ruta_pokemon_datos().read_text(encoding="utf-8"))
+    recomendaciones = obtener_recomendaciones(equipo_nombres, datos, cargar_uso_smogon())
     print(f"\nTop {top_n} recomendaciones:")
-    print(f"{'='*65}")
-    print(f"{'Pokémon':<25} {'Tipos':<20} {'Cobertura':>9} {'Uso%':>6} {'Total':>6}")
-    print(f"{'='*65}")
-    for nombre, total, cobertura, uso_real, tipos in candidatos[:top_n]:
-        tipos_str = " / ".join(tipos)
-        print(f"{nombre:<25} {tipos_str:<20} {cobertura:>9.1f} {uso_real:>5.1f}% {total:>6.2f}")
+    print(f"{'Pokémon':<22} {'Tipos':<18} {'Aporta':<43} {'Total':>6}")
+    print("=" * 93)
+    for recomendacion in recomendaciones[:top_n]:
+        print(
+            f"{recomendacion['nombre']:<22} "
+            f"{' / '.join(recomendacion['tipos']):<18} "
+            f"{recomendacion['aporta']:<43} "
+            f"{recomendacion['puntuacion']['total']:>6.2f}"
+        )
+    return recomendaciones[:top_n]
 
-    return candidatos[:top_n]
 
 def main():
-    equipo = ["garchomp", "incineroar", "flutter-mane", "raging-bolt", "amoonguss"]
-    recomendar(equipo)
+    recomendar(["gholdengo", "volcarona", "garchomp", "rillaboom", "raichu"])
 
 
 if __name__ == "__main__":

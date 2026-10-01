@@ -40,6 +40,7 @@ def descargar_estadisticas(mes, rating, formato):
 
 def _porcentajes(valores, limite, multiplicador=1, normalizar_claves=True):
     """Convierte recuentos ponderados en porcentajes y conserva el top indicado."""
+    valores = {nombre: valor for nombre, valor in valores.items() if nombre.strip()}
     total = sum(float(valor) for valor in valores.values())
     if total <= 0:
         return {}
