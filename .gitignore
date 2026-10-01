@@ -211,3 +211,6 @@ data/cache_showdown/
 
 # Estadísticas mensuales descargadas de Smogon
 data/cache_smogon/
+
+# JSON descargados manualmente en la raíz del proyecto
+/*.json

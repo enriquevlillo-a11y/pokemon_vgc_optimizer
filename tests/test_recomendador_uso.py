@@ -38,7 +38,7 @@ def test_companeros_se_consultan_desde_cada_miembro_del_equipo():
         "rillaboom": {"companeros": {"incineroar": 99}},
     }}
 
-    # 4 * media(0.30 * 10, 0.10 * 10)
+    # 8 * media(0.30 * 10, 0.10 * 10)
     assert _puntuacion_companeros(
         ["incineroar", "amoonguss"], "rillaboom", uso
-    ) == 8
+    ) == 16

@@ -117,6 +117,11 @@ def validar_mes(valor):
     return valor
 
 
+def elegir_formato(regulacion, formato=None):
+    """Prioriza la opción explícita, el formato Smogon y el de Showdown."""
+    return formato or regulacion.get("formato_smogon") or regulacion["formato_showdown"]
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mes", required=True, type=validar_mes)
@@ -126,7 +131,7 @@ def main():
     args = parser.parse_args()
 
     regulacion = json.loads(ruta_regulacion().read_text(encoding="utf-8"))
-    formato = args.formato or regulacion["formato_showdown"]
+    formato = elegir_formato(regulacion, args.formato)
     estadisticas = (
         json.loads(open(args.archivo, encoding="utf-8").read())
         if args.archivo else descargar_estadisticas(args.mes, args.rating, formato)

@@ -14,7 +14,7 @@ PESOS = {
     "ofensivo": 1.0,
     "mega": 1.0,
     "tipos": 0.3,
-    "companeros": 4,
+    "companeros": 8,
     "uso": 0.5,
 }
 

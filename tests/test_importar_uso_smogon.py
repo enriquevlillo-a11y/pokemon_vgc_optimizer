@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from importar_uso_smogon import nombres_desconocidos, transformar_estadisticas
+from importar_uso_smogon import elegir_formato, nombres_desconocidos, transformar_estadisticas
 
 
 FIXTURE = Path(__file__).parent / "fixtures" / "uso_smogon.json"
@@ -61,3 +61,14 @@ def test_informa_nombres_originales_que_no_existen(estadisticas):
     conocidos = {"mr-mime": {}, "charizard": {}, "floette-eternal": {}}
 
     assert nombres_desconocidos(estadisticas, conocidos) == ["Farfetch’d"]
+
+
+def test_formato_smogon_y_sobrescritura():
+    regulacion = {
+        "formato_showdown": "showdown",
+        "formato_smogon": "smogon-bo3",
+    }
+
+    assert elegir_formato(regulacion) == "smogon-bo3"
+    assert elegir_formato(regulacion, "manual") == "manual"
+    assert elegir_formato({"formato_showdown": "showdown"}) == "showdown"
