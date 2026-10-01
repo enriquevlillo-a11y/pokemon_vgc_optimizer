@@ -94,7 +94,8 @@
     "showdown_id": "abomasnow",
     "especie_base": "abomasnow",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "abomasnow-mega": {
     "nombre": "abomasnow-mega",
@@ -187,7 +188,8 @@
     "showdown_id": "abomasnowmega",
     "especie_base": "abomasnow",
     "es_mega": true,
-    "objeto_mega": "Abomasite"
+    "objeto_mega": "Abomasite",
+    "solo_combate": false
   },
   "absol": {
     "nombre": "absol",
@@ -294,7 +296,8 @@
     "showdown_id": "absol",
     "especie_base": "absol",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "absol-mega": {
     "nombre": "absol-mega",
@@ -393,7 +396,8 @@
     "showdown_id": "absolmega",
     "especie_base": "absol",
     "es_mega": true,
-    "objeto_mega": "Absolite"
+    "objeto_mega": "Absolite",
+    "solo_combate": false
   },
   "absol-mega-z": {
     "nombre": "absol-mega-z",
@@ -493,7 +497,8 @@
     "showdown_id": "absolmegaz",
     "especie_base": "absol",
     "es_mega": true,
-    "objeto_mega": "Absolite Z"
+    "objeto_mega": "Absolite Z",
+    "solo_combate": false
   },
   "aegislash": {
     "nombre": "aegislash",
@@ -567,7 +572,8 @@
     "showdown_id": "aegislash",
     "especie_base": "aegislash",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "aegislash-blade": {
     "nombre": "aegislash-blade",
@@ -641,7 +647,8 @@
     "showdown_id": "aegislashblade",
     "especie_base": "aegislash",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": true
   },
   "aerodactyl": {
     "nombre": "aerodactyl",
@@ -735,7 +742,8 @@
     "showdown_id": "aerodactyl",
     "especie_base": "aerodactyl",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "aerodactyl-mega": {
     "nombre": "aerodactyl-mega",
@@ -821,7 +829,8 @@
     "showdown_id": "aerodactylmega",
     "especie_base": "aerodactyl",
     "es_mega": true,
-    "objeto_mega": "Aerodactylite"
+    "objeto_mega": "Aerodactylite",
+    "solo_combate": false
   },
   "aggron": {
     "nombre": "aggron",
@@ -940,7 +949,8 @@
     "showdown_id": "aggron",
     "especie_base": "aggron",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "aggron-mega": {
     "nombre": "aggron-mega",
@@ -1050,7 +1060,8 @@
     "showdown_id": "aggronmega",
     "especie_base": "aggron",
     "es_mega": true,
-    "objeto_mega": "Aggronite"
+    "objeto_mega": "Aggronite",
+    "solo_combate": false
   },
   "alakazam": {
     "nombre": "alakazam",
@@ -1145,7 +1156,8 @@
     "showdown_id": "alakazam",
     "especie_base": "alakazam",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "alakazam-mega": {
     "nombre": "alakazam-mega",
@@ -1232,7 +1244,8 @@
     "showdown_id": "alakazammega",
     "especie_base": "alakazam",
     "es_mega": true,
-    "objeto_mega": "Alakazite"
+    "objeto_mega": "Alakazite",
+    "solo_combate": false
   },
   "alcremie": {
     "nombre": "alcremie",
@@ -1312,7 +1325,8 @@
     "showdown_id": "alcremie",
     "especie_base": "alcremie",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "altaria": {
     "nombre": "altaria",
@@ -1409,7 +1423,8 @@
     "showdown_id": "altaria",
     "especie_base": "altaria",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "altaria-mega": {
     "nombre": "altaria-mega",
@@ -1502,7 +1517,8 @@
     "showdown_id": "altariamega",
     "especie_base": "altaria",
     "es_mega": true,
-    "objeto_mega": "Altarianite"
+    "objeto_mega": "Altarianite",
+    "solo_combate": false
   },
   "ampharos": {
     "nombre": "ampharos",
@@ -1600,7 +1616,8 @@
     "showdown_id": "ampharos",
     "especie_base": "ampharos",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "ampharos-mega": {
     "nombre": "ampharos-mega",
@@ -1695,7 +1712,8 @@
     "showdown_id": "ampharosmega",
     "especie_base": "ampharos",
     "es_mega": true,
-    "objeto_mega": "Ampharosite"
+    "objeto_mega": "Ampharosite",
+    "solo_combate": false
   },
   "annihilape": {
     "nombre": "annihilape",
@@ -1806,7 +1824,8 @@
     "showdown_id": "annihilape",
     "especie_base": "annihilape",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "appletun": {
     "nombre": "appletun",
@@ -1893,7 +1912,8 @@
     "showdown_id": "appletun",
     "especie_base": "appletun",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "araquanid": {
     "nombre": "araquanid",
@@ -1976,7 +1996,8 @@
     "showdown_id": "araquanid",
     "especie_base": "araquanid",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "arbok": {
     "nombre": "arbok",
@@ -2081,7 +2102,8 @@
     "showdown_id": "arbok",
     "especie_base": "arbok",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "arboliva": {
     "nombre": "arboliva",
@@ -2157,7 +2179,8 @@
     "showdown_id": "arboliva",
     "especie_base": "arboliva",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "arcanine": {
     "nombre": "arcanine",
@@ -2249,7 +2272,8 @@
     "showdown_id": "arcanine",
     "especie_base": "arcanine",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "arcanine-hisui": {
     "nombre": "arcanine-hisui",
@@ -2349,7 +2373,8 @@
     "showdown_id": "arcaninehisui",
     "especie_base": "arcanine",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "archaludon": {
     "nombre": "archaludon",
@@ -2435,7 +2460,8 @@
     "showdown_id": "archaludon",
     "especie_base": "archaludon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "ariados": {
     "nombre": "ariados",
@@ -2535,7 +2561,8 @@
     "showdown_id": "ariados",
     "especie_base": "ariados",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "armarouge": {
     "nombre": "armarouge",
@@ -2622,7 +2649,8 @@
     "showdown_id": "armarouge",
     "especie_base": "armarouge",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "aromatisse": {
     "nombre": "aromatisse",
@@ -2701,7 +2729,8 @@
     "showdown_id": "aromatisse",
     "especie_base": "aromatisse",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "audino": {
     "nombre": "audino",
@@ -2805,7 +2834,8 @@
     "showdown_id": "audino",
     "especie_base": "audino",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "audino-mega": {
     "nombre": "audino-mega",
@@ -2902,7 +2932,8 @@
     "showdown_id": "audinomega",
     "especie_base": "audino",
     "es_mega": true,
-    "objeto_mega": "Audinite"
+    "objeto_mega": "Audinite",
+    "solo_combate": false
   },
   "aurorus": {
     "nombre": "aurorus",
@@ -2990,7 +3021,8 @@
     "showdown_id": "aurorus",
     "especie_base": "aurorus",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "avalugg": {
     "nombre": "avalugg",
@@ -3074,7 +3106,8 @@
     "showdown_id": "avalugg",
     "especie_base": "avalugg",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "avalugg-hisui": {
     "nombre": "avalugg-hisui",
@@ -3159,7 +3192,8 @@
     "showdown_id": "avalugghisui",
     "especie_base": "avalugg",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "azumarill": {
     "nombre": "azumarill",
@@ -3261,7 +3295,8 @@
     "showdown_id": "azumarill",
     "especie_base": "azumarill",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "banette": {
     "nombre": "banette",
@@ -3363,7 +3398,8 @@
     "showdown_id": "banette",
     "especie_base": "banette",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "banette-mega": {
     "nombre": "banette-mega",
@@ -3457,7 +3493,8 @@
     "showdown_id": "banettemega",
     "especie_base": "banette",
     "es_mega": true,
-    "objeto_mega": "Banettite"
+    "objeto_mega": "Banettite",
+    "solo_combate": false
   },
   "barbaracle": {
     "nombre": "barbaracle",
@@ -3565,7 +3602,8 @@
     "showdown_id": "barbaracle",
     "especie_base": "barbaracle",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "barbaracle-mega": {
     "nombre": "barbaracle-mega",
@@ -3665,7 +3703,8 @@
     "showdown_id": "barbaraclemega",
     "especie_base": "barbaracle",
     "es_mega": true,
-    "objeto_mega": "Barbaracite"
+    "objeto_mega": "Barbaracite",
+    "solo_combate": false
   },
   "basculegion": {
     "nombre": "basculegion",
@@ -3750,7 +3789,8 @@
     "showdown_id": "basculegion",
     "especie_base": "basculegion",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "basculegion-f": {
     "nombre": "basculegion-f",
@@ -3835,7 +3875,8 @@
     "showdown_id": "basculegionf",
     "especie_base": "basculegion",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "bastiodon": {
     "nombre": "bastiodon",
@@ -3935,7 +3976,8 @@
     "showdown_id": "bastiodon",
     "especie_base": "bastiodon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "baxcalibur": {
     "nombre": "baxcalibur",
@@ -4018,7 +4060,8 @@
     "showdown_id": "baxcalibur",
     "especie_base": "baxcalibur",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "baxcalibur-mega": {
     "nombre": "baxcalibur-mega",
@@ -4097,7 +4140,8 @@
     "showdown_id": "baxcaliburmega",
     "especie_base": "baxcalibur",
     "es_mega": true,
-    "objeto_mega": "Baxcalibrite"
+    "objeto_mega": "Baxcalibrite",
+    "solo_combate": false
   },
   "beartic": {
     "nombre": "beartic",
@@ -4208,7 +4252,8 @@
     "showdown_id": "beartic",
     "especie_base": "beartic",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "beedrill": {
     "nombre": "beedrill",
@@ -4293,7 +4338,8 @@
     "showdown_id": "beedrill",
     "especie_base": "beedrill",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "beedrill-mega": {
     "nombre": "beedrill-mega",
@@ -4374,7 +4420,8 @@
     "showdown_id": "beedrillmega",
     "especie_base": "beedrill",
     "es_mega": true,
-    "objeto_mega": "Beedrillite"
+    "objeto_mega": "Beedrillite",
+    "solo_combate": false
   },
   "bellibolt": {
     "nombre": "bellibolt",
@@ -4448,7 +4495,8 @@
     "showdown_id": "bellibolt",
     "especie_base": "bellibolt",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "blastoise": {
     "nombre": "blastoise",
@@ -4552,7 +4600,8 @@
     "showdown_id": "blastoise",
     "especie_base": "blastoise",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "blastoise-mega": {
     "nombre": "blastoise-mega",
@@ -4652,7 +4701,8 @@
     "showdown_id": "blastoisemega",
     "especie_base": "blastoise",
     "es_mega": true,
-    "objeto_mega": "Blastoisinite"
+    "objeto_mega": "Blastoisinite",
+    "solo_combate": false
   },
   "blaziken": {
     "nombre": "blaziken",
@@ -4763,7 +4813,8 @@
     "showdown_id": "blaziken",
     "especie_base": "blaziken",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "blaziken-mega": {
     "nombre": "blaziken-mega",
@@ -4870,7 +4921,8 @@
     "showdown_id": "blazikenmega",
     "especie_base": "blaziken",
     "es_mega": true,
-    "objeto_mega": "Blazikenite"
+    "objeto_mega": "Blazikenite",
+    "solo_combate": false
   },
   "camerupt": {
     "nombre": "camerupt",
@@ -4973,7 +5025,8 @@
     "showdown_id": "camerupt",
     "especie_base": "camerupt",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "camerupt-mega": {
     "nombre": "camerupt-mega",
@@ -5068,7 +5121,8 @@
     "showdown_id": "cameruptmega",
     "especie_base": "camerupt",
     "es_mega": true,
-    "objeto_mega": "Cameruptite"
+    "objeto_mega": "Cameruptite",
+    "solo_combate": false
   },
   "castform": {
     "nombre": "castform",
@@ -5132,7 +5186,8 @@
     "showdown_id": "castform",
     "especie_base": "castform",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "castform-rainy": {
     "nombre": "castform-rainy",
@@ -5196,7 +5251,8 @@
     "showdown_id": "castformrainy",
     "especie_base": "castform",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": true
   },
   "castform-snowy": {
     "nombre": "castform-snowy",
@@ -5260,7 +5316,8 @@
     "showdown_id": "castformsnowy",
     "especie_base": "castform",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": true
   },
   "castform-sunny": {
     "nombre": "castform-sunny",
@@ -5324,7 +5381,8 @@
     "showdown_id": "castformsunny",
     "especie_base": "castform",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": true
   },
   "ceruledge": {
     "nombre": "ceruledge",
@@ -5411,7 +5469,8 @@
     "showdown_id": "ceruledge",
     "especie_base": "ceruledge",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "chandelure": {
     "nombre": "chandelure",
@@ -5501,7 +5560,8 @@
     "showdown_id": "chandelure",
     "especie_base": "chandelure",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "chandelure-mega": {
     "nombre": "chandelure-mega",
@@ -5583,7 +5643,8 @@
     "showdown_id": "chandeluremega",
     "especie_base": "chandelure",
     "es_mega": true,
-    "objeto_mega": "Chandelurite"
+    "objeto_mega": "Chandelurite",
+    "solo_combate": false
   },
   "charizard": {
     "nombre": "charizard",
@@ -5688,7 +5749,8 @@
     "showdown_id": "charizard",
     "especie_base": "charizard",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "charizard-mega-x": {
     "nombre": "charizard-mega-x",
@@ -5789,7 +5851,8 @@
     "showdown_id": "charizardmegax",
     "especie_base": "charizard",
     "es_mega": true,
-    "objeto_mega": "Charizardite X"
+    "objeto_mega": "Charizardite X",
+    "solo_combate": false
   },
   "charizard-mega-y": {
     "nombre": "charizard-mega-y",
@@ -5890,7 +5953,8 @@
     "showdown_id": "charizardmegay",
     "especie_base": "charizard",
     "es_mega": true,
-    "objeto_mega": "Charizardite Y"
+    "objeto_mega": "Charizardite Y",
+    "solo_combate": false
   },
   "chesnaught": {
     "nombre": "chesnaught",
@@ -6009,7 +6073,8 @@
     "showdown_id": "chesnaught",
     "especie_base": "chesnaught",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "chesnaught-mega": {
     "nombre": "chesnaught-mega",
@@ -6124,7 +6189,8 @@
     "showdown_id": "chesnaughtmega",
     "especie_base": "chesnaught",
     "es_mega": true,
-    "objeto_mega": "Chesnaughtite"
+    "objeto_mega": "Chesnaughtite",
+    "solo_combate": false
   },
   "chimecho": {
     "nombre": "chimecho",
@@ -6216,7 +6282,8 @@
     "showdown_id": "chimecho",
     "especie_base": "chimecho",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "chimecho-mega": {
     "nombre": "chimecho-mega",
@@ -6309,7 +6376,8 @@
     "showdown_id": "chimechomega",
     "especie_base": "chimecho",
     "es_mega": true,
-    "objeto_mega": "Chimechite"
+    "objeto_mega": "Chimechite",
+    "solo_combate": false
   },
   "cinderace": {
     "nombre": "cinderace",
@@ -6404,7 +6472,8 @@
     "showdown_id": "cinderace",
     "especie_base": "cinderace",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "clawitzer": {
     "nombre": "clawitzer",
@@ -6483,7 +6552,8 @@
     "showdown_id": "clawitzer",
     "especie_base": "clawitzer",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "clefable": {
     "nombre": "clefable",
@@ -6609,7 +6679,8 @@
     "showdown_id": "clefable",
     "especie_base": "clefable",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "clefable-mega": {
     "nombre": "clefable-mega",
@@ -6728,7 +6799,8 @@
     "showdown_id": "clefablemega",
     "especie_base": "clefable",
     "es_mega": true,
-    "objeto_mega": "Clefablite"
+    "objeto_mega": "Clefablite",
+    "solo_combate": false
   },
   "cofagrigus": {
     "nombre": "cofagrigus",
@@ -6809,7 +6881,8 @@
     "showdown_id": "cofagrigus",
     "especie_base": "cofagrigus",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "conkeldurr": {
     "nombre": "conkeldurr",
@@ -6905,7 +6978,8 @@
     "showdown_id": "conkeldurr",
     "especie_base": "conkeldurr",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "corviknight": {
     "nombre": "corviknight",
@@ -6996,7 +7070,8 @@
     "showdown_id": "corviknight",
     "especie_base": "corviknight",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "crabominable": {
     "nombre": "crabominable",
@@ -7095,7 +7170,8 @@
     "showdown_id": "crabominable",
     "especie_base": "crabominable",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "crabominable-mega": {
     "nombre": "crabominable-mega",
@@ -7186,7 +7262,8 @@
     "showdown_id": "crabominablemega",
     "especie_base": "crabominable",
     "es_mega": true,
-    "objeto_mega": "Crabominite"
+    "objeto_mega": "Crabominite",
+    "solo_combate": false
   },
   "decidueye": {
     "nombre": "decidueye",
@@ -7284,7 +7361,8 @@
     "showdown_id": "decidueye",
     "especie_base": "decidueye",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "decidueye-hisui": {
     "nombre": "decidueye-hisui",
@@ -7382,7 +7460,8 @@
     "showdown_id": "decidueyehisui",
     "especie_base": "decidueye",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "dedenne": {
     "nombre": "dedenne",
@@ -7468,7 +7547,8 @@
     "showdown_id": "dedenne",
     "especie_base": "dedenne",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "delphox": {
     "nombre": "delphox",
@@ -7572,7 +7652,8 @@
     "showdown_id": "delphox",
     "especie_base": "delphox",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "delphox-mega": {
     "nombre": "delphox-mega",
@@ -7672,7 +7753,8 @@
     "showdown_id": "delphoxmega",
     "especie_base": "delphox",
     "es_mega": true,
-    "objeto_mega": "Delphoxite"
+    "objeto_mega": "Delphoxite",
+    "solo_combate": false
   },
   "diggersby": {
     "nombre": "diggersby",
@@ -7766,7 +7848,8 @@
     "showdown_id": "diggersby",
     "especie_base": "diggersby",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "ditto": {
     "nombre": "ditto",
@@ -7798,7 +7881,8 @@
     "showdown_id": "ditto",
     "especie_base": "ditto",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "dragalge": {
     "nombre": "dragalge",
@@ -7886,7 +7970,8 @@
     "showdown_id": "dragalge",
     "especie_base": "dragalge",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "dragalge-mega": {
     "nombre": "dragalge-mega",
@@ -7966,7 +8051,8 @@
     "showdown_id": "dragalgemega",
     "especie_base": "dragalge",
     "es_mega": true,
-    "objeto_mega": "Dragalgite"
+    "objeto_mega": "Dragalgite",
+    "solo_combate": false
   },
   "dragapult": {
     "nombre": "dragapult",
@@ -8065,7 +8151,8 @@
     "showdown_id": "dragapult",
     "especie_base": "dragapult",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "dragonite": {
     "nombre": "dragonite",
@@ -8180,7 +8267,8 @@
     "showdown_id": "dragonite",
     "especie_base": "dragonite",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "dragonite-mega": {
     "nombre": "dragonite-mega",
@@ -8291,7 +8379,8 @@
     "showdown_id": "dragonitemega",
     "especie_base": "dragonite",
     "es_mega": true,
-    "objeto_mega": "Dragoninite"
+    "objeto_mega": "Dragoninite",
+    "solo_combate": false
   },
   "drampa": {
     "nombre": "drampa",
@@ -8393,7 +8482,8 @@
     "showdown_id": "drampa",
     "especie_base": "drampa",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "drampa-mega": {
     "nombre": "drampa-mega",
@@ -8487,7 +8577,8 @@
     "showdown_id": "drampamega",
     "especie_base": "drampa",
     "es_mega": true,
-    "objeto_mega": "Drampanite"
+    "objeto_mega": "Drampanite",
+    "solo_combate": false
   },
   "eelektross": {
     "nombre": "eelektross",
@@ -8589,7 +8680,8 @@
     "showdown_id": "eelektross",
     "especie_base": "eelektross",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "eelektross-mega": {
     "nombre": "eelektross-mega",
@@ -8691,7 +8783,8 @@
     "showdown_id": "eelektrossmega",
     "especie_base": "eelektross",
     "es_mega": true,
-    "objeto_mega": "Eelektrossite"
+    "objeto_mega": "Eelektrossite",
+    "solo_combate": false
   },
   "emboar": {
     "nombre": "emboar",
@@ -8802,7 +8895,8 @@
     "showdown_id": "emboar",
     "especie_base": "emboar",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "emboar-mega": {
     "nombre": "emboar-mega",
@@ -8909,7 +9003,8 @@
     "showdown_id": "emboarmega",
     "especie_base": "emboar",
     "es_mega": true,
-    "objeto_mega": "Emboarite"
+    "objeto_mega": "Emboarite",
+    "solo_combate": false
   },
   "emolga": {
     "nombre": "emolga",
@@ -8987,7 +9082,8 @@
     "showdown_id": "emolga",
     "especie_base": "emolga",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "empoleon": {
     "nombre": "empoleon",
@@ -9093,7 +9189,8 @@
     "showdown_id": "empoleon",
     "especie_base": "empoleon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "espathra": {
     "nombre": "espathra",
@@ -9185,7 +9282,8 @@
     "showdown_id": "espathra",
     "especie_base": "espathra",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "espeon": {
     "nombre": "espeon",
@@ -9283,7 +9381,8 @@
     "showdown_id": "espeon",
     "especie_base": "espeon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "excadrill": {
     "nombre": "excadrill",
@@ -9373,7 +9472,8 @@
     "showdown_id": "excadrill",
     "especie_base": "excadrill",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "excadrill-mega": {
     "nombre": "excadrill-mega",
@@ -9455,7 +9555,8 @@
     "showdown_id": "excadrillmega",
     "especie_base": "excadrill",
     "es_mega": true,
-    "objeto_mega": "Excadrite"
+    "objeto_mega": "Excadrite",
+    "solo_combate": false
   },
   "falinks": {
     "nombre": "falinks",
@@ -9537,7 +9638,8 @@
     "showdown_id": "falinks",
     "especie_base": "falinks",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "falinks-mega": {
     "nombre": "falinks-mega",
@@ -9615,7 +9717,8 @@
     "showdown_id": "falinksmega",
     "especie_base": "falinks",
     "es_mega": true,
-    "objeto_mega": "Falinksite"
+    "objeto_mega": "Falinksite",
+    "solo_combate": false
   },
   "farfetchd": {
     "nombre": "farfetchd",
@@ -9701,7 +9804,8 @@
     "showdown_id": "farfetchd",
     "especie_base": "farfetchd",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "farigiraf": {
     "nombre": "farigiraf",
@@ -9807,7 +9911,8 @@
     "showdown_id": "farigiraf",
     "especie_base": "farigiraf",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "feraligatr": {
     "nombre": "feraligatr",
@@ -9921,7 +10026,8 @@
     "showdown_id": "feraligatr",
     "especie_base": "feraligatr",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "feraligatr-mega": {
     "nombre": "feraligatr-mega",
@@ -10032,7 +10138,8 @@
     "showdown_id": "feraligatrmega",
     "especie_base": "feraligatr",
     "es_mega": true,
-    "objeto_mega": "Feraligite"
+    "objeto_mega": "Feraligite",
+    "solo_combate": false
   },
   "flapple": {
     "nombre": "flapple",
@@ -10112,7 +10219,8 @@
     "showdown_id": "flapple",
     "especie_base": "flapple",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "flareon": {
     "nombre": "flareon",
@@ -10200,7 +10308,8 @@
     "showdown_id": "flareon",
     "especie_base": "flareon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "floette-eternal": {
     "nombre": "floette-eternal",
@@ -10272,7 +10381,8 @@
     "showdown_id": "floetteeternal",
     "especie_base": "floette",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "floette-mega": {
     "nombre": "floette-mega",
@@ -10340,7 +10450,8 @@
     "showdown_id": "floettemega",
     "especie_base": "floette",
     "es_mega": true,
-    "objeto_mega": "Floettite"
+    "objeto_mega": "Floettite",
+    "solo_combate": false
   },
   "florges": {
     "nombre": "florges",
@@ -10417,7 +10528,8 @@
     "showdown_id": "florges",
     "especie_base": "florges",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "forretress": {
     "nombre": "forretress",
@@ -10518,7 +10630,8 @@
     "showdown_id": "forretress",
     "especie_base": "forretress",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "froslass": {
     "nombre": "froslass",
@@ -10618,7 +10731,8 @@
     "showdown_id": "froslass",
     "especie_base": "froslass",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "froslass-mega": {
     "nombre": "froslass-mega",
@@ -10714,7 +10828,8 @@
     "showdown_id": "froslassmega",
     "especie_base": "froslass",
     "es_mega": true,
-    "objeto_mega": "Froslassite"
+    "objeto_mega": "Froslassite",
+    "solo_combate": false
   },
   "furfrou": {
     "nombre": "furfrou",
@@ -10781,7 +10896,8 @@
     "showdown_id": "furfrou",
     "especie_base": "furfrou",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "gallade": {
     "nombre": "gallade",
@@ -10923,7 +11039,8 @@
     "showdown_id": "gallade",
     "especie_base": "gallade",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "gallade-mega": {
     "nombre": "gallade-mega",
@@ -11057,7 +11174,8 @@
     "showdown_id": "gallademega",
     "especie_base": "gallade",
     "es_mega": true,
-    "objeto_mega": "Galladite"
+    "objeto_mega": "Galladite",
+    "solo_combate": false
   },
   "garbodor": {
     "nombre": "garbodor",
@@ -11145,7 +11263,8 @@
     "showdown_id": "garbodor",
     "especie_base": "garbodor",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "garchomp": {
     "nombre": "garchomp",
@@ -11236,7 +11355,8 @@
     "showdown_id": "garchomp",
     "especie_base": "garchomp",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "garchomp-mega": {
     "nombre": "garchomp-mega",
@@ -11323,7 +11443,8 @@
     "showdown_id": "garchompmega",
     "especie_base": "garchomp",
     "es_mega": true,
-    "objeto_mega": "Garchompite"
+    "objeto_mega": "Garchompite",
+    "solo_combate": false
   },
   "garchomp-mega-z": {
     "nombre": "garchomp-mega-z",
@@ -11409,7 +11530,8 @@
     "showdown_id": "garchompmegaz",
     "especie_base": "garchomp",
     "es_mega": true,
-    "objeto_mega": "Garchompite Z"
+    "objeto_mega": "Garchompite Z",
+    "solo_combate": false
   },
   "gardevoir": {
     "nombre": "gardevoir",
@@ -11525,7 +11647,8 @@
     "showdown_id": "gardevoir",
     "especie_base": "gardevoir",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "gardevoir-mega": {
     "nombre": "gardevoir-mega",
@@ -11633,7 +11756,8 @@
     "showdown_id": "gardevoirmega",
     "especie_base": "gardevoir",
     "es_mega": true,
-    "objeto_mega": "Gardevoirite"
+    "objeto_mega": "Gardevoirite",
+    "solo_combate": false
   },
   "garganacl": {
     "nombre": "garganacl",
@@ -11722,7 +11846,8 @@
     "showdown_id": "garganacl",
     "especie_base": "garganacl",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "gengar": {
     "nombre": "gengar",
@@ -11826,7 +11951,8 @@
     "showdown_id": "gengar",
     "especie_base": "gengar",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "gengar-mega": {
     "nombre": "gengar-mega",
@@ -11930,7 +12056,8 @@
     "showdown_id": "gengarmega",
     "especie_base": "gengar",
     "es_mega": true,
-    "objeto_mega": "Gengarite"
+    "objeto_mega": "Gengarite",
+    "solo_combate": false
   },
   "gholdengo": {
     "nombre": "gholdengo",
@@ -12000,7 +12127,8 @@
     "showdown_id": "gholdengo",
     "especie_base": "gholdengo",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "glaceon": {
     "nombre": "glaceon",
@@ -12089,7 +12217,8 @@
     "showdown_id": "glaceon",
     "especie_base": "glaceon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "glalie": {
     "nombre": "glalie",
@@ -12178,7 +12307,8 @@
     "showdown_id": "glalie",
     "especie_base": "glalie",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "glalie-mega": {
     "nombre": "glalie-mega",
@@ -12259,7 +12389,8 @@
     "showdown_id": "glaliemega",
     "especie_base": "glalie",
     "es_mega": true,
-    "objeto_mega": "Glalitite"
+    "objeto_mega": "Glalitite",
+    "solo_combate": false
   },
   "glimmora": {
     "nombre": "glimmora",
@@ -12337,7 +12468,8 @@
     "showdown_id": "glimmora",
     "especie_base": "glimmora",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "glimmora-mega": {
     "nombre": "glimmora-mega",
@@ -12411,7 +12543,8 @@
     "showdown_id": "glimmoramega",
     "especie_base": "glimmora",
     "es_mega": true,
-    "objeto_mega": "Glimmoranite"
+    "objeto_mega": "Glimmoranite",
+    "solo_combate": false
   },
   "gliscor": {
     "nombre": "gliscor",
@@ -12522,7 +12655,8 @@
     "showdown_id": "gliscor",
     "especie_base": "gliscor",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "gogoat": {
     "nombre": "gogoat",
@@ -12607,7 +12741,8 @@
     "showdown_id": "gogoat",
     "especie_base": "gogoat",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "golisopod": {
     "nombre": "golisopod",
@@ -12702,7 +12837,8 @@
     "showdown_id": "golisopod",
     "especie_base": "golisopod",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "golisopod-mega": {
     "nombre": "golisopod-mega",
@@ -12797,7 +12933,8 @@
     "showdown_id": "golisopodmega",
     "especie_base": "golisopod",
     "es_mega": true,
-    "objeto_mega": "Golisopite"
+    "objeto_mega": "Golisopite",
+    "solo_combate": false
   },
   "golurk": {
     "nombre": "golurk",
@@ -12911,7 +13048,8 @@
     "showdown_id": "golurk",
     "especie_base": "golurk",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "golurk-mega": {
     "nombre": "golurk-mega",
@@ -13017,7 +13155,8 @@
     "showdown_id": "golurkmega",
     "especie_base": "golurk",
     "es_mega": true,
-    "objeto_mega": "Golurkite"
+    "objeto_mega": "Golurkite",
+    "solo_combate": false
   },
   "goodra": {
     "nombre": "goodra",
@@ -13117,7 +13256,8 @@
     "showdown_id": "goodra",
     "especie_base": "goodra",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "goodra-hisui": {
     "nombre": "goodra-hisui",
@@ -13216,7 +13356,8 @@
     "showdown_id": "goodrahisui",
     "especie_base": "goodra",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "gourgeist": {
     "nombre": "gourgeist",
@@ -13312,7 +13453,8 @@
     "showdown_id": "gourgeist",
     "especie_base": "gourgeist",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "gourgeist-large": {
     "nombre": "gourgeist-large",
@@ -13408,7 +13550,8 @@
     "showdown_id": "gourgeistlarge",
     "especie_base": "gourgeist",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "gourgeist-small": {
     "nombre": "gourgeist-small",
@@ -13504,7 +13647,8 @@
     "showdown_id": "gourgeistsmall",
     "especie_base": "gourgeist",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "gourgeist-super": {
     "nombre": "gourgeist-super",
@@ -13600,7 +13744,8 @@
     "showdown_id": "gourgeistsuper",
     "especie_base": "gourgeist",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "grapploct": {
     "nombre": "grapploct",
@@ -13680,7 +13825,8 @@
     "showdown_id": "grapploct",
     "especie_base": "grapploct",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "greninja": {
     "nombre": "greninja",
@@ -13780,7 +13926,8 @@
     "showdown_id": "greninja",
     "especie_base": "greninja",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "greninja-mega": {
     "nombre": "greninja-mega",
@@ -13872,7 +14019,8 @@
     "showdown_id": "greninjamega",
     "especie_base": "greninja",
     "es_mega": true,
-    "objeto_mega": "Greninjite"
+    "objeto_mega": "Greninjite",
+    "solo_combate": false
   },
   "grimmsnarl": {
     "nombre": "grimmsnarl",
@@ -13972,7 +14120,8 @@
     "showdown_id": "grimmsnarl",
     "especie_base": "grimmsnarl",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "gyarados": {
     "nombre": "gyarados",
@@ -14071,7 +14220,8 @@
     "showdown_id": "gyarados",
     "especie_base": "gyarados",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "gyarados-mega": {
     "nombre": "gyarados-mega",
@@ -14166,7 +14316,8 @@
     "showdown_id": "gyaradosmega",
     "especie_base": "gyarados",
     "es_mega": true,
-    "objeto_mega": "Gyaradosite"
+    "objeto_mega": "Gyaradosite",
+    "solo_combate": false
   },
   "hatterene": {
     "nombre": "hatterene",
@@ -14261,7 +14412,8 @@
     "showdown_id": "hatterene",
     "especie_base": "hatterene",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "hawlucha": {
     "nombre": "hawlucha",
@@ -14371,7 +14523,8 @@
     "showdown_id": "hawlucha",
     "especie_base": "hawlucha",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "hawlucha-mega": {
     "nombre": "hawlucha-mega",
@@ -14473,7 +14626,8 @@
     "showdown_id": "hawluchamega",
     "especie_base": "hawlucha",
     "es_mega": true,
-    "objeto_mega": "Hawluchanite"
+    "objeto_mega": "Hawluchanite",
+    "solo_combate": false
   },
   "heliolisk": {
     "nombre": "heliolisk",
@@ -14572,7 +14726,8 @@
     "showdown_id": "heliolisk",
     "especie_base": "heliolisk",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "heracross": {
     "nombre": "heracross",
@@ -14674,7 +14829,8 @@
     "showdown_id": "heracross",
     "especie_base": "heracross",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "heracross-mega": {
     "nombre": "heracross-mega",
@@ -14768,7 +14924,8 @@
     "showdown_id": "heracrossmega",
     "especie_base": "heracross",
     "es_mega": true,
-    "objeto_mega": "Heracronite"
+    "objeto_mega": "Heracronite",
+    "solo_combate": false
   },
   "hippowdon": {
     "nombre": "hippowdon",
@@ -14850,7 +15007,8 @@
     "showdown_id": "hippowdon",
     "especie_base": "hippowdon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "houndoom": {
     "nombre": "houndoom",
@@ -14953,7 +15111,8 @@
     "showdown_id": "houndoom",
     "especie_base": "houndoom",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "houndoom-mega": {
     "nombre": "houndoom-mega",
@@ -15048,7 +15207,8 @@
     "showdown_id": "houndoommega",
     "especie_base": "houndoom",
     "es_mega": true,
-    "objeto_mega": "Houndoominite"
+    "objeto_mega": "Houndoominite",
+    "solo_combate": false
   },
   "houndstone": {
     "nombre": "houndstone",
@@ -15131,7 +15291,8 @@
     "showdown_id": "houndstone",
     "especie_base": "houndstone",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "hydrapple": {
     "nombre": "hydrapple",
@@ -15218,7 +15379,8 @@
     "showdown_id": "hydrapple",
     "especie_base": "hydrapple",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "hydreigon": {
     "nombre": "hydreigon",
@@ -15324,7 +15486,8 @@
     "showdown_id": "hydreigon",
     "especie_base": "hydreigon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "incineroar": {
     "nombre": "incineroar",
@@ -15433,7 +15596,8 @@
     "showdown_id": "incineroar",
     "especie_base": "incineroar",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "indeedee": {
     "nombre": "indeedee",
@@ -15515,7 +15679,8 @@
     "showdown_id": "indeedee",
     "especie_base": "indeedee",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "indeedee-f": {
     "nombre": "indeedee-f",
@@ -15596,7 +15761,8 @@
     "showdown_id": "indeedeef",
     "especie_base": "indeedee",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "infernape": {
     "nombre": "infernape",
@@ -15716,7 +15882,8 @@
     "showdown_id": "infernape",
     "especie_base": "infernape",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "inteleon": {
     "nombre": "inteleon",
@@ -15809,7 +15976,8 @@
     "showdown_id": "inteleon",
     "especie_base": "inteleon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "jolteon": {
     "nombre": "jolteon",
@@ -15899,7 +16067,8 @@
     "showdown_id": "jolteon",
     "especie_base": "jolteon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "kangaskhan": {
     "nombre": "kangaskhan",
@@ -16001,7 +16170,8 @@
     "showdown_id": "kangaskhan",
     "especie_base": "kangaskhan",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "kangaskhan-mega": {
     "nombre": "kangaskhan-mega",
@@ -16095,7 +16265,8 @@
     "showdown_id": "kangaskhanmega",
     "especie_base": "kangaskhan",
     "es_mega": true,
-    "objeto_mega": "Kangaskhanite"
+    "objeto_mega": "Kangaskhanite",
+    "solo_combate": false
   },
   "kingambit": {
     "nombre": "kingambit",
@@ -16184,7 +16355,8 @@
     "showdown_id": "kingambit",
     "especie_base": "kingambit",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "kleavor": {
     "nombre": "kleavor",
@@ -16277,7 +16449,8 @@
     "showdown_id": "kleavor",
     "especie_base": "kleavor",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "klefki": {
     "nombre": "klefki",
@@ -16353,7 +16526,8 @@
     "showdown_id": "klefki",
     "especie_base": "klefki",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "kommo-o": {
     "nombre": "kommo-o",
@@ -16467,7 +16641,8 @@
     "showdown_id": "kommoo",
     "especie_base": "kommo-o",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "krookodile": {
     "nombre": "krookodile",
@@ -16586,7 +16761,8 @@
     "showdown_id": "krookodile",
     "especie_base": "krookodile",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "leafeon": {
     "nombre": "leafeon",
@@ -16675,7 +16851,8 @@
     "showdown_id": "leafeon",
     "especie_base": "leafeon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "liepard": {
     "nombre": "liepard",
@@ -16771,7 +16948,8 @@
     "showdown_id": "liepard",
     "especie_base": "liepard",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "lopunny": {
     "nombre": "lopunny",
@@ -16882,7 +17060,8 @@
     "showdown_id": "lopunny",
     "especie_base": "lopunny",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "lopunny-mega": {
     "nombre": "lopunny-mega",
@@ -16986,7 +17165,8 @@
     "showdown_id": "lopunnymega",
     "especie_base": "lopunny",
     "es_mega": true,
-    "objeto_mega": "Lopunnite"
+    "objeto_mega": "Lopunnite",
+    "solo_combate": false
   },
   "lucario": {
     "nombre": "lucario",
@@ -17105,7 +17285,8 @@
     "showdown_id": "lucario",
     "especie_base": "lucario",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "lucario-mega": {
     "nombre": "lucario-mega",
@@ -17216,7 +17397,8 @@
     "showdown_id": "lucariomega",
     "especie_base": "lucario",
     "es_mega": true,
-    "objeto_mega": "Lucarionite"
+    "objeto_mega": "Lucarionite",
+    "solo_combate": false
   },
   "lucario-mega-z": {
     "nombre": "lucario-mega-z",
@@ -17327,7 +17509,8 @@
     "showdown_id": "lucariomegaz",
     "especie_base": "lucario",
     "es_mega": true,
-    "objeto_mega": "Lucarionite Z"
+    "objeto_mega": "Lucarionite Z",
+    "solo_combate": false
   },
   "luxray": {
     "nombre": "luxray",
@@ -17415,7 +17598,8 @@
     "showdown_id": "luxray",
     "especie_base": "luxray",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "lycanroc": {
     "nombre": "lycanroc",
@@ -17508,7 +17692,8 @@
     "showdown_id": "lycanroc",
     "especie_base": "lycanroc",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "lycanroc-dusk": {
     "nombre": "lycanroc-dusk",
@@ -17596,7 +17781,8 @@
     "showdown_id": "lycanrocdusk",
     "especie_base": "lycanroc",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "lycanroc-midnight": {
     "nombre": "lycanroc-midnight",
@@ -17699,7 +17885,8 @@
     "showdown_id": "lycanrocmidnight",
     "especie_base": "lycanroc",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "mabosstiff": {
     "nombre": "mabosstiff",
@@ -17778,7 +17965,8 @@
     "showdown_id": "mabosstiff",
     "especie_base": "mabosstiff",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "machamp": {
     "nombre": "machamp",
@@ -17879,7 +18067,8 @@
     "showdown_id": "machamp",
     "especie_base": "machamp",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "malamar": {
     "nombre": "malamar",
@@ -17984,7 +18173,8 @@
     "showdown_id": "malamar",
     "especie_base": "malamar",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "malamar-mega": {
     "nombre": "malamar-mega",
@@ -18081,7 +18271,8 @@
     "showdown_id": "malamarmega",
     "especie_base": "malamar",
     "es_mega": true,
-    "objeto_mega": "Malamarite"
+    "objeto_mega": "Malamarite",
+    "solo_combate": false
   },
   "mamoswine": {
     "nombre": "mamoswine",
@@ -18180,7 +18371,8 @@
     "showdown_id": "mamoswine",
     "especie_base": "mamoswine",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "manectric": {
     "nombre": "manectric",
@@ -18264,7 +18456,8 @@
     "showdown_id": "manectric",
     "especie_base": "manectric",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "manectric-mega": {
     "nombre": "manectric-mega",
@@ -18340,7 +18533,8 @@
     "showdown_id": "manectricmega",
     "especie_base": "manectric",
     "es_mega": true,
-    "objeto_mega": "Manectite"
+    "objeto_mega": "Manectite",
+    "solo_combate": false
   },
   "maushold": {
     "nombre": "maushold",
@@ -18425,7 +18619,8 @@
     "showdown_id": "maushold",
     "especie_base": "maushold",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "mawile": {
     "nombre": "mawile",
@@ -18532,7 +18727,8 @@
     "showdown_id": "mawile",
     "especie_base": "mawile",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "mawile-mega": {
     "nombre": "mawile-mega",
@@ -18631,7 +18827,8 @@
     "showdown_id": "mawilemega",
     "especie_base": "mawile",
     "es_mega": true,
-    "objeto_mega": "Mawilite"
+    "objeto_mega": "Mawilite",
+    "solo_combate": false
   },
   "medicham": {
     "nombre": "medicham",
@@ -18740,7 +18937,8 @@
     "showdown_id": "medicham",
     "especie_base": "medicham",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "medicham-mega": {
     "nombre": "medicham-mega",
@@ -18845,7 +19043,8 @@
     "showdown_id": "medichammega",
     "especie_base": "medicham",
     "es_mega": true,
-    "objeto_mega": "Medichamite"
+    "objeto_mega": "Medichamite",
+    "solo_combate": false
   },
   "meganium": {
     "nombre": "meganium",
@@ -18937,7 +19136,8 @@
     "showdown_id": "meganium",
     "especie_base": "meganium",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "meganium-mega": {
     "nombre": "meganium-mega",
@@ -19026,7 +19226,8 @@
     "showdown_id": "meganiummega",
     "especie_base": "meganium",
     "es_mega": true,
-    "objeto_mega": "Meganiumite"
+    "objeto_mega": "Meganiumite",
+    "solo_combate": false
   },
   "meowscarada": {
     "nombre": "meowscarada",
@@ -19124,7 +19325,8 @@
     "showdown_id": "meowscarada",
     "especie_base": "meowscarada",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "meowstic": {
     "nombre": "meowstic",
@@ -19218,7 +19420,8 @@
     "showdown_id": "meowstic",
     "especie_base": "meowstic",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "meowstic-f-mega": {
     "nombre": "meowstic-f-mega",
@@ -19301,7 +19504,8 @@
     "showdown_id": "meowsticfmega",
     "especie_base": "meowstic",
     "es_mega": true,
-    "objeto_mega": "Meowsticite"
+    "objeto_mega": "Meowsticite",
+    "solo_combate": false
   },
   "meowstic-m-mega": {
     "nombre": "meowstic-m-mega",
@@ -19387,7 +19591,8 @@
     "showdown_id": "meowsticmmega",
     "especie_base": "meowstic",
     "es_mega": true,
-    "objeto_mega": "Meowsticite"
+    "objeto_mega": "Meowsticite",
+    "solo_combate": false
   },
   "metagross": {
     "nombre": "metagross",
@@ -19487,7 +19692,8 @@
     "showdown_id": "metagross",
     "especie_base": "metagross",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "metagross-mega": {
     "nombre": "metagross-mega",
@@ -19583,7 +19789,8 @@
     "showdown_id": "metagrossmega",
     "especie_base": "metagross",
     "es_mega": true,
-    "objeto_mega": "Metagrossite"
+    "objeto_mega": "Metagrossite",
+    "solo_combate": false
   },
   "milotic": {
     "nombre": "milotic",
@@ -19679,7 +19886,8 @@
     "showdown_id": "milotic",
     "especie_base": "milotic",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "mimikyu": {
     "nombre": "mimikyu",
@@ -19768,7 +19976,8 @@
     "showdown_id": "mimikyu",
     "especie_base": "mimikyu",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "morpeko": {
     "nombre": "morpeko",
@@ -19861,7 +20070,8 @@
     "showdown_id": "morpeko",
     "especie_base": "morpeko",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "mr-mime": {
     "nombre": "mr-mime",
@@ -19974,7 +20184,8 @@
     "showdown_id": "mrmime",
     "especie_base": "mr-mime",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "mr-rime": {
     "nombre": "mr-rime",
@@ -20103,7 +20314,8 @@
     "showdown_id": "mrrime",
     "especie_base": "mr-rime",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "mudsdale": {
     "nombre": "mudsdale",
@@ -20183,7 +20395,8 @@
     "showdown_id": "mudsdale",
     "especie_base": "mudsdale",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "musharna": {
     "nombre": "musharna",
@@ -20268,7 +20481,8 @@
     "showdown_id": "musharna",
     "especie_base": "musharna",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "ninetales": {
     "nombre": "ninetales",
@@ -20366,7 +20580,8 @@
     "showdown_id": "ninetales",
     "especie_base": "ninetales",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "ninetales-alola": {
     "nombre": "ninetales-alola",
@@ -20462,7 +20677,8 @@
     "showdown_id": "ninetalesalola",
     "especie_base": "ninetales",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "noivern": {
     "nombre": "noivern",
@@ -20562,7 +20778,8 @@
     "showdown_id": "noivern",
     "especie_base": "noivern",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "oranguru": {
     "nombre": "oranguru",
@@ -20662,7 +20879,8 @@
     "showdown_id": "oranguru",
     "especie_base": "oranguru",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "orthworm": {
     "nombre": "orthworm",
@@ -20733,7 +20951,8 @@
     "showdown_id": "orthworm",
     "especie_base": "orthworm",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "overqwil": {
     "nombre": "overqwil",
@@ -20829,7 +21048,8 @@
     "showdown_id": "overqwil",
     "especie_base": "overqwil",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "palafin": {
     "nombre": "palafin",
@@ -20914,7 +21134,8 @@
     "showdown_id": "palafin",
     "especie_base": "palafin",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "pangoro": {
     "nombre": "pangoro",
@@ -21031,7 +21252,8 @@
     "showdown_id": "pangoro",
     "especie_base": "pangoro",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "passimian": {
     "nombre": "passimian",
@@ -21128,7 +21350,8 @@
     "showdown_id": "passimian",
     "especie_base": "passimian",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "pawmot": {
     "nombre": "pawmot",
@@ -21228,7 +21451,8 @@
     "showdown_id": "pawmot",
     "especie_base": "pawmot",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "pelipper": {
     "nombre": "pelipper",
@@ -21317,7 +21541,8 @@
     "showdown_id": "pelipper",
     "especie_base": "pelipper",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "perrserker": {
     "nombre": "perrserker",
@@ -21426,7 +21651,8 @@
     "showdown_id": "perrserker",
     "especie_base": "perrserker",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "persian": {
     "nombre": "persian",
@@ -21527,7 +21753,8 @@
     "showdown_id": "persian",
     "especie_base": "persian",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "persian-alola": {
     "nombre": "persian-alola",
@@ -21635,7 +21862,8 @@
     "showdown_id": "persianalola",
     "especie_base": "persian",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "pidgeot": {
     "nombre": "pidgeot",
@@ -21702,7 +21930,8 @@
     "showdown_id": "pidgeot",
     "especie_base": "pidgeot",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "pidgeot-mega": {
     "nombre": "pidgeot-mega",
@@ -21761,7 +21990,8 @@
     "showdown_id": "pidgeotmega",
     "especie_base": "pidgeot",
     "es_mega": true,
-    "objeto_mega": "Pidgeotite"
+    "objeto_mega": "Pidgeotite",
+    "solo_combate": false
   },
   "pikachu": {
     "nombre": "pikachu",
@@ -21852,7 +22082,8 @@
     "showdown_id": "pikachu",
     "especie_base": "pikachu",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "pincurchin": {
     "nombre": "pincurchin",
@@ -21931,7 +22162,8 @@
     "showdown_id": "pincurchin",
     "especie_base": "pincurchin",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "pinsir": {
     "nombre": "pinsir",
@@ -22020,7 +22252,8 @@
     "showdown_id": "pinsir",
     "especie_base": "pinsir",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "pinsir-mega": {
     "nombre": "pinsir-mega",
@@ -22102,7 +22335,8 @@
     "showdown_id": "pinsirmega",
     "especie_base": "pinsir",
     "es_mega": true,
-    "objeto_mega": "Pinsirite"
+    "objeto_mega": "Pinsirite",
+    "solo_combate": false
   },
   "politoed": {
     "nombre": "politoed",
@@ -22193,7 +22427,8 @@
     "showdown_id": "politoed",
     "especie_base": "politoed",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "polteageist": {
     "nombre": "polteageist",
@@ -22270,7 +22505,8 @@
     "showdown_id": "polteageist",
     "especie_base": "polteageist",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "primarina": {
     "nombre": "primarina",
@@ -22365,7 +22601,8 @@
     "showdown_id": "primarina",
     "especie_base": "primarina",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "pyroar": {
     "nombre": "pyroar",
@@ -22450,7 +22687,8 @@
     "showdown_id": "pyroar",
     "especie_base": "pyroar",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "pyroar-mega": {
     "nombre": "pyroar-mega",
@@ -22527,7 +22765,8 @@
     "showdown_id": "pyroarmega",
     "especie_base": "pyroar",
     "es_mega": true,
-    "objeto_mega": "Pyroarite"
+    "objeto_mega": "Pyroarite",
+    "solo_combate": false
   },
   "quaquaval": {
     "nombre": "quaquaval",
@@ -22618,7 +22857,8 @@
     "showdown_id": "quaquaval",
     "especie_base": "quaquaval",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "qwilfish": {
     "nombre": "qwilfish",
@@ -22718,7 +22958,8 @@
     "showdown_id": "qwilfish",
     "especie_base": "qwilfish",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "raichu": {
     "nombre": "raichu",
@@ -22815,7 +23056,8 @@
     "showdown_id": "raichu",
     "especie_base": "raichu",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "raichu-alola": {
     "nombre": "raichu-alola",
@@ -22917,7 +23159,8 @@
     "showdown_id": "raichualola",
     "especie_base": "raichu",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "raichu-mega-x": {
     "nombre": "raichu-mega-x",
@@ -23010,7 +23253,8 @@
     "showdown_id": "raichumegax",
     "especie_base": "raichu",
     "es_mega": true,
-    "objeto_mega": "Raichunite X"
+    "objeto_mega": "Raichunite X",
+    "solo_combate": false
   },
   "raichu-mega-y": {
     "nombre": "raichu-mega-y",
@@ -23103,7 +23347,8 @@
     "showdown_id": "raichumegay",
     "especie_base": "raichu",
     "es_mega": true,
-    "objeto_mega": "Raichunite Y"
+    "objeto_mega": "Raichunite Y",
+    "solo_combate": false
   },
   "rampardos": {
     "nombre": "rampardos",
@@ -23208,7 +23453,8 @@
     "showdown_id": "rampardos",
     "especie_base": "rampardos",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "reuniclus": {
     "nombre": "reuniclus",
@@ -23309,7 +23555,8 @@
     "showdown_id": "reuniclus",
     "especie_base": "reuniclus",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "rhyperior": {
     "nombre": "rhyperior",
@@ -23436,7 +23683,8 @@
     "showdown_id": "rhyperior",
     "especie_base": "rhyperior",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "rillaboom": {
     "nombre": "rillaboom",
@@ -23534,7 +23782,8 @@
     "showdown_id": "rillaboom",
     "especie_base": "rillaboom",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "roserade": {
     "nombre": "roserade",
@@ -23621,7 +23870,8 @@
     "showdown_id": "roserade",
     "especie_base": "roserade",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "rotom": {
     "nombre": "rotom",
@@ -23691,7 +23941,8 @@
     "showdown_id": "rotom",
     "especie_base": "rotom",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "rotom-fan": {
     "nombre": "rotom-fan",
@@ -23762,7 +24013,8 @@
     "showdown_id": "rotomfan",
     "especie_base": "rotom",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "rotom-frost": {
     "nombre": "rotom-frost",
@@ -23833,7 +24085,8 @@
     "showdown_id": "rotomfrost",
     "especie_base": "rotom",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "rotom-heat": {
     "nombre": "rotom-heat",
@@ -23904,7 +24157,8 @@
     "showdown_id": "rotomheat",
     "especie_base": "rotom",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "rotom-mow": {
     "nombre": "rotom-mow",
@@ -23975,7 +24229,8 @@
     "showdown_id": "rotommow",
     "especie_base": "rotom",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "rotom-wash": {
     "nombre": "rotom-wash",
@@ -24046,7 +24301,8 @@
     "showdown_id": "rotomwash",
     "especie_base": "rotom",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "runerigus": {
     "nombre": "runerigus",
@@ -24143,7 +24399,8 @@
     "showdown_id": "runerigus",
     "especie_base": "runerigus",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "sableye": {
     "nombre": "sableye",
@@ -24267,7 +24524,8 @@
     "showdown_id": "sableye",
     "especie_base": "sableye",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "sableye-mega": {
     "nombre": "sableye-mega",
@@ -24383,7 +24641,8 @@
     "showdown_id": "sableyemega",
     "especie_base": "sableye",
     "es_mega": true,
-    "objeto_mega": "Sablenite"
+    "objeto_mega": "Sablenite",
+    "solo_combate": false
   },
   "salamence": {
     "nombre": "salamence",
@@ -24477,7 +24736,8 @@
     "showdown_id": "salamence",
     "especie_base": "salamence",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "salamence-mega": {
     "nombre": "salamence-mega",
@@ -24567,7 +24827,8 @@
     "showdown_id": "salamencemega",
     "especie_base": "salamence",
     "es_mega": true,
-    "objeto_mega": "Salamencite"
+    "objeto_mega": "Salamencite",
+    "solo_combate": false
   },
   "salazzle": {
     "nombre": "salazzle",
@@ -24669,7 +24930,8 @@
     "showdown_id": "salazzle",
     "especie_base": "salazzle",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "samurott": {
     "nombre": "samurott",
@@ -24762,7 +25024,8 @@
     "showdown_id": "samurott",
     "especie_base": "samurott",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "samurott-hisui": {
     "nombre": "samurott-hisui",
@@ -24862,7 +25125,8 @@
     "showdown_id": "samurotthisui",
     "especie_base": "samurott",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "sandaconda": {
     "nombre": "sandaconda",
@@ -24945,7 +25209,8 @@
     "showdown_id": "sandaconda",
     "especie_base": "sandaconda",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "sceptile": {
     "nombre": "sceptile",
@@ -25054,7 +25319,8 @@
     "showdown_id": "sceptile",
     "especie_base": "sceptile",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "sceptile-mega": {
     "nombre": "sceptile-mega",
@@ -25160,7 +25426,8 @@
     "showdown_id": "sceptilemega",
     "especie_base": "sceptile",
     "es_mega": true,
-    "objeto_mega": "Sceptilite"
+    "objeto_mega": "Sceptilite",
+    "solo_combate": false
   },
   "scizor": {
     "nombre": "scizor",
@@ -25261,7 +25528,8 @@
     "showdown_id": "scizor",
     "especie_base": "scizor",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "scizor-mega": {
     "nombre": "scizor-mega",
@@ -25354,7 +25622,8 @@
     "showdown_id": "scizormega",
     "especie_base": "scizor",
     "es_mega": true,
-    "objeto_mega": "Scizorite"
+    "objeto_mega": "Scizorite",
+    "solo_combate": false
   },
   "scolipede": {
     "nombre": "scolipede",
@@ -25443,7 +25712,8 @@
     "showdown_id": "scolipede",
     "especie_base": "scolipede",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "scolipede-mega": {
     "nombre": "scolipede-mega",
@@ -25524,7 +25794,8 @@
     "showdown_id": "scolipedemega",
     "especie_base": "scolipede",
     "es_mega": true,
-    "objeto_mega": "Scolipite"
+    "objeto_mega": "Scolipite",
+    "solo_combate": false
   },
   "scovillain": {
     "nombre": "scovillain",
@@ -25608,7 +25879,8 @@
     "showdown_id": "scovillain",
     "especie_base": "scovillain",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "scovillain-mega": {
     "nombre": "scovillain-mega",
@@ -25684,7 +25956,8 @@
     "showdown_id": "scovillainmega",
     "especie_base": "scovillain",
     "es_mega": true,
-    "objeto_mega": "Scovillainite"
+    "objeto_mega": "Scovillainite",
+    "solo_combate": false
   },
   "scrafty": {
     "nombre": "scrafty",
@@ -25802,7 +26075,8 @@
     "showdown_id": "scrafty",
     "especie_base": "scrafty",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "scrafty-mega": {
     "nombre": "scrafty-mega",
@@ -25912,7 +26186,8 @@
     "showdown_id": "scraftymega",
     "especie_base": "scrafty",
     "es_mega": true,
-    "objeto_mega": "Scraftinite"
+    "objeto_mega": "Scraftinite",
+    "solo_combate": false
   },
   "serperior": {
     "nombre": "serperior",
@@ -25996,7 +26271,8 @@
     "showdown_id": "serperior",
     "especie_base": "serperior",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "sharpedo": {
     "nombre": "sharpedo",
@@ -26086,7 +26362,8 @@
     "showdown_id": "sharpedo",
     "especie_base": "sharpedo",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "sharpedo-mega": {
     "nombre": "sharpedo-mega",
@@ -26172,7 +26449,8 @@
     "showdown_id": "sharpedomega",
     "especie_base": "sharpedo",
     "es_mega": true,
-    "objeto_mega": "Sharpedonite"
+    "objeto_mega": "Sharpedonite",
+    "solo_combate": false
   },
   "simipour": {
     "nombre": "simipour",
@@ -26255,7 +26533,8 @@
     "showdown_id": "simipour",
     "especie_base": "simipour",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "simisage": {
     "nombre": "simisage",
@@ -26336,7 +26615,8 @@
     "showdown_id": "simisage",
     "especie_base": "simisage",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "simisear": {
     "nombre": "simisear",
@@ -26422,7 +26702,8 @@
     "showdown_id": "simisear",
     "especie_base": "simisear",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "sinistcha": {
     "nombre": "sinistcha",
@@ -26489,7 +26770,8 @@
     "showdown_id": "sinistcha",
     "especie_base": "sinistcha",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "sirfetchd": {
     "nombre": "sirfetchd",
@@ -26569,7 +26851,8 @@
     "showdown_id": "sirfetchd",
     "especie_base": "sirfetchd",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "skarmory": {
     "nombre": "skarmory",
@@ -26657,7 +26940,8 @@
     "showdown_id": "skarmory",
     "especie_base": "skarmory",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "skarmory-mega": {
     "nombre": "skarmory-mega",
@@ -26737,7 +27021,8 @@
     "showdown_id": "skarmorymega",
     "especie_base": "skarmory",
     "es_mega": true,
-    "objeto_mega": "Skarmorite"
+    "objeto_mega": "Skarmorite",
+    "solo_combate": false
   },
   "skeledirge": {
     "nombre": "skeledirge",
@@ -26825,7 +27110,8 @@
     "showdown_id": "skeledirge",
     "especie_base": "skeledirge",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "slowbro": {
     "nombre": "slowbro",
@@ -26939,7 +27225,8 @@
     "showdown_id": "slowbro",
     "especie_base": "slowbro",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "slowbro-galar": {
     "nombre": "slowbro-galar",
@@ -27067,7 +27354,8 @@
     "showdown_id": "slowbrogalar",
     "especie_base": "slowbro",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "slowbro-mega": {
     "nombre": "slowbro-mega",
@@ -27173,7 +27461,8 @@
     "showdown_id": "slowbromega",
     "especie_base": "slowbro",
     "es_mega": true,
-    "objeto_mega": "Slowbronite"
+    "objeto_mega": "Slowbronite",
+    "solo_combate": false
   },
   "slowking": {
     "nombre": "slowking",
@@ -27294,7 +27583,8 @@
     "showdown_id": "slowking",
     "especie_base": "slowking",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "slowking-galar": {
     "nombre": "slowking-galar",
@@ -27425,7 +27715,8 @@
     "showdown_id": "slowkinggalar",
     "especie_base": "slowking",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "slurpuff": {
     "nombre": "slurpuff",
@@ -27498,7 +27789,8 @@
     "showdown_id": "slurpuff",
     "especie_base": "slurpuff",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "sneasler": {
     "nombre": "sneasler",
@@ -27596,7 +27888,8 @@
     "showdown_id": "sneasler",
     "especie_base": "sneasler",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "snorlax": {
     "nombre": "snorlax",
@@ -27714,7 +28007,8 @@
     "showdown_id": "snorlax",
     "especie_base": "snorlax",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "spiritomb": {
     "nombre": "spiritomb",
@@ -27800,7 +28094,8 @@
     "showdown_id": "spiritomb",
     "especie_base": "spiritomb",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "squawkabilly": {
     "nombre": "squawkabilly",
@@ -27879,7 +28174,8 @@
     "showdown_id": "squawkabilly",
     "especie_base": "squawkabilly",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "squawkabilly-blue": {
     "nombre": "squawkabilly-blue",
@@ -27958,7 +28254,8 @@
     "showdown_id": "squawkabillyblue",
     "especie_base": "squawkabilly",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "squawkabilly-white": {
     "nombre": "squawkabilly-white",
@@ -28037,7 +28334,8 @@
     "showdown_id": "squawkabillywhite",
     "especie_base": "squawkabilly",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "squawkabilly-yellow": {
     "nombre": "squawkabilly-yellow",
@@ -28116,7 +28414,8 @@
     "showdown_id": "squawkabillyyellow",
     "especie_base": "squawkabilly",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "staraptor": {
     "nombre": "staraptor",
@@ -28191,7 +28490,8 @@
     "showdown_id": "staraptor",
     "especie_base": "staraptor",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "staraptor-mega": {
     "nombre": "staraptor-mega",
@@ -28262,7 +28562,8 @@
     "showdown_id": "staraptormega",
     "especie_base": "staraptor",
     "es_mega": true,
-    "objeto_mega": "Staraptite"
+    "objeto_mega": "Staraptite",
+    "solo_combate": false
   },
   "starmie": {
     "nombre": "starmie",
@@ -28360,7 +28661,8 @@
     "showdown_id": "starmie",
     "especie_base": "starmie",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "starmie-mega": {
     "nombre": "starmie-mega",
@@ -28450,7 +28752,8 @@
     "showdown_id": "starmiemega",
     "especie_base": "starmie",
     "es_mega": true,
-    "objeto_mega": "Starminite"
+    "objeto_mega": "Starminite",
+    "solo_combate": false
   },
   "steelix": {
     "nombre": "steelix",
@@ -28552,7 +28855,8 @@
     "showdown_id": "steelix",
     "especie_base": "steelix",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "steelix-mega": {
     "nombre": "steelix-mega",
@@ -28646,7 +28950,8 @@
     "showdown_id": "steelixmega",
     "especie_base": "steelix",
     "es_mega": true,
-    "objeto_mega": "Steelixite"
+    "objeto_mega": "Steelixite",
+    "solo_combate": false
   },
   "stunfisk": {
     "nombre": "stunfisk",
@@ -28730,7 +29035,8 @@
     "showdown_id": "stunfisk",
     "especie_base": "stunfisk",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "stunfisk-galar": {
     "nombre": "stunfisk-galar",
@@ -28810,7 +29116,8 @@
     "showdown_id": "stunfiskgalar",
     "especie_base": "stunfisk",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "swalot": {
     "nombre": "swalot",
@@ -28907,7 +29214,8 @@
     "showdown_id": "swalot",
     "especie_base": "swalot",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "swampert": {
     "nombre": "swampert",
@@ -29016,7 +29324,8 @@
     "showdown_id": "swampert",
     "especie_base": "swampert",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "swampert-mega": {
     "nombre": "swampert-mega",
@@ -29121,7 +29430,8 @@
     "showdown_id": "swampertmega",
     "especie_base": "swampert",
     "es_mega": true,
-    "objeto_mega": "Swampertite"
+    "objeto_mega": "Swampertite",
+    "solo_combate": false
   },
   "sylveon": {
     "nombre": "sylveon",
@@ -29207,7 +29517,8 @@
     "showdown_id": "sylveon",
     "especie_base": "sylveon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "talonflame": {
     "nombre": "talonflame",
@@ -29289,7 +29600,8 @@
     "showdown_id": "talonflame",
     "especie_base": "talonflame",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "tauros": {
     "nombre": "tauros",
@@ -29381,7 +29693,8 @@
     "showdown_id": "tauros",
     "especie_base": "tauros",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "tauros-paldea-aqua": {
     "nombre": "tauros-paldea-aqua",
@@ -29469,7 +29782,8 @@
     "showdown_id": "taurospaldeaaqua",
     "especie_base": "tauros",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "tauros-paldea-blaze": {
     "nombre": "tauros-paldea-blaze",
@@ -29558,7 +29872,8 @@
     "showdown_id": "taurospaldeablaze",
     "especie_base": "tauros",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "tauros-paldea-combat": {
     "nombre": "tauros-paldea-combat",
@@ -29641,7 +29956,8 @@
     "showdown_id": "taurospaldeacombat",
     "especie_base": "tauros",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "thievul": {
     "nombre": "thievul",
@@ -29727,7 +30043,8 @@
     "showdown_id": "thievul",
     "especie_base": "thievul",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "tinkaton": {
     "nombre": "tinkaton",
@@ -29810,7 +30127,8 @@
     "showdown_id": "tinkaton",
     "especie_base": "tinkaton",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "torkoal": {
     "nombre": "torkoal",
@@ -29902,7 +30220,8 @@
     "showdown_id": "torkoal",
     "especie_base": "torkoal",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "torterra": {
     "nombre": "torterra",
@@ -30006,7 +30325,8 @@
     "showdown_id": "torterra",
     "especie_base": "torterra",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "toucannon": {
     "nombre": "toucannon",
@@ -30095,7 +30415,8 @@
     "showdown_id": "toucannon",
     "especie_base": "toucannon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "toxapex": {
     "nombre": "toxapex",
@@ -30182,7 +30503,8 @@
     "showdown_id": "toxapex",
     "especie_base": "toxapex",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "toxicroak": {
     "nombre": "toxicroak",
@@ -30299,7 +30621,8 @@
     "showdown_id": "toxicroak",
     "especie_base": "toxicroak",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "toxtricity": {
     "nombre": "toxtricity",
@@ -30403,7 +30726,8 @@
     "showdown_id": "toxtricity",
     "especie_base": "toxtricity",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "toxtricity-low-key": {
     "nombre": "toxtricity-low-key",
@@ -30507,7 +30831,8 @@
     "showdown_id": "toxtricitylowkey",
     "especie_base": "toxtricity",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "trevenant": {
     "nombre": "trevenant",
@@ -30616,7 +30941,8 @@
     "showdown_id": "trevenant",
     "especie_base": "trevenant",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "tsareena": {
     "nombre": "tsareena",
@@ -30705,7 +31031,8 @@
     "showdown_id": "tsareena",
     "especie_base": "tsareena",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "typhlosion": {
     "nombre": "typhlosion",
@@ -30799,7 +31126,8 @@
     "showdown_id": "typhlosion",
     "especie_base": "typhlosion",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "typhlosion-hisui": {
     "nombre": "typhlosion-hisui",
@@ -30897,7 +31225,8 @@
     "showdown_id": "typhlosionhisui",
     "especie_base": "typhlosion",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "tyranitar": {
     "nombre": "tyranitar",
@@ -31021,7 +31350,8 @@
     "showdown_id": "tyranitar",
     "especie_base": "tyranitar",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "tyranitar-mega": {
     "nombre": "tyranitar-mega",
@@ -31141,7 +31471,8 @@
     "showdown_id": "tyranitarmega",
     "especie_base": "tyranitar",
     "es_mega": true,
-    "objeto_mega": "Tyranitarite"
+    "objeto_mega": "Tyranitarite",
+    "solo_combate": false
   },
   "tyrantrum": {
     "nombre": "tyrantrum",
@@ -31237,7 +31568,8 @@
     "showdown_id": "tyrantrum",
     "especie_base": "tyrantrum",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "umbreon": {
     "nombre": "umbreon",
@@ -31335,7 +31667,8 @@
     "showdown_id": "umbreon",
     "especie_base": "umbreon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "vanilluxe": {
     "nombre": "vanilluxe",
@@ -31411,7 +31744,8 @@
     "showdown_id": "vanilluxe",
     "especie_base": "vanilluxe",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "vaporeon": {
     "nombre": "vaporeon",
@@ -31501,7 +31835,8 @@
     "showdown_id": "vaporeon",
     "especie_base": "vaporeon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "venusaur": {
     "nombre": "venusaur",
@@ -31590,7 +31925,8 @@
     "showdown_id": "venusaur",
     "especie_base": "venusaur",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "venusaur-mega": {
     "nombre": "venusaur-mega",
@@ -31675,7 +32011,8 @@
     "showdown_id": "venusaurmega",
     "especie_base": "venusaur",
     "es_mega": true,
-    "objeto_mega": "Venusaurite"
+    "objeto_mega": "Venusaurite",
+    "solo_combate": false
   },
   "victreebel": {
     "nombre": "victreebel",
@@ -31766,7 +32103,8 @@
     "showdown_id": "victreebel",
     "especie_base": "victreebel",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "victreebel-mega": {
     "nombre": "victreebel-mega",
@@ -31853,7 +32191,8 @@
     "showdown_id": "victreebelmega",
     "especie_base": "victreebel",
     "es_mega": true,
-    "objeto_mega": "Victreebelite"
+    "objeto_mega": "Victreebelite",
+    "solo_combate": false
   },
   "vileplume": {
     "nombre": "vileplume",
@@ -31939,7 +32278,8 @@
     "showdown_id": "vileplume",
     "especie_base": "vileplume",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "vivillon": {
     "nombre": "vivillon",
@@ -32018,7 +32358,8 @@
     "showdown_id": "vivillon",
     "especie_base": "vivillon",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "volcarona": {
     "nombre": "volcarona",
@@ -32107,7 +32448,8 @@
     "showdown_id": "volcarona",
     "especie_base": "volcarona",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "watchog": {
     "nombre": "watchog",
@@ -32194,7 +32536,8 @@
     "showdown_id": "watchog",
     "especie_base": "watchog",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "weavile": {
     "nombre": "weavile",
@@ -32299,7 +32642,8 @@
     "showdown_id": "weavile",
     "especie_base": "weavile",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "whimsicott": {
     "nombre": "whimsicott",
@@ -32385,7 +32729,8 @@
     "showdown_id": "whimsicott",
     "especie_base": "whimsicott",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "wigglytuff": {
     "nombre": "wigglytuff",
@@ -32519,7 +32864,8 @@
     "showdown_id": "wigglytuff",
     "especie_base": "wigglytuff",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "wyrdeer": {
     "nombre": "wyrdeer",
@@ -32616,7 +32962,8 @@
     "showdown_id": "wyrdeer",
     "especie_base": "wyrdeer",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "zoroark": {
     "nombre": "zoroark",
@@ -32713,7 +33060,8 @@
     "showdown_id": "zoroark",
     "especie_base": "zoroark",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   },
   "zoroark-hisui": {
     "nombre": "zoroark-hisui",
@@ -32814,6 +33162,7 @@
     "showdown_id": "zoroarkhisui",
     "especie_base": "zoroark",
     "es_mega": false,
-    "objeto_mega": null
+    "objeto_mega": null,
+    "solo_combate": false
   }
 }
