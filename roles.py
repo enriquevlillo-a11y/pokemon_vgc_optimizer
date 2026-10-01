@@ -13,6 +13,10 @@ HABILIDADES_APOYO = {
     "electric-surge", "misty-surge", "drought", "drizzle", "sand-stream",
     "snow-warning",
 }
+HABILIDADES_ANTI_INTIMIDATE = {
+    "defiant", "competitive", "clear-body", "inner-focus", "oblivious",
+    "own-tempo", "scrappy", "guard-dog", "mirror-armor",
+}
 
 
 def _sin_guiones(texto):
@@ -31,11 +35,32 @@ def _ofensivo(datos_pokemon):
     return max(stats.get("attack", 0), stats.get("special-attack", 0))
 
 
-def roles_de(nombre, datos):
-    """Devuelve los roles de una especie base, incluyendo su potencial Mega."""
+def _entrada_uso(nombre, uso_smogon):
+    if not uso_smogon:
+        return None
+    pokemon = uso_smogon.get("pokemon", uso_smogon)
+    entrada = pokemon.get(nombre)
+    return entrada if isinstance(entrada, dict) else None
+
+
+def roles_de(nombre, datos, uso_smogon=None):
+    """Devuelve roles de uso real si existe Smogon, o del learnset si no."""
     pokemon = datos[nombre]
-    movimientos = set(pokemon.get("movimientos", []))
-    habilidades = _habilidades(pokemon)
+    entrada_uso = _entrada_uso(nombre, uso_smogon)
+    if entrada_uso is not None:
+        movimientos = {
+            _sin_guiones(movimiento) for movimiento, porcentaje
+            in entrada_uso.get("movimientos", {}).items() if porcentaje >= 20
+        }
+        habilidades = {
+            _sin_guiones(habilidad) for habilidad, porcentaje
+            in entrada_uso.get("habilidades", {}).items() if porcentaje >= 50
+        }
+        fuente = "uso real"
+    else:
+        movimientos = set(pokemon.get("movimientos", []))
+        habilidades = _habilidades(pokemon)
+        fuente = "learnset"
     megas = [
         entrada for entrada in datos.values()
         if entrada.get("es_mega") and entrada.get("especie_base") == nombre
@@ -46,8 +71,10 @@ def roles_de(nombre, datos):
         "control_velocidad": bool(movimientos & MOVIMIENTOS_VELOCIDAD),
         "control_velocidad_debil": bool(movimientos & MOVIMIENTOS_VELOCIDAD_DEBIL),
         "intimidate": "intimidate" in habilidades,
+        "anti_intimidate": bool(habilidades & {_sin_guiones(h) for h in HABILIDADES_ANTI_INTIMIDATE}),
         "apoyo": len(movimientos & MOVIMIENTOS_APOYO)
         + len(habilidades & apoyo_habilidades),
         "ofensivo": max([_ofensivo(pokemon)] + [_ofensivo(mega) for mega in megas]),
         "tiene_mega": bool(megas),
+        "fuente": fuente,
     }

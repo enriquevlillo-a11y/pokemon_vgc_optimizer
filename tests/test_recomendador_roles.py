@@ -24,6 +24,18 @@ def test_roles_de_volcarona():
     assert roles["apoyo"] >= 1
 
 
+def test_roles_reales_aplican_umbrales_y_no_el_learnset():
+    uso = {"pokemon": {"whimsicott": {
+        "movimientos": {"tailwind": 19.9, "trick-room": 20},
+        "habilidades": {"prankster": 100, "chlorophyll": 0},
+    }}}
+    roles = roles_de("whimsicott", cargar_datos(), uso)
+
+    assert roles["control_velocidad"]
+    assert roles["fuente"] == "uso real"
+    assert roles["apoyo"] == 0
+
+
 def test_megas_y_formas_solo_combate_no_son_candidatos():
     equipo = []
 

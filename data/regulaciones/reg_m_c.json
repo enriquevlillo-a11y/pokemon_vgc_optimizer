@@ -6,6 +6,7 @@
   "max_restringidos": 0,
   "nivel": 50,
   "item_clause": true,
+  "formato_smogon": "gen9championsvgc2026regmcbo3",
   "formato_showdown": "gen9championsvgc2026regmc",
   "formato_pikalytics": "gen9championsvgc2026regmc"
 }
