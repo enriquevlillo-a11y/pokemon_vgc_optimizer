@@ -2,7 +2,7 @@ import json
 
 from config import ruta_equipos_referencia, ruta_pokemon_datos
 from evaluar import evaluar_referencias, resumir
-from recomendador import es_candidato
+from recomendador import _aportes, es_candidato
 from roles import roles_de
 
 
@@ -36,6 +36,15 @@ def test_roles_reales_aplican_umbrales_y_no_el_learnset():
     assert roles["apoyo"] == 0
 
 
+def test_redireccion_exige_veinte_por_ciento_de_uso_real():
+    uso = {"pokemon": {"volcarona": {
+        "movimientos": {"ragepowder": 20, "followme": 19.9},
+        "habilidades": {},
+    }}}
+
+    assert roles_de("volcarona", cargar_datos(), uso)["redireccion"]
+
+
 def test_megas_y_formas_solo_combate_no_son_candidatos():
     equipo = []
 
@@ -54,3 +63,13 @@ def test_v2_mejora_el_puesto_medio_en_equipos_m_c():
     assert resumir(resultados, "v2")["puesto_medio"] < resumir(
         resultados, "v1"
     )["puesto_medio"]
+
+
+def test_aportes_reconoce_clima_de_uso_real_y_atacante():
+    datos = cargar_datos()
+    uso_charizard = {"pokemon": {"charizard": {
+        "movimientos": {}, "habilidades": {"drought": 70, "blaze": 30},
+    }}}
+
+    assert "pone clima/terreno" in _aportes(roles_de("charizard", datos, uso_charizard))
+    assert "Atacante" in _aportes(roles_de("floette-eternal", datos))

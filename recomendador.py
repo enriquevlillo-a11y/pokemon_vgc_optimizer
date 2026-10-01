@@ -48,6 +48,11 @@ def _aportes(rol):
         aportes.append(f"control velocidad débil ({fuente})")
     if rol["apoyo"]:
         aportes.append(f"apoyo {rol['apoyo']} ({fuente})")
+    if rol["ofensivo"] >= 120:
+        etiqueta = "Atacante (Mega)" if rol["ofensivo_base"] < 120 else "Atacante"
+        aportes.append(etiqueta)
+    if rol["pone_clima_terreno"]:
+        aportes.append(f"pone clima/terreno ({fuente})")
     if rol["tiene_mega"]:
         aportes.append("Mega")
     return ", ".join(aportes) or "daño/cobertura"
