@@ -69,3 +69,4 @@ def test_mega_busca_battle_only_antes_que_especie_base():
     )
 
     assert datos["floette-mega"]["movimientos"] == ["lightofruin", "moonblast"]
+    assert datos["floette-mega"]["solo_combate"] is False

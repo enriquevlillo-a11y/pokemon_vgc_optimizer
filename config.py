@@ -27,6 +27,10 @@ def ruta_uso_smogon():
     return DIRECTORIO_DATOS / REGULACION_ACTIVA / "uso_smogon.json"
 
 
+def ruta_equipos_referencia():
+    return DIRECTORIO_DATOS / "equipos_referencia.json"
+
+
 DIRECTORIO_CACHE_SHOWDOWN = DIRECTORIO_DATOS / "cache_showdown"
 DIRECTORIO_CACHE_SMOGON = DIRECTORIO_DATOS / "cache_smogon"
 DIRECTORIO_REG_M_C = DIRECTORIO_DATOS / "reg_m_c"

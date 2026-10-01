@@ -133,6 +133,12 @@ def generar_datos(pokedex, formats_data, learnsets):
             or nombre.endswith("-mega")
             or "-mega-" in nombre,
             "objeto_mega": especie.get("requiredItem"),
+            "solo_combate": bool(especie.get("battleOnly"))
+            and not (
+                especie.get("forme", "").startswith("Mega")
+                or nombre.endswith("-mega")
+                or "-mega-" in nombre
+            ),
         }
 
     resultado = dict(sorted(resultado.items()))
