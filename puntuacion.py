@@ -1,5 +1,6 @@
 """Puntuación por roles, sinergia, uso y defensa de tipos."""
 
+from antisinergias import antisinergias
 from motor_tipos import calcular_defensas
 from recomendador_tipos import calcular_debilidades_equipo, puntuar_candidato
 from roles import roles_de
@@ -40,7 +41,7 @@ def _puntuacion_companeros(equipo, candidato, uso_smogon):
     return PESOS["companeros"] * sum(afinidades) / len(afinidades)
 
 
-def puntuar(equipo, candidato, datos, uso_smogon=None):
+def puntuar(equipo, candidato, datos, uso_smogon=None, aplicar_antisinergias=True):
     """Desglosa la puntuación de ``candidato`` para completar ``equipo``."""
     roles_equipo = [roles_de(nombre, datos, uso_smogon) for nombre in equipo]
     rol = roles_de(candidato, datos, uso_smogon)
@@ -68,5 +69,10 @@ def puntuar(equipo, candidato, datos, uso_smogon=None):
     entrada = _entrada_uso(candidato, uso_smogon)
     componentes["companeros"] = _puntuacion_companeros(equipo, candidato, uso_smogon)
     componentes["uso"] = PESOS["uso"] * entrada.get("uso", 0) / 10 if entrada else 0
+    if aplicar_antisinergias:
+        avisos, penalizacion = antisinergias(equipo, candidato, datos, uso_smogon)
+        if "Psychic Terrain bloquea su Fake Out" in avisos:
+            componentes["fake"] = 0
+        componentes["antisinergia"] = -penalizacion
     componentes["total"] = sum(componentes.values())
     return componentes

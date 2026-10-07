@@ -3,6 +3,19 @@
 from recomendador import es_candidato
 
 
+def construir_filas_amenazas(amenazas):
+    """Presenta primero las amenazas sin respuesta, después las de riesgo."""
+    orden = {"sin respuesta": 0, "en riesgo": 1, "cubierta": 2}
+    return [{
+        "Amenaza": a["forma"],
+        "Uso %": round(a["uso"], 2),
+        "Le pegan": ", ".join(a["le_pegan"]) or "—",
+        "Más rápidos": ", ".join(a["mas_rapidos"]) or "—",
+        "Débiles": ", ".join(a["debiles"]) or "—",
+        "Estado": a["estado"],
+    } for a in sorted(amenazas, key=lambda a: (orden[a["estado"]], -a["uso"], a["nombre"]))]
+
+
 def opciones_selector(datos, uso_smogon):
     """Devuelve pares ``(nombre, etiqueta)`` válidos, ordenados por uso."""
     uso = uso_smogon.get("pokemon", {}) if uso_smogon else {}

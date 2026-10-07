@@ -5,13 +5,15 @@ import json
 import pandas as pd
 import streamlit as st
 
+from amenazas import revisar_equipo
 from config import REGULACION_ACTIVA, ruta_pokemon_datos, ruta_regulacion, ruta_uso_smogon
 from config import ruta_reg_m_c
-from interfaz import construir_filas_recomendaciones, frases_afinidad, opciones_selector
+from interfaz import construir_filas_amenazas, construir_filas_recomendaciones, frases_afinidad, opciones_selector
 from motor_tipos import calcular_defensas
 from recomendador import obtener_recomendaciones
 from recomendador_tipos import calcular_debilidades_equipo
 from roles import roles_de
+from velocidad import velocidad, velocidades_reales
 
 EJEMPLO = ["gholdengo", "volcarona", "garchomp", "rillaboom", "raichu"]
 
@@ -90,6 +92,13 @@ if equipo:
             st.subheader(nombre.title())
             st.write("**Tipos:** " + " / ".join(pokemon["tipos"]))
             st.write("**Roles:** " + (", ".join(roles) or "daño/cobertura"))
+            st.write(f"**Velocidad máxima:** {velocidad(nombre, datos)}")
+            reales = velocidades_reales(nombre, uso, datos)
+            st.write(f"**Velocidad real:** {reales[nombre] if reales[nombre] is not None else 'sin datos'}")
+            for forma, real in reales.items():
+                if forma != nombre:
+                    st.write(f"**{forma} — velocidad máxima:** {velocidad(forma, datos)}")
+                    st.write(f"**{forma} — velocidad real:** {real if real is not None else 'sin datos'}")
             if estadisticas:
                 movimientos = list(estadisticas.get("movimientos", {}))[:3]
                 objeto = next(iter(estadisticas.get("objetos", {})), "—")
@@ -110,6 +119,14 @@ if equipo:
                 st.write(f"**{componente.replace('_', ' ').title()}:** {valor:.2f}")
             for frase in frases_afinidad(recomendacion["nombre"], equipo, uso):
                 st.caption(frase)
+
+    st.header("Amenazas del meta")
+    st.caption("Aproximación por tipos propios, sin cálculo de daño. Velocidad máxima sin Scarf ni Tailwind; velocidad real según el spread más usado.")
+    amenazas = revisar_equipo(equipo, datos, uso)
+    if amenazas:
+        st.dataframe(construir_filas_amenazas(amenazas), hide_index=True, width="stretch")
+    else:
+        st.info("No hay datos de uso para comprobar las amenazas del meta.")
 
     st.header("Debilidades del equipo")
     defensas = {nombre: calcular_defensas(datos[nombre]["tipos"]) for nombre in equipo}
