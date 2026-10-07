@@ -14,11 +14,33 @@ def test_sneasler_sin_fake_out_de_uso_real_no_recibe_avisos(datos):
     assert antisinergias(["gardevoir", "indeedee-f"], "sneasler", datos, uso) == ([], 0)
 
 
-def test_sneasler_actual_supera_umbral_fake_out(datos, uso_smogon):
+def test_sneasler_fake_out_bloqueado_sin_penalizacion_adicional(datos, uso_smogon):
     # El archivo actual da 47,53 %: se aplica el mismo umbral de 20 % a todos.
-    avisos, penalizacion = antisinergias(["gardevoir", "indeedee-f"], "sneasler", datos, uso_smogon)
+    equipo = ["gardevoir", "indeedee-f"]
+    avisos, penalizacion = antisinergias(equipo, "sneasler", datos, uso_smogon)
     assert avisos == ["Psychic Terrain bloquea su Fake Out"]
     assert penalizacion == 0
+    componentes = puntuar(equipo, "sneasler", datos, uso_smogon)
+    assert componentes["fake"] == 0
+    assert componentes["antisinergia"] == 0
+
+
+def test_recomendaciones_con_gardevoir_e_indeedee_f(datos, uso_smogon):
+    equipo = ["gardevoir", "indeedee-f"]
+    recomendaciones = obtener_recomendaciones(equipo, datos, uso_smogon)
+    por_nombre = {r["nombre"]: r for r in recomendaciones}
+    assert recomendaciones[0]["nombre"] == "sneasler"
+
+    incineroar = por_nombre["incineroar"]
+    assert "⚠️ Psychic Terrain bloquea su Fake Out" in incineroar["aporta"]
+    assert incineroar["puntuacion"]["fake"] == 0
+    sin_antisinergias = puntuar(equipo, "incineroar", datos, uso_smogon, aplicar_antisinergias=False)
+    assert incineroar["puntuacion"]["total"] < sin_antisinergias["total"]
+
+    rillaboom = por_nombre["rillaboom"]
+    assert "⚠️ sustituye el campo de indeedee-f" in rillaboom["aporta"]
+    assert rillaboom["puntuacion"]["antisinergia"] == -4
+    assert "rillaboom" not in [r["nombre"] for r in recomendaciones[:5]]
 
 
 def test_incineroar_y_rillaboom_con_campo_psiquico(datos, uso_smogon):
