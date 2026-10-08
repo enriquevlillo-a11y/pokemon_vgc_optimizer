@@ -262,11 +262,13 @@ def test_app_selector_actualiza_roles_amenazas_y_exportacion(variantes, monkeypa
         assert "Garchomp @ Garchompite Z" in app.code[0].value
         assert "- Power Gem" in app.code[0].value
         assert "control de velocidad" not in " ".join(m.value for m in app.markdown if "**Roles:**" in m.value)
+        assert any("El equipo no tiene control de velocidad" in e.value for e in app.error)
         app.selectbox(key="variante_dragonite").set_value("dragonite-mega").run(timeout=30)
         assert not app.exception
         assert "Dragonite @ Dragoninite" in app.code[0].value
         assert "- Tailwind" in app.code[0].value
         assert "control de velocidad" in " ".join(m.value for m in app.markdown if "**Roles:**" in m.value)
+        assert not any("El equipo no tiene control de velocidad" in e.value for e in app.error)
         app.selectbox(key="variante_garchomp").set_value("garchomp").run(timeout=30)
         assert not app.exception
         assert "Garchompite Z" not in app.code[0].value

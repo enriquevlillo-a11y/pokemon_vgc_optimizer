@@ -102,12 +102,14 @@ def _cargar_movimientos():
     return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
 
 
-def _movimientos_probables(estadisticas, orientacion, movimientos, objeto, conservar_frecuentes=False):
+def _movimientos_probables(estadisticas, orientacion, movimientos, objeto, conservar_frecuentes=False, excluir=()):
     categoria_descartada = {"fisica": "special", "especial": "physical"}.get(orientacion)
     choice = normalizar_id(objeto or "") in {"choicescarf", "choiceband", "choicespecs"}
     ataques = []
     for movimiento in _ordenados(estadisticas.get("movimientos", {})):
         identificador = normalizar_id(movimiento)
+        if identificador in excluir:
+            continue
         categoria = movimientos.get(identificador, {}).get("categoria", "").lower()
         frecuente = conservar_frecuentes and estadisticas["movimientos"][movimiento] >= 50
         if categoria == categoria_descartada and not frecuente:
@@ -176,7 +178,7 @@ def set_generico(nombre, datos, movimientos):
 
 
 def sets_equipo(equipo, uso_smogon, datos, movimientos=None, variantes=None):
-    """Conserva todos los miembros y resuelve Item Clause según el uso."""
+    """Resuelve Item Clause y retira Fake Out minoritario si hay ≥ 3 usuarios."""
     if movimientos is None:
         movimientos = _cargar_movimientos()
     sets = []
@@ -212,4 +214,18 @@ def sets_equipo(equipo, uso_smogon, datos, movimientos=None, variantes=None):
             uso[entrada["nombre"]], entrada["orientacion"], movimientos, entrada["objeto"],
             conservar_frecuentes=forma is not None,
         )
+    usuarios_fake = [entrada for entrada in sets
+                     if any(normalizar_id(m) == "fakeout" for m in entrada["movimientos"])]
+    if len(usuarios_fake) >= 3:
+        for entrada in usuarios_fake:
+            nombre = entrada["nombre"]
+            estadisticas = uso[nombre]
+            porcentaje = max((p for m, p in estadisticas.get("movimientos", {}).items()
+                              if normalizar_id(m) == "fakeout"), default=0)
+            if porcentaje < 50:
+                forma = seleccionar_variante(nombre, uso_smogon, variantes.get(nombre))
+                entrada["movimientos"] = _movimientos_probables(
+                    estadisticas, entrada["orientacion"], movimientos, entrada["objeto"],
+                    conservar_frecuentes=forma is not None, excluir={"fakeout"},
+                )
     return sets

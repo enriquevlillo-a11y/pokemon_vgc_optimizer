@@ -6,6 +6,7 @@ import pandas as pd
 import streamlit as st
 
 from amenazas import revisar_equipo
+from diagnostico import debilidades_equipo, explicar
 from config import REGULACION_ACTIVA, ruta_pokemon_datos, ruta_regulacion, ruta_uso_smogon
 from config import ruta_nombres
 from sets import sets_equipo, set_probable
@@ -135,9 +136,24 @@ if equipo:
                 st.write("**Movimientos:** " + ", ".join(movimientos_visibles))
                 st.write("**Objeto:** " + objeto_visible)
 
-    recomendaciones = obtener_recomendaciones(equipo, datos, uso)
+    st.header("Debilidades de tu equipo")
+    diagnostico = debilidades_equipo(equipo, datos, uso, variantes=variantes_equipo)
+    for debilidad in diagnostico:
+        mensaje = f"**Gravedad {debilidad['gravedad']}:** {debilidad['texto']}"
+        if debilidad["gravedad"] == "alta":
+            st.error(mensaje)
+        else:
+            st.warning(mensaje)
+    if not diagnostico:
+        st.info("No se detectan debilidades con estos criterios.")
+
+    recomendaciones = obtener_recomendaciones(equipo, datos, uso, variantes=variantes_equipo)
+    filas = construir_filas_recomendaciones(recomendaciones, uso)
+    for fila, recomendacion in zip(filas, recomendaciones):
+        motivos = explicar(equipo, recomendacion["nombre"], datos, uso, variantes=variantes_equipo)
+        fila["Por qué"] = " • ".join(m["texto"] for m in motivos) or "No cubre las debilidades detectadas; destaca por su puntuación global."
     st.header("Recomendaciones")
-    st.dataframe(construir_filas_recomendaciones(recomendaciones, uso), hide_index=True, width="stretch")
+    st.dataframe(filas, hide_index=True, width="stretch")
     for recomendacion in recomendaciones[:5]:
         with st.expander(f"Desglose: {recomendacion['nombre'].title()}"):
             for componente, valor in recomendacion["puntuacion"].items():
