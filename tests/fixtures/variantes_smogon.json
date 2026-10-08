@@ -1,0 +1,641 @@
+{
+  "estadisticas": {
+    "info": {
+      "number of battles": 1000
+    },
+    "data": {
+      "Garchomp": {
+        "usage": 0.03,
+        "Raw count": 900,
+        "Abilities": {
+          "roughskin": 630.0,
+          "sandveil": 70.0
+        },
+        "Items": {
+          "lifeorb": 560.0,
+          "choicescarf": 140.0
+        },
+        "Moves": {
+          "protect": 700.0,
+          "dragonclaw": 665.0,
+          "earthquake": 630.0,
+          "rockslide": 560.0
+        },
+        "Spreads": {
+          "Jolly:2/32/0/0/0/32": 420.0,
+          "Adamant:2/32/0/0/0/32": 280.0
+        },
+        "Teammates": {
+          "Dragonite-Mega": 280.0
+        }
+      },
+      "Garchomp-Mega-Z": {
+        "usage": 0.07,
+        "Raw count": 100,
+        "Abilities": {
+          "levitate": 300.0
+        },
+        "Items": {
+          "garchompitez": 30.0,
+          "lifeorb": 270.0
+        },
+        "Moves": {
+          "protect": 300.0,
+          "powergem": 285.0,
+          "earthpower": 270.0,
+          "dragonpulse": 255.0
+        },
+        "Spreads": {
+          "Modest:2/0/0/32/0/32": 300.0
+        },
+        "Teammates": {
+          "Dragonite-Mega": 120.0
+        }
+      },
+      "Dragonite": {
+        "usage": 0.08,
+        "Raw count": 200,
+        "Abilities": {
+          "innerfocus": 720.0,
+          "multiscale": 80.0
+        },
+        "Items": {
+          "lifeorb": 560.0,
+          "choicescarf": 240.0
+        },
+        "Moves": {
+          "extremespeed": 800.0,
+          "dragonclaw": 760.0,
+          "earthquake": 720.0,
+          "protect": 640.0
+        },
+        "Spreads": {
+          "Adamant:2/32/0/0/0/32": 800.0
+        },
+        "Teammates": {
+          "Dragonite-Mega": 320.0
+        }
+      },
+      "Dragonite-Mega": {
+        "usage": 0.02,
+        "Raw count": 800,
+        "Abilities": {
+          "multiscale": 200.0
+        },
+        "Items": {
+          "dragoninite": 200.0
+        },
+        "Moves": {
+          "tailwind": 200.0,
+          "heatwave": 190.0,
+          "dragonpulse": 180.0,
+          "protect": 170.0
+        },
+        "Spreads": {
+          "Modest:2/0/0/32/0/32": 200.0
+        },
+        "Teammates": {
+          "Dragonite-Mega": 80.0
+        }
+      },
+      "Volcarona": {
+        "usage": 0.01,
+        "Raw count": 100,
+        "Abilities": {
+          "flamebody": 100.0
+        },
+        "Items": {
+          "sitrusberry": 100.0
+        },
+        "Moves": {
+          "heatwave": 100.0
+        },
+        "Spreads": {
+          "Modest:32/0/0/32/2/0": 100.0
+        },
+        "Teammates": {
+          "Dragonite-Mega": 40.0
+        }
+      }
+    }
+  },
+  "uso": {
+    "info": {
+      "mes": "2026-09",
+      "rating": 1760,
+      "formato": "fixture",
+      "combates": 1000
+    },
+    "pokemon": {
+      "garchomp": {
+        "uso": 10.0,
+        "recuento": 1000.0,
+        "megas": {
+          "garchomp-mega-z": 10.0
+        },
+        "habilidades": {
+          "roughskin": 63.0,
+          "levitate": 30.0,
+          "sandveil": 7.000000000000001
+        },
+        "objetos": {
+          "lifeorb": 83.0,
+          "choicescarf": 14.000000000000002,
+          "garchompitez": 3.0
+        },
+        "movimientos": {
+          "protect": 100.0,
+          "dragonclaw": 66.5,
+          "earthquake": 63.0,
+          "rockslide": 56.00000000000001,
+          "powergem": 28.499999999999996,
+          "earthpower": 27.0,
+          "dragonpulse": 25.5
+        },
+        "companeros": {
+          "dragonite": 40.0
+        },
+        "spreads": {
+          "Jolly:2/32/0/0/0/32": 42.0,
+          "Modest:2/0/0/32/0/32": 30.0,
+          "Adamant:2/32/0/0/0/32": 28.000000000000004
+        },
+        "variantes": {
+          "garchomp": {
+            "uso": 3.0,
+            "habilidades": {
+              "roughskin": 90.0,
+              "sandveil": 10.0
+            },
+            "objetos": {
+              "lifeorb": 80.0,
+              "choicescarf": 20.0
+            },
+            "movimientos": {
+              "protect": 100.0,
+              "dragonclaw": 95.0,
+              "earthquake": 90.0,
+              "rockslide": 80.0
+            },
+            "spreads": {
+              "Jolly:2/32/0/0/0/32": 60.0,
+              "Adamant:2/32/0/0/0/32": 40.0
+            }
+          },
+          "garchomp-mega-z": {
+            "uso": 7.000000000000001,
+            "habilidades": {
+              "levitate": 100.0
+            },
+            "objetos": {
+              "lifeorb": 90.0,
+              "garchompitez": 10.0
+            },
+            "movimientos": {
+              "protect": 100.0,
+              "powergem": 95.0,
+              "earthpower": 90.0,
+              "dragonpulse": 85.0
+            },
+            "spreads": {
+              "Modest:2/0/0/32/0/32": 100.0
+            }
+          }
+        }
+      },
+      "dragonite": {
+        "uso": 10.0,
+        "recuento": 1000.0,
+        "megas": {
+          "dragonite-mega": 80.0
+        },
+        "habilidades": {
+          "innerfocus": 72.0,
+          "multiscale": 28.000000000000004
+        },
+        "objetos": {
+          "lifeorb": 56.00000000000001,
+          "choicescarf": 24.0,
+          "dragoninite": 20.0
+        },
+        "movimientos": {
+          "protect": 81.0,
+          "extremespeed": 80.0,
+          "dragonclaw": 76.0,
+          "earthquake": 72.0,
+          "tailwind": 20.0,
+          "heatwave": 19.0,
+          "dragonpulse": 18.0
+        },
+        "companeros": {
+          "dragonite": 40.0
+        },
+        "spreads": {
+          "Adamant:2/32/0/0/0/32": 80.0,
+          "Modest:2/0/0/32/0/32": 20.0
+        },
+        "variantes": {
+          "dragonite": {
+            "uso": 8.0,
+            "habilidades": {
+              "innerfocus": 90.0,
+              "multiscale": 10.0
+            },
+            "objetos": {
+              "lifeorb": 70.0,
+              "choicescarf": 30.0
+            },
+            "movimientos": {
+              "extremespeed": 100.0,
+              "dragonclaw": 95.0,
+              "earthquake": 90.0,
+              "protect": 80.0
+            },
+            "spreads": {
+              "Adamant:2/32/0/0/0/32": 100.0
+            }
+          },
+          "dragonite-mega": {
+            "uso": 2.0,
+            "habilidades": {
+              "multiscale": 100.0
+            },
+            "objetos": {
+              "dragoninite": 100.0
+            },
+            "movimientos": {
+              "tailwind": 100.0,
+              "heatwave": 95.0,
+              "dragonpulse": 90.0,
+              "protect": 85.0
+            },
+            "spreads": {
+              "Modest:2/0/0/32/0/32": 100.0
+            }
+          }
+        }
+      },
+      "volcarona": {
+        "uso": 1.0,
+        "recuento": 100.0,
+        "megas": {},
+        "habilidades": {
+          "flamebody": 100.0
+        },
+        "objetos": {
+          "sitrusberry": 100.0
+        },
+        "movimientos": {
+          "heatwave": 100.0
+        },
+        "companeros": {
+          "dragonite": 40.0
+        },
+        "spreads": {
+          "Modest:32/0/0/32/2/0": 100.0
+        },
+        "variantes": {
+          "volcarona": {
+            "uso": 1.0,
+            "habilidades": {
+              "flamebody": 100.0
+            },
+            "objetos": {
+              "sitrusberry": 100.0
+            },
+            "movimientos": {
+              "heatwave": 100.0
+            },
+            "spreads": {
+              "Modest:32/0/0/32/2/0": 100.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "datos": {
+    "garchomp": {
+      "nombre": "garchomp",
+      "nombre_showdown": "Garchomp",
+      "tipos": [
+        "dragon",
+        "ground"
+      ],
+      "stats": {
+        "hp": 108,
+        "attack": 130,
+        "defense": 95,
+        "special-attack": 80,
+        "special-defense": 85,
+        "speed": 102
+      },
+      "habilidades": [
+        {
+          "nombre": "sand-veil",
+          "es_oculta": false
+        },
+        {
+          "nombre": "rough-skin",
+          "es_oculta": true
+        }
+      ],
+      "peso": 95,
+      "showdown_id": "garchomp",
+      "especie_base": "garchomp",
+      "es_mega": false,
+      "objeto_mega": null,
+      "solo_combate": false,
+      "movimientos": [
+        "earthquake",
+        "dragonclaw",
+        "extremespeed",
+        "heatwave",
+        "dragonpulse",
+        "powergem",
+        "tailwind",
+        "protect",
+        "earthpower",
+        "rockslide"
+      ]
+    },
+    "garchomp-mega-z": {
+      "nombre": "garchomp-mega-z",
+      "nombre_showdown": "Garchomp-Mega-Z",
+      "tipos": [
+        "dragon"
+      ],
+      "stats": {
+        "hp": 108,
+        "attack": 130,
+        "defense": 85,
+        "special-attack": 141,
+        "special-defense": 85,
+        "speed": 151
+      },
+      "habilidades": [
+        {
+          "nombre": "levitate",
+          "es_oculta": false
+        }
+      ],
+      "peso": 99,
+      "showdown_id": "garchompmegaz",
+      "especie_base": "garchomp",
+      "es_mega": true,
+      "objeto_mega": "Garchompite Z",
+      "solo_combate": false,
+      "movimientos": [
+        "earthquake",
+        "dragonclaw",
+        "extremespeed",
+        "heatwave",
+        "dragonpulse",
+        "powergem",
+        "tailwind",
+        "protect",
+        "earthpower",
+        "rockslide"
+      ]
+    },
+    "dragonite": {
+      "nombre": "dragonite",
+      "nombre_showdown": "Dragonite",
+      "tipos": [
+        "dragon",
+        "flying"
+      ],
+      "stats": {
+        "hp": 91,
+        "attack": 134,
+        "defense": 95,
+        "special-attack": 100,
+        "special-defense": 100,
+        "speed": 80
+      },
+      "habilidades": [
+        {
+          "nombre": "inner-focus",
+          "es_oculta": false
+        },
+        {
+          "nombre": "multiscale",
+          "es_oculta": true
+        }
+      ],
+      "peso": 210,
+      "showdown_id": "dragonite",
+      "especie_base": "dragonite",
+      "es_mega": false,
+      "objeto_mega": null,
+      "solo_combate": false,
+      "movimientos": [
+        "earthquake",
+        "dragonclaw",
+        "extremespeed",
+        "heatwave",
+        "dragonpulse",
+        "powergem",
+        "tailwind",
+        "protect",
+        "earthpower",
+        "rockslide"
+      ]
+    },
+    "dragonite-mega": {
+      "nombre": "dragonite-mega",
+      "nombre_showdown": "Dragonite-Mega",
+      "tipos": [
+        "dragon",
+        "flying"
+      ],
+      "stats": {
+        "hp": 91,
+        "attack": 124,
+        "defense": 115,
+        "special-attack": 145,
+        "special-defense": 125,
+        "speed": 100
+      },
+      "habilidades": [
+        {
+          "nombre": "multiscale",
+          "es_oculta": false
+        }
+      ],
+      "peso": 290,
+      "showdown_id": "dragonitemega",
+      "especie_base": "dragonite",
+      "es_mega": true,
+      "objeto_mega": "Dragoninite",
+      "solo_combate": false,
+      "movimientos": [
+        "earthquake",
+        "dragonclaw",
+        "extremespeed",
+        "heatwave",
+        "dragonpulse",
+        "powergem",
+        "tailwind",
+        "protect",
+        "earthpower",
+        "rockslide"
+      ]
+    },
+    "volcarona": {
+      "nombre": "volcarona",
+      "nombre_showdown": "Volcarona",
+      "tipos": [
+        "bug",
+        "fire"
+      ],
+      "stats": {
+        "hp": 85,
+        "attack": 60,
+        "defense": 65,
+        "special-attack": 135,
+        "special-defense": 105,
+        "speed": 100
+      },
+      "habilidades": [
+        {
+          "nombre": "flame-body",
+          "es_oculta": false
+        },
+        {
+          "nombre": "swarm",
+          "es_oculta": true
+        }
+      ],
+      "peso": 46,
+      "showdown_id": "volcarona",
+      "especie_base": "volcarona",
+      "es_mega": false,
+      "objeto_mega": null,
+      "solo_combate": false,
+      "movimientos": [
+        "earthquake",
+        "dragonclaw",
+        "extremespeed",
+        "heatwave",
+        "dragonpulse",
+        "powergem",
+        "tailwind",
+        "protect",
+        "earthpower",
+        "rockslide"
+      ]
+    }
+  },
+  "movimientos": {
+    "earthquake": {
+      "nombre": "Earthquake",
+      "tipo": "Ground",
+      "categoria": "Physical",
+      "potencia": 100,
+      "prioridad": 0,
+      "objetivo": "allAdjacent"
+    },
+    "dragonclaw": {
+      "nombre": "Dragon Claw",
+      "tipo": "Dragon",
+      "categoria": "Physical",
+      "potencia": 80,
+      "prioridad": 0,
+      "objetivo": "normal"
+    },
+    "extremespeed": {
+      "nombre": "Extreme Speed",
+      "tipo": "Normal",
+      "categoria": "Physical",
+      "potencia": 80,
+      "prioridad": 2,
+      "objetivo": "normal"
+    },
+    "heatwave": {
+      "nombre": "Heat Wave",
+      "tipo": "Fire",
+      "categoria": "Special",
+      "potencia": 95,
+      "prioridad": 0,
+      "objetivo": "allAdjacentFoes"
+    },
+    "dragonpulse": {
+      "nombre": "Dragon Pulse",
+      "tipo": "Dragon",
+      "categoria": "Special",
+      "potencia": 85,
+      "prioridad": 0,
+      "objetivo": "any"
+    },
+    "powergem": {
+      "nombre": "Power Gem",
+      "tipo": "Rock",
+      "categoria": "Special",
+      "potencia": 80,
+      "prioridad": 0,
+      "objetivo": "normal"
+    },
+    "tailwind": {
+      "nombre": "Tailwind",
+      "tipo": "Flying",
+      "categoria": "Status",
+      "potencia": 0,
+      "prioridad": 0,
+      "objetivo": "allySide"
+    },
+    "protect": {
+      "nombre": "Protect",
+      "tipo": "Normal",
+      "categoria": "Status",
+      "potencia": 0,
+      "prioridad": 4,
+      "objetivo": "self"
+    },
+    "earthpower": {
+      "nombre": "Earth Power",
+      "tipo": "Ground",
+      "categoria": "Special",
+      "potencia": 90,
+      "prioridad": 0,
+      "objetivo": "normal"
+    },
+    "rockslide": {
+      "nombre": "Rock Slide",
+      "tipo": "Rock",
+      "categoria": "Physical",
+      "potencia": 75,
+      "prioridad": 0,
+      "objetivo": "allAdjacentFoes"
+    }
+  },
+  "nombres": {
+    "movimientos": {
+      "dragonclaw": "Dragon Claw",
+      "dragonpulse": "Dragon Pulse",
+      "earthpower": "Earth Power",
+      "earthquake": "Earthquake",
+      "extremespeed": "Extreme Speed",
+      "heatwave": "Heat Wave",
+      "powergem": "Power Gem",
+      "protect": "Protect",
+      "rockslide": "Rock Slide",
+      "tailwind": "Tailwind"
+    },
+    "objetos": {
+      "choicescarf": "Choice Scarf",
+      "dragoninite": "Dragoninite",
+      "garchompitez": "Garchompite Z",
+      "lifeorb": "Life Orb",
+      "sitrusberry": "Sitrus Berry"
+    },
+    "habilidades": {
+      "flamebody": "Flame Body",
+      "innerfocus": "Inner Focus",
+      "levitate": "Levitate",
+      "multiscale": "Multiscale",
+      "roughskin": "Rough Skin",
+      "sandveil": "Sand Veil"
+    }
+  }
+}

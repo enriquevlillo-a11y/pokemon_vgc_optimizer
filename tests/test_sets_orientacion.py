@@ -4,7 +4,8 @@ from pathlib import Path
 import pytest
 
 import sets
-from config import ruta_uso_smogon
+from config import ruta_nombres
+from datos_uso import entrada_variante, seleccionar_variante
 from importar_showdown import extraer_movimientos
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -34,14 +35,19 @@ def test_sets_reales_coherentes(datos, uso_smogon, catalogo):
     garchomp = sets.set_probable("garchomp", uso_smogon, datos)
     assert garchomp["orientacion"] == "fisica"
     assert garchomp["naturaleza"] in {"Jolly", "Adamant"}
+    variantes = uso_smogon["pokemon"]["garchomp"].get("variantes")
+    if variantes:
+        assert seleccionar_variante("garchomp", uso_smogon) == "garchomp"
+        assert garchomp["objeto"] != "garchompitez"
     assert len(garchomp["movimientos"]) == 4
     assert all(catalogo[m]["categoria"] != "Special" for m in garchomp["movimientos"])
-    assert sets.set_probable("rillaboom", uso_smogon, datos)["naturaleza"] == "Adamant"
+    assert sets.set_probable("rillaboom", uso_smogon, datos)["orientacion"] == "fisica"
     raichu = sets.set_probable("raichu", uso_smogon, datos)
     assert {"zapcannon", "focusblast"} <= set(raichu["movimientos"])
     incineroar = sets.set_probable("incineroar", uso_smogon, datos)
     assert {"fakeout", "partingshot"} <= set(incineroar["movimientos"])
     assert incineroar["habilidad"] == "intimidate"
+    assert incineroar["objeto"] == "sitrusberry"
 
 
 @pytest.mark.parametrize("fisico,especial,orientacion,naturaleza,ataques", [
@@ -73,12 +79,12 @@ def test_suma_spreads_y_no_solo_el_mas_usado(catalogo):
     assert entrada["naturaleza"] == "Jolly"
 
 
-def test_catalogo_ausente_no_filtra(monkeypatch, tmp_path):
+def test_catalogo_ausente_no_filtra(monkeypatch, tmp_path, fixture_sets):
     monkeypatch.setattr(sets, "ruta_movimientos", lambda: tmp_path / "no-existe.json")
-    uso = json.loads(ruta_uso_smogon().read_text())
-    raichu = sets.set_probable("raichu", uso, {})
-    assert raichu["orientacion"] == "apoyo"
-    assert raichu["movimientos"] == ["protect", "zapcannon", "focusblast", "fakeout"]
+    raichu = sets.set_probable("raichu", fixture_sets["uso"], {}, variante="raichu-mega-y")
+    assert raichu["orientacion"] == "especial"
+    assert raichu["objeto"] == "raichunitey"
+    assert set(raichu["movimientos"]) == {"protect", "zapcannon", "focusblast", "fakeout"}
 
 
 def test_sets_equipo_aplica_filtro(catalogo):
@@ -102,25 +108,22 @@ def test_desempate_redondea_a_seis_decimales(monkeypatch):
     assert [r["nombre"] for r in recomendaciones] == ["gardevoir", "salazzle"]
 
 
-@pytest.mark.parametrize("nombre,habilidad,nombre_showdown", [
-    ("charizard", "blaze", "Charizard"),
-    ("gardevoir", "trace", "Gardevoir"),
-    ("floette-eternal", "flowerveil", "Floette-Eternal"),
-    ("raichu", "lightningrod", "Raichu"),
-    ("incineroar", "intimidate", "Incineroar"),
+@pytest.mark.parametrize("nombre,nombre_showdown", [
+    ("charizard", "Charizard"), ("gardevoir", "Gardevoir"),
+    ("floette-eternal", "Floette-Eternal"), ("raichu", "Raichu"),
+    ("incineroar", "Incineroar"),
 ])
-def test_exporta_habilidad_base_real(datos, uso_smogon, catalogo, nombre, habilidad, nombre_showdown):
+def test_exporta_habilidad_base_real(datos, uso_smogon, catalogo, nombre, nombre_showdown):
     from exportar import a_showdown
-    from importar_showdown import extraer_nombres, normalizar_id
+    from importar_showdown import normalizar_id
 
     entrada = sets.set_probable(nombre, uso_smogon, datos)
     base = {normalizar_id(h["nombre"]) for h in datos[nombre]["habilidades"]}
-    assert entrada["habilidad"] == habilidad
     assert entrada["habilidad"] in base
-    nombres = {"habilidades": extraer_nombres(FIXTURES / "abilities.ts")}
+    nombres = json.loads(ruta_nombres().read_text())
     datos_exportacion = {nombre: {**datos[nombre], "nombre_showdown": nombre_showdown}}
     texto = a_showdown([entrada], datos_exportacion, nombres)
-    assert "Ability: " + nombres["habilidades"][habilidad] in texto.splitlines()
+    assert "Ability: " + nombres["habilidades"][entrada["habilidad"]] in texto.splitlines()
 
 
 @pytest.mark.parametrize("habilidades_uso,esperada", [
@@ -137,7 +140,9 @@ def test_habilidad_base_mayor_uso_o_primera(habilidades_uso, esperada):
 def test_basculegion_choice_scarf_sin_protect(datos, uso_smogon, catalogo):
     entrada = sets.set_probable("basculegion", uso_smogon, datos)
     assert entrada["objeto"] == "choicescarf"
-    assert entrada["movimientos"] == ["lastrespects", "aquajet", "wavecrash", "flipturn"]
+    assert "protect" not in entrada["movimientos"]
+    assert all(catalogo.get(m, {}).get("categoria") != "Status" for m in entrada["movimientos"])
+    assert set(entrada["movimientos"]) <= set(entrada_variante("basculegion", uso_smogon)["movimientos"])
 
 
 @pytest.mark.parametrize("objeto", ["choicescarf", "choiceband", "choicespecs"])

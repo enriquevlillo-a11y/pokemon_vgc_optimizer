@@ -1,4 +1,10 @@
 {
-  "M-C": {"v1": 82.44, "v2": 69.31, "v2_smogon": 7.04, "v2_smogon_antisinergias": 7.40},
-  "M-B": {"v1": 56.00, "v2": 75.72, "v2_smogon": 8.06, "v2_smogon_antisinergias": 8.06}
+  "sin_variantes": {
+    "M-C": {"v1": 82.44, "v2": 69.31, "v2_smogon": 7.04, "v2_smogon_antisinergias": 7.40},
+    "M-B": {"v1": 56.00, "v2": 75.72, "v2_smogon": 8.06, "v2_smogon_antisinergias": 8.06}
+  },
+  "con_variantes": {
+    "M-C": {"v1": 82.44, "v2": 69.31, "v2_smogon": 6.89, "v2_smogon_antisinergias": 6.96},
+    "M-B": {"v1": 56.00, "v2": 75.72, "v2_smogon": 8.06, "v2_smogon_antisinergias": 8.06}
+  }
 }

@@ -4,7 +4,8 @@ import json
 
 from config import ruta_movimientos
 from importar_showdown import normalizar_id
-from datos_uso import entrada_uso
+from importar_uso_smogon import nombre_base, SUFIJO_MEGA
+from datos_uso import entrada_uso, entrada_variante, seleccionar_variante
 
 ESTADISTICAS = ("hp", "attack", "defense", "special-attack", "special-defense", "speed")
 
@@ -13,7 +14,14 @@ def _ordenados(valores):
     return sorted(valores, key=lambda clave: (-valores[clave], clave))
 
 
-def _objetos(estadisticas, datos):
+def _objetos(estadisticas, datos, variante=None):
+    if variante is not None:
+        forma = datos.get(variante, {})
+        if forma.get("es_mega") or SUFIJO_MEGA.search(variante):
+            piedra = forma.get("objeto_mega")
+            if piedra:
+                return [normalizar_id(piedra)]
+        return _ordenados(estadisticas.get("objetos", {}))
     objetos = _ordenados(estadisticas.get("objetos", {}))
     megas = estadisticas.get("megas", {})
     if sum(megas.values()) > 50:
@@ -35,6 +43,27 @@ def _habilidad_base(nombre, estadisticas, datos):
            for habilidad, porcentaje in estadisticas.get("habilidades", {}).items()}
     # max conserva la primera habilidad de la base cuando ninguna tiene uso.
     return max(habilidades, key=lambda habilidad: uso.get(habilidad, 0))
+
+
+def _habilidad_variante(nombre, variante, estadisticas, uso_smogon, datos):
+    """Exporta una habilidad legal de la base, priorizando la de la Mega."""
+    if variante is None or not (datos.get(variante, {}).get("es_mega") or SUFIJO_MEGA.search(variante)):
+        return _habilidad_base(nombre, estadisticas, datos)
+    def habilidades(forma):
+        return [normalizar_id(h["nombre"] if isinstance(h, dict) else h)
+                for h in datos.get(forma, {}).get("habilidades", [])]
+    comunes = set(habilidades(nombre)) & set(habilidades(variante))
+    if not comunes:
+        comunes = set(habilidades(nombre)) & {
+            normalizar_id(h) for h in estadisticas.get("habilidades", {})
+        }
+    if comunes:
+        uso = {normalizar_id(h): p for h, p in estadisticas.get("habilidades", {}).items()}
+        return min(comunes, key=lambda h: (-uso.get(h, 0), h))
+    variantes = (entrada_uso(nombre, uso_smogon) or {}).get("variantes", {})
+    base = next((v for forma, v in variantes.items()
+                 if nombre_base(forma) == nombre and not SUFIJO_MEGA.search(forma)), {})
+    return _habilidad_base(nombre, base, datos)
 
 
 def _validar_puntos(nombre, puntos):
@@ -73,14 +102,15 @@ def _cargar_movimientos():
     return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
 
 
-def _movimientos_probables(estadisticas, orientacion, movimientos, objeto):
+def _movimientos_probables(estadisticas, orientacion, movimientos, objeto, conservar_frecuentes=False):
     categoria_descartada = {"fisica": "special", "especial": "physical"}.get(orientacion)
     choice = normalizar_id(objeto or "") in {"choicescarf", "choiceband", "choicespecs"}
     ataques = []
     for movimiento in _ordenados(estadisticas.get("movimientos", {})):
         identificador = normalizar_id(movimiento)
         categoria = movimientos.get(identificador, {}).get("categoria", "").lower()
-        if categoria == categoria_descartada:
+        frecuente = conservar_frecuentes and estadisticas["movimientos"][movimiento] >= 50
+        if categoria == categoria_descartada and not frecuente:
             continue
         if choice and (identificador == "protect" or categoria == "status"):
             continue
@@ -90,25 +120,30 @@ def _movimientos_probables(estadisticas, orientacion, movimientos, objeto):
     return ataques
 
 
-def set_probable(nombre, uso_smogon, datos, movimientos=None):
+def set_probable(nombre, uso_smogon, datos, movimientos=None, variante=None):
     """Elige spread y movimientos compatibles con la orientación dominante.
 
     Smogon publica distribuciones separadas; esta aproximación evita combinar
     ataques físicos y especiales de orientaciones distintas. Si falta el
     catálogo de movimientos, no se filtra por categoría. Protect se omite
-    siempre con objetos Choice. La habilidad debe pertenecer a la especie base.
+    siempre con objetos Choice. En variantes se conservan los movimientos con
+    uso >=50 % aunque su categoría sea opuesta. Todo procede de la elegida
+    (la más usada por defecto). Una Mega lleva su piedra y una habilidad legal
+    de la base: la de la Mega si la comparte, o la más usada en la forma normal.
     """
-    estadisticas = entrada_uso(nombre, uso_smogon)
+    forma = seleccionar_variante(nombre, uso_smogon, variante)
+    estadisticas = entrada_variante(nombre, uso_smogon, variante)
     if not estadisticas:
         return None
     if movimientos is None:
         movimientos = _cargar_movimientos()
-    objetos = _objetos(estadisticas, datos)
+    objetos = _objetos(estadisticas, datos, forma)
     orientacion, naturaleza, puntos = _spread(estadisticas, nombre)
     _validar_puntos(nombre, puntos)
     objeto = objetos[0] if objetos else None
-    ataques = _movimientos_probables(estadisticas, orientacion, movimientos, objeto)
-    return {"nombre": nombre, "habilidad": _habilidad_base(nombre, estadisticas, datos),
+    ataques = _movimientos_probables(estadisticas, orientacion, movimientos, objeto,
+                                    conservar_frecuentes=forma is not None)
+    return {"nombre": nombre, "habilidad": _habilidad_variante(nombre, forma, estadisticas, uso_smogon, datos),
             "objeto": objeto,
             "movimientos": ataques, "orientacion": orientacion,
             "naturaleza": naturaleza, "puntos": puntos}
@@ -140,17 +175,19 @@ def set_generico(nombre, datos, movimientos):
             "generico": True}
 
 
-def sets_equipo(equipo, uso_smogon, datos, movimientos=None):
+def sets_equipo(equipo, uso_smogon, datos, movimientos=None, variantes=None):
     """Conserva todos los miembros y resuelve Item Clause según el uso."""
     if movimientos is None:
         movimientos = _cargar_movimientos()
     sets = []
+    variantes = variantes or {}
     for nombre in equipo:
-        entrada = set_probable(nombre, uso_smogon, datos, movimientos)
+        entrada = set_probable(nombre, uso_smogon, datos, movimientos, variantes.get(nombre))
         if entrada is None:
             entrada = set_generico(nombre, datos, movimientos)
         sets.append(entrada)
-    uso = (uso_smogon or {}).get("pokemon", uso_smogon or {})
+    uso = {nombre: entrada_variante(nombre, uso_smogon, variantes.get(nombre)) or {}
+           for nombre in equipo}
     # Los objetos inicialmente elegidos quedan reservados para sus ganadores.
     ganadores = {}
     for entrada in sets:
@@ -165,11 +202,14 @@ def sets_equipo(equipo, uso_smogon, datos, movimientos=None):
         objeto = entrada["objeto"]
         if not objeto or ganadores[objeto][1] is entrada:
             continue
-        alternativas = _ordenados(uso[entrada["nombre"]].get("objetos", {}))
+        nombre = entrada["nombre"]
+        forma = seleccionar_variante(nombre, uso_smogon, variantes.get(nombre))
+        alternativas = _objetos(uso[nombre], datos, forma) if forma else _ordenados(uso[nombre].get("objetos", {}))
         entrada["objeto"] = next((objeto for objeto in alternativas if objeto not in ocupados), None)
         if entrada["objeto"]:
             ocupados.add(entrada["objeto"])
         entrada["movimientos"] = _movimientos_probables(
-            uso[entrada["nombre"]], entrada["orientacion"], movimientos, entrada["objeto"]
+            uso[entrada["nombre"]], entrada["orientacion"], movimientos, entrada["objeto"],
+            conservar_frecuentes=forma is not None,
         )
     return sets

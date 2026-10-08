@@ -44,7 +44,7 @@ def _sumar_bloque(destino, valores, normalizar_claves=True):
 
 
 def _porcentajes(valores, peso, limite=None, minimo=0):
-    """Convierte recuentos al porcentaje del peso total de la especie."""
+    """Convierte recuentos al porcentaje del peso proporcionado."""
     if peso <= 0:
         return {}
     resultado = [
@@ -58,18 +58,36 @@ def _porcentajes(valores, peso, limite=None, minimo=0):
     return dict(resultado)
 
 
+def _variante(datos):
+    """Resume cada entrada sin mezclar formas y con su propio peso."""
+    peso = sum(float(valor) for valor in datos.get("Abilities", {}).values())
+    resultado = {"uso": float(datos.get("usage", 0)) * 100}
+    for origen, destino, limite, minimo in (
+        ("Abilities", "habilidades", None, 1), ("Items", "objetos", 10, 0),
+        ("Moves", "movimientos", 20, 5), ("Spreads", "spreads", 15, 0),
+    ):
+        valores = {}
+        for clave, valor in datos.get(origen, {}).items():
+            if clave.strip():
+                clave = clave if origen == "Spreads" else normalizar_nombre(clave)
+                valores[clave] = valores.get(clave, 0) + float(valor)
+        resultado[destino] = _porcentajes(valores, peso, limite=limite, minimo=minimo)
+    return resultado
+
+
 def transformar_estadisticas(estadisticas, mes, rating, formato=None):
     """Agrupa formas Mega y adapta el JSON chaos al esquema del proyecto."""
     acumulados = {}
     for nombre_smogon, datos in estadisticas.get("data", {}).items():
         base = nombre_base(nombre_smogon)
         entrada = acumulados.setdefault(base, {
-            "Raw count": 0.0, "usage": 0.0, "megas_raw": {},
+            "Raw count": 0.0, "usage": 0.0, "megas_raw": {}, "variantes": {},
             "Abilities": {}, "Items": {}, "Moves": {}, "Teammates": {}, "Spreads": {},
         })
         entrada["Raw count"] += float(datos.get("Raw count", 0))
         entrada["usage"] += float(datos.get("usage", 0))
         normalizado = normalizar_nombre(nombre_smogon)
+        entrada["variantes"][normalizado] = _variante(datos)
         if SUFIJO_MEGA.search(normalizado):
             entrada["megas_raw"][normalizado] = (
                 entrada["megas_raw"].get(normalizado, 0) + float(datos.get("Raw count", 0))
@@ -95,6 +113,7 @@ def transformar_estadisticas(estadisticas, mes, rating, formato=None):
             "movimientos": _porcentajes(datos["Moves"], peso, minimo=5),
             "companeros": _porcentajes(datos["Teammates"], peso, 20),
             "spreads": _porcentajes(datos["Spreads"], peso, 5),
+            "variantes": datos["variantes"],
         }
 
     return {

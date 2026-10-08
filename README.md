@@ -82,8 +82,9 @@ campos y usan una caché distinta de los movimientos base.
 
 Puedes seleccionar hasta seis Pokémon y descargar el equipo desde **Exportar
 equipo**. Los sets suman el uso de los spreads físicos y especiales para elegir
-la orientación dominante y su spread más usado; excluyen ataques de la categoría
-opuesta, conservando los Status. Sin inversión ofensiva se consideran de apoyo;
+la orientación dominante y su spread más usado. En variantes, los movimientos
+con uso ≥ 50 % se conservan aunque sean de la categoría opuesta; el filtro de
+orientación se aplica al resto, conservando los Status. Sin inversión ofensiva se consideran de apoyo;
 sin `movimientos.json` no se filtra por categoría. Se elige una habilidad de la
 forma base y con Choice Scarf/Band/Specs se omiten Protect y los movimientos
 Status conocidos. Además, resuelven objetos
@@ -106,3 +107,28 @@ SHOWDOWN_DIR=/ruta/a/pokemon-showdown python3 -m pytest tests/test_validador_sho
 
 Sin `SHOWDOWN_DIR`, ese test se omite; el resto de pruebas comprueba también los
 equipos de Yvar Vlieger y Emilio Forbes, sus seis miembros y los límites de puntos.
+
+La importación de Smogon conserva además `variantes` por especie: uso, habilidades,
+objetos, movimientos y spreads de cada entrada original, con porcentajes calculados
+sobre el peso de esa forma. Por variante guarda habilidades con uso ≥ 1 %, los
+10 objetos más usados, movimientos con uso ≥ 5 % (máximo 20) y los 15 spreads
+más usados. Los datos agregados siguen alimentando el recomendador y su lógica
+de puntuación se mantiene. Las referencias de evaluación distinguen el JSON
+antiguo del regenerado: en M-C las medias v2 + Smogon y con antisinergias son
+7.04/7.40 para el antiguo y 6.89/6.96 para el regenerado; el resto se conserva.
+
+`set_probable(..., variante="garchomp-mega-z")`, `roles_de(..., variante=...)` y
+`velocidad_real(..., variante=...)` permiten elegir una forma; por defecto usan la
+de mayor uso. El set usa exclusivamente sus distribuciones. Una Mega lleva su
+Megapiedra (o el objeto más usado de la variante si falta `objeto_mega` en los
+datos) y exporta su habilidad si también existe en la base; en caso contrario,
+la habilidad más usada de la variante normal. `sets_equipo`, `revisar_equipo` y
+`amenazas_del_meta` aceptan `variantes={"garchomp": "garchomp-mega-z"}`.
+
+En la app, el selector «Mega / sin Mega» de cada miembro con variantes Mega cambia
+roles, cobertura de amenazas, velocidad y exportación. Con varias Megas se puede
+elegir cada forma por separado. Las amenazas usan también las inmunidades por
+habilidad de la variante con uso ≥ 50 %. Los JSON antiguos sin `variantes` conservan
+el comportamiento anterior; vuelve a ejecutar la importación local de Smogon para
+disponer de los selectores. Los tests usan un fixture con variantes y no requieren
+regenerar los datos de uso incluidos.

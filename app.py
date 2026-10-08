@@ -8,8 +8,9 @@ import streamlit as st
 from amenazas import revisar_equipo
 from config import REGULACION_ACTIVA, ruta_pokemon_datos, ruta_regulacion, ruta_uso_smogon
 from config import ruta_nombres
-from sets import sets_equipo
+from sets import sets_equipo, set_probable
 from exportar import a_showdown
+from datos_uso import entrada_variante, forma_variante, seleccionar_variante
 from interfaz import construir_filas_amenazas, construir_filas_recomendaciones, frases_afinidad, opciones_selector
 from motor_tipos import calcular_defensas
 from recomendador import obtener_recomendaciones
@@ -74,36 +75,58 @@ equipo = st.multiselect(
 if equipo:
     st.header("Tu equipo")
     columnas = st.columns(len(equipo))
-    entrada_uso = uso.get("pokemon", {})
+    variantes_equipo = {}
     for columna, nombre in zip(columnas, equipo):
-        pokemon, rol, estadisticas = datos[nombre], roles_de(nombre, datos, uso), entrada_uso.get(nombre, {})
-        etiquetas_roles = {
-            "fake_out": "Fake Out",
-            "control_velocidad": "control de velocidad",
-            "intimidate": "Intimidate",
-            "anti_intimidate": "anti-Intimidate",
-            "redireccion": "redirección",
-            "pone_clima_terreno": "pone clima/terreno",
-        }
-        roles = [etiqueta for clave, etiqueta in etiquetas_roles.items() if rol.get(clave)]
-        if rol["apoyo"] > 0:
-            roles.append("apoyo")
-        if rol["ofensivo"] >= 120:
-            roles.append("atacante")
         with columna.container(border=True):
             st.subheader(nombre.title())
+            variantes = uso.get("pokemon", {}).get(nombre, {}).get("variantes", {})
+            megas = [forma for forma in variantes if datos.get(forma, {}).get("es_mega")]
+            if megas:
+                habitual = seleccionar_variante(nombre, uso)
+                formas = sorted(variantes, key=lambda f: (-variantes[f].get("uso", 0), f))
+                variante = st.selectbox(
+                    "Mega / sin Mega", formas, index=formas.index(habitual),
+                    format_func=lambda f: "Mega" + (f" ({f})" if len(megas) > 1 else "") if f in megas else "sin Mega",
+                    key=f"variante_{nombre}",
+                )
+                variantes_equipo[nombre] = variante
+            variante = variantes_equipo.get(nombre)
+            forma = forma_variante(nombre, uso, datos, variante) if variantes else nombre
+            pokemon = datos[forma]
+            rol = roles_de(nombre, datos, uso, variante)
+            estadisticas = entrada_variante(nombre, uso, variante)
+            etiquetas_roles = {
+                "fake_out": "Fake Out",
+                "control_velocidad": "control de velocidad",
+                "intimidate": "Intimidate",
+                "anti_intimidate": "anti-Intimidate",
+                "redireccion": "redirección",
+                "pone_clima_terreno": "pone clima/terreno",
+            }
+            roles = [etiqueta for clave, etiqueta in etiquetas_roles.items() if rol.get(clave)]
+            if rol["apoyo"] > 0:
+                roles.append("apoyo")
+            if rol["ofensivo"] >= 120:
+                roles.append("atacante")
             st.write("**Tipos:** " + " / ".join(pokemon["tipos"]))
             st.write("**Roles:** " + (", ".join(roles) or "daño/cobertura"))
-            st.write(f"**Velocidad máxima:** {velocidad(nombre, datos)}")
-            reales = velocidades_reales(nombre, uso, datos)
-            st.write(f"**Velocidad real:** {reales[nombre] if reales[nombre] is not None else 'sin datos'}")
-            for forma, real in reales.items():
-                if forma != nombre:
-                    st.write(f"**{forma} — velocidad máxima:** {velocidad(forma, datos)}")
-                    st.write(f"**{forma} — velocidad real:** {real if real is not None else 'sin datos'}")
+            st.write(f"**Velocidad máxima:** {velocidad(forma, datos)}")
+            reales = velocidades_reales(nombre, uso, datos, variante)
+            real = reales.get(forma)
+            st.write(f"**Velocidad real:** {real if real is not None else 'sin datos'}")
+            if not variantes:
+                for otra_forma, real in reales.items():
+                    if otra_forma != nombre:
+                        st.write(f"**{otra_forma} — velocidad máxima:** {velocidad(otra_forma, datos)}")
+                        st.write(f"**{otra_forma} — velocidad real:** {real if real is not None else 'sin datos'}")
             if estadisticas:
-                movimientos = list(estadisticas.get("movimientos", {}))[:3]
-                objeto = next(iter(estadisticas.get("objetos", {})), "—")
+                if variantes:
+                    probable = set_probable(nombre, uso, datos, variante=variante)
+                    movimientos = probable["movimientos"][:3]
+                    objeto = probable["objeto"] or "—"
+                else:
+                    movimientos = list(estadisticas.get("movimientos", {}))[:3]
+                    objeto = next(iter(estadisticas.get("objetos", {})), "—")
                 movimientos_visibles = [
                     nombres.get("movimientos", {}).get(movimiento, movimiento)
                     for movimiento in movimientos
@@ -124,14 +147,14 @@ if equipo:
 
     st.header("Amenazas del meta")
     st.caption("Cobertura por ataques con uso ≥ 20 %; sin datos de Smogon, tipos propios. Sin cálculo de daño. Velocidad máxima sin Scarf ni Tailwind; velocidad real según el spread más usado.")
-    amenazas = revisar_equipo(equipo, datos, uso)
+    amenazas = revisar_equipo(equipo, datos, uso, variantes=variantes_equipo)
     if amenazas:
         st.dataframe(construir_filas_amenazas(amenazas), hide_index=True, width="stretch")
     else:
         st.info("No hay datos de uso para comprobar las amenazas del meta.")
 
     st.header("Exportar equipo")
-    sets = sets_equipo(equipo, uso, datos)
+    sets = sets_equipo(equipo, uso, datos, variantes=variantes_equipo)
     for entrada in sets:
         if entrada.get("generico"):
             st.warning(f"{entrada['nombre'].title()}: set genérico (sin datos de uso)")
@@ -144,7 +167,11 @@ if equipo:
             st.download_button("Descargar equipo (.txt)", texto, file_name="equipo_showdown.txt", mime="text/plain")
 
     st.header("Debilidades del equipo")
-    defensas = {nombre: calcular_defensas(datos[nombre]["tipos"]) for nombre in equipo}
+    defensas = {}
+    for nombre in equipo:
+        tiene_variantes = uso.get("pokemon", {}).get(nombre, {}).get("variantes")
+        forma = forma_variante(nombre, uso, datos, variantes_equipo.get(nombre)) if tiene_variantes else nombre
+        defensas[nombre] = calcular_defensas(datos[forma]["tipos"])
     debilidades = calcular_debilidades_equipo(defensas)
     tabla = pd.DataFrame(
         [

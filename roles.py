@@ -1,5 +1,7 @@
 """Detección de roles relevantes para construir equipos de VGC."""
 
+from datos_uso import entrada_variante
+
 # Estas listas viven juntas y a la vista para poder ajustar el criterio a mano.
 MOVIMIENTOS_FAKE_OUT = {"fakeout"}
 MOVIMIENTOS_VELOCIDAD = {"tailwind", "trickroom"}
@@ -39,18 +41,10 @@ def _ofensivo(datos_pokemon):
     return max(stats.get("attack", 0), stats.get("special-attack", 0))
 
 
-def _entrada_uso(nombre, uso_smogon):
-    if not uso_smogon:
-        return None
-    pokemon = uso_smogon.get("pokemon", uso_smogon)
-    entrada = pokemon.get(nombre)
-    return entrada if isinstance(entrada, dict) else None
-
-
-def roles_de(nombre, datos, uso_smogon=None):
-    """Devuelve roles de uso real si existe Smogon, o del learnset si no."""
+def roles_de(nombre, datos, uso_smogon=None, variante=None):
+    """Roles de la variante más usada o explícita; learnset si falta Smogon."""
     pokemon = datos[nombre]
-    entrada_uso = _entrada_uso(nombre, uso_smogon)
+    entrada_uso = entrada_variante(nombre, uso_smogon, variante)
     if entrada_uso is not None:
         movimientos = {
             _sin_guiones(movimiento) for movimiento, porcentaje
