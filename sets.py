@@ -1,4 +1,4 @@
-"""Sets probables a partir de las estadísticas de Smogon."""
+"""Sets probables de Smogon y sets genéricos para especies sin datos de uso."""
 
 import json
 
@@ -37,7 +37,16 @@ def _habilidad_base(nombre, estadisticas, datos):
     return max(habilidades, key=lambda habilidad: uso.get(habilidad, 0))
 
 
-def _spread(estadisticas):
+def _validar_puntos(nombre, puntos):
+    for stat, cantidad in puntos.items():
+        if not 0 <= cantidad <= 32:
+            raise ValueError(f"Puntos inválidos para {nombre}: {stat} tiene {cantidad}; debe estar entre 0 y 32.")
+    total = sum(puntos.values())
+    if total > 66:
+        raise ValueError(f"Puntos inválidos para {nombre}: total {total}; el máximo es 66.")
+
+
+def _spread(estadisticas, nombre):
     """Suma usos por orientación y escoge el spread más usado en la ganadora."""
     spreads = []
     porcentajes = {"fisica": 0, "especial": 0}
@@ -47,8 +56,9 @@ def _spread(estadisticas):
             puntos = [int(punto) for punto in reparto.split("/")]
         except (ValueError, AttributeError):
             continue
-        if len(puntos) != 6 or any(not 0 <= punto <= 32 for punto in puntos):
+        if len(puntos) != 6:
             continue
+        _validar_puntos(nombre, dict(zip(ESTADISTICAS, puntos)))
         orientacion = "fisica" if puntos[1] > puntos[3] else "especial" if puntos[3] > puntos[1] else "apoyo"
         spreads.append((orientacion, naturaleza, dict(zip(ESTADISTICAS, puntos))))
         if orientacion in porcentajes:
@@ -94,7 +104,8 @@ def set_probable(nombre, uso_smogon, datos, movimientos=None):
     if movimientos is None:
         movimientos = _cargar_movimientos()
     objetos = _objetos(estadisticas, datos)
-    orientacion, naturaleza, puntos = _spread(estadisticas)
+    orientacion, naturaleza, puntos = _spread(estadisticas, nombre)
+    _validar_puntos(nombre, puntos)
     objeto = objetos[0] if objetos else None
     ataques = _movimientos_probables(estadisticas, orientacion, movimientos, objeto)
     return {"nombre": nombre, "habilidad": _habilidad_base(nombre, estadisticas, datos),
@@ -103,12 +114,42 @@ def set_probable(nombre, uso_smogon, datos, movimientos=None):
             "naturaleza": naturaleza, "puntos": puntos}
 
 
+def set_generico(nombre, datos, movimientos):
+    """Construye un set sin objeto con ataques del learnset, priorizando STAB."""
+    especie = datos[nombre]
+    stats = especie["stats"]
+    fisico = stats["attack"] >= stats["special-attack"]
+    orientacion = "fisica" if fisico else "especial"
+    categoria = "physical" if fisico else "special"
+    puntos = dict.fromkeys(ESTADISTICAS, 0)
+    puntos.update({"attack" if fisico else "special-attack": 32, "speed": 32, "hp": 2})
+    _validar_puntos(nombre, puntos)
+    learnset = {normalizar_id(movimiento) for movimiento in especie.get("movimientos", [])}
+    tipos = {tipo.lower() for tipo in especie["tipos"]}
+    ataques = [movimiento for movimiento in learnset
+               if movimientos.get(movimiento, {}).get("categoria", "").lower() == categoria
+               and movimientos[movimiento].get("potencia", 0) > 0]
+    ataques.sort(key=lambda movimiento: (
+        movimientos[movimiento].get("tipo", "").lower() not in tipos,
+        -movimientos[movimiento]["potencia"], movimiento,
+    ))
+    elegidos = (["protect"] if "protect" in learnset else []) + ataques[:3]
+    return {"nombre": nombre, "habilidad": _habilidad_base(nombre, {}, datos),
+            "objeto": None, "movimientos": elegidos, "orientacion": orientacion,
+            "naturaleza": "Adamant" if fisico else "Modest", "puntos": puntos,
+            "generico": True}
+
+
 def sets_equipo(equipo, uso_smogon, datos, movimientos=None):
-    """Resuelve Item Clause conservando cada objeto en quien más lo usa."""
+    """Conserva todos los miembros y resuelve Item Clause según el uso."""
     if movimientos is None:
         movimientos = _cargar_movimientos()
-    sets = [set_probable(nombre, uso_smogon, datos, movimientos) for nombre in equipo]
-    sets = [entrada for entrada in sets if entrada is not None]
+    sets = []
+    for nombre in equipo:
+        entrada = set_probable(nombre, uso_smogon, datos, movimientos)
+        if entrada is None:
+            entrada = set_generico(nombre, datos, movimientos)
+        sets.append(entrada)
     uso = (uso_smogon or {}).get("pokemon", uso_smogon or {})
     # Los objetos inicialmente elegidos quedan reservados para sus ganadores.
     ganadores = {}

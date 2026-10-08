@@ -132,14 +132,12 @@ if equipo:
 
     st.header("Exportar equipo")
     sets = sets_equipo(equipo, uso, datos)
-    faltantes = [nombre for nombre in equipo if not any(s["nombre"] == nombre for s in sets)]
-    if faltantes:
-        st.warning("Sin datos de Smogon para: " + ", ".join(faltantes))
+    for entrada in sets:
+        if entrada.get("generico"):
+            st.warning(f"{entrada['nombre'].title()}: set genérico (sin datos de uso)")
     if sets:
         if not nombres.get("habilidades") or any(not datos[s["nombre"]].get("nombre_showdown") for s in sets):
             st.info("Ejecuta importar_showdown.py en local para actualizar los nombres de exportación.")
-        elif faltantes:
-            st.info("La exportación completa requiere datos de Smogon de todos los miembros.")
         else:
             texto = a_showdown(sets, datos, nombres)
             st.code(texto, language=None)

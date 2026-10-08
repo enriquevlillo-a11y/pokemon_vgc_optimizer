@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import pytest
 from streamlit.testing.v1 import AppTest
 
 
@@ -17,7 +18,9 @@ def test_app_arranca_sin_errores():
     assert "Amenazas del meta" in [cabecera.value for cabecera in app.header]
     tabla_amenazas = app.dataframe[1].value
     assert len(tabla_amenazas) == 20
-    assert tabla_amenazas.iloc[0]["Estado"] == "sin respuesta"
+    prioridad = {"sin respuesta": 0, "en riesgo": 1, "cubierta": 2}
+    estados = [prioridad[estado] for estado in tabla_amenazas["Estado"]]
+    assert estados == sorted(estados)
     assert any("**Velocidad máxima:**" in texto.value for texto in app.markdown)
     assert any("**Velocidad real:**" in texto.value for texto in app.markdown)
 
@@ -55,5 +58,30 @@ def test_app_exporta_equipo_completo_con_fixtures(monkeypatch, tmp_path):
         amenazas = app.dataframe[1].value
         volcarona = amenazas[amenazas["Amenaza"] == "volcarona"].iloc[0]
         assert "garchomp (Rock Slide)" in volcarona["Con"]
+    finally:
+        st.cache_data.clear()
+
+
+@pytest.mark.parametrize("jugador,generico", [
+    ("Yvar Vlieger", "Meowstic"),
+    ("Emilio Forbes", "Tsareena"),
+])
+def test_app_avisa_y_exporta_sets_genericos(jugador, generico):
+    import json
+    import streamlit as st
+
+    from config import ruta_equipos_referencia
+
+    referencias = json.loads(ruta_equipos_referencia().read_text(encoding="utf-8"))
+    equipo = next(r["equipo"] for r in referencias if jugador in r["nombre"])
+    st.cache_data.clear()
+    try:
+        app = AppTest.from_file(str(Path(__file__).resolve().parent.parent / "app.py")).run(timeout=30)
+        app.multiselect[0].set_value(equipo).run(timeout=30)
+        assert not app.exception
+        assert f"{generico}: set genérico (sin datos de uso)" in [a.value for a in app.warning]
+        assert app.code[0].value.count("Level: 50") == 6
+        assert generico in app.code[0].value.splitlines()
+        assert len(app.get("download_button")) == 1
     finally:
         st.cache_data.clear()
