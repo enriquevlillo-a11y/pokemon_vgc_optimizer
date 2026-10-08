@@ -69,4 +69,4 @@ def test_tabla_ordena_sin_respuesta_antes_de_riesgo_y_cubierta():
                 for n, estado in [("agua", "cubierta"), ("fuego", "sin respuesta"), ("roca", "en riesgo")]]
     filas = construir_filas_amenazas(amenazas)
     assert [f["Estado"] for f in filas] == ["sin respuesta", "en riesgo", "cubierta"]
-    assert set(filas[0]) == {"Amenaza", "Uso %", "Le pegan", "Más rápidos", "Débiles", "Estado"}
+    assert set(filas[0]) == {"Amenaza", "Uso %", "Le pegan", "Más rápidos", "Débiles", "Estado", "Con"}

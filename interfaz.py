@@ -10,6 +10,10 @@ def construir_filas_amenazas(amenazas):
         "Amenaza": a["forma"],
         "Uso %": round(a["uso"], 2),
         "Le pegan": ", ".join(a["le_pegan"]) or "—",
+        "Con": ", ".join(
+            miembro + (" (" + ", ".join(movimientos) + ")" if movimientos else "")
+            for miembro, movimientos in a.get("con", {}).items()
+        ) or "—",
         "Más rápidos": ", ".join(a["mas_rapidos"]) or "—",
         "Débiles": ", ".join(a["debiles"]) or "—",
         "Estado": a["estado"],

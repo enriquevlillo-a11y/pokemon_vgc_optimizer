@@ -77,7 +77,8 @@ def obtener_recomendaciones(equipo, datos, uso_smogon=None, aplicar_antisinergia
             "aporta": aporta,
             "puntuacion": componentes,
         })
-    return sorted(recomendaciones, key=lambda r: (-r["puntuacion"]["total"], r["nombre"]))
+    # Los errores de coma flotante no deben decidir empates matemáticos.
+    return sorted(recomendaciones, key=lambda r: (-round(r["puntuacion"]["total"], 6), r["nombre"]))
 
 
 def recomendar(equipo_nombres, top_n=10):
