@@ -4,6 +4,7 @@ import json
 
 from antisinergias import antisinergias
 from config import ruta_pokemon_datos, ruta_uso_pikalytics, ruta_uso_smogon
+from datos_uso import uso_agregado
 from puntuacion import puntuar
 from recomendador_tipos import calcular_debilidades_equipo, puntuar_candidato
 from roles import roles_de
@@ -61,6 +62,7 @@ def _aportes(rol):
 
 def obtener_recomendaciones(equipo, datos, uso_smogon=None, aplicar_antisinergias=True):
     """Devuelve todos los candidatos ordenados; es la API reutilizable y testeable."""
+    uso_smogon = uso_agregado(uso_smogon)
     recomendaciones = []
     for nombre, pokemon in datos.items():
         if not es_candidato(nombre, pokemon, equipo):

@@ -132,6 +132,17 @@ def test_evaluacion_sin_cambios(evaluacion_actual, regulacion, version, media):
     assert resumir(evaluacion_actual[regulacion], version)["puesto_medio"] == pytest.approx(media, abs=0.01)
 
 
+def test_evaluacion_con_variantes_conserva_todos_los_puestos(evaluacion_actual):
+    referencias = json.loads(ruta_equipos_referencia().read_text())
+    datos = json.loads(ruta_pokemon_datos().read_text())
+    uso = json.loads(ruta_uso_smogon().read_text())
+    fixture = json.loads((FIXTURES / "variantes_smogon.json").read_text())
+    for nombre, entrada in fixture["uso"]["pokemon"].items():
+        uso["pokemon"][nombre]["variantes"] = entrada["variantes"]
+    con_variantes, _ = evaluar_referencias(referencias, datos, uso)
+    assert con_variantes == evaluacion_actual
+
+
 @pytest.fixture(scope="module")
 def evaluacion_actual():
     referencias = json.loads(ruta_equipos_referencia().read_text())

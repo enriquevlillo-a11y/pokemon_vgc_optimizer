@@ -106,3 +106,23 @@ SHOWDOWN_DIR=/ruta/a/pokemon-showdown python3 -m pytest tests/test_validador_sho
 
 Sin `SHOWDOWN_DIR`, ese test se omite; el resto de pruebas comprueba también los
 equipos de Yvar Vlieger y Emilio Forbes, sus seis miembros y los límites de puntos.
+
+La importación de Smogon conserva además `variantes` por especie: uso, habilidades,
+objetos, movimientos y spreads de cada entrada original, con porcentajes calculados
+sobre el peso de esa forma. Los datos agregados siguen alimentando el recomendador,
+por lo que su puntuación y la evaluación de referencia se mantienen.
+
+`set_probable(..., variante="garchomp-mega-z")`, `roles_de(..., variante=...)` y
+`velocidad_real(..., variante=...)` permiten elegir una forma; por defecto usan la
+de mayor uso. El set usa exclusivamente sus distribuciones. Una Mega lleva su
+Megapiedra y exporta su habilidad si también existe en la base; en caso contrario,
+la habilidad más usada de la variante normal. `sets_equipo`, `revisar_equipo` y
+`amenazas_del_meta` aceptan `variantes={"garchomp": "garchomp-mega-z"}`.
+
+En la app, el selector «Mega / sin Mega» de cada miembro con variantes Mega cambia
+roles, cobertura de amenazas, velocidad y exportación. Con varias Megas se puede
+elegir cada forma por separado. Las amenazas usan también las inmunidades por
+habilidad de la variante con uso ≥ 50 %. Los JSON antiguos sin `variantes` conservan
+el comportamiento anterior; vuelve a ejecutar la importación local de Smogon para
+disponer de los selectores. Los tests usan un fixture con variantes y no requieren
+regenerar los datos de uso incluidos.

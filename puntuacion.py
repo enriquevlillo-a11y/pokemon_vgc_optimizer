@@ -1,6 +1,7 @@
 """Puntuación por roles, sinergia, uso y defensa de tipos."""
 
 from antisinergias import antisinergias
+from datos_uso import uso_agregado
 from motor_tipos import calcular_defensas
 from recomendador_tipos import calcular_debilidades_equipo, puntuar_candidato
 from roles import roles_de
@@ -43,6 +44,7 @@ def _puntuacion_companeros(equipo, candidato, uso_smogon):
 
 def puntuar(equipo, candidato, datos, uso_smogon=None, aplicar_antisinergias=True):
     """Desglosa la puntuación de ``candidato`` para completar ``equipo``."""
+    uso_smogon = uso_agregado(uso_smogon)
     roles_equipo = [roles_de(nombre, datos, uso_smogon) for nombre in equipo]
     rol = roles_de(candidato, datos, uso_smogon)
     componentes = {}

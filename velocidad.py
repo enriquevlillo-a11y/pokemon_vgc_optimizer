@@ -1,6 +1,6 @@
 """Estadísticas de Pokémon Champions a nivel 50, sin efectos de habilidades."""
 
-from datos_uso import entrada_uso, mega_habitual
+from datos_uso import entrada_uso, entrada_variante, forma_variante, mega_habitual
 
 
 NATURALEZAS_RAPIDAS = {"Timid", "Jolly", "Hasty", "Naive"}
@@ -24,8 +24,8 @@ def velocidad(nombre, datos, puntos=32, naturaleza=1.1, scarf=False, tailwind=Fa
     return stat * 2 if tailwind else stat
 
 
-def _spread_habitual(nombre, uso_smogon):
-    spreads = (entrada_uso(nombre, uso_smogon) or {}).get("spreads", {})
+def _spread_habitual(nombre, uso_smogon, variante=None):
+    spreads = (entrada_variante(nombre, uso_smogon, variante) or {}).get("spreads", {})
     if not spreads:
         return None
     spread = max(spreads, key=spreads.get)
@@ -40,20 +40,34 @@ def _spread_habitual(nombre, uso_smogon):
     return puntos[-1], modificador
 
 
-def velocidad_real(nombre, uso_smogon, datos):
-    """Velocidad base con el spread más usado; None si falta un spread válido.
+def velocidad_real(nombre, uso_smogon, datos, variante=None):
+    """Velocidad de la variante con su spread; None si falta un spread válido.
 
     No infiere Scarf ni habilidades a partir de distribuciones independientes.
-    ``velocidades_reales`` añade la velocidad de la Mega habitual al resultado.
+    Sin variantes conserva el cálculo histórico de la especie base.
     """
-    spread = _spread_habitual(nombre, uso_smogon)
-    if spread is None or nombre not in datos:
+    spread = _spread_habitual(nombre, uso_smogon, variante)
+    # Antes de las variantes, esta función calculaba siempre la especie base.
+    tiene_variantes = (entrada_uso(nombre, uso_smogon) or {}).get("variantes")
+    forma = forma_variante(nombre, uso_smogon, datos, variante) if tiene_variantes else nombre
+    if spread is None or forma not in datos:
         return None
-    return velocidad(nombre, datos, puntos=spread[0], naturaleza=spread[1])
+    return velocidad(forma, datos, puntos=spread[0], naturaleza=spread[1])
 
 
-def velocidades_reales(nombre, uso_smogon, datos):
-    """Devuelve velocidad de la especie y también de su Mega habitual (>50 %)."""
+def velocidades_reales(nombre, uso_smogon, datos, variante=None):
+    """Velocidad de cada variante con su spread, o solo de la forma explícita.
+
+    Sin variantes devuelve la base y su Mega habitual (>50 %) como antes.
+    """
+    variantes = (entrada_uso(nombre, uso_smogon) or {}).get("variantes", {})
+    if variantes:
+        formas = [variante] if variante is not None else list(variantes)
+        resultado = {}
+        for forma in formas:
+            especie = forma_variante(nombre, uso_smogon, datos, forma)
+            resultado[especie] = velocidad_real(nombre, uso_smogon, datos, forma)
+        return resultado
     resultado = {nombre: velocidad_real(nombre, uso_smogon, datos)}
     mega = mega_habitual(nombre, uso_smogon, datos)
     spread = _spread_habitual(nombre, uso_smogon)
