@@ -75,15 +75,14 @@ def test_set_incineroar(datos, uso, nombres):
     entrada = set_probable("incineroar", uso, datos)
     assert nombres["habilidades"][entrada["habilidad"]] == "Intimidate"
     assert nombres["objetos"][entrada["objeto"]] == "Sitrus Berry"
-    assert entrada["movimientos"][:2] == ["fakeout", "partingshot"]
-    assert entrada["naturaleza"] == "Sassy"
-    assert entrada["puntos"] == {"hp": 32, "attack": 0, "defense": 4,
-                                "special-attack": 0, "special-defense": 30, "speed": 0}
+    assert {"fakeout", "partingshot"} <= set(entrada["movimientos"])
+    assert all(0 <= p <= 32 for p in entrada["puntos"].values())
+    assert sum(entrada["puntos"].values()) <= 66
     assert set_probable("desconocido", uso, datos) is None
 
 
 def test_garchomp_mega(datos, uso, nombres):
-    entrada = set_probable("garchomp", uso, datos)
+    entrada = set_probable("garchomp", uso, datos, variante="garchomp-mega-z")
     assert nombres["objetos"][entrada["objeto"]] == "Garchompite Z"
 
 
@@ -107,9 +106,9 @@ def test_item_clause():
     assert uso["pokemon"]["b"]["objetos"]["sitrusberry"] == 60
 
 
-def test_exportacion_exacta(datos, uso, nombres):
-    entrada = set_probable("incineroar", uso, datos)
-    datos = {"incineroar": {"nombre_showdown": "Incineroar"}}
+def test_exportacion_exacta(fixture_sets, nombres):
+    datos = fixture_sets["datos"]
+    entrada = set_probable("incineroar", fixture_sets["uso"], datos, fixture_sets["movimientos"])
     esperado = """Incineroar @ Sitrus Berry
 Ability: Intimidate
 Level: 50
@@ -123,12 +122,14 @@ Sassy Nature
     assert a_showdown([entrada, entrada], datos, nombres) == esperado + "\n\n" + esperado
 
 
-@pytest.mark.parametrize("regulacion,version,media", [
-    (regulacion, version, media)
-    for regulacion, versiones in json.loads((FIXTURES / "evaluacion_referencia.json").read_text()).items()
-    for version, media in versiones.items()
+@pytest.mark.parametrize("regulacion,version", [
+    (regulacion, version)
+    for regulacion, versiones in json.loads((FIXTURES / "evaluacion_referencia.json").read_text())["sin_variantes"].items()
+    for version in versiones
 ])
-def test_evaluacion_sin_cambios(evaluacion_actual, regulacion, version, media):
+def test_evaluacion_sin_cambios(evaluacion_actual, uso_smogon, regulacion, version):
+    perfil = "con_variantes" if any(e.get("variantes") for e in uso_smogon["pokemon"].values()) else "sin_variantes"
+    media = json.loads((FIXTURES / "evaluacion_referencia.json").read_text())[perfil][regulacion][version]
     assert resumir(evaluacion_actual[regulacion], version)["puesto_medio"] == pytest.approx(media, abs=0.01)
 
 

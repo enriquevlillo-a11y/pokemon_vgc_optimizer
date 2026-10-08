@@ -40,12 +40,83 @@ def test_importador_conserva_formas_y_sus_porcentajes(variantes):
     assert mega["spreads"] == {"Modest:2/0/0/32/0/32": 100}
 
 
-def test_importador_no_recorta_distribuciones_de_variantes(variantes):
+def test_importador_filtra_y_limita_distribuciones_por_variante(variantes):
     datos = variantes["estadisticas"]
-    datos["data"]["Garchomp-Mega-Z"]["Moves"]["unused"] = 3
+    mega = datos["data"]["Garchomp-Mega-Z"]
+    mega["Abilities"] = {"levitate": 98.01, "habilidad-umbral": 1, "habilidad-baja": .99}
+    mega["Items"] = {f"objeto-{i:02}": 100 - i for i in range(12)}
+    mega["Moves"] = {f"ataque-{i:02}": 30 - i for i in range(26)}
+    mega["Spreads"] = {f"Modest:2/0/0/32/{i}/0": 100 - i for i in range(20)}
     resultado = transformar_estadisticas(datos, "2026-09", 1760)["pokemon"]["garchomp"]
-    assert resultado["variantes"]["garchomp-mega-z"]["movimientos"]["unused"] == 1
-    assert "unused" not in resultado["movimientos"]
+    forma = resultado["variantes"]["garchomp-mega-z"]
+    assert forma["habilidades"] == {"levitate": 98.01, "habilidad-umbral": 1}
+    assert list(forma["objetos"]) == [f"objeto-{i:02}" for i in range(10)]
+    assert list(forma["movimientos"]) == [f"ataque-{i:02}" for i in range(20)]
+    assert list(forma["spreads"]) == [f"Modest:2/0/0/32/{i}/0" for i in range(15)]
+    assert all(p >= 5 for p in forma["movimientos"].values())
+    mega["Moves"] = {"ataque-umbral": 5, "ataque-bajo": 4.99}
+    forma = transformar_estadisticas(datos, "2026-09", 1760)["pokemon"]["garchomp"]["variantes"]["garchomp-mega-z"]
+    assert forma["movimientos"] == {"ataque-umbral": 5}
+
+
+def test_importacion_con_miles_de_spreads_no_supera_600_kb():
+    spreads = {
+        f"Adamant:{hp}/{atk}/0/0/0/{spe}": 1
+        for hp in range(33) for atk in range(33) for spe in range(33)
+        if hp + atk + spe <= 66
+    }
+    spreads = dict(list(spreads.items())[:7289])
+    entrada = {
+        "usage": .005, "Raw count": 10000, "Abilities": {"ability": 10000},
+        "Items": {f"item{i}": 10000 / (i + 1) for i in range(100)},
+        "Moves": {f"move{i}": 10000 / (i + 1) for i in range(100)},
+        "Spreads": spreads,
+    }
+    # 200 entradas con 7.289 spreads cada una, agrupadas en cien especies.
+    datos = {n: entrada for i in range(100) for n in (f"Species-{i}", f"Species-{i}-Mega")}
+    resultado = transformar_estadisticas({"data": datos}, "2026-09", 1760)
+    assert len(resultado["pokemon"]) == 100
+    assert all(len(v["spreads"]) == 15 for e in resultado["pokemon"].values() for v in e["variantes"].values())
+    assert len((json.dumps(resultado, ensure_ascii=False, indent=2) + "\n").encode()) < 600_000
+
+
+def test_raichu_mega_conserva_fake_out_en_set_especial(fixture_sets):
+    entrada = set_probable("raichu", fixture_sets["uso"], fixture_sets["datos"], fixture_sets["movimientos"],
+                           variante="raichu-mega-y")
+    assert entrada["orientacion"] == "especial"
+    assert set(entrada["movimientos"]) == {"zapcannon", "focusblast", "protect", "fakeout"}
+
+
+@pytest.mark.parametrize("uso_fake_out,incluido", [(49.99, False), (50, True)])
+def test_orientacion_solo_filtra_ataques_minoritarios(fixture_sets, uso_fake_out, incluido):
+    forma = fixture_sets["uso"]["pokemon"]["raichu"]["variantes"]["raichu-mega-y"]
+    forma["movimientos"]["fakeout"] = uso_fake_out
+    entrada = set_probable("raichu", fixture_sets["uso"], fixture_sets["datos"], fixture_sets["movimientos"])
+    assert ("fakeout" in entrada["movimientos"]) is incluido
+
+
+@pytest.mark.parametrize("datos_mega", [None, {}, {"objeto_mega": None}])
+def test_mega_sin_metadatos_de_piedra_usa_objeto_de_variante(fixture_sets, datos_mega):
+    datos = fixture_sets["datos"]
+    if datos_mega is None:
+        del datos["raichu-mega-y"]
+    else:
+        datos["raichu-mega-y"] = datos_mega
+    forma = fixture_sets["uso"]["pokemon"]["raichu"]["variantes"]["raichu-mega-y"]
+    forma["objetos"] = {"lifeorb": 80, "raichunitey": 20}
+    assert set_probable("raichu", fixture_sets["uso"], datos, fixture_sets["movimientos"])["objeto"] == "lifeorb"
+
+
+def test_item_clause_choice_mantiene_fake_out_pero_omite_protect(fixture_sets):
+    uso = fixture_sets["uso"]
+    forma = uso["pokemon"]["raichu"]["variantes"]["raichu-mega-y"]
+    forma["objetos"] = {"sitrusberry": 80, "choicescarf": 20}
+    datos = fixture_sets["datos"]
+    del datos["raichu-mega-y"]["objeto_mega"]
+    entradas = sets_equipo(["incineroar", "raichu"], uso, datos, fixture_sets["movimientos"])
+    assert entradas[1]["objeto"] == "choicescarf"
+    assert "protect" not in entradas[1]["movimientos"]
+    assert "fakeout" in entradas[1]["movimientos"]
 
 
 @pytest.mark.parametrize("forma,naturaleza,objeto,ataques,habilidad", [

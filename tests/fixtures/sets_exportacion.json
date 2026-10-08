@@ -1,0 +1,46 @@
+{
+  "uso": {
+    "pokemon": {
+      "incineroar": {
+        "uso": 20,
+        "habilidades": {"intimidate": 100},
+        "objetos": {"sitrusberry": 100},
+        "movimientos": {"fakeout": 100, "partingshot": 95, "flareblitz": 90, "throatchop": 85},
+        "spreads": {"Sassy:32/0/4/0/30/0": 100}
+      },
+      "raichu": {
+        "uso": 4,
+        "variantes": {
+          "raichu": {
+            "uso": 1,
+            "habilidades": {"lightningrod": 90, "static": 10},
+            "objetos": {"sitrusberry": 100},
+            "movimientos": {"fakeout": 100, "protect": 95, "zapcannon": 90, "focusblast": 85},
+            "spreads": {"Sassy:32/0/4/0/30/0": 100}
+          },
+          "raichu-mega-y": {
+            "uso": 3,
+            "habilidades": {"levitate": 100},
+            "objetos": {"raichunitey": 100},
+            "movimientos": {"zapcannon": 99, "focusblast": 94, "protect": 90, "fakeout": 83},
+            "spreads": {"Modest:2/0/0/32/0/32": 100}
+          }
+        }
+      }
+    }
+  },
+  "datos": {
+    "incineroar": {"nombre_showdown": "Incineroar", "habilidades": [{"nombre": "intimidate"}, {"nombre": "blaze"}]},
+    "raichu": {"nombre_showdown": "Raichu", "habilidades": [{"nombre": "static"}, {"nombre": "lightning-rod"}]},
+    "raichu-mega-y": {"es_mega": true, "objeto_mega": "Raichunite Y", "habilidades": [{"nombre": "levitate"}]}
+  },
+  "movimientos": {
+    "zapcannon": {"categoria": "Special"},
+    "focusblast": {"categoria": "Special"},
+    "protect": {"categoria": "Status"},
+    "fakeout": {"categoria": "Physical"},
+    "partingshot": {"categoria": "Status"},
+    "flareblitz": {"categoria": "Physical"},
+    "throatchop": {"categoria": "Physical"}
+  }
+}

@@ -59,17 +59,19 @@ def _porcentajes(valores, peso, limite=None, minimo=0):
 
 
 def _variante(datos):
-    """Conserva las distribuciones completas de una entrada, con su propio peso."""
+    """Resume cada entrada sin mezclar formas y con su propio peso."""
     peso = sum(float(valor) for valor in datos.get("Abilities", {}).values())
     resultado = {"uso": float(datos.get("usage", 0)) * 100}
-    for origen, destino in (("Abilities", "habilidades"), ("Items", "objetos"),
-                            ("Moves", "movimientos"), ("Spreads", "spreads")):
+    for origen, destino, limite, minimo in (
+        ("Abilities", "habilidades", None, 1), ("Items", "objetos", 10, 0),
+        ("Moves", "movimientos", 20, 5), ("Spreads", "spreads", 15, 0),
+    ):
         valores = {}
         for clave, valor in datos.get(origen, {}).items():
             if clave.strip():
                 clave = clave if origen == "Spreads" else normalizar_nombre(clave)
                 valores[clave] = valores.get(clave, 0) + float(valor)
-        resultado[destino] = _porcentajes(valores, peso)
+        resultado[destino] = _porcentajes(valores, peso, limite=limite, minimo=minimo)
     return resultado
 
 

@@ -19,9 +19,8 @@ def _objetos(estadisticas, datos, variante=None):
         forma = datos.get(variante, {})
         if forma.get("es_mega") or SUFIJO_MEGA.search(variante):
             piedra = forma.get("objeto_mega")
-            if not piedra:
-                raise ValueError(f"Falta objeto_mega para {variante}")
-            return [normalizar_id(piedra)]
+            if piedra:
+                return [normalizar_id(piedra)]
         return _ordenados(estadisticas.get("objetos", {}))
     objetos = _ordenados(estadisticas.get("objetos", {}))
     megas = estadisticas.get("megas", {})
@@ -103,14 +102,15 @@ def _cargar_movimientos():
     return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
 
 
-def _movimientos_probables(estadisticas, orientacion, movimientos, objeto):
+def _movimientos_probables(estadisticas, orientacion, movimientos, objeto, conservar_frecuentes=False):
     categoria_descartada = {"fisica": "special", "especial": "physical"}.get(orientacion)
     choice = normalizar_id(objeto or "") in {"choicescarf", "choiceband", "choicespecs"}
     ataques = []
     for movimiento in _ordenados(estadisticas.get("movimientos", {})):
         identificador = normalizar_id(movimiento)
         categoria = movimientos.get(identificador, {}).get("categoria", "").lower()
-        if categoria == categoria_descartada:
+        frecuente = conservar_frecuentes and estadisticas["movimientos"][movimiento] >= 50
+        if categoria == categoria_descartada and not frecuente:
             continue
         if choice and (identificador == "protect" or categoria == "status"):
             continue
@@ -126,7 +126,8 @@ def set_probable(nombre, uso_smogon, datos, movimientos=None, variante=None):
     Smogon publica distribuciones separadas; esta aproximación evita combinar
     ataques físicos y especiales de orientaciones distintas. Si falta el
     catálogo de movimientos, no se filtra por categoría. Protect se omite
-    siempre con objetos Choice. Si hay variantes, todo procede de la elegida
+    siempre con objetos Choice. En variantes se conservan los movimientos con
+    uso >=50 % aunque su categoría sea opuesta. Todo procede de la elegida
     (la más usada por defecto). Una Mega lleva su piedra y una habilidad legal
     de la base: la de la Mega si la comparte, o la más usada en la forma normal.
     """
@@ -140,7 +141,8 @@ def set_probable(nombre, uso_smogon, datos, movimientos=None, variante=None):
     orientacion, naturaleza, puntos = _spread(estadisticas, nombre)
     _validar_puntos(nombre, puntos)
     objeto = objetos[0] if objetos else None
-    ataques = _movimientos_probables(estadisticas, orientacion, movimientos, objeto)
+    ataques = _movimientos_probables(estadisticas, orientacion, movimientos, objeto,
+                                    conservar_frecuentes=forma is not None)
     return {"nombre": nombre, "habilidad": _habilidad_variante(nombre, forma, estadisticas, uso_smogon, datos),
             "objeto": objeto,
             "movimientos": ataques, "orientacion": orientacion,
@@ -207,6 +209,7 @@ def sets_equipo(equipo, uso_smogon, datos, movimientos=None, variantes=None):
         if entrada["objeto"]:
             ocupados.add(entrada["objeto"])
         entrada["movimientos"] = _movimientos_probables(
-            uso[entrada["nombre"]], entrada["orientacion"], movimientos, entrada["objeto"]
+            uso[entrada["nombre"]], entrada["orientacion"], movimientos, entrada["objeto"],
+            conservar_frecuentes=forma is not None,
         )
     return sets
