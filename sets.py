@@ -25,6 +25,18 @@ def _objetos(estadisticas, datos):
     return objetos
 
 
+def _habilidad_base(nombre, estadisticas, datos):
+    """Descarta habilidades de Mega y prioriza el uso entre las de la base."""
+    habilidades = [normalizar_id(habilidad["nombre"] if isinstance(habilidad, dict) else habilidad)
+                   for habilidad in datos.get(nombre, {}).get("habilidades", [])]
+    if not habilidades:
+        return None
+    uso = {normalizar_id(habilidad): porcentaje
+           for habilidad, porcentaje in estadisticas.get("habilidades", {}).items()}
+    # max conserva la primera habilidad de la base cuando ninguna tiene uso.
+    return max(habilidades, key=lambda habilidad: uso.get(habilidad, 0))
+
+
 def _spread(estadisticas):
     """Suma usos por orientación y escoge el spread más usado en la ganadora."""
     spreads = []
@@ -51,27 +63,42 @@ def _cargar_movimientos():
     return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
 
 
+def _movimientos_probables(estadisticas, orientacion, movimientos, objeto):
+    categoria_descartada = {"fisica": "special", "especial": "physical"}.get(orientacion)
+    choice = normalizar_id(objeto or "") in {"choicescarf", "choiceband", "choicespecs"}
+    ataques = []
+    for movimiento in _ordenados(estadisticas.get("movimientos", {})):
+        identificador = normalizar_id(movimiento)
+        categoria = movimientos.get(identificador, {}).get("categoria", "").lower()
+        if categoria == categoria_descartada:
+            continue
+        if choice and (identificador == "protect" or categoria == "status"):
+            continue
+        ataques.append(movimiento)
+        if len(ataques) == 4:
+            break
+    return ataques
+
+
 def set_probable(nombre, uso_smogon, datos, movimientos=None):
     """Elige spread y movimientos compatibles con la orientación dominante.
 
     Smogon publica distribuciones separadas; esta aproximación evita combinar
     ataques físicos y especiales de orientaciones distintas. Si falta el
-    catálogo de movimientos, se conserva el orden de uso sin filtrar.
+    catálogo de movimientos, no se filtra por categoría. Protect se omite
+    siempre con objetos Choice. La habilidad debe pertenecer a la especie base.
     """
     estadisticas = entrada_uso(nombre, uso_smogon)
     if not estadisticas:
         return None
     if movimientos is None:
         movimientos = _cargar_movimientos()
-    habilidades = _ordenados(estadisticas.get("habilidades", {}))
     objetos = _objetos(estadisticas, datos)
     orientacion, naturaleza, puntos = _spread(estadisticas)
-    categoria_descartada = {"fisica": "special", "especial": "physical"}.get(orientacion)
-    ataques = [movimiento for movimiento in _ordenados(estadisticas.get("movimientos", {}))
-               if movimientos.get(normalizar_id(movimiento), {}).get("categoria", "").lower()
-               != categoria_descartada][:4]
-    return {"nombre": nombre, "habilidad": habilidades[0] if habilidades else None,
-            "objeto": objetos[0] if objetos else None,
+    objeto = objetos[0] if objetos else None
+    ataques = _movimientos_probables(estadisticas, orientacion, movimientos, objeto)
+    return {"nombre": nombre, "habilidad": _habilidad_base(nombre, estadisticas, datos),
+            "objeto": objeto,
             "movimientos": ataques, "orientacion": orientacion,
             "naturaleza": naturaleza, "puntos": puntos}
 
@@ -101,4 +128,7 @@ def sets_equipo(equipo, uso_smogon, datos, movimientos=None):
         entrada["objeto"] = next((objeto for objeto in alternativas if objeto not in ocupados), None)
         if entrada["objeto"]:
             ocupados.add(entrada["objeto"])
+        entrada["movimientos"] = _movimientos_probables(
+            uso[entrada["nombre"]], entrada["orientacion"], movimientos, entrada["objeto"]
+        )
     return sets

@@ -84,7 +84,9 @@ Puedes seleccionar hasta seis Pokémon y descargar el equipo desde **Exportar
 equipo**. Los sets suman el uso de los spreads físicos y especiales para elegir
 la orientación dominante y su spread más usado; excluyen ataques de la categoría
 opuesta, conservando los Status. Sin inversión ofensiva se consideran de apoyo;
-sin `movimientos.json` no se filtran ataques. Además, resuelven objetos
+sin `movimientos.json` no se filtra por categoría. Se elige una habilidad de la
+forma base y con Choice Scarf/Band/Specs se omiten Protect y los movimientos
+Status conocidos. Además, resuelven objetos
 repetidos con Item Clause y conservan los puntos Champions (0 a 32) en la línea
 `EVs`. Si no hay datos de Smogon de algún miembro, la app lo indica y espera a
 que estén disponibles para exportar el equipo completo. Si no quedan objetos

@@ -17,7 +17,8 @@ def catalogo(monkeypatch, tmp_path):
         nombre: {"categoria": categoria}
         for categoria, nombres in {
             "Physical": ["dragonclaw", "stompingtantrum", "earthquake", "scaleshot",
-                         "grassyglide", "woodhammer", "highhorsepower", "uturn"],
+                         "grassyglide", "woodhammer", "highhorsepower", "uturn",
+                         "lastrespects", "aquajet", "wavecrash", "flipturn"],
             "Special": ["powergem", "earthpower", "dragonpulse", "dracometeor",
                         "flamethrower", "zapcannon", "focusblast"],
             "Status": ["encore"],
@@ -99,3 +100,68 @@ def test_desempate_redondea_a_seis_decimales(monkeypatch):
     datos = {nombre: {"tipos": []} for nombre in ["salazzle", "gardevoir"]}
     recomendaciones = recomendador.obtener_recomendaciones([], datos, aplicar_antisinergias=False)
     assert [r["nombre"] for r in recomendaciones] == ["gardevoir", "salazzle"]
+
+
+@pytest.mark.parametrize("nombre,habilidad,nombre_showdown", [
+    ("charizard", "blaze", "Charizard"),
+    ("gardevoir", "trace", "Gardevoir"),
+    ("floette-eternal", "flowerveil", "Floette-Eternal"),
+    ("raichu", "lightningrod", "Raichu"),
+    ("incineroar", "intimidate", "Incineroar"),
+])
+def test_exporta_habilidad_base_real(datos, uso_smogon, catalogo, nombre, habilidad, nombre_showdown):
+    from exportar import a_showdown
+    from importar_showdown import extraer_nombres, normalizar_id
+
+    entrada = sets.set_probable(nombre, uso_smogon, datos)
+    base = {normalizar_id(h["nombre"]) for h in datos[nombre]["habilidades"]}
+    assert entrada["habilidad"] == habilidad
+    assert entrada["habilidad"] in base
+    nombres = {"habilidades": extraer_nombres(FIXTURES / "abilities.ts")}
+    datos_exportacion = {nombre: {**datos[nombre], "nombre_showdown": nombre_showdown}}
+    texto = a_showdown([entrada], datos_exportacion, nombres)
+    assert "Ability: " + nombres["habilidades"][habilidad] in texto.splitlines()
+
+
+@pytest.mark.parametrize("habilidades_uso,esperada", [
+    ({"drought": 99, "solar-power": 0.8, "blaze": 0.2}, "solarpower"),
+    ({"drought": 100}, "blaze"),
+    ({"drought": 100, "solarpower": 0, "blaze": 0}, "blaze"),
+])
+def test_habilidad_base_mayor_uso_o_primera(habilidades_uso, esperada):
+    datos = {"charizard": {"habilidades": [{"nombre": "blaze"}, {"nombre": "solar-power"}]}}
+    uso = {"charizard": {"habilidades": habilidades_uso}}
+    assert sets.set_probable("charizard", uso, datos, movimientos={})["habilidad"] == esperada
+
+
+def test_basculegion_choice_scarf_sin_protect(datos, uso_smogon, catalogo):
+    entrada = sets.set_probable("basculegion", uso_smogon, datos)
+    assert entrada["objeto"] == "choicescarf"
+    assert entrada["movimientos"] == ["lastrespects", "aquajet", "wavecrash", "flipturn"]
+
+
+@pytest.mark.parametrize("objeto", ["choicescarf", "choiceband", "choicespecs"])
+def test_choice_excluye_status(objeto, catalogo):
+    uso = {"prueba": {
+        "objetos": {objeto: 100},
+        "movimientos": {"protect": 100, "encore": 95, "partingshot": 90,
+                        "fakeout": 85, "rockslide": 80, "flareblitz": 75, "throatchop": 70},
+    }}
+    entrada = sets.set_probable("prueba", uso, {})
+    assert entrada["movimientos"] == ["fakeout", "rockslide", "flareblitz", "throatchop"]
+
+
+def test_choice_sin_catalogo_omite_protect():
+    uso = {"prueba": {"objetos": {"choicescarf": 100}, "movimientos": {"protect": 100, "fakeout": 90}}}
+    assert sets.set_probable("prueba", uso, {}, movimientos={})["movimientos"] == ["fakeout"]
+
+
+def test_item_clause_recalcula_movimientos_al_pasar_a_choice(catalogo):
+    uso = {"pokemon": {
+        "a": {"objetos": {"lifeorb": 80}},
+        "b": {"objetos": {"lifeorb": 70, "choicescarf": 30},
+              "movimientos": {"protect": 100, "encore": 95, "fakeout": 90, "rockslide": 85}},
+    }}
+    resultado = sets.sets_equipo(["a", "b"], uso, {})
+    assert resultado[1]["objeto"] == "choicescarf"
+    assert resultado[1]["movimientos"] == ["fakeout", "rockslide"]
