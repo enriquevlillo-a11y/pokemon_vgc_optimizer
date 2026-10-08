@@ -48,3 +48,22 @@ sus datos generados en `data/<regulacion>/`. Para añadir otra regulación:
 
 Todos los scripts obtienen las rutas desde `config.py`, por lo que no necesitan
 otros cambios al seleccionar una regulación.
+
+### Cobertura y exportación Showdown
+
+La tabla de amenazas considera los movimientos ofensivos con al menos un 20 %
+de uso en Smogon y muestra con cuáles responde cada miembro. Sin estadísticas
+de un miembro, se aproxima su cobertura con sus tipos propios.
+
+Para habilitar la exportación, ejecuta `python3 importar_showdown.py` en local.
+El importador añade `movimientos.json`, los nombres de habilidades y el nombre
+original de Showdown de cada especie. No es necesario cambiar la puntuación del
+recomendador. Las entradas Champions con `inherit: true` sobrescriben solo sus
+campos y usan una caché distinta de los movimientos base.
+
+Puedes seleccionar hasta seis Pokémon y descargar el equipo desde **Exportar
+equipo**. Los sets usan las opciones más frecuentes de Smogon, resuelven objetos
+repetidos con Item Clause y conservan los puntos Champions (0 a 32) en la línea
+`EVs`. Si no hay datos de Smogon de algún miembro, la app lo indica y espera a
+que estén disponibles para exportar el equipo completo. Si no quedan objetos
+alternativos libres, ese miembro se exporta sin objeto.

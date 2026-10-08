@@ -49,3 +49,11 @@ def ruta_cache_smogon(nombre_archivo):
 def ruta_reg_m_c(nombre_archivo):
     """Devuelve la ruta de un archivo generado para Regulation M-C."""
     return DIRECTORIO_REG_M_C / nombre_archivo
+
+
+def ruta_movimientos():
+    return DIRECTORIO_DATOS / REGULACION_ACTIVA / "movimientos.json"
+
+
+def ruta_nombres():
+    return DIRECTORIO_DATOS / REGULACION_ACTIVA / "nombres.json"

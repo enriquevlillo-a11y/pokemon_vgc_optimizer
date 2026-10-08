@@ -6,7 +6,10 @@ import pandas as pd
 import streamlit as st
 
 from config import REGULACION_ACTIVA, ruta_pokemon_datos, ruta_regulacion, ruta_uso_smogon
-from config import ruta_reg_m_c
+from config import ruta_nombres
+from amenazas import revisar_equipo
+from sets import sets_equipo
+from exportar import a_showdown
 from interfaz import construir_filas_recomendaciones, frases_afinidad, opciones_selector
 from motor_tipos import calcular_defensas
 from recomendador import obtener_recomendaciones
@@ -34,7 +37,7 @@ def cargar_regulacion():
 
 @st.cache_data
 def cargar_nombres():
-    ruta = ruta_reg_m_c("nombres.json")
+    ruta = ruta_nombres()
     return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
 
 
@@ -60,10 +63,10 @@ if st.button("Cargar ejemplo: Eric Rios (Frankfurt 17-0)"):
 opciones = opciones_selector(datos, uso)
 etiquetas = dict(opciones)
 equipo = st.multiselect(
-    "Elige de 1 a 5 Pokémon",
+    "Elige de 1 a 6 Pokémon",
     options=[nombre for nombre, _ in opciones],
     format_func=lambda nombre: etiquetas[nombre],
-    max_selections=5,
+    max_selections=6,
     key="equipo",
 )
 
@@ -110,6 +113,33 @@ if equipo:
                 st.write(f"**{componente.replace('_', ' ').title()}:** {valor:.2f}")
             for frase in frases_afinidad(recomendacion["nombre"], equipo, uso):
                 st.caption(frase)
+
+    st.header("Amenazas")
+    amenazas = revisar_equipo(equipo, datos, uso)
+    st.dataframe([{
+        "Pokémon": amenaza["nombre"],
+        "Uso %": round(amenaza["uso"], 1),
+        "Le pegan": ", ".join(amenaza["le_pegan"]) or "Sin respuesta",
+        "Con": ", ".join(
+            miembro + (" (" + ", ".join(movimientos) + ")" if movimientos else "")
+            for miembro, movimientos in amenaza["con"].items()
+        ),
+    } for amenaza in amenazas], hide_index=True, width="stretch")
+
+    st.header("Exportar equipo")
+    sets = sets_equipo(equipo, uso, datos)
+    faltantes = [nombre for nombre in equipo if not any(s["nombre"] == nombre for s in sets)]
+    if faltantes:
+        st.warning("Sin datos de Smogon para: " + ", ".join(faltantes))
+    if sets:
+        if not nombres.get("habilidades") or any(not datos[s["nombre"]].get("nombre_showdown") for s in sets):
+            st.info("Ejecuta importar_showdown.py en local para actualizar los nombres de exportación.")
+        elif faltantes:
+            st.info("La exportación completa requiere datos de Smogon de todos los miembros.")
+        else:
+            texto = a_showdown(sets, datos, nombres)
+            st.code(texto, language=None)
+            st.download_button("Descargar equipo (.txt)", texto, file_name="equipo_showdown.txt", mime="text/plain")
 
     st.header("Debilidades del equipo")
     defensas = {nombre: calcular_defensas(datos[nombre]["tipos"]) for nombre in equipo}

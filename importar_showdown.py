@@ -15,6 +15,8 @@ ARCHIVOS_SHOWDOWN = {
     "formats_data": "data/mods/champions/formats-data.ts",
     "learnsets": "data/mods/champions/learnsets.ts",
     "moves": "data/moves.ts",
+    "moves_champions": "data/mods/champions/moves.ts",
+    "abilities": "data/abilities.ts",
     "items": "data/items.ts",
 }
 
@@ -25,7 +27,9 @@ def descargar_archivos(actualizar=False):
 
     rutas = {}
     for clave, ruta_remota in ARCHIVOS_SHOWDOWN.items():
-        destino = ruta_cache_showdown(Path(ruta_remota).name)
+        destino = ruta_cache_showdown(
+            "champions-moves.ts" if clave == "moves_champions" else Path(ruta_remota).name
+        )
         rutas[clave] = destino
         if destino.exists() and not actualizar:
             print(f"Usando caché: {destino}")
@@ -51,30 +55,59 @@ def leer_typescript(ruta):
     return json5.loads(texto)
 
 
+def _campos_typescript(ruta):
+    """Extrae propiedades escalares de entradas de primer nivel, sin evaluar JS.
+
+    Las cadenas y comentarios se tokenizan antes de contar llaves: las funciones
+    y objetos anidados no pueden introducir entradas ni propiedades falsas.
+    """
+    texto = Path(ruta).read_text(encoding="utf-8")
+    patron = r"//[^\n]*|/\*[\s\S]*?\*/|\"(?:\\.|[^\"\\])*\"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`|[A-Za-z_$][\w$]*|-?\d+(?:\.\d+)?|[^\s]"
+    tokens = [m.group() for m in re.finditer(patron, texto)
+              if not m.group().startswith(("//", "/*"))]
+    profundidad = 0
+    resultado = {}
+    entrada = None
+    for indice, token in enumerate(tokens):
+        if token == "{":
+            profundidad += 1
+        elif token == "}":
+            profundidad -= 1
+        elif indice + 2 < len(tokens) and tokens[indice + 1] == ":":
+            clave = token.strip("\"'")
+            valor = tokens[indice + 2]
+            if profundidad == 1 and valor == "{":
+                entrada = resultado.setdefault(clave, {})
+            elif profundidad == 2 and entrada is not None:
+                if valor.startswith(("\"", "'")):
+                    entrada[clave] = valor[1:-1]
+                elif re.fullmatch(r"-?\d+(?:\.\d+)?", valor):
+                    entrada[clave] = float(valor) if "." in valor else int(valor)
+                elif valor in ("true", "false"):
+                    entrada[clave] = valor == "true"
+    return resultado
+
+
 def extraer_nombres(ruta):
     """Obtiene ``id: name`` incluso si el TypeScript contiene funciones."""
-    try:
-        entradas = leer_typescript(ruta)
-        return {
-            identificador: entrada["name"]
-            for identificador, entrada in entradas.items()
-            if isinstance(entrada, dict) and isinstance(entrada.get("name"), str)
-        }
-    except (ValueError, TypeError):
-        texto = Path(ruta).read_text(encoding="utf-8")
-        inicios = list(re.finditer(
-            r"^\s*(?:['\"](?P<id_q>[^'\"]+)['\"]|(?P<id>\w+))\s*:\s*\{",
-            texto,
-            flags=re.M,
-        ))
-        resultado = {}
-        for indice, bloque in enumerate(inicios):
-            fin = inicios[indice + 1].start() if indice + 1 < len(inicios) else len(texto)
-            cuerpo = texto[bloque.end():fin]
-            nombre = re.search(r"\bname\s*:\s*(['\"])(.*?)\1", cuerpo)
-            if nombre:
-                resultado[bloque.group("id_q") or bloque.group("id")] = nombre.group(2)
-        return resultado
+    return {identificador: entrada["name"]
+            for identificador, entrada in _campos_typescript(ruta).items()
+            if isinstance(entrada.get("name"), str)}
+
+
+def extraer_movimientos(ruta_base, ruta_mod):
+    """Aplica las entradas Champions sobre los campos originales de cada ataque."""
+    entradas = _campos_typescript(ruta_base)
+    for identificador, cambios in _campos_typescript(ruta_mod).items():
+        if cambios.get("inherit"):
+            entradas.setdefault(identificador, {}).update(cambios)
+        else:
+            entradas[identificador] = cambios
+    campos = {"name": "nombre", "type": "tipo", "category": "categoria",
+              "basePower": "potencia", "priority": "prioridad", "target": "objetivo"}
+    return {identificador: {destino: entrada[origen]
+                           for origen, destino in campos.items() if origen in entrada}
+            for identificador, entrada in entradas.items()}
 
 
 def normalizar_nombre(nombre):
@@ -148,6 +181,7 @@ def generar_datos(pokedex, formats_data, learnsets):
         }
         resultado[nombre] = {
             "nombre": nombre,
+            "nombre_showdown": especie["name"],
             "tipos": [tipo.lower() for tipo in especie["types"]],
             "stats": stats,
             "habilidades": habilidades,
@@ -188,11 +222,12 @@ def guardar_datos(permitidos, datos):
         print(f"Generado: {ruta}")
 
 
-def guardar_nombres(movimientos, objetos):
+def guardar_nombres(movimientos, objetos, habilidades=None):
     """Genera el catálogo de nombres visibles usado por la interfaz."""
     ruta = ruta_reg_m_c("nombres.json")
     ruta.parent.mkdir(parents=True, exist_ok=True)
-    contenido = {"movimientos": movimientos, "objetos": objetos}
+    contenido = {"movimientos": movimientos, "objetos": objetos,
+                 "habilidades": habilidades or {}}
     ruta.write_text(
         json.dumps(contenido, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
@@ -212,9 +247,13 @@ def main():
         leer_typescript(rutas["learnsets"]),
     )
     guardar_datos(permitidos, datos)
+    movimientos = extraer_movimientos(rutas["moves"], rutas["moves_champions"])
+    ruta = ruta_reg_m_c("movimientos.json")
+    ruta.write_text(json.dumps(movimientos, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     guardar_nombres(
-        extraer_nombres(rutas["moves"]),
+        {clave: valor["nombre"] for clave, valor in movimientos.items() if "nombre" in valor},
         extraer_nombres(rutas["items"]),
+        extraer_nombres(rutas["abilities"]),
     )
 
 
