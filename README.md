@@ -4,6 +4,25 @@ Este proyecto analiza las debilidades defensivas de un equipo de Pokémon VGC y
 recomienda integrantes que complementen su cobertura, teniendo en cuenta además
 su uso en el metajuego de Pikalytics.
 
+El recomendador también consulta Smogon para detectar conflictos de campos y
+climas, y avisa cuando Psychic Terrain reduce el valor de Fake Out o de otros
+movimientos de prioridad. Usa habilidades con al menos 50 % de uso y movimientos
+con al menos 20 %; sin datos de uso, consulta las habilidades y el learnset.
+Los PESOS de roles y afinidad se conservan: los conflictos de campo descuentan
+4 puntos por compañero y los de clima, 2.
+
+La interfaz muestra velocidades máximas y según el spread más usado, calculadas
+con la fórmula de Champions a nivel 50. Si una especie megaevoluciona en más del
+50 % de sus equipos (sumando sus formas Mega), también muestra la Mega más usada.
+La tabla «Amenazas del meta» revisa las 20 especies con mayor uso y presenta
+primero aquellas sin respuesta. Es una aproximación por tipos propios, sin
+cálculo de daño ni cobertura por movimientos; las velocidades no incluyen
+habilidades, Scarf ni Tailwind salvo que se pidan explícitamente a `velocidad`.
+
+`python3 evaluar.py` compara v1, v2, v2 + Smogon y v2 + Smogon + antisinergias
+con las mismas referencias y PESOS. Ejecuta `python3 -m pytest` para validar
+la lógica y la interfaz.
+
 ## Instalación
 
 Se necesita Python 3. Instala las dependencias con:

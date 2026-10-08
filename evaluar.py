@@ -39,7 +39,7 @@ def _puesto(nombre, recomendaciones):
 
 
 def evaluar_equipo(equipo, datos, uso_smogon=None):
-    """Calcula v1, v2 y, cuando procede, v2 enriquecido con Smogon."""
+    """Compara v1, v2 y Smogon con/sin antisinergias conservando los PESOS."""
     resultados = []
     for quitado in equipo:
         parcial = equipo.copy()
@@ -47,15 +47,20 @@ def evaluar_equipo(equipo, datos, uso_smogon=None):
         v1 = obtener_recomendaciones_v1(parcial, datos)
         v2 = [
             recomendacion["nombre"]
-            for recomendacion in obtener_recomendaciones(parcial, datos)
+            for recomendacion in obtener_recomendaciones(parcial, datos, aplicar_antisinergias=False)
         ]
         resultado = {"pokemon": quitado, "puesto_v1": _puesto(quitado, v1), "puesto_v2": _puesto(quitado, v2)}
         if uso_smogon:
             v2_smogon = [
                 recomendacion["nombre"]
-                for recomendacion in obtener_recomendaciones(parcial, datos, uso_smogon)
+                for recomendacion in obtener_recomendaciones(parcial, datos, uso_smogon, aplicar_antisinergias=False)
             ]
             resultado["puesto_v2_smogon"] = _puesto(quitado, v2_smogon)
+            v2_antisinergias = [
+                recomendacion["nombre"]
+                for recomendacion in obtener_recomendaciones(parcial, datos, uso_smogon)
+            ]
+            resultado["puesto_v2_smogon_antisinergias"] = _puesto(quitado, v2_antisinergias)
         resultados.append(resultado)
     return resultados
 
@@ -87,19 +92,22 @@ def evaluar_referencias(referencias, datos, uso_smogon=None):
 
 def imprimir_resumen(por_regulacion, todos):
     print(
-        f"{'Regulación':<12} {'Versión':<8} "
+        f"{'Regulación':<12} {'Versión':<28} "
         f"{'Media':>8} {'Mediana':>9} {'Top 10':>8}"
     )
-    print("-" * 49)
+    print("-" * 70)
     for regulacion, resultados in por_regulacion.items():
         versiones = ["v1", "v2"]
         if resultados and "puesto_v2_smogon" in resultados[0]:
-            versiones.append("v2_smogon")
+            versiones.extend(["v2_smogon", "v2_smogon_antisinergias"])
         for version in versiones:
             resumen = resumir(resultados, version)
-            etiqueta = "v2 + Smogon" if version == "v2_smogon" else version
+            etiqueta = {
+                "v2_smogon": "v2 + Smogon",
+                "v2_smogon_antisinergias": "v2 + Smogon + antisinergias",
+            }.get(version, version)
             print(
-                f"{regulacion:<12} {etiqueta:<12} {resumen['puesto_medio']:>8.2f} "
+                f"{regulacion:<12} {etiqueta:<28} {resumen['puesto_medio']:>8.2f} "
                 f"{resumen['mediana']:>9.1f} {resumen['top_10']:>8}"
             )
 

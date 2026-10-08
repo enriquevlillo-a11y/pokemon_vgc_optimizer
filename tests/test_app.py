@@ -14,3 +14,9 @@ def test_app_arranca_sin_errores():
 
     assert not app.exception
     assert app.dataframe[0].value.iloc[0]["Pokémon"] == "incineroar"
+    assert "Amenazas del meta" in [cabecera.value for cabecera in app.header]
+    tabla_amenazas = app.dataframe[1].value
+    assert len(tabla_amenazas) == 20
+    assert tabla_amenazas.iloc[0]["Estado"] == "sin respuesta"
+    assert any("**Velocidad máxima:**" in texto.value for texto in app.markdown)
+    assert any("**Velocidad real:**" in texto.value for texto in app.markdown)

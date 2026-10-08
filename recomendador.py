@@ -2,6 +2,7 @@
 
 import json
 
+from antisinergias import antisinergias
 from config import ruta_pokemon_datos, ruta_uso_pikalytics, ruta_uso_smogon
 from puntuacion import puntuar
 from recomendador_tipos import calcular_debilidades_equipo, puntuar_candidato
@@ -58,17 +59,22 @@ def _aportes(rol):
     return ", ".join(aportes) or "daño/cobertura"
 
 
-def obtener_recomendaciones(equipo, datos, uso_smogon=None):
+def obtener_recomendaciones(equipo, datos, uso_smogon=None, aplicar_antisinergias=True):
     """Devuelve todos los candidatos ordenados; es la API reutilizable y testeable."""
     recomendaciones = []
     for nombre, pokemon in datos.items():
         if not es_candidato(nombre, pokemon, equipo):
             continue
-        componentes = puntuar(equipo, nombre, datos, uso_smogon)
+        componentes = puntuar(equipo, nombre, datos, uso_smogon, aplicar_antisinergias)
+        aporta = _aportes(roles_de(nombre, datos, uso_smogon))
+        if aplicar_antisinergias:
+            avisos, _ = antisinergias(equipo, nombre, datos, uso_smogon)
+            if avisos:
+                aporta += "; " + "; ".join(f"⚠️ {aviso}" for aviso in avisos)
         recomendaciones.append({
             "nombre": nombre,
             "tipos": pokemon["tipos"],
-            "aporta": _aportes(roles_de(nombre, datos, uso_smogon)),
+            "aporta": aporta,
             "puntuacion": componentes,
         })
     return sorted(recomendaciones, key=lambda r: (-r["puntuacion"]["total"], r["nombre"]))
