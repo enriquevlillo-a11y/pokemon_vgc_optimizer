@@ -52,23 +52,23 @@ def test_nombre_original():
 
 def test_eric_responde_volcarona(datos, uso, movimientos):
     equipo = ["gholdengo", "volcarona", "garchomp", "incineroar", "rillaboom", "raichu"]
-    amenaza = next(a for a in revisar_equipo(equipo, datos, uso, movimientos) if a["nombre"] == "volcarona")
+    amenaza = next(a for a in revisar_equipo(equipo, datos, uso, movimientos=movimientos) if a["nombre"] == "volcarona")
     assert not amenaza["sin_respuesta"]
     assert "garchomp" in amenaza["le_pegan"]
     assert "Rock Slide" in amenaza["con"]["garchomp"]
 
 
 def test_umbral_categoria_potencia_y_fallback(movimientos):
-    datos = {"atacante": {"tipos": ["rock"]}, "volcarona": {"tipos": ["fire", "bug"]}}
+    datos = {"atacante": {"tipos": ["rock"], "stats": {"speed": 80}}, "volcarona": {"tipos": ["fire", "bug"], "stats": {"speed": 100}}}
     uso = {"pokemon": {"volcarona": {"uso": 10}, "atacante": {"movimientos": {"rockslide": 19.99}}}}
-    assert revisar_equipo(["atacante"], datos, uso, movimientos)[0]["sin_respuesta"]
+    assert revisar_equipo(["atacante"], datos, uso, movimientos=movimientos)[0]["sin_respuesta"]
     uso["pokemon"]["atacante"]["movimientos"]["rockslide"] = 20
-    assert not revisar_equipo(["atacante"], datos, uso, movimientos)[0]["sin_respuesta"]
+    assert not revisar_equipo(["atacante"], datos, uso, movimientos=movimientos)[0]["sin_respuesta"]
     for campo, valor in [("categoria", "Status"), ("potencia", 0)]:
         modificados = {**movimientos, "rockslide": {**movimientos["rockslide"], campo: valor}}
-        assert revisar_equipo(["atacante"], datos, uso, modificados)[0]["sin_respuesta"]
+        assert revisar_equipo(["atacante"], datos, uso, movimientos=modificados)[0]["sin_respuesta"]
     del uso["pokemon"]["atacante"]
-    assert not revisar_equipo(["atacante"], datos, uso, {})[0]["sin_respuesta"]
+    assert not revisar_equipo(["atacante"], datos, uso, movimientos={})[0]["sin_respuesta"]
 
 
 def test_set_incineroar(datos, uso, nombres):
@@ -126,10 +126,10 @@ Sassy Nature
 def test_evaluacion_sin_cambios(datos, uso):
     referencias = json.loads(ruta_equipos_referencia().read_text())
     por_regulacion, _ = evaluar_referencias(referencias, datos, uso)
-    esperados = {"M-C": [(82.44, 77, 11), (69.26, 58.5, 11), (7.04, 2.5, 61)],
-                 "M-B": [(56, 37, 16), (75.75, 51, 10), (8.06, 3, 65)]}
+    esperados = {"M-C": [(82.44, 77, 11), (69.26, 58.5, 11), (7.04, 2.5, 61), (7.40, 2.5, 61)],
+                 "M-B": [(56, 37, 16), (75.75, 51, 10), (8.06, 3, 65), (8.06, 3, 65)]}
     for regulacion, resultados in por_regulacion.items():
-        for version, (media, mediana, top) in zip(("v1", "v2", "v2_smogon"), esperados[regulacion]):
+        for version, (media, mediana, top) in zip(("v1", "v2", "v2_smogon", "v2_smogon_antisinergias"), esperados[regulacion]):
             resumen = resumir(resultados, version)
             assert round(resumen["puesto_medio"], 2) == media
             assert resumen["mediana"] == mediana

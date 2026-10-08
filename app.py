@@ -5,16 +5,17 @@ import json
 import pandas as pd
 import streamlit as st
 
+from amenazas import revisar_equipo
 from config import REGULACION_ACTIVA, ruta_pokemon_datos, ruta_regulacion, ruta_uso_smogon
 from config import ruta_nombres
-from amenazas import revisar_equipo
 from sets import sets_equipo
 from exportar import a_showdown
-from interfaz import construir_filas_recomendaciones, frases_afinidad, opciones_selector
+from interfaz import construir_filas_amenazas, construir_filas_recomendaciones, frases_afinidad, opciones_selector
 from motor_tipos import calcular_defensas
 from recomendador import obtener_recomendaciones
 from recomendador_tipos import calcular_debilidades_equipo
 from roles import roles_de
+from velocidad import velocidad, velocidades_reales
 
 EJEMPLO = ["gholdengo", "volcarona", "garchomp", "rillaboom", "raichu"]
 
@@ -93,6 +94,13 @@ if equipo:
             st.subheader(nombre.title())
             st.write("**Tipos:** " + " / ".join(pokemon["tipos"]))
             st.write("**Roles:** " + (", ".join(roles) or "daño/cobertura"))
+            st.write(f"**Velocidad máxima:** {velocidad(nombre, datos)}")
+            reales = velocidades_reales(nombre, uso, datos)
+            st.write(f"**Velocidad real:** {reales[nombre] if reales[nombre] is not None else 'sin datos'}")
+            for forma, real in reales.items():
+                if forma != nombre:
+                    st.write(f"**{forma} — velocidad máxima:** {velocidad(forma, datos)}")
+                    st.write(f"**{forma} — velocidad real:** {real if real is not None else 'sin datos'}")
             if estadisticas:
                 movimientos = list(estadisticas.get("movimientos", {}))[:3]
                 objeto = next(iter(estadisticas.get("objetos", {})), "—")
@@ -114,17 +122,13 @@ if equipo:
             for frase in frases_afinidad(recomendacion["nombre"], equipo, uso):
                 st.caption(frase)
 
-    st.header("Amenazas")
+    st.header("Amenazas del meta")
+    st.caption("Cobertura por ataques con uso ≥ 20 %; sin datos de Smogon, tipos propios. Sin cálculo de daño. Velocidad máxima sin Scarf ni Tailwind; velocidad real según el spread más usado.")
     amenazas = revisar_equipo(equipo, datos, uso)
-    st.dataframe([{
-        "Pokémon": amenaza["nombre"],
-        "Uso %": round(amenaza["uso"], 1),
-        "Le pegan": ", ".join(amenaza["le_pegan"]) or "Sin respuesta",
-        "Con": ", ".join(
-            miembro + (" (" + ", ".join(movimientos) + ")" if movimientos else "")
-            for miembro, movimientos in amenaza["con"].items()
-        ),
-    } for amenaza in amenazas], hide_index=True, width="stretch")
+    if amenazas:
+        st.dataframe(construir_filas_amenazas(amenazas), hide_index=True, width="stretch")
+    else:
+        st.info("No hay datos de uso para comprobar las amenazas del meta.")
 
     st.header("Exportar equipo")
     sets = sets_equipo(equipo, uso, datos)

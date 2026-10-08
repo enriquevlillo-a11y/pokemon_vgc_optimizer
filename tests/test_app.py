@@ -14,6 +14,12 @@ def test_app_arranca_sin_errores():
 
     assert not app.exception
     assert app.dataframe[0].value.iloc[0]["Pokémon"] == "incineroar"
+    assert "Amenazas del meta" in [cabecera.value for cabecera in app.header]
+    tabla_amenazas = app.dataframe[1].value
+    assert len(tabla_amenazas) == 20
+    assert tabla_amenazas.iloc[0]["Estado"] == "sin respuesta"
+    assert any("**Velocidad máxima:**" in texto.value for texto in app.markdown)
+    assert any("**Velocidad real:**" in texto.value for texto in app.markdown)
 
 
 def test_app_exporta_equipo_completo_con_fixtures(monkeypatch, tmp_path):
@@ -47,7 +53,7 @@ def test_app_exporta_equipo_completo_con_fixtures(monkeypatch, tmp_path):
         assert app.code[0].value.count("Level: 50") == 6
         assert len(app.get("download_button")) == 1
         amenazas = app.dataframe[1].value
-        volcarona = amenazas[amenazas["Pokémon"] == "volcarona"].iloc[0]
+        volcarona = amenazas[amenazas["Amenaza"] == "volcarona"].iloc[0]
         assert "garchomp (Rock Slide)" in volcarona["Con"]
     finally:
         st.cache_data.clear()

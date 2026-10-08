@@ -1,26 +1,55 @@
-"""Revisa respuestas ofensivas y defensivas frente al metajuego."""
+"""Lista de comprobación del meta basada en tipos y velocidades."""
 
 import json
 
-from config import ruta_movimientos
+from config import ruta_pokemon_datos, ruta_movimientos
 from importar_showdown import normalizar_id
+from datos_uso import mega_habitual, entrada_uso
 from motor_tipos import calcular_defensas
+from velocidad import velocidad, velocidades_reales
 
 
-def revisar_equipo(equipo, datos, uso_smogon=None, movimientos=None):
-    """Devuelve amenazas por uso y los miembros que les pegan o las resisten.
+def amenazas_del_meta(uso_smogon, n=20, datos=None):
+    """Las n especies con mayor uso y los tipos de su Mega habitual, si procede.
 
-    Con Smogon solo se consideran ataques frecuentes y con potencia positiva.
-    Sin Smogon se conserva la aproximación ofensiva por tipos propios.
+    Los datos de especies se cargan desde config.py si no se proporcionan.
     """
-    uso = (uso_smogon or {}).get("pokemon", {})
+    if datos is None:
+        datos = json.loads(ruta_pokemon_datos().read_text(encoding="utf-8"))
+    pokemon = (uso_smogon or {}).get("pokemon", uso_smogon or {})
+    ordenadas = sorted(pokemon, key=lambda nombre: (-pokemon[nombre].get("uso", 0), nombre))
+    resultado = []
+    for nombre in ordenadas[:max(0, n)]:
+        forma = mega_habitual(nombre, uso_smogon, datos) or nombre
+        resultado.append({
+            "nombre": nombre,
+            "uso": pokemon[nombre].get("uso", 0),
+            "tipos": datos[forma]["tipos"],
+            "forma": forma,
+        })
+    return resultado
+
+
+def _estado(le_pegan, debiles):
+    if not le_pegan:
+        return "sin respuesta"
+    return "en riesgo" if len(debiles) >= 3 else "cubierta"
+
+
+def revisar_equipo(equipo, datos, uso_smogon, n=20, movimientos=None):
+    """Cobertura de ataques frecuentes, con fallback a tipos propios sin Smogon.
+
+    Compara la velocidad máxima de cada miembro (32 puntos, naturaleza favorable,
+    sin Scarf/Tailwind) con el spread más usado de la amenaza, o su máximo cuando
+    falta. Para amenazas que megaevolucionan >50 %, usa su Mega habitual.
+    """
     if movimientos is None:
         ruta = ruta_movimientos()
         movimientos = json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
     ataques = {}
     for miembro in equipo:
-        estadisticas = uso.get(miembro)
-        if estadisticas:
+        estadisticas = entrada_uso(miembro, uso_smogon)
+        if estadisticas is not None:
             ataques[miembro] = [
                 (movimiento.get("tipo", "").lower(), movimiento.get("nombre", nombre))
                 for nombre, porcentaje in estadisticas.get("movimientos", {}).items()
@@ -31,22 +60,29 @@ def revisar_equipo(equipo, datos, uso_smogon=None, movimientos=None):
             ]
         else:
             ataques[miembro] = [(tipo, None) for tipo in datos[miembro]["tipos"]]
+    defensas = {nombre: calcular_defensas(datos[nombre]["tipos"]) for nombre in equipo}
+    velocidades = {nombre: velocidad(nombre, datos) for nombre in equipo}
     resultado = []
-    for nombre, estadisticas in sorted(uso.items(), key=lambda par: (-par[1].get("uso", 0), par[0])):
-        if nombre not in datos:
-            continue
-        defensas = calcular_defensas(datos[nombre]["tipos"])
-        le_pegan, con, resisten = [], {}, []
+    for amenaza in amenazas_del_meta(uso_smogon, n, datos):
+        defensa = calcular_defensas(amenaza["tipos"])
+        le_pegan, con = [], {}
         for miembro in equipo:
-            efectivos = [movimiento for tipo, movimiento in ataques[miembro]
-                         if defensas.get(tipo, 1) > 1]
+            efectivos = [movimiento for tipo, movimiento in ataques[miembro] if defensa.get(tipo, 1) > 1]
             if efectivos:
                 le_pegan.append(miembro)
                 con[miembro] = [movimiento for movimiento in efectivos if movimiento]
-            defensas_miembro = calcular_defensas(datos[miembro]["tipos"])
-            if all(defensas_miembro[tipo] < 1 for tipo in datos[nombre]["tipos"]):
-                resisten.append(miembro)
-        resultado.append({"nombre": nombre, "uso": estadisticas.get("uso", 0),
-                          "le_pegan": le_pegan, "con": con, "resisten": resisten,
-                          "sin_respuesta": not le_pegan})
+        debiles = [nombre for nombre in equipo if any(defensas[nombre][tipo] > 1 for tipo in amenaza["tipos"])]
+        forma = amenaza["forma"]
+        real = velocidades_reales(amenaza["nombre"], uso_smogon, datos).get(forma)
+        referencia = real if real is not None else velocidad(forma, datos)
+        mas_rapidos = [nombre for nombre in equipo if velocidades[nombre] > referencia]
+        resultado.append({
+            **amenaza,
+            "le_pegan": le_pegan,
+            "con": con,
+            "sin_respuesta": not le_pegan,
+            "debiles": debiles,
+            "mas_rapidos": mas_rapidos,
+            "estado": _estado(le_pegan, debiles),
+        })
     return resultado
