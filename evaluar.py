@@ -1,7 +1,9 @@
 """Compara los recomendadores por tipos (v1) y por roles (v2)."""
 
+import argparse
 import json
 from collections import defaultdict
+from pathlib import Path
 from statistics import median
 
 from config import ruta_equipos_referencia, ruta_pokemon_datos, ruta_uso_smogon
@@ -122,6 +124,10 @@ def imprimir_resumen(por_regulacion, todos):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--actualizar-referencia", action="store_true",
+                        help="Regenera el perfil activo de tests/fixtures/evaluacion_referencia.json")
+    args = parser.parse_args()
     datos = json.loads(ruta_pokemon_datos().read_text(encoding="utf-8"))
     uso = (
         json.loads(ruta_uso_smogon().read_text(encoding="utf-8"))
@@ -131,6 +137,18 @@ def main():
     referencias = json.loads(ruta_equipos_referencia().read_text(encoding="utf-8"))
     por_regulacion, todos = evaluar_referencias(referencias, datos, uso)
     imprimir_resumen(por_regulacion, todos)
+    if args.actualizar_referencia:
+        ruta = Path(__file__).resolve().parent / "tests" / "fixtures" / "evaluacion_referencia.json"
+        referencia = json.loads(ruta.read_text(encoding="utf-8"))
+        pokemon = uso.get("pokemon", uso)
+        perfil = "con_variantes" if any(e.get("variantes") for e in pokemon.values()) else "sin_variantes"
+        versiones = ["v1", "v2"] + (["v2_smogon", "v2_smogon_antisinergias"] if uso else [])
+        referencia[perfil] = {
+            regulacion: {v: round(resumir(resultados, v)["puesto_medio"], 2) for v in versiones}
+            for regulacion, resultados in por_regulacion.items()
+        }
+        ruta.write_text(json.dumps(referencia, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"\nReferencia regenerada: {perfil} ({ruta.relative_to(ruta.parent.parent.parent)})")
 
 
 if __name__ == "__main__":

@@ -52,7 +52,7 @@ pip3 install -r requirements.txt
 streamlit run app.py
 ```
 
-La aplicación permite elegir hasta cinco Pokémon, inspeccionar sus roles y datos
+La aplicación permite elegir hasta seis Pokémon, inspeccionar sus roles y datos
 de uso, y comparar recomendaciones, afinidades y debilidades del equipo.
 
 ## Cambiar de regulación
@@ -113,9 +113,9 @@ objetos, movimientos y spreads de cada entrada original, con porcentajes calcula
 sobre el peso de esa forma. Por variante guarda habilidades con uso ≥ 1 %, los
 10 objetos más usados, movimientos con uso ≥ 5 % (máximo 20) y los 15 spreads
 más usados. Los datos agregados siguen alimentando el recomendador y su lógica
-de puntuación se mantiene. Las referencias de evaluación distinguen el JSON
-antiguo del regenerado: en M-C las medias v2 + Smogon y con antisinergias son
-7.04/7.40 para el antiguo y 6.89/6.96 para el regenerado; el resto se conserva.
+de puntuación usa esa vista agregada. Las referencias de evaluación distinguen
+el JSON antiguo del regenerado. Para actualizar el perfil activo con resultados
+calculados, ejecuta `python evaluar.py --actualizar-referencia`.
 
 `set_probable(..., variante="garchomp-mega-z")`, `roles_de(..., variante=...)` y
 `velocidad_real(..., variante=...)` permiten elegir una forma; por defecto usan la
@@ -132,3 +132,25 @@ habilidad de la variante con uso ≥ 50 %. Los JSON antiguos sin `variantes` con
 el comportamiento anterior; vuelve a ejecutar la importación local de Smogon para
 disponer de los selectores. Los tests usan un fixture con variantes y no requieren
 regenerar los datos de uso incluidos.
+
+### Diagnóstico y motivos de recomendación
+
+«Debilidades de tu equipo» aparece antes de las recomendaciones y ordena los
+problemas por gravedad e identificador. Detecta carencias de Fake Out, control de
+velocidad, Intimidate y atacantes con estadística ofensiva ≥ 120; el control solo
+con Icy Wind/Electroweb se considera débil y de gravedad media. También señala
+los tipos que golpean superefectivo a tres miembros sin ninguna resistencia o
+inmunidad y las amenazas del top 20 sin respuesta o en riesgo.
+
+`diagnostico.debilidades_equipo(...)` y `diagnostico.explicar(equipo, candidato, ...)`
+aceptan el catálogo `movimientos` y `variantes={especie: forma}`. Usan las variantes
+seleccionadas y las inmunidades de `amenazas._defensas`. «Por qué» explica los
+roles, resistencias y mejoras de estado de amenazas que aporta cada candidato.
+La app y el CLI calculan los motivos solo para las recomendaciones mostradas.
+
+Fake Out recibe su peso completo cuando el equipo no tiene usuarios, la mitad
+cuando tiene uno y cero con dos o más, sin penalización negativa. Si al construir
+los sets hay al menos tres usuarios, se retira de los que lo usan en menos del
+50 % de su variante y se sustituye según el uso, la orientación y el objeto final.
+Los usuarios con uso ≥ 50 % lo conservan, incluso si hay tres o más. El
+recomendador avisa cuando un candidato minoritario se suma a dos usuarios.

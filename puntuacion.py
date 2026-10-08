@@ -48,7 +48,9 @@ def puntuar(equipo, candidato, datos, uso_smogon=None, aplicar_antisinergias=Tru
     roles_equipo = [roles_de(nombre, datos, uso_smogon) for nombre in equipo]
     rol = roles_de(candidato, datos, uso_smogon)
     componentes = {}
-    componentes["fake"] = PESOS["fake"] * (0.5 if any(r["fake_out"] for r in roles_equipo) else 1) if rol["fake_out"] else 0
+    usuarios_fake = sum(r["fake_out"] for r in roles_equipo)
+    factor_fake = 1 if usuarios_fake == 0 else 0.5 if usuarios_fake == 1 else 0
+    componentes["fake"] = PESOS["fake"] * factor_fake if rol["fake_out"] else 0
     if rol["control_velocidad_debil"] and not rol["control_velocidad"]:
         componentes["velocidad"] = 0.3 * PESOS["velocidad"]
     elif rol["control_velocidad"]:

@@ -4,7 +4,17 @@ import pytest
 from streamlit.testing.v1 import AppTest
 
 
-def test_app_arranca_sin_errores():
+def test_app_arranca_sin_errores(monkeypatch):
+    import diagnostico
+
+    explicar_original = diagnostico.explicar
+    llamadas = []
+
+    def explicar_visible(equipo, candidato, *args, **kwargs):
+        llamadas.append(candidato)
+        return explicar_original(equipo, candidato, *args, **kwargs)
+
+    monkeypatch.setattr(diagnostico, "explicar", explicar_visible)
     ruta_app = Path(__file__).resolve().parent.parent / "app.py"
     app = AppTest.from_file(str(ruta_app)).run(timeout=30)
 
@@ -15,7 +25,13 @@ def test_app_arranca_sin_errores():
 
     assert not app.exception
     assert app.dataframe[0].value.iloc[0]["Pokémon"] == "incineroar"
-    assert "Amenazas del meta" in [cabecera.value for cabecera in app.header]
+    cabeceras = [cabecera.value for cabecera in app.header]
+    assert "Amenazas del meta" in cabeceras
+    assert cabeceras.index("Debilidades de tu equipo") < cabeceras.index("Recomendaciones")
+    recomendaciones = app.dataframe[0].value
+    assert "Por qué" in recomendaciones.columns
+    assert recomendaciones["Por qué"].str.len().gt(0).all()
+    assert llamadas == recomendaciones["Pokémon"].tolist()
     tabla_amenazas = app.dataframe[1].value
     assert len(tabla_amenazas) == 20
     prioridad = {"sin respuesta": 0, "en riesgo": 1, "cubierta": 2}
