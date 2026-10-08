@@ -87,7 +87,22 @@ opuesta, conservando los Status. Sin inversión ofensiva se consideran de apoyo;
 sin `movimientos.json` no se filtra por categoría. Se elige una habilidad de la
 forma base y con Choice Scarf/Band/Specs se omiten Protect y los movimientos
 Status conocidos. Además, resuelven objetos
-repetidos con Item Clause y conservan los puntos Champions (0 a 32) en la línea
-`EVs`. Si no hay datos de Smogon de algún miembro, la app lo indica y espera a
-que estén disponibles para exportar el equipo completo. Si no quedan objetos
-alternativos libres, ese miembro se exporta sin objeto.
+repetidos con Item Clause y conservan los puntos Champions (0 a 32 por stat y
+66 en total) en la línea `EVs`. Los repartos que exceden esos límites lanzan
+`ValueError`. Si no hay datos de Smogon de algún miembro, se exporta un set
+genérico y la app muestra «set genérico (sin datos de uso)». Usa la primera
+habilidad, ningún objeto, naturaleza Adamant o Modest según el ataque base
+mayor (físico en empate), 32 puntos en ese ataque, 32 en velocidad y 2 en PS.
+Lleva Protect si lo aprende y hasta tres ataques de su orientación, priorizando
+STAB y luego potencia. Si no quedan objetos alternativos libres para un set
+de Smogon, ese miembro se exporta sin objeto.
+
+La validación oficial de los 24 equipos de referencia es opcional. Con una
+instalación de Pokémon Showdown preparada, ejecuta:
+
+```bash
+SHOWDOWN_DIR=/ruta/a/pokemon-showdown python3 -m pytest tests/test_validador_showdown.py
+```
+
+Sin `SHOWDOWN_DIR`, ese test se omite; el resto de pruebas comprueba también los
+equipos de Yvar Vlieger y Emilio Forbes, sus seis miembros y los límites de puntos.
