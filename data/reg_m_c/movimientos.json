@@ -1,0 +1,7634 @@
+{
+  "10000000voltthunderbolt": {
+    "nombre": "10,000,000 Volt Thunderbolt",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 195,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "absorb": {
+    "nombre": "Absorb",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 20,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "accelerock": {
+    "nombre": "Accelerock",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "acid": {
+    "nombre": "Acid",
+    "tipo": "Poison",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "acidarmor": {
+    "nombre": "Acid Armor",
+    "tipo": "Poison",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "aciddownpour": {
+    "nombre": "Acid Downpour",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "acidspray": {
+    "nombre": "Acid Spray",
+    "tipo": "Poison",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "acrobatics": {
+    "nombre": "Acrobatics",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 55,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "acupressure": {
+    "nombre": "Acupressure",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "adjacentAllyOrSelf"
+  },
+  "aerialace": {
+    "nombre": "Aerial Ace",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "aeroblast": {
+    "nombre": "Aeroblast",
+    "tipo": "Flying",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "afteryou": {
+    "nombre": "After You",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "agility": {
+    "nombre": "Agility",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "aircutter": {
+    "nombre": "Air Cutter",
+    "tipo": "Flying",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "airslash": {
+    "nombre": "Air Slash",
+    "tipo": "Flying",
+    "categoria": "Special",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "alloutpummeling": {
+    "nombre": "All-Out Pummeling",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "alluringvoice": {
+    "nombre": "Alluring Voice",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "allyswitch": {
+    "nombre": "Ally Switch",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 2,
+    "objetivo": "self"
+  },
+  "amnesia": {
+    "nombre": "Amnesia",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "anchorshot": {
+    "nombre": "Anchor Shot",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "ancientpower": {
+    "nombre": "Ancient Power",
+    "tipo": "Rock",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "appleacid": {
+    "nombre": "Apple Acid",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "aquacutter": {
+    "nombre": "Aqua Cutter",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "aquajet": {
+    "nombre": "Aqua Jet",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "aquaring": {
+    "nombre": "Aqua Ring",
+    "tipo": "Water",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "aquastep": {
+    "nombre": "Aqua Step",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "aquatail": {
+    "nombre": "Aqua Tail",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "armorcannon": {
+    "nombre": "Armor Cannon",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "armthrust": {
+    "nombre": "Arm Thrust",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 15,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "aromatherapy": {
+    "nombre": "Aromatherapy",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allyTeam"
+  },
+  "aromaticmist": {
+    "nombre": "Aromatic Mist",
+    "tipo": "Fairy",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "adjacentAlly"
+  },
+  "assist": {
+    "nombre": "Assist",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "assurance": {
+    "nombre": "Assurance",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "astonish": {
+    "nombre": "Astonish",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 30,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "astralbarrage": {
+    "nombre": "Astral Barrage",
+    "tipo": "Ghost",
+    "categoria": "Special",
+    "potencia": 110,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "attackorder": {
+    "nombre": "Attack Order",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "attract": {
+    "nombre": "Attract",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "aurasphere": {
+    "nombre": "Aura Sphere",
+    "tipo": "Fighting",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "aurawheel": {
+    "nombre": "Aura Wheel",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 110,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "aurorabeam": {
+    "nombre": "Aurora Beam",
+    "tipo": "Ice",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "auroraveil": {
+    "nombre": "Aurora Veil",
+    "tipo": "Ice",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allySide"
+  },
+  "autotomize": {
+    "nombre": "Autotomize",
+    "tipo": "Steel",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "avalanche": {
+    "nombre": "Avalanche",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": -4,
+    "objetivo": "normal"
+  },
+  "axekick": {
+    "nombre": "Axe Kick",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "babydolleyes": {
+    "nombre": "Baby-Doll Eyes",
+    "tipo": "Fairy",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "baddybad": {
+    "nombre": "Baddy Bad",
+    "tipo": "Dark",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "banefulbunker": {
+    "nombre": "Baneful Bunker",
+    "tipo": "Poison",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 4,
+    "objetivo": "self"
+  },
+  "barbbarrage": {
+    "nombre": "Barb Barrage",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "barrage": {
+    "nombre": "Barrage",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 15,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "barrier": {
+    "nombre": "Barrier",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "batonpass": {
+    "nombre": "Baton Pass",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "beakblast": {
+    "nombre": "Beak Blast",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": -3,
+    "objetivo": "normal"
+  },
+  "beatup": {
+    "nombre": "Beat Up",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "behemothbash": {
+    "nombre": "Behemoth Bash",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "behemothblade": {
+    "nombre": "Behemoth Blade",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "belch": {
+    "nombre": "Belch",
+    "tipo": "Poison",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bellydrum": {
+    "nombre": "Belly Drum",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "bestow": {
+    "nombre": "Bestow",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bide": {
+    "nombre": "Bide",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 1,
+    "objetivo": "self"
+  },
+  "bind": {
+    "nombre": "Bind",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 15,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bite": {
+    "nombre": "Bite",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bitterblade": {
+    "nombre": "Bitter Blade",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bittermalice": {
+    "nombre": "Bitter Malice",
+    "tipo": "Ghost",
+    "categoria": "Special",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "blackholeeclipse": {
+    "nombre": "Black Hole Eclipse",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "blastburn": {
+    "nombre": "Blast Burn",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "blazekick": {
+    "nombre": "Blaze Kick",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "blazingtorque": {
+    "nombre": "Blazing Torque",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bleakwindstorm": {
+    "nombre": "Bleakwind Storm",
+    "tipo": "Flying",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "blizzard": {
+    "nombre": "Blizzard",
+    "tipo": "Ice",
+    "categoria": "Special",
+    "potencia": 110,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "block": {
+    "nombre": "Block",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bloodmoon": {
+    "nombre": "Blood Moon",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 130,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bloomdoom": {
+    "nombre": "Bloom Doom",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "blueflare": {
+    "nombre": "Blue Flare",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 130,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bodypress": {
+    "nombre": "Body Press",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bodyslam": {
+    "nombre": "Body Slam",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "boltbeak": {
+    "nombre": "Bolt Beak",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "boltstrike": {
+    "nombre": "Bolt Strike",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 130,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "boneclub": {
+    "nombre": "Bone Club",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bonemerang": {
+    "nombre": "Bonemerang",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bonerush": {
+    "nombre": "Bone Rush",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 30,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "boomburst": {
+    "nombre": "Boomburst",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 140,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "bounce": {
+    "nombre": "Bounce",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "bouncybubble": {
+    "nombre": "Bouncy Bubble",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "branchpoke": {
+    "nombre": "Branch Poke",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bravebird": {
+    "nombre": "Brave Bird",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "breakingswipe": {
+    "nombre": "Breaking Swipe",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "breakneckblitz": {
+    "nombre": "Breakneck Blitz",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "brickbreak": {
+    "nombre": "Brick Break",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "brine": {
+    "nombre": "Brine",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "brutalswing": {
+    "nombre": "Brutal Swing",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "bubble": {
+    "nombre": "Bubble",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "bubblebeam": {
+    "nombre": "Bubble Beam",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bugbite": {
+    "nombre": "Bug Bite",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bugbuzz": {
+    "nombre": "Bug Buzz",
+    "tipo": "Bug",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "bulkup": {
+    "nombre": "Bulk Up",
+    "tipo": "Fighting",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "bulldoze": {
+    "nombre": "Bulldoze",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "bulletpunch": {
+    "nombre": "Bullet Punch",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "bulletseed": {
+    "nombre": "Bullet Seed",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 25,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "burningbulwark": {
+    "nombre": "Burning Bulwark",
+    "tipo": "Fire",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 4,
+    "objetivo": "self"
+  },
+  "burningjealousy": {
+    "nombre": "Burning Jealousy",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "burnup": {
+    "nombre": "Burn Up",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 130,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "buzzybuzz": {
+    "nombre": "Buzzy Buzz",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "calmmind": {
+    "nombre": "Calm Mind",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "camouflage": {
+    "nombre": "Camouflage",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "captivate": {
+    "nombre": "Captivate",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "catastropika": {
+    "nombre": "Catastropika",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 210,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "ceaselessedge": {
+    "nombre": "Ceaseless Edge",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "celebrate": {
+    "nombre": "Celebrate",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "charge": {
+    "nombre": "Charge",
+    "tipo": "Electric",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "chargebeam": {
+    "nombre": "Charge Beam",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "charm": {
+    "nombre": "Charm",
+    "tipo": "Fairy",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "chatter": {
+    "nombre": "Chatter",
+    "tipo": "Flying",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "chillingwater": {
+    "nombre": "Chilling Water",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "chillyreception": {
+    "nombre": "Chilly Reception",
+    "tipo": "Ice",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "chipaway": {
+    "nombre": "Chip Away",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "chloroblast": {
+    "nombre": "Chloroblast",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "circlethrow": {
+    "nombre": "Circle Throw",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": -6,
+    "objetivo": "normal"
+  },
+  "clamp": {
+    "nombre": "Clamp",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 35,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "clangingscales": {
+    "nombre": "Clanging Scales",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 110,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "clangoroussoul": {
+    "nombre": "Clangorous Soul",
+    "tipo": "Dragon",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "clangoroussoulblaze": {
+    "nombre": "Clangorous Soulblaze",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 185,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "clearsmog": {
+    "nombre": "Clear Smog",
+    "tipo": "Poison",
+    "categoria": "Special",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "closecombat": {
+    "nombre": "Close Combat",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "coaching": {
+    "nombre": "Coaching",
+    "tipo": "Fighting",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "adjacentAlly"
+  },
+  "coil": {
+    "nombre": "Coil",
+    "tipo": "Poison",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "collisioncourse": {
+    "nombre": "Collision Course",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "combattorque": {
+    "nombre": "Combat Torque",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "cometpunch": {
+    "nombre": "Comet Punch",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 18,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "comeuppance": {
+    "nombre": "Comeuppance",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "scripted"
+  },
+  "confide": {
+    "nombre": "Confide",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "confuseray": {
+    "nombre": "Confuse Ray",
+    "tipo": "Ghost",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "confusion": {
+    "nombre": "Confusion",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "constrict": {
+    "nombre": "Constrict",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "continentalcrush": {
+    "nombre": "Continental Crush",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "conversion": {
+    "nombre": "Conversion",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "conversion2": {
+    "nombre": "Conversion 2",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "copycat": {
+    "nombre": "Copycat",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "coreenforcer": {
+    "nombre": "Core Enforcer",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "corkscrewcrash": {
+    "nombre": "Corkscrew Crash",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "corrosivegas": {
+    "nombre": "Corrosive Gas",
+    "tipo": "Poison",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "cosmicpower": {
+    "nombre": "Cosmic Power",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "cottonguard": {
+    "nombre": "Cotton Guard",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "cottonspore": {
+    "nombre": "Cotton Spore",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "counter": {
+    "nombre": "Counter",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": -5,
+    "objetivo": "scripted"
+  },
+  "courtchange": {
+    "nombre": "Court Change",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "covet": {
+    "nombre": "Covet",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "crabhammer": {
+    "nombre": "Crabhammer",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "craftyshield": {
+    "nombre": "Crafty Shield",
+    "tipo": "Fairy",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 3,
+    "objetivo": "allySide"
+  },
+  "crosschop": {
+    "nombre": "Cross Chop",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "crosspoison": {
+    "nombre": "Cross Poison",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "crunch": {
+    "nombre": "Crunch",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "crushclaw": {
+    "nombre": "Crush Claw",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "crushgrip": {
+    "nombre": "Crush Grip",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "curse": {
+    "nombre": "Curse",
+    "tipo": "Ghost",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "cut": {
+    "nombre": "Cut",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "darkestlariat": {
+    "nombre": "Darkest Lariat",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "darkpulse": {
+    "nombre": "Dark Pulse",
+    "tipo": "Dark",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "darkvoid": {
+    "nombre": "Dark Void",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "dazzlinggleam": {
+    "nombre": "Dazzling Gleam",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "decorate": {
+    "nombre": "Decorate",
+    "tipo": "Fairy",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "defendorder": {
+    "nombre": "Defend Order",
+    "tipo": "Bug",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "defensecurl": {
+    "nombre": "Defense Curl",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "defog": {
+    "nombre": "Defog",
+    "tipo": "Flying",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "destinybond": {
+    "nombre": "Destiny Bond",
+    "tipo": "Ghost",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "detect": {
+    "nombre": "Detect",
+    "tipo": "Fighting",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 4,
+    "objetivo": "self"
+  },
+  "devastatingdrake": {
+    "nombre": "Devastating Drake",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "diamondstorm": {
+    "nombre": "Diamond Storm",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "dig": {
+    "nombre": "Dig",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "direclaw": {
+    "nombre": "Dire Claw",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "disable": {
+    "nombre": "Disable",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "disarmingvoice": {
+    "nombre": "Disarming Voice",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "discharge": {
+    "nombre": "Discharge",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "dive": {
+    "nombre": "Dive",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dizzypunch": {
+    "nombre": "Dizzy Punch",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "doodle": {
+    "nombre": "Doodle",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "doomdesire": {
+    "nombre": "Doom Desire",
+    "tipo": "Steel",
+    "categoria": "Special",
+    "potencia": 140,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "doubleedge": {
+    "nombre": "Double-Edge",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "doublehit": {
+    "nombre": "Double Hit",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 35,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "doubleironbash": {
+    "nombre": "Double Iron Bash",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "doublekick": {
+    "nombre": "Double Kick",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 30,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "doubleshock": {
+    "nombre": "Double Shock",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "doubleslap": {
+    "nombre": "Double Slap",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 15,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "doubleteam": {
+    "nombre": "Double Team",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "dracometeor": {
+    "nombre": "Draco Meteor",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 130,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dragonascent": {
+    "nombre": "Dragon Ascent",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "dragonbreath": {
+    "nombre": "Dragon Breath",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dragoncheer": {
+    "nombre": "Dragon Cheer",
+    "tipo": "Dragon",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "adjacentAlly"
+  },
+  "dragonclaw": {
+    "nombre": "Dragon Claw",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dragondance": {
+    "nombre": "Dragon Dance",
+    "tipo": "Dragon",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "dragondarts": {
+    "nombre": "Dragon Darts",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dragonenergy": {
+    "nombre": "Dragon Energy",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "dragonhammer": {
+    "nombre": "Dragon Hammer",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dragonpulse": {
+    "nombre": "Dragon Pulse",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "dragonrage": {
+    "nombre": "Dragon Rage",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dragonrush": {
+    "nombre": "Dragon Rush",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dragontail": {
+    "nombre": "Dragon Tail",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": -6,
+    "objetivo": "normal"
+  },
+  "drainingkiss": {
+    "nombre": "Draining Kiss",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "drainpunch": {
+    "nombre": "Drain Punch",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dreameater": {
+    "nombre": "Dream Eater",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "drillpeck": {
+    "nombre": "Drill Peck",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "drillrun": {
+    "nombre": "Drill Run",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "drumbeating": {
+    "nombre": "Drum Beating",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dualchop": {
+    "nombre": "Dual Chop",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dualwingbeat": {
+    "nombre": "Dual Wingbeat",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dynamaxcannon": {
+    "nombre": "Dynamax Cannon",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "dynamicpunch": {
+    "nombre": "Dynamic Punch",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "earthpower": {
+    "nombre": "Earth Power",
+    "tipo": "Ground",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "earthquake": {
+    "nombre": "Earthquake",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "echoedvoice": {
+    "nombre": "Echoed Voice",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "eerieimpulse": {
+    "nombre": "Eerie Impulse",
+    "tipo": "Electric",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "eeriespell": {
+    "nombre": "Eerie Spell",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "eggbomb": {
+    "nombre": "Egg Bomb",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "electricterrain": {
+    "nombre": "Electric Terrain",
+    "tipo": "Electric",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "electrify": {
+    "nombre": "Electrify",
+    "tipo": "Electric",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "electroball": {
+    "nombre": "Electro Ball",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "electrodrift": {
+    "nombre": "Electro Drift",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "electroshot": {
+    "nombre": "Electro Shot",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 130,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "electroweb": {
+    "nombre": "Electroweb",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 55,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "embargo": {
+    "nombre": "Embargo",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "ember": {
+    "nombre": "Ember",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "encore": {
+    "nombre": "Encore",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "endeavor": {
+    "nombre": "Endeavor",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "endure": {
+    "nombre": "Endure",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 4,
+    "objetivo": "self"
+  },
+  "energyball": {
+    "nombre": "Energy Ball",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "entrainment": {
+    "nombre": "Entrainment",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "eruption": {
+    "nombre": "Eruption",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "esperwing": {
+    "nombre": "Esper Wing",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "eternabeam": {
+    "nombre": "Eternabeam",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 160,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "expandingforce": {
+    "nombre": "Expanding Force",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "explosion": {
+    "nombre": "Explosion",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 250,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "extrasensory": {
+    "nombre": "Extrasensory",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "extremeevoboost": {
+    "nombre": "Extreme Evoboost",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "extremespeed": {
+    "nombre": "Extreme Speed",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 2,
+    "objetivo": "normal"
+  },
+  "facade": {
+    "nombre": "Facade",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "fairylock": {
+    "nombre": "Fairy Lock",
+    "tipo": "Fairy",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "fairywind": {
+    "nombre": "Fairy Wind",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "fakeout": {
+    "nombre": "Fake Out",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 3,
+    "objetivo": "normal"
+  },
+  "faketears": {
+    "nombre": "Fake Tears",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "falsesurrender": {
+    "nombre": "False Surrender",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "falseswipe": {
+    "nombre": "False Swipe",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "featherdance": {
+    "nombre": "Feather Dance",
+    "tipo": "Flying",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "feint": {
+    "nombre": "Feint",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 30,
+    "prioridad": 2,
+    "objetivo": "normal"
+  },
+  "feintattack": {
+    "nombre": "Feint Attack",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "fellstinger": {
+    "nombre": "Fell Stinger",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "ficklebeam": {
+    "nombre": "Fickle Beam",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "fierydance": {
+    "nombre": "Fiery Dance",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "fierywrath": {
+    "nombre": "Fiery Wrath",
+    "tipo": "Dark",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "filletaway": {
+    "nombre": "Fillet Away",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "finalgambit": {
+    "nombre": "Final Gambit",
+    "tipo": "Fighting",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "fireblast": {
+    "nombre": "Fire Blast",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 110,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "firefang": {
+    "nombre": "Fire Fang",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "firelash": {
+    "nombre": "Fire Lash",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "firepledge": {
+    "nombre": "Fire Pledge",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "firepunch": {
+    "nombre": "Fire Punch",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "firespin": {
+    "nombre": "Fire Spin",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 35,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "firstimpression": {
+    "nombre": "First Impression",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 2,
+    "objetivo": "normal"
+  },
+  "fishiousrend": {
+    "nombre": "Fishious Rend",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "fissure": {
+    "nombre": "Fissure",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "flail": {
+    "nombre": "Flail",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "flameburst": {
+    "nombre": "Flame Burst",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "flamecharge": {
+    "nombre": "Flame Charge",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "flamethrower": {
+    "nombre": "Flamethrower",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "flamewheel": {
+    "nombre": "Flame Wheel",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "flareblitz": {
+    "nombre": "Flare Blitz",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "flash": {
+    "nombre": "Flash",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "flashcannon": {
+    "nombre": "Flash Cannon",
+    "tipo": "Steel",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "flatter": {
+    "nombre": "Flatter",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "fleurcannon": {
+    "nombre": "Fleur Cannon",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 130,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "fling": {
+    "nombre": "Fling",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "flipturn": {
+    "nombre": "Flip Turn",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "floatyfall": {
+    "nombre": "Floaty Fall",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "floralhealing": {
+    "nombre": "Floral Healing",
+    "tipo": "Fairy",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "flowershield": {
+    "nombre": "Flower Shield",
+    "tipo": "Fairy",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "flowertrick": {
+    "nombre": "Flower Trick",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "fly": {
+    "nombre": "Fly",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "flyingpress": {
+    "nombre": "Flying Press",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "focusblast": {
+    "nombre": "Focus Blast",
+    "tipo": "Fighting",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "focusenergy": {
+    "nombre": "Focus Energy",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "focuspunch": {
+    "nombre": "Focus Punch",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 150,
+    "prioridad": -3,
+    "objetivo": "normal"
+  },
+  "followme": {
+    "nombre": "Follow Me",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 2,
+    "objetivo": "self"
+  },
+  "forcepalm": {
+    "nombre": "Force Palm",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "foresight": {
+    "nombre": "Foresight",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "forestscurse": {
+    "nombre": "Forest's Curse",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "foulplay": {
+    "nombre": "Foul Play",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 95,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "freezedry": {
+    "nombre": "Freeze-Dry",
+    "tipo": "Ice",
+    "categoria": "Special",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "freezeshock": {
+    "nombre": "Freeze Shock",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 140,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "freezingglare": {
+    "nombre": "Freezing Glare",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "freezyfrost": {
+    "nombre": "Freezy Frost",
+    "tipo": "Ice",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "frenzyplant": {
+    "nombre": "Frenzy Plant",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "frostbreath": {
+    "nombre": "Frost Breath",
+    "tipo": "Ice",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "frustration": {
+    "nombre": "Frustration",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "furyattack": {
+    "nombre": "Fury Attack",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 15,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "furycutter": {
+    "nombre": "Fury Cutter",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "furyswipes": {
+    "nombre": "Fury Swipes",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 18,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "fusionbolt": {
+    "nombre": "Fusion Bolt",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "fusionflare": {
+    "nombre": "Fusion Flare",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "futuresight": {
+    "nombre": "Future Sight",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "gastroacid": {
+    "nombre": "Gastro Acid",
+    "tipo": "Poison",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "geargrind": {
+    "nombre": "Gear Grind",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "gearup": {
+    "nombre": "Gear Up",
+    "tipo": "Steel",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allySide"
+  },
+  "genesissupernova": {
+    "nombre": "Genesis Supernova",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 185,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "geomancy": {
+    "nombre": "Geomancy",
+    "tipo": "Fairy",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "gigadrain": {
+    "nombre": "Giga Drain",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "gigaimpact": {
+    "nombre": "Giga Impact",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "gigatonhammer": {
+    "nombre": "Gigaton Hammer",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 160,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "gigavolthavoc": {
+    "nombre": "Gigavolt Havoc",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "glaciallance": {
+    "nombre": "Glacial Lance",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "glaciate": {
+    "nombre": "Glaciate",
+    "tipo": "Ice",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "glaiverush": {
+    "nombre": "Glaive Rush",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "glare": {
+    "nombre": "Glare",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "glitzyglow": {
+    "nombre": "Glitzy Glow",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "gmaxbefuddle": {
+    "nombre": "G-Max Befuddle",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxcannonade": {
+    "nombre": "G-Max Cannonade",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxcentiferno": {
+    "nombre": "G-Max Centiferno",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxchistrike": {
+    "nombre": "G-Max Chi Strike",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxcuddle": {
+    "nombre": "G-Max Cuddle",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxdepletion": {
+    "nombre": "G-Max Depletion",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxdrumsolo": {
+    "nombre": "G-Max Drum Solo",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 160,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxfinale": {
+    "nombre": "G-Max Finale",
+    "tipo": "Fairy",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxfireball": {
+    "nombre": "G-Max Fireball",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 160,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxfoamburst": {
+    "nombre": "G-Max Foam Burst",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxgoldrush": {
+    "nombre": "G-Max Gold Rush",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxgravitas": {
+    "nombre": "G-Max Gravitas",
+    "tipo": "Psychic",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxhydrosnipe": {
+    "nombre": "G-Max Hydrosnipe",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 160,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxmalodor": {
+    "nombre": "G-Max Malodor",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxmeltdown": {
+    "nombre": "G-Max Meltdown",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxoneblow": {
+    "nombre": "G-Max One Blow",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxrapidflow": {
+    "nombre": "G-Max Rapid Flow",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxreplenish": {
+    "nombre": "G-Max Replenish",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxresonance": {
+    "nombre": "G-Max Resonance",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxsandblast": {
+    "nombre": "G-Max Sandblast",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxsmite": {
+    "nombre": "G-Max Smite",
+    "tipo": "Fairy",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxsnooze": {
+    "nombre": "G-Max Snooze",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxsteelsurge": {
+    "nombre": "G-Max Steelsurge",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxstonesurge": {
+    "nombre": "G-Max Stonesurge",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxstunshock": {
+    "nombre": "G-Max Stun Shock",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxsweetness": {
+    "nombre": "G-Max Sweetness",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxtartness": {
+    "nombre": "G-Max Tartness",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxterror": {
+    "nombre": "G-Max Terror",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxvinelash": {
+    "nombre": "G-Max Vine Lash",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxvolcalith": {
+    "nombre": "G-Max Volcalith",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxvoltcrash": {
+    "nombre": "G-Max Volt Crash",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxwildfire": {
+    "nombre": "G-Max Wildfire",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "gmaxwindrage": {
+    "nombre": "G-Max Wind Rage",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "grassknot": {
+    "nombre": "Grass Knot",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "grasspledge": {
+    "nombre": "Grass Pledge",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "grasswhistle": {
+    "nombre": "Grass Whistle",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "grassyglide": {
+    "nombre": "Grassy Glide",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 55,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "grassyterrain": {
+    "nombre": "Grassy Terrain",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "gravapple": {
+    "nombre": "Grav Apple",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "gravity": {
+    "nombre": "Gravity",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "growl": {
+    "nombre": "Growl",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "growth": {
+    "nombre": "Growth",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "grudge": {
+    "nombre": "Grudge",
+    "tipo": "Ghost",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "guardianofalola": {
+    "nombre": "Guardian of Alola",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "guardsplit": {
+    "nombre": "Guard Split",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "guardswap": {
+    "nombre": "Guard Swap",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "guillotine": {
+    "nombre": "Guillotine",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "gunkshot": {
+    "nombre": "Gunk Shot",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "gust": {
+    "nombre": "Gust",
+    "tipo": "Flying",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "gyroball": {
+    "nombre": "Gyro Ball",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hail": {
+    "nombre": "Hail",
+    "tipo": "Ice",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "hammerarm": {
+    "nombre": "Hammer Arm",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "happyhour": {
+    "nombre": "Happy Hour",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allySide"
+  },
+  "harden": {
+    "nombre": "Harden",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "hardpress": {
+    "nombre": "Hard Press",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "haze": {
+    "nombre": "Haze",
+    "tipo": "Ice",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "headbutt": {
+    "nombre": "Headbutt",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "headcharge": {
+    "nombre": "Head Charge",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "headlongrush": {
+    "nombre": "Headlong Rush",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "headsmash": {
+    "nombre": "Head Smash",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "healbell": {
+    "nombre": "Heal Bell",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allyTeam"
+  },
+  "healblock": {
+    "nombre": "Heal Block",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "healingwish": {
+    "nombre": "Healing Wish",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "healorder": {
+    "nombre": "Heal Order",
+    "tipo": "Bug",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "healpulse": {
+    "nombre": "Heal Pulse",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "heartstamp": {
+    "nombre": "Heart Stamp",
+    "tipo": "Psychic",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "heartswap": {
+    "nombre": "Heart Swap",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "heatcrash": {
+    "nombre": "Heat Crash",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "heatwave": {
+    "nombre": "Heat Wave",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 95,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "heavyslam": {
+    "nombre": "Heavy Slam",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "helpinghand": {
+    "nombre": "Helping Hand",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 5,
+    "objetivo": "adjacentAlly"
+  },
+  "hex": {
+    "nombre": "Hex",
+    "tipo": "Ghost",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpower": {
+    "nombre": "Hidden Power",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerbug": {
+    "nombre": "Hidden Power Bug",
+    "tipo": "Bug",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerdark": {
+    "nombre": "Hidden Power Dark",
+    "tipo": "Dark",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerdragon": {
+    "nombre": "Hidden Power Dragon",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerelectric": {
+    "nombre": "Hidden Power Electric",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerfighting": {
+    "nombre": "Hidden Power Fighting",
+    "tipo": "Fighting",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerfire": {
+    "nombre": "Hidden Power Fire",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerflying": {
+    "nombre": "Hidden Power Flying",
+    "tipo": "Flying",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerghost": {
+    "nombre": "Hidden Power Ghost",
+    "tipo": "Ghost",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowergrass": {
+    "nombre": "Hidden Power Grass",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerground": {
+    "nombre": "Hidden Power Ground",
+    "tipo": "Ground",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerice": {
+    "nombre": "Hidden Power Ice",
+    "tipo": "Ice",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerpoison": {
+    "nombre": "Hidden Power Poison",
+    "tipo": "Poison",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerpsychic": {
+    "nombre": "Hidden Power Psychic",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerrock": {
+    "nombre": "Hidden Power Rock",
+    "tipo": "Rock",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowersteel": {
+    "nombre": "Hidden Power Steel",
+    "tipo": "Steel",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hiddenpowerwater": {
+    "nombre": "Hidden Power Water",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "highhorsepower": {
+    "nombre": "High Horsepower",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 95,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "highjumpkick": {
+    "nombre": "High Jump Kick",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 130,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "holdback": {
+    "nombre": "Hold Back",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "holdhands": {
+    "nombre": "Hold Hands",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "adjacentAlly"
+  },
+  "honeclaws": {
+    "nombre": "Hone Claws",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "hornattack": {
+    "nombre": "Horn Attack",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "horndrill": {
+    "nombre": "Horn Drill",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hornleech": {
+    "nombre": "Horn Leech",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "howl": {
+    "nombre": "Howl",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allies"
+  },
+  "hurricane": {
+    "nombre": "Hurricane",
+    "tipo": "Flying",
+    "categoria": "Special",
+    "potencia": 110,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "hydrocannon": {
+    "nombre": "Hydro Cannon",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hydropump": {
+    "nombre": "Hydro Pump",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 110,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hydrosteam": {
+    "nombre": "Hydro Steam",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hydrovortex": {
+    "nombre": "Hydro Vortex",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hyperbeam": {
+    "nombre": "Hyper Beam",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hyperdrill": {
+    "nombre": "Hyper Drill",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hyperfang": {
+    "nombre": "Hyper Fang",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hyperspacefury": {
+    "nombre": "Hyperspace Fury",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hyperspacehole": {
+    "nombre": "Hyperspace Hole",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "hypervoice": {
+    "nombre": "Hyper Voice",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "hypnosis": {
+    "nombre": "Hypnosis",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "iceball": {
+    "nombre": "Ice Ball",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 30,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "icebeam": {
+    "nombre": "Ice Beam",
+    "tipo": "Ice",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "iceburn": {
+    "nombre": "Ice Burn",
+    "tipo": "Ice",
+    "categoria": "Special",
+    "potencia": 140,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "icefang": {
+    "nombre": "Ice Fang",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "icehammer": {
+    "nombre": "Ice Hammer",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "icepunch": {
+    "nombre": "Ice Punch",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "iceshard": {
+    "nombre": "Ice Shard",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "icespinner": {
+    "nombre": "Ice Spinner",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "iciclecrash": {
+    "nombre": "Icicle Crash",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "iciclespear": {
+    "nombre": "Icicle Spear",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 25,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "icywind": {
+    "nombre": "Icy Wind",
+    "tipo": "Ice",
+    "categoria": "Special",
+    "potencia": 55,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "imprison": {
+    "nombre": "Imprison",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "incinerate": {
+    "nombre": "Incinerate",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "infernalparade": {
+    "nombre": "Infernal Parade",
+    "tipo": "Ghost",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "inferno": {
+    "nombre": "Inferno",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "infernooverdrive": {
+    "nombre": "Inferno Overdrive",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "infestation": {
+    "nombre": "Infestation",
+    "tipo": "Bug",
+    "categoria": "Special",
+    "potencia": 20,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "ingrain": {
+    "nombre": "Ingrain",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "instruct": {
+    "nombre": "Instruct",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "iondeluge": {
+    "nombre": "Ion Deluge",
+    "tipo": "Electric",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 1,
+    "objetivo": "all"
+  },
+  "irondefense": {
+    "nombre": "Iron Defense",
+    "tipo": "Steel",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "ironhead": {
+    "nombre": "Iron Head",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "irontail": {
+    "nombre": "Iron Tail",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "ivycudgel": {
+    "nombre": "Ivy Cudgel",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "jawlock": {
+    "nombre": "Jaw Lock",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "jetpunch": {
+    "nombre": "Jet Punch",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "judgment": {
+    "nombre": "Judgment",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "jumpkick": {
+    "nombre": "Jump Kick",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "junglehealing": {
+    "nombre": "Jungle Healing",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allies"
+  },
+  "karatechop": {
+    "nombre": "Karate Chop",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "kinesis": {
+    "nombre": "Kinesis",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "kingsshield": {
+    "nombre": "King's Shield",
+    "tipo": "Steel",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 4,
+    "objetivo": "self"
+  },
+  "knockoff": {
+    "nombre": "Knock Off",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "kowtowcleave": {
+    "nombre": "Kowtow Cleave",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "landswrath": {
+    "nombre": "Land's Wrath",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "laserfocus": {
+    "nombre": "Laser Focus",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "lashout": {
+    "nombre": "Lash Out",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "lastresort": {
+    "nombre": "Last Resort",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 140,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "lastrespects": {
+    "nombre": "Last Respects",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "lavaplume": {
+    "nombre": "Lava Plume",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "leafage": {
+    "nombre": "Leafage",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "leafblade": {
+    "nombre": "Leaf Blade",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "leafstorm": {
+    "nombre": "Leaf Storm",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 130,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "leaftornado": {
+    "nombre": "Leaf Tornado",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "leechlife": {
+    "nombre": "Leech Life",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "leechseed": {
+    "nombre": "Leech Seed",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "leer": {
+    "nombre": "Leer",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "letssnuggleforever": {
+    "nombre": "Let's Snuggle Forever",
+    "tipo": "Fairy",
+    "categoria": "Physical",
+    "potencia": 190,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "lick": {
+    "nombre": "Lick",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 30,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "lifedew": {
+    "nombre": "Life Dew",
+    "tipo": "Water",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allies"
+  },
+  "lightofruin": {
+    "nombre": "Light of Ruin",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 140,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "lightscreen": {
+    "nombre": "Light Screen",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allySide"
+  },
+  "lightthatburnsthesky": {
+    "nombre": "Light That Burns the Sky",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 200,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "liquidation": {
+    "nombre": "Liquidation",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "lockon": {
+    "nombre": "Lock-On",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "lovelykiss": {
+    "nombre": "Lovely Kiss",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "lowkick": {
+    "nombre": "Low Kick",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "lowsweep": {
+    "nombre": "Low Sweep",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "luckychant": {
+    "nombre": "Lucky Chant",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allySide"
+  },
+  "luminacrash": {
+    "nombre": "Lumina Crash",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "lunarblessing": {
+    "nombre": "Lunar Blessing",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allies"
+  },
+  "lunardance": {
+    "nombre": "Lunar Dance",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "lunge": {
+    "nombre": "Lunge",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "lusterpurge": {
+    "nombre": "Luster Purge",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 95,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "machpunch": {
+    "nombre": "Mach Punch",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "magicalleaf": {
+    "nombre": "Magical Leaf",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "magicaltorque": {
+    "nombre": "Magical Torque",
+    "tipo": "Fairy",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "magiccoat": {
+    "nombre": "Magic Coat",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 4,
+    "objetivo": "self"
+  },
+  "magicpowder": {
+    "nombre": "Magic Powder",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "magicroom": {
+    "nombre": "Magic Room",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "magmastorm": {
+    "nombre": "Magma Storm",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "magnetbomb": {
+    "nombre": "Magnet Bomb",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "magneticflux": {
+    "nombre": "Magnetic Flux",
+    "tipo": "Electric",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allySide"
+  },
+  "magnetrise": {
+    "nombre": "Magnet Rise",
+    "tipo": "Electric",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "magnitude": {
+    "nombre": "Magnitude",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "makeitrain": {
+    "nombre": "Make It Rain",
+    "tipo": "Steel",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "maliciousmoonsault": {
+    "nombre": "Malicious Moonsault",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 180,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "malignantchain": {
+    "nombre": "Malignant Chain",
+    "tipo": "Poison",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "matblock": {
+    "nombre": "Mat Block",
+    "tipo": "Fighting",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allySide"
+  },
+  "matchagotcha": {
+    "nombre": "Matcha Gotcha",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "maxairstream": {
+    "nombre": "Max Airstream",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxdarkness": {
+    "nombre": "Max Darkness",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxflare": {
+    "nombre": "Max Flare",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxflutterby": {
+    "nombre": "Max Flutterby",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxgeyser": {
+    "nombre": "Max Geyser",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxguard": {
+    "nombre": "Max Guard",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 4,
+    "objetivo": "self"
+  },
+  "maxhailstorm": {
+    "nombre": "Max Hailstorm",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxknuckle": {
+    "nombre": "Max Knuckle",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxlightning": {
+    "nombre": "Max Lightning",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxmindstorm": {
+    "nombre": "Max Mindstorm",
+    "tipo": "Psychic",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxooze": {
+    "nombre": "Max Ooze",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxovergrowth": {
+    "nombre": "Max Overgrowth",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxphantasm": {
+    "nombre": "Max Phantasm",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxquake": {
+    "nombre": "Max Quake",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxrockfall": {
+    "nombre": "Max Rockfall",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxstarfall": {
+    "nombre": "Max Starfall",
+    "tipo": "Fairy",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxsteelspike": {
+    "nombre": "Max Steelspike",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxstrike": {
+    "nombre": "Max Strike",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "maxwyrmwind": {
+    "nombre": "Max Wyrmwind",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "meanlook": {
+    "nombre": "Mean Look",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "meditate": {
+    "nombre": "Meditate",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "mefirst": {
+    "nombre": "Me First",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "adjacentFoe"
+  },
+  "megadrain": {
+    "nombre": "Mega Drain",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "megahorn": {
+    "nombre": "Megahorn",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "megakick": {
+    "nombre": "Mega Kick",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "megapunch": {
+    "nombre": "Mega Punch",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "memento": {
+    "nombre": "Memento",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "menacingmoonrazemaelstrom": {
+    "nombre": "Menacing Moonraze Maelstrom",
+    "tipo": "Ghost",
+    "categoria": "Special",
+    "potencia": 200,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "metalburst": {
+    "nombre": "Metal Burst",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "scripted"
+  },
+  "metalclaw": {
+    "nombre": "Metal Claw",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "metalsound": {
+    "nombre": "Metal Sound",
+    "tipo": "Steel",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "meteorassault": {
+    "nombre": "Meteor Assault",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 170,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "meteorbeam": {
+    "nombre": "Meteor Beam",
+    "tipo": "Rock",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "meteormash": {
+    "nombre": "Meteor Mash",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "metronome": {
+    "nombre": "Metronome",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "mightycleave": {
+    "nombre": "Mighty Cleave",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 95,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "milkdrink": {
+    "nombre": "Milk Drink",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "adjacentAllyOrSelf"
+  },
+  "mimic": {
+    "nombre": "Mimic",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "mindblown": {
+    "nombre": "Mind Blown",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "mindreader": {
+    "nombre": "Mind Reader",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "minimize": {
+    "nombre": "Minimize",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "miracleeye": {
+    "nombre": "Miracle Eye",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "mirrorcoat": {
+    "nombre": "Mirror Coat",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": -5,
+    "objetivo": "scripted"
+  },
+  "mirrormove": {
+    "nombre": "Mirror Move",
+    "tipo": "Flying",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "mirrorshot": {
+    "nombre": "Mirror Shot",
+    "tipo": "Steel",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "mist": {
+    "nombre": "Mist",
+    "tipo": "Ice",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allySide"
+  },
+  "mistball": {
+    "nombre": "Mist Ball",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 95,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "mistyexplosion": {
+    "nombre": "Misty Explosion",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "mistyterrain": {
+    "nombre": "Misty Terrain",
+    "tipo": "Fairy",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "moonblast": {
+    "nombre": "Moonblast",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 95,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "moongeistbeam": {
+    "nombre": "Moongeist Beam",
+    "tipo": "Ghost",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "moonlight": {
+    "nombre": "Moonlight",
+    "tipo": "Fairy",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "morningsun": {
+    "nombre": "Morning Sun",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "mortalspin": {
+    "nombre": "Mortal Spin",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 30,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "mountaingale": {
+    "nombre": "Mountain Gale",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "mudbomb": {
+    "nombre": "Mud Bomb",
+    "tipo": "Ground",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "muddywater": {
+    "nombre": "Muddy Water",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "mudshot": {
+    "nombre": "Mud Shot",
+    "tipo": "Ground",
+    "categoria": "Special",
+    "potencia": 55,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "mudslap": {
+    "nombre": "Mud-Slap",
+    "tipo": "Ground",
+    "categoria": "Special",
+    "potencia": 20,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "mudsport": {
+    "nombre": "Mud Sport",
+    "tipo": "Ground",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "multiattack": {
+    "nombre": "Multi-Attack",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "mysticalfire": {
+    "nombre": "Mystical Fire",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "mysticalpower": {
+    "nombre": "Mystical Power",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "nastyplot": {
+    "nombre": "Nasty Plot",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "naturalgift": {
+    "nombre": "Natural Gift",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "naturepower": {
+    "nombre": "Nature Power",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "naturesmadness": {
+    "nombre": "Nature's Madness",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "needlearm": {
+    "nombre": "Needle Arm",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "neverendingnightmare": {
+    "nombre": "Never-Ending Nightmare",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "nightdaze": {
+    "nombre": "Night Daze",
+    "tipo": "Dark",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "nightmare": {
+    "nombre": "Nightmare",
+    "tipo": "Ghost",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "nightshade": {
+    "nombre": "Night Shade",
+    "tipo": "Ghost",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "nightslash": {
+    "nombre": "Night Slash",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "nihillight": {
+    "nombre": "Nihil Light",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "nobleroar": {
+    "nombre": "Noble Roar",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "noretreat": {
+    "nombre": "No Retreat",
+    "tipo": "Fighting",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "noxioustorque": {
+    "nombre": "Noxious Torque",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "nuzzle": {
+    "nombre": "Nuzzle",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 20,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "oblivionwing": {
+    "nombre": "Oblivion Wing",
+    "tipo": "Flying",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "obstruct": {
+    "nombre": "Obstruct",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 4,
+    "objetivo": "self"
+  },
+  "oceanicoperetta": {
+    "nombre": "Oceanic Operetta",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 195,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "octazooka": {
+    "nombre": "Octazooka",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "octolock": {
+    "nombre": "Octolock",
+    "tipo": "Fighting",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "odorsleuth": {
+    "nombre": "Odor Sleuth",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "ominouswind": {
+    "nombre": "Ominous Wind",
+    "tipo": "Ghost",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "orderup": {
+    "nombre": "Order Up",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "originpulse": {
+    "nombre": "Origin Pulse",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 110,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "outrage": {
+    "nombre": "Outrage",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "randomNormal"
+  },
+  "overdrive": {
+    "nombre": "Overdrive",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "overheat": {
+    "nombre": "Overheat",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 130,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "painsplit": {
+    "nombre": "Pain Split",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "paraboliccharge": {
+    "nombre": "Parabolic Charge",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "partingshot": {
+    "nombre": "Parting Shot",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "payback": {
+    "nombre": "Payback",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "payday": {
+    "nombre": "Pay Day",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "peck": {
+    "nombre": "Peck",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 35,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "perishsong": {
+    "nombre": "Perish Song",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "petalblizzard": {
+    "nombre": "Petal Blizzard",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "petaldance": {
+    "nombre": "Petal Dance",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "randomNormal"
+  },
+  "phantomforce": {
+    "nombre": "Phantom Force",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "photongeyser": {
+    "nombre": "Photon Geyser",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "pikapapow": {
+    "nombre": "Pika Papow",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "pinmissile": {
+    "nombre": "Pin Missile",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 25,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "plasmafists": {
+    "nombre": "Plasma Fists",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "playnice": {
+    "nombre": "Play Nice",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "playrough": {
+    "nombre": "Play Rough",
+    "tipo": "Fairy",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "pluck": {
+    "nombre": "Pluck",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "poisonfang": {
+    "nombre": "Poison Fang",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "poisongas": {
+    "nombre": "Poison Gas",
+    "tipo": "Poison",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "poisonjab": {
+    "nombre": "Poison Jab",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "poisonpowder": {
+    "nombre": "Poison Powder",
+    "tipo": "Poison",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "poisonsting": {
+    "nombre": "Poison Sting",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 15,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "poisontail": {
+    "nombre": "Poison Tail",
+    "tipo": "Poison",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "pollenpuff": {
+    "nombre": "Pollen Puff",
+    "tipo": "Bug",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "poltergeist": {
+    "nombre": "Poltergeist",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 110,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "populationbomb": {
+    "nombre": "Population Bomb",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 20,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "pounce": {
+    "nombre": "Pounce",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "pound": {
+    "nombre": "Pound",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "powder": {
+    "nombre": "Powder",
+    "tipo": "Bug",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "powdersnow": {
+    "nombre": "Powder Snow",
+    "tipo": "Ice",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "powergem": {
+    "nombre": "Power Gem",
+    "tipo": "Rock",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "powershift": {
+    "nombre": "Power Shift",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "powersplit": {
+    "nombre": "Power Split",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "powerswap": {
+    "nombre": "Power Swap",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "powertrick": {
+    "nombre": "Power Trick",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "powertrip": {
+    "nombre": "Power Trip",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 20,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "poweruppunch": {
+    "nombre": "Power-Up Punch",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "powerwhip": {
+    "nombre": "Power Whip",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "precipiceblades": {
+    "nombre": "Precipice Blades",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "present": {
+    "nombre": "Present",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "prismaticlaser": {
+    "nombre": "Prismatic Laser",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 160,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "protect": {
+    "nombre": "Protect",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 4,
+    "objetivo": "self"
+  },
+  "psybeam": {
+    "nombre": "Psybeam",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "psyblade": {
+    "nombre": "Psyblade",
+    "tipo": "Psychic",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "psychic": {
+    "nombre": "Psychic",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "psychicfangs": {
+    "nombre": "Psychic Fangs",
+    "tipo": "Psychic",
+    "categoria": "Physical",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "psychicnoise": {
+    "nombre": "Psychic Noise",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "psychicterrain": {
+    "nombre": "Psychic Terrain",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "psychoboost": {
+    "nombre": "Psycho Boost",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 140,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "psychocut": {
+    "nombre": "Psycho Cut",
+    "tipo": "Psychic",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "psychoshift": {
+    "nombre": "Psycho Shift",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "psychup": {
+    "nombre": "Psych Up",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "psyshieldbash": {
+    "nombre": "Psyshield Bash",
+    "tipo": "Psychic",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "psyshock": {
+    "nombre": "Psyshock",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "psystrike": {
+    "nombre": "Psystrike",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "psywave": {
+    "nombre": "Psywave",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "pulverizingpancake": {
+    "nombre": "Pulverizing Pancake",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 210,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "punishment": {
+    "nombre": "Punishment",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "purify": {
+    "nombre": "Purify",
+    "tipo": "Poison",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "pursuit": {
+    "nombre": "Pursuit",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "pyroball": {
+    "nombre": "Pyro Ball",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "quash": {
+    "nombre": "Quash",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "quickattack": {
+    "nombre": "Quick Attack",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "quickguard": {
+    "nombre": "Quick Guard",
+    "tipo": "Fighting",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 3,
+    "objetivo": "allySide"
+  },
+  "quiverdance": {
+    "nombre": "Quiver Dance",
+    "tipo": "Bug",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "rage": {
+    "nombre": "Rage",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 20,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "ragefist": {
+    "nombre": "Rage Fist",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "ragepowder": {
+    "nombre": "Rage Powder",
+    "tipo": "Bug",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 2,
+    "objetivo": "self"
+  },
+  "ragingbull": {
+    "nombre": "Raging Bull",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "ragingfury": {
+    "nombre": "Raging Fury",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "randomNormal"
+  },
+  "raindance": {
+    "nombre": "Rain Dance",
+    "tipo": "Water",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "rapidspin": {
+    "nombre": "Rapid Spin",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "razorleaf": {
+    "nombre": "Razor Leaf",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 55,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "razorshell": {
+    "nombre": "Razor Shell",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "razorwind": {
+    "nombre": "Razor Wind",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "recover": {
+    "nombre": "Recover",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "recycle": {
+    "nombre": "Recycle",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "reflect": {
+    "nombre": "Reflect",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allySide"
+  },
+  "reflecttype": {
+    "nombre": "Reflect Type",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "refresh": {
+    "nombre": "Refresh",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "relicsong": {
+    "nombre": "Relic Song",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "rest": {
+    "nombre": "Rest",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "retaliate": {
+    "nombre": "Retaliate",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "return": {
+    "nombre": "Return",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "revelationdance": {
+    "nombre": "Revelation Dance",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "revenge": {
+    "nombre": "Revenge",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": -4,
+    "objetivo": "normal"
+  },
+  "reversal": {
+    "nombre": "Reversal",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "revivalblessing": {
+    "nombre": "Revival Blessing",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "risingvoltage": {
+    "nombre": "Rising Voltage",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "roar": {
+    "nombre": "Roar",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": -6,
+    "objetivo": "normal"
+  },
+  "roaroftime": {
+    "nombre": "Roar of Time",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "rockblast": {
+    "nombre": "Rock Blast",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 25,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "rockclimb": {
+    "nombre": "Rock Climb",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "rockpolish": {
+    "nombre": "Rock Polish",
+    "tipo": "Rock",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "rockslide": {
+    "nombre": "Rock Slide",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "rocksmash": {
+    "nombre": "Rock Smash",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "rockthrow": {
+    "nombre": "Rock Throw",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "rocktomb": {
+    "nombre": "Rock Tomb",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "rockwrecker": {
+    "nombre": "Rock Wrecker",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "roleplay": {
+    "nombre": "Role Play",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "rollingkick": {
+    "nombre": "Rolling Kick",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "rollout": {
+    "nombre": "Rollout",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 30,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "roost": {
+    "nombre": "Roost",
+    "tipo": "Flying",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "rototiller": {
+    "nombre": "Rototiller",
+    "tipo": "Ground",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "round": {
+    "nombre": "Round",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "ruination": {
+    "nombre": "Ruination",
+    "tipo": "Dark",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sacredfire": {
+    "nombre": "Sacred Fire",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sacredsword": {
+    "nombre": "Sacred Sword",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "safeguard": {
+    "nombre": "Safeguard",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allySide"
+  },
+  "saltcure": {
+    "nombre": "Salt Cure",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sandattack": {
+    "nombre": "Sand Attack",
+    "tipo": "Ground",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sandsearstorm": {
+    "nombre": "Sandsear Storm",
+    "tipo": "Ground",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "sandstorm": {
+    "nombre": "Sandstorm",
+    "tipo": "Rock",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "sandtomb": {
+    "nombre": "Sand Tomb",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 35,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sappyseed": {
+    "nombre": "Sappy Seed",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "savagespinout": {
+    "nombre": "Savage Spin-Out",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "scald": {
+    "nombre": "Scald",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "scaleshot": {
+    "nombre": "Scale Shot",
+    "tipo": "Dragon",
+    "categoria": "Physical",
+    "potencia": 25,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "scaryface": {
+    "nombre": "Scary Face",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "scorchingsands": {
+    "nombre": "Scorching Sands",
+    "tipo": "Ground",
+    "categoria": "Special",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "scratch": {
+    "nombre": "Scratch",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "screech": {
+    "nombre": "Screech",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "searingshot": {
+    "nombre": "Searing Shot",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "searingsunrazesmash": {
+    "nombre": "Searing Sunraze Smash",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 200,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "secretpower": {
+    "nombre": "Secret Power",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "secretsword": {
+    "nombre": "Secret Sword",
+    "tipo": "Fighting",
+    "categoria": "Special",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "seedbomb": {
+    "nombre": "Seed Bomb",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "seedflare": {
+    "nombre": "Seed Flare",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "seismictoss": {
+    "nombre": "Seismic Toss",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "selfdestruct": {
+    "nombre": "Self-Destruct",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 200,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "shadowball": {
+    "nombre": "Shadow Ball",
+    "tipo": "Ghost",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "shadowbone": {
+    "nombre": "Shadow Bone",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "shadowclaw": {
+    "nombre": "Shadow Claw",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "shadowforce": {
+    "nombre": "Shadow Force",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "shadowpunch": {
+    "nombre": "Shadow Punch",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "shadowsneak": {
+    "nombre": "Shadow Sneak",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "sharpen": {
+    "nombre": "Sharpen",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "shatteredpsyche": {
+    "nombre": "Shattered Psyche",
+    "tipo": "Psychic",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "shedtail": {
+    "nombre": "Shed Tail",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "sheercold": {
+    "nombre": "Sheer Cold",
+    "tipo": "Ice",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "shellsidearm": {
+    "nombre": "Shell Side Arm",
+    "tipo": "Poison",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "shellsmash": {
+    "nombre": "Shell Smash",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "shelltrap": {
+    "nombre": "Shell Trap",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 150,
+    "prioridad": -3,
+    "objetivo": "allAdjacentFoes"
+  },
+  "shelter": {
+    "nombre": "Shelter",
+    "tipo": "Steel",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "shiftgear": {
+    "nombre": "Shift Gear",
+    "tipo": "Steel",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "shockwave": {
+    "nombre": "Shock Wave",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "shoreup": {
+    "nombre": "Shore Up",
+    "tipo": "Ground",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "signalbeam": {
+    "nombre": "Signal Beam",
+    "tipo": "Bug",
+    "categoria": "Special",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "silktrap": {
+    "nombre": "Silk Trap",
+    "tipo": "Bug",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 4,
+    "objetivo": "self"
+  },
+  "silverwind": {
+    "nombre": "Silver Wind",
+    "tipo": "Bug",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "simplebeam": {
+    "nombre": "Simple Beam",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sing": {
+    "nombre": "Sing",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sinisterarrowraid": {
+    "nombre": "Sinister Arrow Raid",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 180,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sizzlyslide": {
+    "nombre": "Sizzly Slide",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sketch": {
+    "nombre": "Sketch",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "skillswap": {
+    "nombre": "Skill Swap",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "skittersmack": {
+    "nombre": "Skitter Smack",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "skullbash": {
+    "nombre": "Skull Bash",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 130,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "skyattack": {
+    "nombre": "Sky Attack",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 140,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "skydrop": {
+    "nombre": "Sky Drop",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "skyuppercut": {
+    "nombre": "Sky Uppercut",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "slackoff": {
+    "nombre": "Slack Off",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "slam": {
+    "nombre": "Slam",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "slash": {
+    "nombre": "Slash",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sleeppowder": {
+    "nombre": "Sleep Powder",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sleeptalk": {
+    "nombre": "Sleep Talk",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "sludge": {
+    "nombre": "Sludge",
+    "tipo": "Poison",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sludgebomb": {
+    "nombre": "Sludge Bomb",
+    "tipo": "Poison",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sludgewave": {
+    "nombre": "Sludge Wave",
+    "tipo": "Poison",
+    "categoria": "Special",
+    "potencia": 95,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "smackdown": {
+    "nombre": "Smack Down",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "smartstrike": {
+    "nombre": "Smart Strike",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "smellingsalts": {
+    "nombre": "Smelling Salts",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "smog": {
+    "nombre": "Smog",
+    "tipo": "Poison",
+    "categoria": "Special",
+    "potencia": 30,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "smokescreen": {
+    "nombre": "Smokescreen",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "snaptrap": {
+    "nombre": "Snap Trap",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 35,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "snarl": {
+    "nombre": "Snarl",
+    "tipo": "Dark",
+    "categoria": "Special",
+    "potencia": 55,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "snatch": {
+    "nombre": "Snatch",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 4,
+    "objetivo": "self"
+  },
+  "snipeshot": {
+    "nombre": "Snipe Shot",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "snore": {
+    "nombre": "Snore",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "snowscape": {
+    "nombre": "Snowscape",
+    "tipo": "Ice",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "soak": {
+    "nombre": "Soak",
+    "tipo": "Water",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "softboiled": {
+    "nombre": "Soft-Boiled",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "solarbeam": {
+    "nombre": "Solar Beam",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "solarblade": {
+    "nombre": "Solar Blade",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 125,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sonicboom": {
+    "nombre": "Sonic Boom",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "soulstealing7starstrike": {
+    "nombre": "Soul-Stealing 7-Star Strike",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 195,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "spacialrend": {
+    "nombre": "Spacial Rend",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "spark": {
+    "nombre": "Spark",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sparklingaria": {
+    "nombre": "Sparkling Aria",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "sparklyswirl": {
+    "nombre": "Sparkly Swirl",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "spectralthief": {
+    "nombre": "Spectral Thief",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "speedswap": {
+    "nombre": "Speed Swap",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "spicyextract": {
+    "nombre": "Spicy Extract",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "spiderweb": {
+    "nombre": "Spider Web",
+    "tipo": "Bug",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "spikecannon": {
+    "nombre": "Spike Cannon",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 20,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "spikes": {
+    "nombre": "Spikes",
+    "tipo": "Ground",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "foeSide"
+  },
+  "spikyshield": {
+    "nombre": "Spiky Shield",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 4,
+    "objetivo": "self"
+  },
+  "spinout": {
+    "nombre": "Spin Out",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "spiritbreak": {
+    "nombre": "Spirit Break",
+    "tipo": "Fairy",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "spiritshackle": {
+    "nombre": "Spirit Shackle",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "spite": {
+    "nombre": "Spite",
+    "tipo": "Ghost",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "spitup": {
+    "nombre": "Spit Up",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "splash": {
+    "nombre": "Splash",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "splinteredstormshards": {
+    "nombre": "Splintered Stormshards",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 190,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "splishysplash": {
+    "nombre": "Splishy Splash",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "spore": {
+    "nombre": "Spore",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "spotlight": {
+    "nombre": "Spotlight",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 3,
+    "objetivo": "normal"
+  },
+  "springtidestorm": {
+    "nombre": "Springtide Storm",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "stealthrock": {
+    "nombre": "Stealth Rock",
+    "tipo": "Rock",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "foeSide"
+  },
+  "steameruption": {
+    "nombre": "Steam Eruption",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 110,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "steamroller": {
+    "nombre": "Steamroller",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "steelbeam": {
+    "nombre": "Steel Beam",
+    "tipo": "Steel",
+    "categoria": "Special",
+    "potencia": 140,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "steelroller": {
+    "nombre": "Steel Roller",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 130,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "steelwing": {
+    "nombre": "Steel Wing",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "stickyweb": {
+    "nombre": "Sticky Web",
+    "tipo": "Bug",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "foeSide"
+  },
+  "stockpile": {
+    "nombre": "Stockpile",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "stokedsparksurfer": {
+    "nombre": "Stoked Sparksurfer",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 175,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "stomp": {
+    "nombre": "Stomp",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "stompingtantrum": {
+    "nombre": "Stomping Tantrum",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "stoneaxe": {
+    "nombre": "Stone Axe",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "stoneedge": {
+    "nombre": "Stone Edge",
+    "tipo": "Rock",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "storedpower": {
+    "nombre": "Stored Power",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 20,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "stormthrow": {
+    "nombre": "Storm Throw",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "strangesteam": {
+    "nombre": "Strange Steam",
+    "tipo": "Fairy",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "strength": {
+    "nombre": "Strength",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "strengthsap": {
+    "nombre": "Strength Sap",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "stringshot": {
+    "nombre": "String Shot",
+    "tipo": "Bug",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "struggle": {
+    "nombre": "Struggle",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "randomNormal"
+  },
+  "strugglebug": {
+    "nombre": "Struggle Bug",
+    "tipo": "Bug",
+    "categoria": "Special",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "stuffcheeks": {
+    "nombre": "Stuff Cheeks",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "stunspore": {
+    "nombre": "Stun Spore",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "submission": {
+    "nombre": "Submission",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "substitute": {
+    "nombre": "Substitute",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "subzeroslammer": {
+    "nombre": "Subzero Slammer",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "suckerpunch": {
+    "nombre": "Sucker Punch",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "sunnyday": {
+    "nombre": "Sunny Day",
+    "tipo": "Fire",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "sunsteelstrike": {
+    "nombre": "Sunsteel Strike",
+    "tipo": "Steel",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "supercellslam": {
+    "nombre": "Supercell Slam",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "superfang": {
+    "nombre": "Super Fang",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "superpower": {
+    "nombre": "Superpower",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "supersonic": {
+    "nombre": "Supersonic",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "supersonicskystrike": {
+    "nombre": "Supersonic Skystrike",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "surf": {
+    "nombre": "Surf",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "surgingstrikes": {
+    "nombre": "Surging Strikes",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 25,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "swagger": {
+    "nombre": "Swagger",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "swallow": {
+    "nombre": "Swallow",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "sweetkiss": {
+    "nombre": "Sweet Kiss",
+    "tipo": "Fairy",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "sweetscent": {
+    "nombre": "Sweet Scent",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "swift": {
+    "nombre": "Swift",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "switcheroo": {
+    "nombre": "Switcheroo",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "swordsdance": {
+    "nombre": "Swords Dance",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "synchronoise": {
+    "nombre": "Synchronoise",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "synthesis": {
+    "nombre": "Synthesis",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "syrupbomb": {
+    "nombre": "Syrup Bomb",
+    "tipo": "Grass",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "tachyoncutter": {
+    "nombre": "Tachyon Cutter",
+    "tipo": "Steel",
+    "categoria": "Special",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "tackle": {
+    "nombre": "Tackle",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "tailglow": {
+    "nombre": "Tail Glow",
+    "tipo": "Bug",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "tailslap": {
+    "nombre": "Tail Slap",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 25,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "tailwhip": {
+    "nombre": "Tail Whip",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "tailwind": {
+    "nombre": "Tailwind",
+    "tipo": "Flying",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allySide"
+  },
+  "takedown": {
+    "nombre": "Take Down",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "takeheart": {
+    "nombre": "Take Heart",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "tarshot": {
+    "nombre": "Tar Shot",
+    "tipo": "Rock",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "taunt": {
+    "nombre": "Taunt",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "tearfullook": {
+    "nombre": "Tearful Look",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "teatime": {
+    "nombre": "Teatime",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "technoblast": {
+    "nombre": "Techno Blast",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "tectonicrage": {
+    "nombre": "Tectonic Rage",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "teeterdance": {
+    "nombre": "Teeter Dance",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacent"
+  },
+  "telekinesis": {
+    "nombre": "Telekinesis",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "teleport": {
+    "nombre": "Teleport",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": -6,
+    "objetivo": "self"
+  },
+  "temperflare": {
+    "nombre": "Temper Flare",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "terablast": {
+    "nombre": "Tera Blast",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "terastarstorm": {
+    "nombre": "Tera Starstorm",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "terrainpulse": {
+    "nombre": "Terrain Pulse",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "thief": {
+    "nombre": "Thief",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "thousandarrows": {
+    "nombre": "Thousand Arrows",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "thousandwaves": {
+    "nombre": "Thousand Waves",
+    "tipo": "Ground",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "thrash": {
+    "nombre": "Thrash",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "randomNormal"
+  },
+  "throatchop": {
+    "nombre": "Throat Chop",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "thunder": {
+    "nombre": "Thunder",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 110,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "thunderbolt": {
+    "nombre": "Thunderbolt",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "thundercage": {
+    "nombre": "Thunder Cage",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "thunderclap": {
+    "nombre": "Thunderclap",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 70,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "thunderfang": {
+    "nombre": "Thunder Fang",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "thunderouskick": {
+    "nombre": "Thunderous Kick",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "thunderpunch": {
+    "nombre": "Thunder Punch",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "thundershock": {
+    "nombre": "Thunder Shock",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "thunderwave": {
+    "nombre": "Thunder Wave",
+    "tipo": "Electric",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "tickle": {
+    "nombre": "Tickle",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "tidyup": {
+    "nombre": "Tidy Up",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "topsyturvy": {
+    "nombre": "Topsy-Turvy",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "torchsong": {
+    "nombre": "Torch Song",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "torment": {
+    "nombre": "Torment",
+    "tipo": "Dark",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "toxic": {
+    "nombre": "Toxic",
+    "tipo": "Poison",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "toxicspikes": {
+    "nombre": "Toxic Spikes",
+    "tipo": "Poison",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "foeSide"
+  },
+  "toxicthread": {
+    "nombre": "Toxic Thread",
+    "tipo": "Poison",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "trailblaze": {
+    "nombre": "Trailblaze",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "transform": {
+    "nombre": "Transform",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "triattack": {
+    "nombre": "Tri Attack",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "trick": {
+    "nombre": "Trick",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "trickortreat": {
+    "nombre": "Trick-or-Treat",
+    "tipo": "Ghost",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "trickroom": {
+    "nombre": "Trick Room",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": -7,
+    "objetivo": "all"
+  },
+  "triplearrows": {
+    "nombre": "Triple Arrows",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "tripleaxel": {
+    "nombre": "Triple Axel",
+    "tipo": "Ice",
+    "categoria": "Physical",
+    "potencia": 20,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "tripledive": {
+    "nombre": "Triple Dive",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 35,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "triplekick": {
+    "nombre": "Triple Kick",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 10,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "tropkick": {
+    "nombre": "Trop Kick",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "trumpcard": {
+    "nombre": "Trump Card",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "twinbeam": {
+    "nombre": "Twin Beam",
+    "tipo": "Psychic",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "twineedle": {
+    "nombre": "Twineedle",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 25,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "twinkletackle": {
+    "nombre": "Twinkle Tackle",
+    "tipo": "Fairy",
+    "categoria": "Physical",
+    "potencia": 1,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "twister": {
+    "nombre": "Twister",
+    "tipo": "Dragon",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "upperhand": {
+    "nombre": "Upper Hand",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 65,
+    "prioridad": 3,
+    "objetivo": "normal"
+  },
+  "uproar": {
+    "nombre": "Uproar",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "randomNormal"
+  },
+  "uturn": {
+    "nombre": "U-turn",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "vacuumwave": {
+    "nombre": "Vacuum Wave",
+    "tipo": "Fighting",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "vcreate": {
+    "nombre": "V-create",
+    "tipo": "Fire",
+    "categoria": "Physical",
+    "potencia": 180,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "veeveevolley": {
+    "nombre": "Veevee Volley",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "venomdrench": {
+    "nombre": "Venom Drench",
+    "tipo": "Poison",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "venoshock": {
+    "nombre": "Venoshock",
+    "tipo": "Poison",
+    "categoria": "Special",
+    "potencia": 65,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "victorydance": {
+    "nombre": "Victory Dance",
+    "tipo": "Fighting",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "vinewhip": {
+    "nombre": "Vine Whip",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 45,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "visegrip": {
+    "nombre": "Vise Grip",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 55,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "vitalthrow": {
+    "nombre": "Vital Throw",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": -1,
+    "objetivo": "normal"
+  },
+  "voltswitch": {
+    "nombre": "Volt Switch",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "volttackle": {
+    "nombre": "Volt Tackle",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "wakeupslap": {
+    "nombre": "Wake-Up Slap",
+    "tipo": "Fighting",
+    "categoria": "Physical",
+    "potencia": 70,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "waterfall": {
+    "nombre": "Waterfall",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "watergun": {
+    "nombre": "Water Gun",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 40,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "waterpledge": {
+    "nombre": "Water Pledge",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "waterpulse": {
+    "nombre": "Water Pulse",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "watershuriken": {
+    "nombre": "Water Shuriken",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 15,
+    "prioridad": 1,
+    "objetivo": "normal"
+  },
+  "watersport": {
+    "nombre": "Water Sport",
+    "tipo": "Water",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "waterspout": {
+    "nombre": "Water Spout",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 150,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "wavecrash": {
+    "nombre": "Wave Crash",
+    "tipo": "Water",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "weatherball": {
+    "nombre": "Weather Ball",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 50,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "whirlpool": {
+    "nombre": "Whirlpool",
+    "tipo": "Water",
+    "categoria": "Special",
+    "potencia": 35,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "whirlwind": {
+    "nombre": "Whirlwind",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": -6,
+    "objetivo": "normal"
+  },
+  "wickedblow": {
+    "nombre": "Wicked Blow",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "wickedtorque": {
+    "nombre": "Wicked Torque",
+    "tipo": "Dark",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "wideguard": {
+    "nombre": "Wide Guard",
+    "tipo": "Rock",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 3,
+    "objetivo": "allySide"
+  },
+  "wildboltstorm": {
+    "nombre": "Wildbolt Storm",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 100,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  },
+  "wildcharge": {
+    "nombre": "Wild Charge",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 90,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "willowisp": {
+    "nombre": "Will-O-Wisp",
+    "tipo": "Fire",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "wingattack": {
+    "nombre": "Wing Attack",
+    "tipo": "Flying",
+    "categoria": "Physical",
+    "potencia": 60,
+    "prioridad": 0,
+    "objetivo": "any"
+  },
+  "wish": {
+    "nombre": "Wish",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "withdraw": {
+    "nombre": "Withdraw",
+    "tipo": "Water",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "wonderroom": {
+    "nombre": "Wonder Room",
+    "tipo": "Psychic",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "all"
+  },
+  "woodhammer": {
+    "nombre": "Wood Hammer",
+    "tipo": "Grass",
+    "categoria": "Physical",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "workup": {
+    "nombre": "Work Up",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "self"
+  },
+  "worryseed": {
+    "nombre": "Worry Seed",
+    "tipo": "Grass",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "wrap": {
+    "nombre": "Wrap",
+    "tipo": "Normal",
+    "categoria": "Physical",
+    "potencia": 15,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "wringout": {
+    "nombre": "Wring Out",
+    "tipo": "Normal",
+    "categoria": "Special",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "xscissor": {
+    "nombre": "X-Scissor",
+    "tipo": "Bug",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "yawn": {
+    "nombre": "Yawn",
+    "tipo": "Normal",
+    "categoria": "Status",
+    "potencia": 0,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "zapcannon": {
+    "nombre": "Zap Cannon",
+    "tipo": "Electric",
+    "categoria": "Special",
+    "potencia": 120,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "zenheadbutt": {
+    "nombre": "Zen Headbutt",
+    "tipo": "Psychic",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "zingzap": {
+    "nombre": "Zing Zap",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "zippyzap": {
+    "nombre": "Zippy Zap",
+    "tipo": "Electric",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 2,
+    "objetivo": "normal"
+  },
+  "paleowave": {
+    "nombre": "Paleo Wave",
+    "tipo": "Rock",
+    "categoria": "Special",
+    "potencia": 85,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "shadowstrike": {
+    "nombre": "Shadow Strike",
+    "tipo": "Ghost",
+    "categoria": "Physical",
+    "potencia": 80,
+    "prioridad": 0,
+    "objetivo": "normal"
+  },
+  "polarflare": {
+    "nombre": "Polar Flare",
+    "tipo": "Fire",
+    "categoria": "Special",
+    "potencia": 75,
+    "prioridad": 0,
+    "objetivo": "allAdjacentFoes"
+  }
+}

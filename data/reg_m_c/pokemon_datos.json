@@ -1,6 +1,7 @@
 {
   "abomasnow": {
     "nombre": "abomasnow",
+    "nombre_showdown": "Abomasnow",
     "tipos": [
       "grass",
       "ice"
@@ -99,6 +100,7 @@
   },
   "abomasnow-mega": {
     "nombre": "abomasnow-mega",
+    "nombre_showdown": "Abomasnow-Mega",
     "tipos": [
       "grass",
       "ice"
@@ -193,6 +195,7 @@
   },
   "absol": {
     "nombre": "absol",
+    "nombre_showdown": "Absol",
     "tipos": [
       "dark"
     ],
@@ -301,6 +304,7 @@
   },
   "absol-mega": {
     "nombre": "absol-mega",
+    "nombre_showdown": "Absol-Mega",
     "tipos": [
       "dark"
     ],
@@ -401,6 +405,7 @@
   },
   "absol-mega-z": {
     "nombre": "absol-mega-z",
+    "nombre_showdown": "Absol-Mega-Z",
     "tipos": [
       "dark",
       "ghost"
@@ -502,6 +507,7 @@
   },
   "aegislash": {
     "nombre": "aegislash",
+    "nombre_showdown": "Aegislash",
     "tipos": [
       "steel",
       "ghost"
@@ -577,6 +583,7 @@
   },
   "aegislash-blade": {
     "nombre": "aegislash-blade",
+    "nombre_showdown": "Aegislash-Blade",
     "tipos": [
       "steel",
       "ghost"
@@ -652,6 +659,7 @@
   },
   "aerodactyl": {
     "nombre": "aerodactyl",
+    "nombre_showdown": "Aerodactyl",
     "tipos": [
       "rock",
       "flying"
@@ -747,6 +755,7 @@
   },
   "aerodactyl-mega": {
     "nombre": "aerodactyl-mega",
+    "nombre_showdown": "Aerodactyl-Mega",
     "tipos": [
       "rock",
       "flying"
@@ -834,6 +843,7 @@
   },
   "aggron": {
     "nombre": "aggron",
+    "nombre_showdown": "Aggron",
     "tipos": [
       "steel",
       "rock"
@@ -954,6 +964,7 @@
   },
   "aggron-mega": {
     "nombre": "aggron-mega",
+    "nombre_showdown": "Aggron-Mega",
     "tipos": [
       "steel"
     ],
@@ -1065,6 +1076,7 @@
   },
   "alakazam": {
     "nombre": "alakazam",
+    "nombre_showdown": "Alakazam",
     "tipos": [
       "psychic"
     ],
@@ -1161,6 +1173,7 @@
   },
   "alakazam-mega": {
     "nombre": "alakazam-mega",
+    "nombre_showdown": "Alakazam-Mega",
     "tipos": [
       "psychic"
     ],
@@ -1249,6 +1262,7 @@
   },
   "alcremie": {
     "nombre": "alcremie",
+    "nombre_showdown": "Alcremie",
     "tipos": [
       "fairy"
     ],
@@ -1330,6 +1344,7 @@
   },
   "altaria": {
     "nombre": "altaria",
+    "nombre_showdown": "Altaria",
     "tipos": [
       "dragon",
       "flying"
@@ -1428,6 +1443,7 @@
   },
   "altaria-mega": {
     "nombre": "altaria-mega",
+    "nombre_showdown": "Altaria-Mega",
     "tipos": [
       "dragon",
       "fairy"
@@ -1522,6 +1538,7 @@
   },
   "ampharos": {
     "nombre": "ampharos",
+    "nombre_showdown": "Ampharos",
     "tipos": [
       "electric"
     ],
@@ -1621,6 +1638,7 @@
   },
   "ampharos-mega": {
     "nombre": "ampharos-mega",
+    "nombre_showdown": "Ampharos-Mega",
     "tipos": [
       "electric",
       "dragon"
@@ -1717,6 +1735,7 @@
   },
   "annihilape": {
     "nombre": "annihilape",
+    "nombre_showdown": "Annihilape",
     "tipos": [
       "fighting",
       "ghost"
@@ -1829,6 +1848,7 @@
   },
   "appletun": {
     "nombre": "appletun",
+    "nombre_showdown": "Appletun",
     "tipos": [
       "grass",
       "dragon"
@@ -1917,6 +1937,7 @@
   },
   "araquanid": {
     "nombre": "araquanid",
+    "nombre_showdown": "Araquanid",
     "tipos": [
       "water",
       "bug"
@@ -2001,6 +2022,7 @@
   },
   "arbok": {
     "nombre": "arbok",
+    "nombre_showdown": "Arbok",
     "tipos": [
       "poison"
     ],
@@ -2107,6 +2129,7 @@
   },
   "arboliva": {
     "nombre": "arboliva",
+    "nombre_showdown": "Arboliva",
     "tipos": [
       "grass",
       "normal"
@@ -2184,6 +2207,7 @@
   },
   "arcanine": {
     "nombre": "arcanine",
+    "nombre_showdown": "Arcanine",
     "tipos": [
       "fire"
     ],
@@ -2277,6 +2301,7 @@
   },
   "arcanine-hisui": {
     "nombre": "arcanine-hisui",
+    "nombre_showdown": "Arcanine-Hisui",
     "tipos": [
       "fire",
       "rock"
@@ -2378,6 +2403,7 @@
   },
   "archaludon": {
     "nombre": "archaludon",
+    "nombre_showdown": "Archaludon",
     "tipos": [
       "steel",
       "dragon"
@@ -2465,6 +2491,7 @@
   },
   "ariados": {
     "nombre": "ariados",
+    "nombre_showdown": "Ariados",
     "tipos": [
       "bug",
       "poison"
@@ -2566,6 +2593,7 @@
   },
   "armarouge": {
     "nombre": "armarouge",
+    "nombre_showdown": "Armarouge",
     "tipos": [
       "fire",
       "psychic"
@@ -2654,6 +2682,7 @@
   },
   "aromatisse": {
     "nombre": "aromatisse",
+    "nombre_showdown": "Aromatisse",
     "tipos": [
       "fairy"
     ],
@@ -2734,6 +2763,7 @@
   },
   "audino": {
     "nombre": "audino",
+    "nombre_showdown": "Audino",
     "tipos": [
       "normal"
     ],
@@ -2839,6 +2869,7 @@
   },
   "audino-mega": {
     "nombre": "audino-mega",
+    "nombre_showdown": "Audino-Mega",
     "tipos": [
       "normal",
       "fairy"
@@ -2937,6 +2968,7 @@
   },
   "aurorus": {
     "nombre": "aurorus",
+    "nombre_showdown": "Aurorus",
     "tipos": [
       "rock",
       "ice"
@@ -3026,6 +3058,7 @@
   },
   "avalugg": {
     "nombre": "avalugg",
+    "nombre_showdown": "Avalugg",
     "tipos": [
       "ice"
     ],
@@ -3111,6 +3144,7 @@
   },
   "avalugg-hisui": {
     "nombre": "avalugg-hisui",
+    "nombre_showdown": "Avalugg-Hisui",
     "tipos": [
       "ice",
       "rock"
@@ -3197,6 +3231,7 @@
   },
   "azumarill": {
     "nombre": "azumarill",
+    "nombre_showdown": "Azumarill",
     "tipos": [
       "water",
       "fairy"
@@ -3300,6 +3335,7 @@
   },
   "banette": {
     "nombre": "banette",
+    "nombre_showdown": "Banette",
     "tipos": [
       "ghost"
     ],
@@ -3403,6 +3439,7 @@
   },
   "banette-mega": {
     "nombre": "banette-mega",
+    "nombre_showdown": "Banette-Mega",
     "tipos": [
       "ghost"
     ],
@@ -3498,6 +3535,7 @@
   },
   "barbaracle": {
     "nombre": "barbaracle",
+    "nombre_showdown": "Barbaracle",
     "tipos": [
       "rock",
       "water"
@@ -3607,6 +3645,7 @@
   },
   "barbaracle-mega": {
     "nombre": "barbaracle-mega",
+    "nombre_showdown": "Barbaracle-Mega",
     "tipos": [
       "rock",
       "fighting"
@@ -3708,6 +3747,7 @@
   },
   "basculegion": {
     "nombre": "basculegion",
+    "nombre_showdown": "Basculegion",
     "tipos": [
       "water",
       "ghost"
@@ -3794,6 +3834,7 @@
   },
   "basculegion-f": {
     "nombre": "basculegion-f",
+    "nombre_showdown": "Basculegion-F",
     "tipos": [
       "water",
       "ghost"
@@ -3880,6 +3921,7 @@
   },
   "bastiodon": {
     "nombre": "bastiodon",
+    "nombre_showdown": "Bastiodon",
     "tipos": [
       "rock",
       "steel"
@@ -3981,6 +4023,7 @@
   },
   "baxcalibur": {
     "nombre": "baxcalibur",
+    "nombre_showdown": "Baxcalibur",
     "tipos": [
       "dragon",
       "ice"
@@ -4065,6 +4108,7 @@
   },
   "baxcalibur-mega": {
     "nombre": "baxcalibur-mega",
+    "nombre_showdown": "Baxcalibur-Mega",
     "tipos": [
       "dragon",
       "ice"
@@ -4145,6 +4189,7 @@
   },
   "beartic": {
     "nombre": "beartic",
+    "nombre_showdown": "Beartic",
     "tipos": [
       "ice"
     ],
@@ -4257,6 +4302,7 @@
   },
   "beedrill": {
     "nombre": "beedrill",
+    "nombre_showdown": "Beedrill",
     "tipos": [
       "bug",
       "poison"
@@ -4343,6 +4389,7 @@
   },
   "beedrill-mega": {
     "nombre": "beedrill-mega",
+    "nombre_showdown": "Beedrill-Mega",
     "tipos": [
       "bug",
       "poison"
@@ -4425,6 +4472,7 @@
   },
   "bellibolt": {
     "nombre": "bellibolt",
+    "nombre_showdown": "Bellibolt",
     "tipos": [
       "electric"
     ],
@@ -4500,6 +4548,7 @@
   },
   "blastoise": {
     "nombre": "blastoise",
+    "nombre_showdown": "Blastoise",
     "tipos": [
       "water"
     ],
@@ -4605,6 +4654,7 @@
   },
   "blastoise-mega": {
     "nombre": "blastoise-mega",
+    "nombre_showdown": "Blastoise-Mega",
     "tipos": [
       "water"
     ],
@@ -4706,6 +4756,7 @@
   },
   "blaziken": {
     "nombre": "blaziken",
+    "nombre_showdown": "Blaziken",
     "tipos": [
       "fire",
       "fighting"
@@ -4818,6 +4869,7 @@
   },
   "blaziken-mega": {
     "nombre": "blaziken-mega",
+    "nombre_showdown": "Blaziken-Mega",
     "tipos": [
       "fire",
       "fighting"
@@ -4926,6 +4978,7 @@
   },
   "camerupt": {
     "nombre": "camerupt",
+    "nombre_showdown": "Camerupt",
     "tipos": [
       "fire",
       "ground"
@@ -5030,6 +5083,7 @@
   },
   "camerupt-mega": {
     "nombre": "camerupt-mega",
+    "nombre_showdown": "Camerupt-Mega",
     "tipos": [
       "fire",
       "ground"
@@ -5126,6 +5180,7 @@
   },
   "castform": {
     "nombre": "castform",
+    "nombre_showdown": "Castform",
     "tipos": [
       "normal"
     ],
@@ -5191,6 +5246,7 @@
   },
   "castform-rainy": {
     "nombre": "castform-rainy",
+    "nombre_showdown": "Castform-Rainy",
     "tipos": [
       "water"
     ],
@@ -5256,6 +5312,7 @@
   },
   "castform-snowy": {
     "nombre": "castform-snowy",
+    "nombre_showdown": "Castform-Snowy",
     "tipos": [
       "ice"
     ],
@@ -5321,6 +5378,7 @@
   },
   "castform-sunny": {
     "nombre": "castform-sunny",
+    "nombre_showdown": "Castform-Sunny",
     "tipos": [
       "fire"
     ],
@@ -5386,6 +5444,7 @@
   },
   "ceruledge": {
     "nombre": "ceruledge",
+    "nombre_showdown": "Ceruledge",
     "tipos": [
       "fire",
       "ghost"
@@ -5474,6 +5533,7 @@
   },
   "chandelure": {
     "nombre": "chandelure",
+    "nombre_showdown": "Chandelure",
     "tipos": [
       "ghost",
       "fire"
@@ -5565,6 +5625,7 @@
   },
   "chandelure-mega": {
     "nombre": "chandelure-mega",
+    "nombre_showdown": "Chandelure-Mega",
     "tipos": [
       "ghost",
       "fire"
@@ -5648,6 +5709,7 @@
   },
   "charizard": {
     "nombre": "charizard",
+    "nombre_showdown": "Charizard",
     "tipos": [
       "fire",
       "flying"
@@ -5754,6 +5816,7 @@
   },
   "charizard-mega-x": {
     "nombre": "charizard-mega-x",
+    "nombre_showdown": "Charizard-Mega-X",
     "tipos": [
       "fire",
       "dragon"
@@ -5856,6 +5919,7 @@
   },
   "charizard-mega-y": {
     "nombre": "charizard-mega-y",
+    "nombre_showdown": "Charizard-Mega-Y",
     "tipos": [
       "fire",
       "flying"
@@ -5958,6 +6022,7 @@
   },
   "chesnaught": {
     "nombre": "chesnaught",
+    "nombre_showdown": "Chesnaught",
     "tipos": [
       "grass",
       "fighting"
@@ -6078,6 +6143,7 @@
   },
   "chesnaught-mega": {
     "nombre": "chesnaught-mega",
+    "nombre_showdown": "Chesnaught-Mega",
     "tipos": [
       "grass",
       "fighting"
@@ -6194,6 +6260,7 @@
   },
   "chimecho": {
     "nombre": "chimecho",
+    "nombre_showdown": "Chimecho",
     "tipos": [
       "psychic"
     ],
@@ -6287,6 +6354,7 @@
   },
   "chimecho-mega": {
     "nombre": "chimecho-mega",
+    "nombre_showdown": "Chimecho-Mega",
     "tipos": [
       "psychic",
       "steel"
@@ -6381,6 +6449,7 @@
   },
   "cinderace": {
     "nombre": "cinderace",
+    "nombre_showdown": "Cinderace",
     "tipos": [
       "fire"
     ],
@@ -6477,6 +6546,7 @@
   },
   "clawitzer": {
     "nombre": "clawitzer",
+    "nombre_showdown": "Clawitzer",
     "tipos": [
       "water"
     ],
@@ -6557,6 +6627,7 @@
   },
   "clefable": {
     "nombre": "clefable",
+    "nombre_showdown": "Clefable",
     "tipos": [
       "fairy"
     ],
@@ -6684,6 +6755,7 @@
   },
   "clefable-mega": {
     "nombre": "clefable-mega",
+    "nombre_showdown": "Clefable-Mega",
     "tipos": [
       "fairy",
       "flying"
@@ -6804,6 +6876,7 @@
   },
   "cofagrigus": {
     "nombre": "cofagrigus",
+    "nombre_showdown": "Cofagrigus",
     "tipos": [
       "ghost"
     ],
@@ -6886,6 +6959,7 @@
   },
   "conkeldurr": {
     "nombre": "conkeldurr",
+    "nombre_showdown": "Conkeldurr",
     "tipos": [
       "fighting"
     ],
@@ -6983,6 +7057,7 @@
   },
   "corviknight": {
     "nombre": "corviknight",
+    "nombre_showdown": "Corviknight",
     "tipos": [
       "flying",
       "steel"
@@ -7075,6 +7150,7 @@
   },
   "crabominable": {
     "nombre": "crabominable",
+    "nombre_showdown": "Crabominable",
     "tipos": [
       "fighting",
       "ice"
@@ -7175,6 +7251,7 @@
   },
   "crabominable-mega": {
     "nombre": "crabominable-mega",
+    "nombre_showdown": "Crabominable-Mega",
     "tipos": [
       "fighting",
       "ice"
@@ -7267,6 +7344,7 @@
   },
   "decidueye": {
     "nombre": "decidueye",
+    "nombre_showdown": "Decidueye",
     "tipos": [
       "grass",
       "ghost"
@@ -7366,6 +7444,7 @@
   },
   "decidueye-hisui": {
     "nombre": "decidueye-hisui",
+    "nombre_showdown": "Decidueye-Hisui",
     "tipos": [
       "grass",
       "fighting"
@@ -7465,6 +7544,7 @@
   },
   "dedenne": {
     "nombre": "dedenne",
+    "nombre_showdown": "Dedenne",
     "tipos": [
       "electric",
       "fairy"
@@ -7552,6 +7632,7 @@
   },
   "delphox": {
     "nombre": "delphox",
+    "nombre_showdown": "Delphox",
     "tipos": [
       "fire",
       "psychic"
@@ -7657,6 +7738,7 @@
   },
   "delphox-mega": {
     "nombre": "delphox-mega",
+    "nombre_showdown": "Delphox-Mega",
     "tipos": [
       "fire",
       "psychic"
@@ -7758,6 +7840,7 @@
   },
   "diggersby": {
     "nombre": "diggersby",
+    "nombre_showdown": "Diggersby",
     "tipos": [
       "normal",
       "ground"
@@ -7853,6 +7936,7 @@
   },
   "ditto": {
     "nombre": "ditto",
+    "nombre_showdown": "Ditto",
     "tipos": [
       "normal"
     ],
@@ -7886,6 +7970,7 @@
   },
   "dragalge": {
     "nombre": "dragalge",
+    "nombre_showdown": "Dragalge",
     "tipos": [
       "poison",
       "dragon"
@@ -7975,6 +8060,7 @@
   },
   "dragalge-mega": {
     "nombre": "dragalge-mega",
+    "nombre_showdown": "Dragalge-Mega",
     "tipos": [
       "poison",
       "dragon"
@@ -8056,6 +8142,7 @@
   },
   "dragapult": {
     "nombre": "dragapult",
+    "nombre_showdown": "Dragapult",
     "tipos": [
       "dragon",
       "ghost"
@@ -8156,6 +8243,7 @@
   },
   "dragonite": {
     "nombre": "dragonite",
+    "nombre_showdown": "Dragonite",
     "tipos": [
       "dragon",
       "flying"
@@ -8272,6 +8360,7 @@
   },
   "dragonite-mega": {
     "nombre": "dragonite-mega",
+    "nombre_showdown": "Dragonite-Mega",
     "tipos": [
       "dragon",
       "flying"
@@ -8384,6 +8473,7 @@
   },
   "drampa": {
     "nombre": "drampa",
+    "nombre_showdown": "Drampa",
     "tipos": [
       "normal",
       "dragon"
@@ -8487,6 +8577,7 @@
   },
   "drampa-mega": {
     "nombre": "drampa-mega",
+    "nombre_showdown": "Drampa-Mega",
     "tipos": [
       "normal",
       "dragon"
@@ -8582,6 +8673,7 @@
   },
   "eelektross": {
     "nombre": "eelektross",
+    "nombre_showdown": "Eelektross",
     "tipos": [
       "electric"
     ],
@@ -8685,6 +8777,7 @@
   },
   "eelektross-mega": {
     "nombre": "eelektross-mega",
+    "nombre_showdown": "Eelektross-Mega",
     "tipos": [
       "electric"
     ],
@@ -8788,6 +8881,7 @@
   },
   "emboar": {
     "nombre": "emboar",
+    "nombre_showdown": "Emboar",
     "tipos": [
       "fire",
       "fighting"
@@ -8900,6 +8994,7 @@
   },
   "emboar-mega": {
     "nombre": "emboar-mega",
+    "nombre_showdown": "Emboar-Mega",
     "tipos": [
       "fire",
       "fighting"
@@ -9008,6 +9103,7 @@
   },
   "emolga": {
     "nombre": "emolga",
+    "nombre_showdown": "Emolga",
     "tipos": [
       "electric",
       "flying"
@@ -9087,6 +9183,7 @@
   },
   "empoleon": {
     "nombre": "empoleon",
+    "nombre_showdown": "Empoleon",
     "tipos": [
       "water",
       "steel"
@@ -9194,6 +9291,7 @@
   },
   "espathra": {
     "nombre": "espathra",
+    "nombre_showdown": "Espathra",
     "tipos": [
       "psychic"
     ],
@@ -9287,6 +9385,7 @@
   },
   "espeon": {
     "nombre": "espeon",
+    "nombre_showdown": "Espeon",
     "tipos": [
       "psychic"
     ],
@@ -9386,6 +9485,7 @@
   },
   "excadrill": {
     "nombre": "excadrill",
+    "nombre_showdown": "Excadrill",
     "tipos": [
       "ground",
       "steel"
@@ -9477,6 +9577,7 @@
   },
   "excadrill-mega": {
     "nombre": "excadrill-mega",
+    "nombre_showdown": "Excadrill-Mega",
     "tipos": [
       "ground",
       "steel"
@@ -9560,6 +9661,7 @@
   },
   "falinks": {
     "nombre": "falinks",
+    "nombre_showdown": "Falinks",
     "tipos": [
       "fighting"
     ],
@@ -9643,6 +9745,7 @@
   },
   "falinks-mega": {
     "nombre": "falinks-mega",
+    "nombre_showdown": "Falinks-Mega",
     "tipos": [
       "fighting"
     ],
@@ -9722,6 +9825,7 @@
   },
   "farfetchd": {
     "nombre": "farfetchd",
+    "nombre_showdown": "Farfetch’d",
     "tipos": [
       "normal",
       "flying"
@@ -9809,6 +9913,7 @@
   },
   "farigiraf": {
     "nombre": "farigiraf",
+    "nombre_showdown": "Farigiraf",
     "tipos": [
       "normal",
       "psychic"
@@ -9916,6 +10021,7 @@
   },
   "feraligatr": {
     "nombre": "feraligatr",
+    "nombre_showdown": "Feraligatr",
     "tipos": [
       "water"
     ],
@@ -10031,6 +10137,7 @@
   },
   "feraligatr-mega": {
     "nombre": "feraligatr-mega",
+    "nombre_showdown": "Feraligatr-Mega",
     "tipos": [
       "water",
       "dragon"
@@ -10143,6 +10250,7 @@
   },
   "flapple": {
     "nombre": "flapple",
+    "nombre_showdown": "Flapple",
     "tipos": [
       "grass",
       "dragon"
@@ -10224,6 +10332,7 @@
   },
   "flareon": {
     "nombre": "flareon",
+    "nombre_showdown": "Flareon",
     "tipos": [
       "fire"
     ],
@@ -10313,6 +10422,7 @@
   },
   "floette-eternal": {
     "nombre": "floette-eternal",
+    "nombre_showdown": "Floette-Eternal",
     "tipos": [
       "fairy"
     ],
@@ -10386,6 +10496,7 @@
   },
   "floette-mega": {
     "nombre": "floette-mega",
+    "nombre_showdown": "Floette-Mega",
     "tipos": [
       "fairy"
     ],
@@ -10455,6 +10566,7 @@
   },
   "florges": {
     "nombre": "florges",
+    "nombre_showdown": "Florges",
     "tipos": [
       "fairy"
     ],
@@ -10533,6 +10645,7 @@
   },
   "forretress": {
     "nombre": "forretress",
+    "nombre_showdown": "Forretress",
     "tipos": [
       "bug",
       "steel"
@@ -10635,6 +10748,7 @@
   },
   "froslass": {
     "nombre": "froslass",
+    "nombre_showdown": "Froslass",
     "tipos": [
       "ice",
       "ghost"
@@ -10736,6 +10850,7 @@
   },
   "froslass-mega": {
     "nombre": "froslass-mega",
+    "nombre_showdown": "Froslass-Mega",
     "tipos": [
       "ice",
       "ghost"
@@ -10833,6 +10948,7 @@
   },
   "furfrou": {
     "nombre": "furfrou",
+    "nombre_showdown": "Furfrou",
     "tipos": [
       "normal"
     ],
@@ -10901,6 +11017,7 @@
   },
   "gallade": {
     "nombre": "gallade",
+    "nombre_showdown": "Gallade",
     "tipos": [
       "psychic",
       "fighting"
@@ -11044,6 +11161,7 @@
   },
   "gallade-mega": {
     "nombre": "gallade-mega",
+    "nombre_showdown": "Gallade-Mega",
     "tipos": [
       "psychic",
       "fighting"
@@ -11179,6 +11297,7 @@
   },
   "garbodor": {
     "nombre": "garbodor",
+    "nombre_showdown": "Garbodor",
     "tipos": [
       "poison"
     ],
@@ -11268,6 +11387,7 @@
   },
   "garchomp": {
     "nombre": "garchomp",
+    "nombre_showdown": "Garchomp",
     "tipos": [
       "dragon",
       "ground"
@@ -11360,6 +11480,7 @@
   },
   "garchomp-mega": {
     "nombre": "garchomp-mega",
+    "nombre_showdown": "Garchomp-Mega",
     "tipos": [
       "dragon",
       "ground"
@@ -11448,6 +11569,7 @@
   },
   "garchomp-mega-z": {
     "nombre": "garchomp-mega-z",
+    "nombre_showdown": "Garchomp-Mega-Z",
     "tipos": [
       "dragon"
     ],
@@ -11535,6 +11657,7 @@
   },
   "gardevoir": {
     "nombre": "gardevoir",
+    "nombre_showdown": "Gardevoir",
     "tipos": [
       "psychic",
       "fairy"
@@ -11652,6 +11775,7 @@
   },
   "gardevoir-mega": {
     "nombre": "gardevoir-mega",
+    "nombre_showdown": "Gardevoir-Mega",
     "tipos": [
       "psychic",
       "fairy"
@@ -11761,6 +11885,7 @@
   },
   "garganacl": {
     "nombre": "garganacl",
+    "nombre_showdown": "Garganacl",
     "tipos": [
       "rock"
     ],
@@ -11851,6 +11976,7 @@
   },
   "gengar": {
     "nombre": "gengar",
+    "nombre_showdown": "Gengar",
     "tipos": [
       "ghost",
       "poison"
@@ -11956,6 +12082,7 @@
   },
   "gengar-mega": {
     "nombre": "gengar-mega",
+    "nombre_showdown": "Gengar-Mega",
     "tipos": [
       "ghost",
       "poison"
@@ -12061,6 +12188,7 @@
   },
   "gholdengo": {
     "nombre": "gholdengo",
+    "nombre_showdown": "Gholdengo",
     "tipos": [
       "steel",
       "ghost"
@@ -12132,6 +12260,7 @@
   },
   "glaceon": {
     "nombre": "glaceon",
+    "nombre_showdown": "Glaceon",
     "tipos": [
       "ice"
     ],
@@ -12222,6 +12351,7 @@
   },
   "glalie": {
     "nombre": "glalie",
+    "nombre_showdown": "Glalie",
     "tipos": [
       "ice"
     ],
@@ -12312,6 +12442,7 @@
   },
   "glalie-mega": {
     "nombre": "glalie-mega",
+    "nombre_showdown": "Glalie-Mega",
     "tipos": [
       "ice"
     ],
@@ -12394,6 +12525,7 @@
   },
   "glimmora": {
     "nombre": "glimmora",
+    "nombre_showdown": "Glimmora",
     "tipos": [
       "rock",
       "poison"
@@ -12473,6 +12605,7 @@
   },
   "glimmora-mega": {
     "nombre": "glimmora-mega",
+    "nombre_showdown": "Glimmora-Mega",
     "tipos": [
       "rock",
       "poison"
@@ -12548,6 +12681,7 @@
   },
   "gliscor": {
     "nombre": "gliscor",
+    "nombre_showdown": "Gliscor",
     "tipos": [
       "ground",
       "flying"
@@ -12660,6 +12794,7 @@
   },
   "gogoat": {
     "nombre": "gogoat",
+    "nombre_showdown": "Gogoat",
     "tipos": [
       "grass"
     ],
@@ -12746,6 +12881,7 @@
   },
   "golisopod": {
     "nombre": "golisopod",
+    "nombre_showdown": "Golisopod",
     "tipos": [
       "bug",
       "water"
@@ -12842,6 +12978,7 @@
   },
   "golisopod-mega": {
     "nombre": "golisopod-mega",
+    "nombre_showdown": "Golisopod-Mega",
     "tipos": [
       "bug",
       "steel"
@@ -12938,6 +13075,7 @@
   },
   "golurk": {
     "nombre": "golurk",
+    "nombre_showdown": "Golurk",
     "tipos": [
       "ground",
       "ghost"
@@ -13053,6 +13191,7 @@
   },
   "golurk-mega": {
     "nombre": "golurk-mega",
+    "nombre_showdown": "Golurk-Mega",
     "tipos": [
       "ground",
       "ghost"
@@ -13160,6 +13299,7 @@
   },
   "goodra": {
     "nombre": "goodra",
+    "nombre_showdown": "Goodra",
     "tipos": [
       "dragon"
     ],
@@ -13261,6 +13401,7 @@
   },
   "goodra-hisui": {
     "nombre": "goodra-hisui",
+    "nombre_showdown": "Goodra-Hisui",
     "tipos": [
       "steel",
       "dragon"
@@ -13361,6 +13502,7 @@
   },
   "gourgeist": {
     "nombre": "gourgeist",
+    "nombre_showdown": "Gourgeist",
     "tipos": [
       "ghost",
       "grass"
@@ -13458,6 +13600,7 @@
   },
   "gourgeist-large": {
     "nombre": "gourgeist-large",
+    "nombre_showdown": "Gourgeist-Large",
     "tipos": [
       "ghost",
       "grass"
@@ -13555,6 +13698,7 @@
   },
   "gourgeist-small": {
     "nombre": "gourgeist-small",
+    "nombre_showdown": "Gourgeist-Small",
     "tipos": [
       "ghost",
       "grass"
@@ -13652,6 +13796,7 @@
   },
   "gourgeist-super": {
     "nombre": "gourgeist-super",
+    "nombre_showdown": "Gourgeist-Super",
     "tipos": [
       "ghost",
       "grass"
@@ -13749,6 +13894,7 @@
   },
   "grapploct": {
     "nombre": "grapploct",
+    "nombre_showdown": "Grapploct",
     "tipos": [
       "fighting"
     ],
@@ -13830,6 +13976,7 @@
   },
   "greninja": {
     "nombre": "greninja",
+    "nombre_showdown": "Greninja",
     "tipos": [
       "water",
       "dark"
@@ -13931,6 +14078,7 @@
   },
   "greninja-mega": {
     "nombre": "greninja-mega",
+    "nombre_showdown": "Greninja-Mega",
     "tipos": [
       "water",
       "dark"
@@ -14024,6 +14172,7 @@
   },
   "grimmsnarl": {
     "nombre": "grimmsnarl",
+    "nombre_showdown": "Grimmsnarl",
     "tipos": [
       "dark",
       "fairy"
@@ -14125,6 +14274,7 @@
   },
   "gyarados": {
     "nombre": "gyarados",
+    "nombre_showdown": "Gyarados",
     "tipos": [
       "water",
       "flying"
@@ -14225,6 +14375,7 @@
   },
   "gyarados-mega": {
     "nombre": "gyarados-mega",
+    "nombre_showdown": "Gyarados-Mega",
     "tipos": [
       "water",
       "dark"
@@ -14321,6 +14472,7 @@
   },
   "hatterene": {
     "nombre": "hatterene",
+    "nombre_showdown": "Hatterene",
     "tipos": [
       "psychic",
       "fairy"
@@ -14417,6 +14569,7 @@
   },
   "hawlucha": {
     "nombre": "hawlucha",
+    "nombre_showdown": "Hawlucha",
     "tipos": [
       "fighting",
       "flying"
@@ -14528,6 +14681,7 @@
   },
   "hawlucha-mega": {
     "nombre": "hawlucha-mega",
+    "nombre_showdown": "Hawlucha-Mega",
     "tipos": [
       "fighting",
       "flying"
@@ -14631,6 +14785,7 @@
   },
   "heliolisk": {
     "nombre": "heliolisk",
+    "nombre_showdown": "Heliolisk",
     "tipos": [
       "electric",
       "normal"
@@ -14731,6 +14886,7 @@
   },
   "heracross": {
     "nombre": "heracross",
+    "nombre_showdown": "Heracross",
     "tipos": [
       "bug",
       "fighting"
@@ -14834,6 +14990,7 @@
   },
   "heracross-mega": {
     "nombre": "heracross-mega",
+    "nombre_showdown": "Heracross-Mega",
     "tipos": [
       "bug",
       "fighting"
@@ -14929,6 +15086,7 @@
   },
   "hippowdon": {
     "nombre": "hippowdon",
+    "nombre_showdown": "Hippowdon",
     "tipos": [
       "ground"
     ],
@@ -15012,6 +15170,7 @@
   },
   "houndoom": {
     "nombre": "houndoom",
+    "nombre_showdown": "Houndoom",
     "tipos": [
       "dark",
       "fire"
@@ -15116,6 +15275,7 @@
   },
   "houndoom-mega": {
     "nombre": "houndoom-mega",
+    "nombre_showdown": "Houndoom-Mega",
     "tipos": [
       "dark",
       "fire"
@@ -15212,6 +15372,7 @@
   },
   "houndstone": {
     "nombre": "houndstone",
+    "nombre_showdown": "Houndstone",
     "tipos": [
       "ghost"
     ],
@@ -15296,6 +15457,7 @@
   },
   "hydrapple": {
     "nombre": "hydrapple",
+    "nombre_showdown": "Hydrapple",
     "tipos": [
       "grass",
       "dragon"
@@ -15384,6 +15546,7 @@
   },
   "hydreigon": {
     "nombre": "hydreigon",
+    "nombre_showdown": "Hydreigon",
     "tipos": [
       "dark",
       "dragon"
@@ -15491,6 +15654,7 @@
   },
   "incineroar": {
     "nombre": "incineroar",
+    "nombre_showdown": "Incineroar",
     "tipos": [
       "fire",
       "dark"
@@ -15601,6 +15765,7 @@
   },
   "indeedee": {
     "nombre": "indeedee",
+    "nombre_showdown": "Indeedee",
     "tipos": [
       "psychic",
       "normal"
@@ -15684,6 +15849,7 @@
   },
   "indeedee-f": {
     "nombre": "indeedee-f",
+    "nombre_showdown": "Indeedee-F",
     "tipos": [
       "psychic",
       "normal"
@@ -15766,6 +15932,7 @@
   },
   "infernape": {
     "nombre": "infernape",
+    "nombre_showdown": "Infernape",
     "tipos": [
       "fire",
       "fighting"
@@ -15887,6 +16054,7 @@
   },
   "inteleon": {
     "nombre": "inteleon",
+    "nombre_showdown": "Inteleon",
     "tipos": [
       "water"
     ],
@@ -15981,6 +16149,7 @@
   },
   "jolteon": {
     "nombre": "jolteon",
+    "nombre_showdown": "Jolteon",
     "tipos": [
       "electric"
     ],
@@ -16072,6 +16241,7 @@
   },
   "kangaskhan": {
     "nombre": "kangaskhan",
+    "nombre_showdown": "Kangaskhan",
     "tipos": [
       "normal"
     ],
@@ -16175,6 +16345,7 @@
   },
   "kangaskhan-mega": {
     "nombre": "kangaskhan-mega",
+    "nombre_showdown": "Kangaskhan-Mega",
     "tipos": [
       "normal"
     ],
@@ -16270,6 +16441,7 @@
   },
   "kingambit": {
     "nombre": "kingambit",
+    "nombre_showdown": "Kingambit",
     "tipos": [
       "dark",
       "steel"
@@ -16360,6 +16532,7 @@
   },
   "kleavor": {
     "nombre": "kleavor",
+    "nombre_showdown": "Kleavor",
     "tipos": [
       "bug",
       "rock"
@@ -16454,6 +16627,7 @@
   },
   "klefki": {
     "nombre": "klefki",
+    "nombre_showdown": "Klefki",
     "tipos": [
       "steel",
       "fairy"
@@ -16531,6 +16705,7 @@
   },
   "kommo-o": {
     "nombre": "kommo-o",
+    "nombre_showdown": "Kommo-o",
     "tipos": [
       "dragon",
       "fighting"
@@ -16646,6 +16821,7 @@
   },
   "krookodile": {
     "nombre": "krookodile",
+    "nombre_showdown": "Krookodile",
     "tipos": [
       "ground",
       "dark"
@@ -16766,6 +16942,7 @@
   },
   "leafeon": {
     "nombre": "leafeon",
+    "nombre_showdown": "Leafeon",
     "tipos": [
       "grass"
     ],
@@ -16856,6 +17033,7 @@
   },
   "liepard": {
     "nombre": "liepard",
+    "nombre_showdown": "Liepard",
     "tipos": [
       "dark"
     ],
@@ -16953,6 +17131,7 @@
   },
   "lopunny": {
     "nombre": "lopunny",
+    "nombre_showdown": "Lopunny",
     "tipos": [
       "normal"
     ],
@@ -17065,6 +17244,7 @@
   },
   "lopunny-mega": {
     "nombre": "lopunny-mega",
+    "nombre_showdown": "Lopunny-Mega",
     "tipos": [
       "normal",
       "fighting"
@@ -17170,6 +17350,7 @@
   },
   "lucario": {
     "nombre": "lucario",
+    "nombre_showdown": "Lucario",
     "tipos": [
       "fighting",
       "steel"
@@ -17290,6 +17471,7 @@
   },
   "lucario-mega": {
     "nombre": "lucario-mega",
+    "nombre_showdown": "Lucario-Mega",
     "tipos": [
       "fighting",
       "steel"
@@ -17402,6 +17584,7 @@
   },
   "lucario-mega-z": {
     "nombre": "lucario-mega-z",
+    "nombre_showdown": "Lucario-Mega-Z",
     "tipos": [
       "fighting",
       "steel"
@@ -17514,6 +17697,7 @@
   },
   "luxray": {
     "nombre": "luxray",
+    "nombre_showdown": "Luxray",
     "tipos": [
       "electric"
     ],
@@ -17603,6 +17787,7 @@
   },
   "lycanroc": {
     "nombre": "lycanroc",
+    "nombre_showdown": "Lycanroc",
     "tipos": [
       "rock"
     ],
@@ -17697,6 +17882,7 @@
   },
   "lycanroc-dusk": {
     "nombre": "lycanroc-dusk",
+    "nombre_showdown": "Lycanroc-Dusk",
     "tipos": [
       "rock"
     ],
@@ -17786,6 +17972,7 @@
   },
   "lycanroc-midnight": {
     "nombre": "lycanroc-midnight",
+    "nombre_showdown": "Lycanroc-Midnight",
     "tipos": [
       "rock"
     ],
@@ -17890,6 +18077,7 @@
   },
   "mabosstiff": {
     "nombre": "mabosstiff",
+    "nombre_showdown": "Mabosstiff",
     "tipos": [
       "dark"
     ],
@@ -17970,6 +18158,7 @@
   },
   "machamp": {
     "nombre": "machamp",
+    "nombre_showdown": "Machamp",
     "tipos": [
       "fighting"
     ],
@@ -18072,6 +18261,7 @@
   },
   "malamar": {
     "nombre": "malamar",
+    "nombre_showdown": "Malamar",
     "tipos": [
       "dark",
       "psychic"
@@ -18178,6 +18368,7 @@
   },
   "malamar-mega": {
     "nombre": "malamar-mega",
+    "nombre_showdown": "Malamar-Mega",
     "tipos": [
       "dark",
       "psychic"
@@ -18276,6 +18467,7 @@
   },
   "mamoswine": {
     "nombre": "mamoswine",
+    "nombre_showdown": "Mamoswine",
     "tipos": [
       "ice",
       "ground"
@@ -18376,6 +18568,7 @@
   },
   "manectric": {
     "nombre": "manectric",
+    "nombre_showdown": "Manectric",
     "tipos": [
       "electric"
     ],
@@ -18461,6 +18654,7 @@
   },
   "manectric-mega": {
     "nombre": "manectric-mega",
+    "nombre_showdown": "Manectric-Mega",
     "tipos": [
       "electric"
     ],
@@ -18538,6 +18732,7 @@
   },
   "maushold": {
     "nombre": "maushold",
+    "nombre_showdown": "Maushold",
     "tipos": [
       "normal"
     ],
@@ -18624,6 +18819,7 @@
   },
   "mawile": {
     "nombre": "mawile",
+    "nombre_showdown": "Mawile",
     "tipos": [
       "steel",
       "fairy"
@@ -18732,6 +18928,7 @@
   },
   "mawile-mega": {
     "nombre": "mawile-mega",
+    "nombre_showdown": "Mawile-Mega",
     "tipos": [
       "steel",
       "fairy"
@@ -18832,6 +19029,7 @@
   },
   "medicham": {
     "nombre": "medicham",
+    "nombre_showdown": "Medicham",
     "tipos": [
       "fighting",
       "psychic"
@@ -18942,6 +19140,7 @@
   },
   "medicham-mega": {
     "nombre": "medicham-mega",
+    "nombre_showdown": "Medicham-Mega",
     "tipos": [
       "fighting",
       "psychic"
@@ -19048,6 +19247,7 @@
   },
   "meganium": {
     "nombre": "meganium",
+    "nombre_showdown": "Meganium",
     "tipos": [
       "grass"
     ],
@@ -19141,6 +19341,7 @@
   },
   "meganium-mega": {
     "nombre": "meganium-mega",
+    "nombre_showdown": "Meganium-Mega",
     "tipos": [
       "grass",
       "fairy"
@@ -19231,6 +19432,7 @@
   },
   "meowscarada": {
     "nombre": "meowscarada",
+    "nombre_showdown": "Meowscarada",
     "tipos": [
       "grass",
       "dark"
@@ -19330,6 +19532,7 @@
   },
   "meowstic": {
     "nombre": "meowstic",
+    "nombre_showdown": "Meowstic",
     "tipos": [
       "psychic"
     ],
@@ -19425,6 +19628,7 @@
   },
   "meowstic-f-mega": {
     "nombre": "meowstic-f-mega",
+    "nombre_showdown": "Meowstic-F-Mega",
     "tipos": [
       "psychic"
     ],
@@ -19509,6 +19713,7 @@
   },
   "meowstic-m-mega": {
     "nombre": "meowstic-m-mega",
+    "nombre_showdown": "Meowstic-M-Mega",
     "tipos": [
       "psychic"
     ],
@@ -19596,6 +19801,7 @@
   },
   "metagross": {
     "nombre": "metagross",
+    "nombre_showdown": "Metagross",
     "tipos": [
       "steel",
       "psychic"
@@ -19697,6 +19903,7 @@
   },
   "metagross-mega": {
     "nombre": "metagross-mega",
+    "nombre_showdown": "Metagross-Mega",
     "tipos": [
       "steel",
       "psychic"
@@ -19794,6 +20001,7 @@
   },
   "milotic": {
     "nombre": "milotic",
+    "nombre_showdown": "Milotic",
     "tipos": [
       "water"
     ],
@@ -19891,6 +20099,7 @@
   },
   "mimikyu": {
     "nombre": "mimikyu",
+    "nombre_showdown": "Mimikyu",
     "tipos": [
       "ghost",
       "fairy"
@@ -19981,6 +20190,7 @@
   },
   "morpeko": {
     "nombre": "morpeko",
+    "nombre_showdown": "Morpeko",
     "tipos": [
       "electric",
       "dark"
@@ -20075,6 +20285,7 @@
   },
   "mr-mime": {
     "nombre": "mr-mime",
+    "nombre_showdown": "Mr. Mime",
     "tipos": [
       "psychic",
       "fairy"
@@ -20189,6 +20400,7 @@
   },
   "mr-rime": {
     "nombre": "mr-rime",
+    "nombre_showdown": "Mr. Rime",
     "tipos": [
       "ice",
       "psychic"
@@ -20319,6 +20531,7 @@
   },
   "mudsdale": {
     "nombre": "mudsdale",
+    "nombre_showdown": "Mudsdale",
     "tipos": [
       "ground"
     ],
@@ -20400,6 +20613,7 @@
   },
   "musharna": {
     "nombre": "musharna",
+    "nombre_showdown": "Musharna",
     "tipos": [
       "psychic"
     ],
@@ -20486,6 +20700,7 @@
   },
   "ninetales": {
     "nombre": "ninetales",
+    "nombre_showdown": "Ninetales",
     "tipos": [
       "fire"
     ],
@@ -20585,6 +20800,7 @@
   },
   "ninetales-alola": {
     "nombre": "ninetales-alola",
+    "nombre_showdown": "Ninetales-Alola",
     "tipos": [
       "ice",
       "fairy"
@@ -20682,6 +20898,7 @@
   },
   "noivern": {
     "nombre": "noivern",
+    "nombre_showdown": "Noivern",
     "tipos": [
       "flying",
       "dragon"
@@ -20783,6 +21000,7 @@
   },
   "oranguru": {
     "nombre": "oranguru",
+    "nombre_showdown": "Oranguru",
     "tipos": [
       "normal",
       "psychic"
@@ -20884,6 +21102,7 @@
   },
   "orthworm": {
     "nombre": "orthworm",
+    "nombre_showdown": "Orthworm",
     "tipos": [
       "steel"
     ],
@@ -20956,6 +21175,7 @@
   },
   "overqwil": {
     "nombre": "overqwil",
+    "nombre_showdown": "Overqwil",
     "tipos": [
       "dark",
       "poison"
@@ -21053,6 +21273,7 @@
   },
   "palafin": {
     "nombre": "palafin",
+    "nombre_showdown": "Palafin",
     "tipos": [
       "water"
     ],
@@ -21139,6 +21360,7 @@
   },
   "pangoro": {
     "nombre": "pangoro",
+    "nombre_showdown": "Pangoro",
     "tipos": [
       "fighting",
       "dark"
@@ -21257,6 +21479,7 @@
   },
   "passimian": {
     "nombre": "passimian",
+    "nombre_showdown": "Passimian",
     "tipos": [
       "fighting"
     ],
@@ -21355,6 +21578,7 @@
   },
   "pawmot": {
     "nombre": "pawmot",
+    "nombre_showdown": "Pawmot",
     "tipos": [
       "electric",
       "fighting"
@@ -21456,6 +21680,7 @@
   },
   "pelipper": {
     "nombre": "pelipper",
+    "nombre_showdown": "Pelipper",
     "tipos": [
       "water",
       "flying"
@@ -21546,6 +21771,7 @@
   },
   "perrserker": {
     "nombre": "perrserker",
+    "nombre_showdown": "Perrserker",
     "tipos": [
       "steel"
     ],
@@ -21656,6 +21882,7 @@
   },
   "persian": {
     "nombre": "persian",
+    "nombre_showdown": "Persian",
     "tipos": [
       "normal"
     ],
@@ -21758,6 +21985,7 @@
   },
   "persian-alola": {
     "nombre": "persian-alola",
+    "nombre_showdown": "Persian-Alola",
     "tipos": [
       "dark"
     ],
@@ -21867,6 +22095,7 @@
   },
   "pidgeot": {
     "nombre": "pidgeot",
+    "nombre_showdown": "Pidgeot",
     "tipos": [
       "normal",
       "flying"
@@ -21935,6 +22164,7 @@
   },
   "pidgeot-mega": {
     "nombre": "pidgeot-mega",
+    "nombre_showdown": "Pidgeot-Mega",
     "tipos": [
       "normal",
       "flying"
@@ -21995,6 +22225,7 @@
   },
   "pikachu": {
     "nombre": "pikachu",
+    "nombre_showdown": "Pikachu",
     "tipos": [
       "electric"
     ],
@@ -22087,6 +22318,7 @@
   },
   "pincurchin": {
     "nombre": "pincurchin",
+    "nombre_showdown": "Pincurchin",
     "tipos": [
       "electric"
     ],
@@ -22167,6 +22399,7 @@
   },
   "pinsir": {
     "nombre": "pinsir",
+    "nombre_showdown": "Pinsir",
     "tipos": [
       "bug"
     ],
@@ -22257,6 +22490,7 @@
   },
   "pinsir-mega": {
     "nombre": "pinsir-mega",
+    "nombre_showdown": "Pinsir-Mega",
     "tipos": [
       "bug",
       "flying"
@@ -22340,6 +22574,7 @@
   },
   "politoed": {
     "nombre": "politoed",
+    "nombre_showdown": "Politoed",
     "tipos": [
       "water"
     ],
@@ -22432,6 +22667,7 @@
   },
   "polteageist": {
     "nombre": "polteageist",
+    "nombre_showdown": "Polteageist",
     "tipos": [
       "ghost"
     ],
@@ -22510,6 +22746,7 @@
   },
   "primarina": {
     "nombre": "primarina",
+    "nombre_showdown": "Primarina",
     "tipos": [
       "water",
       "fairy"
@@ -22606,6 +22843,7 @@
   },
   "pyroar": {
     "nombre": "pyroar",
+    "nombre_showdown": "Pyroar",
     "tipos": [
       "fire",
       "normal"
@@ -22692,6 +22930,7 @@
   },
   "pyroar-mega": {
     "nombre": "pyroar-mega",
+    "nombre_showdown": "Pyroar-Mega",
     "tipos": [
       "fire",
       "normal"
@@ -22770,6 +23009,7 @@
   },
   "quaquaval": {
     "nombre": "quaquaval",
+    "nombre_showdown": "Quaquaval",
     "tipos": [
       "water",
       "fighting"
@@ -22862,6 +23102,7 @@
   },
   "qwilfish": {
     "nombre": "qwilfish",
+    "nombre_showdown": "Qwilfish",
     "tipos": [
       "water",
       "poison"
@@ -22963,6 +23204,7 @@
   },
   "raichu": {
     "nombre": "raichu",
+    "nombre_showdown": "Raichu",
     "tipos": [
       "electric"
     ],
@@ -23061,6 +23303,7 @@
   },
   "raichu-alola": {
     "nombre": "raichu-alola",
+    "nombre_showdown": "Raichu-Alola",
     "tipos": [
       "electric",
       "psychic"
@@ -23164,6 +23407,7 @@
   },
   "raichu-mega-x": {
     "nombre": "raichu-mega-x",
+    "nombre_showdown": "Raichu-Mega-X",
     "tipos": [
       "electric"
     ],
@@ -23258,6 +23502,7 @@
   },
   "raichu-mega-y": {
     "nombre": "raichu-mega-y",
+    "nombre_showdown": "Raichu-Mega-Y",
     "tipos": [
       "electric"
     ],
@@ -23352,6 +23597,7 @@
   },
   "rampardos": {
     "nombre": "rampardos",
+    "nombre_showdown": "Rampardos",
     "tipos": [
       "rock"
     ],
@@ -23458,6 +23704,7 @@
   },
   "reuniclus": {
     "nombre": "reuniclus",
+    "nombre_showdown": "Reuniclus",
     "tipos": [
       "psychic"
     ],
@@ -23560,6 +23807,7 @@
   },
   "rhyperior": {
     "nombre": "rhyperior",
+    "nombre_showdown": "Rhyperior",
     "tipos": [
       "ground",
       "rock"
@@ -23688,6 +23936,7 @@
   },
   "rillaboom": {
     "nombre": "rillaboom",
+    "nombre_showdown": "Rillaboom",
     "tipos": [
       "grass"
     ],
@@ -23787,6 +24036,7 @@
   },
   "roserade": {
     "nombre": "roserade",
+    "nombre_showdown": "Roserade",
     "tipos": [
       "grass",
       "poison"
@@ -23875,6 +24125,7 @@
   },
   "rotom": {
     "nombre": "rotom",
+    "nombre_showdown": "Rotom",
     "tipos": [
       "electric",
       "ghost"
@@ -23946,6 +24197,7 @@
   },
   "rotom-fan": {
     "nombre": "rotom-fan",
+    "nombre_showdown": "Rotom-Fan",
     "tipos": [
       "electric",
       "flying"
@@ -24018,6 +24270,7 @@
   },
   "rotom-frost": {
     "nombre": "rotom-frost",
+    "nombre_showdown": "Rotom-Frost",
     "tipos": [
       "electric",
       "ice"
@@ -24090,6 +24343,7 @@
   },
   "rotom-heat": {
     "nombre": "rotom-heat",
+    "nombre_showdown": "Rotom-Heat",
     "tipos": [
       "electric",
       "fire"
@@ -24162,6 +24416,7 @@
   },
   "rotom-mow": {
     "nombre": "rotom-mow",
+    "nombre_showdown": "Rotom-Mow",
     "tipos": [
       "electric",
       "grass"
@@ -24234,6 +24489,7 @@
   },
   "rotom-wash": {
     "nombre": "rotom-wash",
+    "nombre_showdown": "Rotom-Wash",
     "tipos": [
       "electric",
       "water"
@@ -24306,6 +24562,7 @@
   },
   "runerigus": {
     "nombre": "runerigus",
+    "nombre_showdown": "Runerigus",
     "tipos": [
       "ground",
       "ghost"
@@ -24404,6 +24661,7 @@
   },
   "sableye": {
     "nombre": "sableye",
+    "nombre_showdown": "Sableye",
     "tipos": [
       "dark",
       "ghost"
@@ -24529,6 +24787,7 @@
   },
   "sableye-mega": {
     "nombre": "sableye-mega",
+    "nombre_showdown": "Sableye-Mega",
     "tipos": [
       "dark",
       "ghost"
@@ -24646,6 +24905,7 @@
   },
   "salamence": {
     "nombre": "salamence",
+    "nombre_showdown": "Salamence",
     "tipos": [
       "dragon",
       "flying"
@@ -24741,6 +25001,7 @@
   },
   "salamence-mega": {
     "nombre": "salamence-mega",
+    "nombre_showdown": "Salamence-Mega",
     "tipos": [
       "dragon",
       "flying"
@@ -24832,6 +25093,7 @@
   },
   "salazzle": {
     "nombre": "salazzle",
+    "nombre_showdown": "Salazzle",
     "tipos": [
       "poison",
       "fire"
@@ -24935,6 +25197,7 @@
   },
   "samurott": {
     "nombre": "samurott",
+    "nombre_showdown": "Samurott",
     "tipos": [
       "water"
     ],
@@ -25029,6 +25292,7 @@
   },
   "samurott-hisui": {
     "nombre": "samurott-hisui",
+    "nombre_showdown": "Samurott-Hisui",
     "tipos": [
       "water",
       "dark"
@@ -25130,6 +25394,7 @@
   },
   "sandaconda": {
     "nombre": "sandaconda",
+    "nombre_showdown": "Sandaconda",
     "tipos": [
       "ground"
     ],
@@ -25214,6 +25479,7 @@
   },
   "sceptile": {
     "nombre": "sceptile",
+    "nombre_showdown": "Sceptile",
     "tipos": [
       "grass"
     ],
@@ -25324,6 +25590,7 @@
   },
   "sceptile-mega": {
     "nombre": "sceptile-mega",
+    "nombre_showdown": "Sceptile-Mega",
     "tipos": [
       "grass",
       "dragon"
@@ -25431,6 +25698,7 @@
   },
   "scizor": {
     "nombre": "scizor",
+    "nombre_showdown": "Scizor",
     "tipos": [
       "bug",
       "steel"
@@ -25533,6 +25801,7 @@
   },
   "scizor-mega": {
     "nombre": "scizor-mega",
+    "nombre_showdown": "Scizor-Mega",
     "tipos": [
       "bug",
       "steel"
@@ -25627,6 +25896,7 @@
   },
   "scolipede": {
     "nombre": "scolipede",
+    "nombre_showdown": "Scolipede",
     "tipos": [
       "bug",
       "poison"
@@ -25717,6 +25987,7 @@
   },
   "scolipede-mega": {
     "nombre": "scolipede-mega",
+    "nombre_showdown": "Scolipede-Mega",
     "tipos": [
       "bug",
       "poison"
@@ -25799,6 +26070,7 @@
   },
   "scovillain": {
     "nombre": "scovillain",
+    "nombre_showdown": "Scovillain",
     "tipos": [
       "grass",
       "fire"
@@ -25884,6 +26156,7 @@
   },
   "scovillain-mega": {
     "nombre": "scovillain-mega",
+    "nombre_showdown": "Scovillain-Mega",
     "tipos": [
       "grass",
       "fire"
@@ -25961,6 +26234,7 @@
   },
   "scrafty": {
     "nombre": "scrafty",
+    "nombre_showdown": "Scrafty",
     "tipos": [
       "dark",
       "fighting"
@@ -26080,6 +26354,7 @@
   },
   "scrafty-mega": {
     "nombre": "scrafty-mega",
+    "nombre_showdown": "Scrafty-Mega",
     "tipos": [
       "dark",
       "fighting"
@@ -26191,6 +26466,7 @@
   },
   "serperior": {
     "nombre": "serperior",
+    "nombre_showdown": "Serperior",
     "tipos": [
       "grass"
     ],
@@ -26276,6 +26552,7 @@
   },
   "sharpedo": {
     "nombre": "sharpedo",
+    "nombre_showdown": "Sharpedo",
     "tipos": [
       "water",
       "dark"
@@ -26367,6 +26644,7 @@
   },
   "sharpedo-mega": {
     "nombre": "sharpedo-mega",
+    "nombre_showdown": "Sharpedo-Mega",
     "tipos": [
       "water",
       "dark"
@@ -26454,6 +26732,7 @@
   },
   "simipour": {
     "nombre": "simipour",
+    "nombre_showdown": "Simipour",
     "tipos": [
       "water"
     ],
@@ -26538,6 +26817,7 @@
   },
   "simisage": {
     "nombre": "simisage",
+    "nombre_showdown": "Simisage",
     "tipos": [
       "grass"
     ],
@@ -26620,6 +26900,7 @@
   },
   "simisear": {
     "nombre": "simisear",
+    "nombre_showdown": "Simisear",
     "tipos": [
       "fire"
     ],
@@ -26707,6 +26988,7 @@
   },
   "sinistcha": {
     "nombre": "sinistcha",
+    "nombre_showdown": "Sinistcha",
     "tipos": [
       "grass",
       "ghost"
@@ -26775,6 +27057,7 @@
   },
   "sirfetchd": {
     "nombre": "sirfetchd",
+    "nombre_showdown": "Sirfetch’d",
     "tipos": [
       "fighting"
     ],
@@ -26856,6 +27139,7 @@
   },
   "skarmory": {
     "nombre": "skarmory",
+    "nombre_showdown": "Skarmory",
     "tipos": [
       "steel",
       "flying"
@@ -26945,6 +27229,7 @@
   },
   "skarmory-mega": {
     "nombre": "skarmory-mega",
+    "nombre_showdown": "Skarmory-Mega",
     "tipos": [
       "steel",
       "flying"
@@ -27026,6 +27311,7 @@
   },
   "skeledirge": {
     "nombre": "skeledirge",
+    "nombre_showdown": "Skeledirge",
     "tipos": [
       "fire",
       "ghost"
@@ -27115,6 +27401,7 @@
   },
   "slowbro": {
     "nombre": "slowbro",
+    "nombre_showdown": "Slowbro",
     "tipos": [
       "water",
       "psychic"
@@ -27230,6 +27517,7 @@
   },
   "slowbro-galar": {
     "nombre": "slowbro-galar",
+    "nombre_showdown": "Slowbro-Galar",
     "tipos": [
       "poison",
       "psychic"
@@ -27359,6 +27647,7 @@
   },
   "slowbro-mega": {
     "nombre": "slowbro-mega",
+    "nombre_showdown": "Slowbro-Mega",
     "tipos": [
       "water",
       "psychic"
@@ -27466,6 +27755,7 @@
   },
   "slowking": {
     "nombre": "slowking",
+    "nombre_showdown": "Slowking",
     "tipos": [
       "water",
       "psychic"
@@ -27588,6 +27878,7 @@
   },
   "slowking-galar": {
     "nombre": "slowking-galar",
+    "nombre_showdown": "Slowking-Galar",
     "tipos": [
       "poison",
       "psychic"
@@ -27720,6 +28011,7 @@
   },
   "slurpuff": {
     "nombre": "slurpuff",
+    "nombre_showdown": "Slurpuff",
     "tipos": [
       "fairy"
     ],
@@ -27794,6 +28086,7 @@
   },
   "sneasler": {
     "nombre": "sneasler",
+    "nombre_showdown": "Sneasler",
     "tipos": [
       "fighting",
       "poison"
@@ -27893,6 +28186,7 @@
   },
   "snorlax": {
     "nombre": "snorlax",
+    "nombre_showdown": "Snorlax",
     "tipos": [
       "normal"
     ],
@@ -28012,6 +28306,7 @@
   },
   "spiritomb": {
     "nombre": "spiritomb",
+    "nombre_showdown": "Spiritomb",
     "tipos": [
       "ghost",
       "dark"
@@ -28099,6 +28394,7 @@
   },
   "squawkabilly": {
     "nombre": "squawkabilly",
+    "nombre_showdown": "Squawkabilly",
     "tipos": [
       "normal",
       "flying"
@@ -28179,6 +28475,7 @@
   },
   "squawkabilly-blue": {
     "nombre": "squawkabilly-blue",
+    "nombre_showdown": "Squawkabilly-Blue",
     "tipos": [
       "normal",
       "flying"
@@ -28259,6 +28556,7 @@
   },
   "squawkabilly-white": {
     "nombre": "squawkabilly-white",
+    "nombre_showdown": "Squawkabilly-White",
     "tipos": [
       "normal",
       "flying"
@@ -28339,6 +28637,7 @@
   },
   "squawkabilly-yellow": {
     "nombre": "squawkabilly-yellow",
+    "nombre_showdown": "Squawkabilly-Yellow",
     "tipos": [
       "normal",
       "flying"
@@ -28419,6 +28718,7 @@
   },
   "staraptor": {
     "nombre": "staraptor",
+    "nombre_showdown": "Staraptor",
     "tipos": [
       "normal",
       "flying"
@@ -28495,6 +28795,7 @@
   },
   "staraptor-mega": {
     "nombre": "staraptor-mega",
+    "nombre_showdown": "Staraptor-Mega",
     "tipos": [
       "fighting",
       "flying"
@@ -28567,6 +28868,7 @@
   },
   "starmie": {
     "nombre": "starmie",
+    "nombre_showdown": "Starmie",
     "tipos": [
       "water",
       "psychic"
@@ -28666,6 +28968,7 @@
   },
   "starmie-mega": {
     "nombre": "starmie-mega",
+    "nombre_showdown": "Starmie-Mega",
     "tipos": [
       "water",
       "psychic"
@@ -28757,6 +29060,7 @@
   },
   "steelix": {
     "nombre": "steelix",
+    "nombre_showdown": "Steelix",
     "tipos": [
       "steel",
       "ground"
@@ -28860,6 +29164,7 @@
   },
   "steelix-mega": {
     "nombre": "steelix-mega",
+    "nombre_showdown": "Steelix-Mega",
     "tipos": [
       "steel",
       "ground"
@@ -28955,6 +29260,7 @@
   },
   "stunfisk": {
     "nombre": "stunfisk",
+    "nombre_showdown": "Stunfisk",
     "tipos": [
       "ground",
       "electric"
@@ -29040,6 +29346,7 @@
   },
   "stunfisk-galar": {
     "nombre": "stunfisk-galar",
+    "nombre_showdown": "Stunfisk-Galar",
     "tipos": [
       "ground",
       "steel"
@@ -29121,6 +29428,7 @@
   },
   "swalot": {
     "nombre": "swalot",
+    "nombre_showdown": "Swalot",
     "tipos": [
       "poison"
     ],
@@ -29219,6 +29527,7 @@
   },
   "swampert": {
     "nombre": "swampert",
+    "nombre_showdown": "Swampert",
     "tipos": [
       "water",
       "ground"
@@ -29329,6 +29638,7 @@
   },
   "swampert-mega": {
     "nombre": "swampert-mega",
+    "nombre_showdown": "Swampert-Mega",
     "tipos": [
       "water",
       "ground"
@@ -29435,6 +29745,7 @@
   },
   "sylveon": {
     "nombre": "sylveon",
+    "nombre_showdown": "Sylveon",
     "tipos": [
       "fairy"
     ],
@@ -29522,6 +29833,7 @@
   },
   "talonflame": {
     "nombre": "talonflame",
+    "nombre_showdown": "Talonflame",
     "tipos": [
       "fire",
       "flying"
@@ -29605,6 +29917,7 @@
   },
   "tauros": {
     "nombre": "tauros",
+    "nombre_showdown": "Tauros",
     "tipos": [
       "normal"
     ],
@@ -29698,6 +30011,7 @@
   },
   "tauros-paldea-aqua": {
     "nombre": "tauros-paldea-aqua",
+    "nombre_showdown": "Tauros-Paldea-Aqua",
     "tipos": [
       "fighting",
       "water"
@@ -29787,6 +30101,7 @@
   },
   "tauros-paldea-blaze": {
     "nombre": "tauros-paldea-blaze",
+    "nombre_showdown": "Tauros-Paldea-Blaze",
     "tipos": [
       "fighting",
       "fire"
@@ -29877,6 +30192,7 @@
   },
   "tauros-paldea-combat": {
     "nombre": "tauros-paldea-combat",
+    "nombre_showdown": "Tauros-Paldea-Combat",
     "tipos": [
       "fighting"
     ],
@@ -29961,6 +30277,7 @@
   },
   "thievul": {
     "nombre": "thievul",
+    "nombre_showdown": "Thievul",
     "tipos": [
       "dark"
     ],
@@ -30048,6 +30365,7 @@
   },
   "tinkaton": {
     "nombre": "tinkaton",
+    "nombre_showdown": "Tinkaton",
     "tipos": [
       "fairy",
       "steel"
@@ -30132,6 +30450,7 @@
   },
   "torkoal": {
     "nombre": "torkoal",
+    "nombre_showdown": "Torkoal",
     "tipos": [
       "fire"
     ],
@@ -30225,6 +30544,7 @@
   },
   "torterra": {
     "nombre": "torterra",
+    "nombre_showdown": "Torterra",
     "tipos": [
       "grass",
       "ground"
@@ -30330,6 +30650,7 @@
   },
   "toucannon": {
     "nombre": "toucannon",
+    "nombre_showdown": "Toucannon",
     "tipos": [
       "normal",
       "flying"
@@ -30420,6 +30741,7 @@
   },
   "toxapex": {
     "nombre": "toxapex",
+    "nombre_showdown": "Toxapex",
     "tipos": [
       "poison",
       "water"
@@ -30508,6 +30830,7 @@
   },
   "toxicroak": {
     "nombre": "toxicroak",
+    "nombre_showdown": "Toxicroak",
     "tipos": [
       "poison",
       "fighting"
@@ -30626,6 +30949,7 @@
   },
   "toxtricity": {
     "nombre": "toxtricity",
+    "nombre_showdown": "Toxtricity",
     "tipos": [
       "electric",
       "poison"
@@ -30731,6 +31055,7 @@
   },
   "toxtricity-low-key": {
     "nombre": "toxtricity-low-key",
+    "nombre_showdown": "Toxtricity-Low-Key",
     "tipos": [
       "electric",
       "poison"
@@ -30836,6 +31161,7 @@
   },
   "trevenant": {
     "nombre": "trevenant",
+    "nombre_showdown": "Trevenant",
     "tipos": [
       "ghost",
       "grass"
@@ -30946,6 +31272,7 @@
   },
   "tsareena": {
     "nombre": "tsareena",
+    "nombre_showdown": "Tsareena",
     "tipos": [
       "grass"
     ],
@@ -31036,6 +31363,7 @@
   },
   "typhlosion": {
     "nombre": "typhlosion",
+    "nombre_showdown": "Typhlosion",
     "tipos": [
       "fire"
     ],
@@ -31131,6 +31459,7 @@
   },
   "typhlosion-hisui": {
     "nombre": "typhlosion-hisui",
+    "nombre_showdown": "Typhlosion-Hisui",
     "tipos": [
       "fire",
       "ghost"
@@ -31230,6 +31559,7 @@
   },
   "tyranitar": {
     "nombre": "tyranitar",
+    "nombre_showdown": "Tyranitar",
     "tipos": [
       "rock",
       "dark"
@@ -31355,6 +31685,7 @@
   },
   "tyranitar-mega": {
     "nombre": "tyranitar-mega",
+    "nombre_showdown": "Tyranitar-Mega",
     "tipos": [
       "rock",
       "dark"
@@ -31476,6 +31807,7 @@
   },
   "tyrantrum": {
     "nombre": "tyrantrum",
+    "nombre_showdown": "Tyrantrum",
     "tipos": [
       "rock",
       "dragon"
@@ -31573,6 +31905,7 @@
   },
   "umbreon": {
     "nombre": "umbreon",
+    "nombre_showdown": "Umbreon",
     "tipos": [
       "dark"
     ],
@@ -31672,6 +32005,7 @@
   },
   "vanilluxe": {
     "nombre": "vanilluxe",
+    "nombre_showdown": "Vanilluxe",
     "tipos": [
       "ice"
     ],
@@ -31749,6 +32083,7 @@
   },
   "vaporeon": {
     "nombre": "vaporeon",
+    "nombre_showdown": "Vaporeon",
     "tipos": [
       "water"
     ],
@@ -31840,6 +32175,7 @@
   },
   "venusaur": {
     "nombre": "venusaur",
+    "nombre_showdown": "Venusaur",
     "tipos": [
       "grass",
       "poison"
@@ -31930,6 +32266,7 @@
   },
   "venusaur-mega": {
     "nombre": "venusaur-mega",
+    "nombre_showdown": "Venusaur-Mega",
     "tipos": [
       "grass",
       "poison"
@@ -32016,6 +32353,7 @@
   },
   "victreebel": {
     "nombre": "victreebel",
+    "nombre_showdown": "Victreebel",
     "tipos": [
       "grass",
       "poison"
@@ -32108,6 +32446,7 @@
   },
   "victreebel-mega": {
     "nombre": "victreebel-mega",
+    "nombre_showdown": "Victreebel-Mega",
     "tipos": [
       "grass",
       "poison"
@@ -32196,6 +32535,7 @@
   },
   "vileplume": {
     "nombre": "vileplume",
+    "nombre_showdown": "Vileplume",
     "tipos": [
       "grass",
       "poison"
@@ -32283,6 +32623,7 @@
   },
   "vivillon": {
     "nombre": "vivillon",
+    "nombre_showdown": "Vivillon",
     "tipos": [
       "bug",
       "flying"
@@ -32363,6 +32704,7 @@
   },
   "volcarona": {
     "nombre": "volcarona",
+    "nombre_showdown": "Volcarona",
     "tipos": [
       "bug",
       "fire"
@@ -32453,6 +32795,7 @@
   },
   "watchog": {
     "nombre": "watchog",
+    "nombre_showdown": "Watchog",
     "tipos": [
       "normal"
     ],
@@ -32541,6 +32884,7 @@
   },
   "weavile": {
     "nombre": "weavile",
+    "nombre_showdown": "Weavile",
     "tipos": [
       "dark",
       "ice"
@@ -32647,6 +32991,7 @@
   },
   "whimsicott": {
     "nombre": "whimsicott",
+    "nombre_showdown": "Whimsicott",
     "tipos": [
       "grass",
       "fairy"
@@ -32734,6 +33079,7 @@
   },
   "wigglytuff": {
     "nombre": "wigglytuff",
+    "nombre_showdown": "Wigglytuff",
     "tipos": [
       "normal",
       "fairy"
@@ -32869,6 +33215,7 @@
   },
   "wyrdeer": {
     "nombre": "wyrdeer",
+    "nombre_showdown": "Wyrdeer",
     "tipos": [
       "normal",
       "psychic"
@@ -32967,6 +33314,7 @@
   },
   "zoroark": {
     "nombre": "zoroark",
+    "nombre_showdown": "Zoroark",
     "tipos": [
       "dark"
     ],
@@ -33065,6 +33413,7 @@
   },
   "zoroark-hisui": {
     "nombre": "zoroark-hisui",
+    "nombre_showdown": "Zoroark-Hisui",
     "tipos": [
       "normal",
       "ghost"
