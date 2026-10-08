@@ -81,7 +81,10 @@ recomendador. Las entradas Champions con `inherit: true` sobrescriben solo sus
 campos y usan una caché distinta de los movimientos base.
 
 Puedes seleccionar hasta seis Pokémon y descargar el equipo desde **Exportar
-equipo**. Los sets usan las opciones más frecuentes de Smogon, resuelven objetos
+equipo**. Los sets suman el uso de los spreads físicos y especiales para elegir
+la orientación dominante y su spread más usado; excluyen ataques de la categoría
+opuesta, conservando los Status. Sin inversión ofensiva se consideran de apoyo;
+sin `movimientos.json` no se filtran ataques. Además, resuelven objetos
 repetidos con Item Clause y conservan los puntos Champions (0 a 32) en la línea
 `EVs`. Si no hay datos de Smogon de algún miembro, la app lo indica y espera a
 que estén disponibles para exportar el equipo completo. Si no quedan objetos

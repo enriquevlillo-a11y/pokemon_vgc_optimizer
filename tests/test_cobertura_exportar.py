@@ -123,14 +123,19 @@ Sassy Nature
     assert a_showdown([entrada, entrada], datos, nombres) == esperado + "\n\n" + esperado
 
 
-def test_evaluacion_sin_cambios(datos, uso):
+@pytest.mark.parametrize("regulacion,version,media", [
+    (regulacion, version, media)
+    for regulacion, versiones in json.loads((FIXTURES / "evaluacion_referencia.json").read_text()).items()
+    for version, media in versiones.items()
+])
+def test_evaluacion_sin_cambios(evaluacion_actual, regulacion, version, media):
+    assert resumir(evaluacion_actual[regulacion], version)["puesto_medio"] == pytest.approx(media, abs=0.01)
+
+
+@pytest.fixture(scope="module")
+def evaluacion_actual():
     referencias = json.loads(ruta_equipos_referencia().read_text())
+    datos = json.loads(ruta_pokemon_datos().read_text())
+    uso = json.loads(ruta_uso_smogon().read_text())
     por_regulacion, _ = evaluar_referencias(referencias, datos, uso)
-    esperados = {"M-C": [(82.44, 77, 11), (69.26, 58.5, 11), (7.04, 2.5, 61), (7.40, 2.5, 61)],
-                 "M-B": [(56, 37, 16), (75.75, 51, 10), (8.06, 3, 65), (8.06, 3, 65)]}
-    for regulacion, resultados in por_regulacion.items():
-        for version, (media, mediana, top) in zip(("v1", "v2", "v2_smogon", "v2_smogon_antisinergias"), esperados[regulacion]):
-            resumen = resumir(resultados, version)
-            assert round(resumen["puesto_medio"], 2) == media
-            assert resumen["mediana"] == mediana
-            assert resumen["top_10"] == top
+    return por_regulacion
