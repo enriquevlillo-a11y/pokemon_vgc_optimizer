@@ -154,3 +154,72 @@ los sets hay al menos tres usuarios, se retira de los que lo usan en menos del
 50 % de su variante y se sustituye según el uso, la orientación y el objeto final.
 Los usuarios con uso ≥ 50 % lo conservan, incluso si hay tres o más. El
 recomendador avisa cuando un candidato minoritario se suma a dos usuarios.
+
+## Cálculo de daño
+
+Requiere **Node 18 o superior**. Instala la versión fijada `@smogon/calc 0.12.0`
+con el lockfile incluido, desde la raíz del repo:
+
+```bash
+npm ci --prefix calculo
+python calculo.py
+python -m pytest
+```
+
+`python calculo.py` muestra los duelos de la final de Frankfurt usando los equipos
+de `tests/fixtures/final_frankfurt/`. Eruption al sol y en área hace 258–306 sin
+objeto; con el Charcoal del fixture hace 312–368 contra Gholdengo.
+
+La API usa Champions (`Generations.get(0)`), nivel 50 y Doubles. Los puntos son
+los valores 0–32 de Champions, con un máximo total de 66, sin convertir a EVs.
+`Calculadora` inicia un único proceso Node y lo reutiliza hasta salir del contexto:
+
+```python
+from calculo import Calculadora, set_a_calculo
+
+with Calculadora() as calculadora:
+    atacante = set_a_calculo(
+        {"nombre": "garchomp", "objeto": "garchompitez", "habilidad": "roughskin",
+         "naturaleza": "Modest", "puntos": {"hp": 2, "special-attack": 32, "speed": 32}},
+        calculadora.datos, calculadora.nombres, megaevolucionado=True,
+    )
+    peticion = {
+        "atacante": atacante,
+        "defensor": {"especie": "Torkoal", "naturaleza": "Quiet",
+                     "puntos": {"hp": 32, "spa": 32, "spd": 2}},
+        "movimiento": "Earth Power",
+        "campo": {},
+    }
+    print(calculadora.calcular(peticion))
+    resultados = calculadora.calcular_lote([peticion] * 1000)
+```
+
+Cada Pokémon admite `especie`, `naturaleza`, `puntos`, `objeto`, `habilidad`,
+`boosts` (−6 a +6), `estado` (`brn`, `par`, `psn`, `tox`, `slp`, `frz` o vacío)
+y `ps_actuales` (1 a sus PS máximos; por defecto completos). Las estadísticas
+usan `hp`, `atk`, `def`, `spa`, `spd`, `spe`; también se aceptan las claves largas
+del repo. Los sets con `nombre` se convierten automáticamente; añade
+`megaevolucionado=True` al set para aplicar la forma de su piedra. Una especie
+Mega explícita conserva su forma y usa su habilidad Mega.
+
+`campo` admite `clima` (por ejemplo `Sun`, `Rain`, `Sand`, `Snow`), `terreno`
+(`Electric`, `Grassy`, `Misty`, `Psychic`), `helping_hand`, `reflect`,
+`light_screen`, `aurora_veil` y `friend_guard`. Los booleanos de pantallas y
+Friend Guard corresponden al lado defensor; Helping Hand al atacante. El clima
+se especifica en el campo. `isSpread` se infiere de `movimientos.json` para
+`allAdjacentFoes` y `allAdjacent`; una petición con `isSpread=False` calcula
+el ataque contra un único objetivo.
+
+Cada respuesta contiene `ok`, `min`, `max`, `ps_defensor` (PS máximos),
+`porcentaje_min`, `porcentaje_max` (sobre los PS máximos), `ko`, `descripcion`,
+`stats_atacante` y `stats_defensor`. Las estadísticas incluyen puntos y naturaleza,
+antes de boosts y otros modificadores. Los movimientos Status o de potencia cero
+devuelven daño 0 y `ko="sin daño"`. Las peticiones inválidas devuelven
+`{"ok": False, "error": "mensaje en español"}` sin detener el proceso; en un lote
+se conserva el orden y cada error ocupa su posición. Python valida especies y
+movimientos contra el catálogo Champions de la versión instalada antes de enviar.
+Los errores de instalación o comunicación lanzan `RuntimeError`.
+
+El servidor también se puede usar directamente con `node calculo/servidor.js`:
+lee un objeto JSON o una lista por línea de stdin y responde una línea JSON.
+Los tests de esta capa se omiten si falta `node` o `calculo/node_modules`.
