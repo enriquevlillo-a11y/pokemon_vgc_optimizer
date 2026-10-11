@@ -214,3 +214,6 @@ data/cache_smogon/
 
 # JSON descargados manualmente en la raíz del proyecto
 /*.json
+
+# Dependencias del servidor de cálculo de daño
+calculo/node_modules/

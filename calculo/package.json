@@ -1,0 +1,8 @@
+{
+  "name": "pokemon-vgc-calculo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Servidor de cálculo de daño para Pokémon Champions",
+  "engines": { "node": ">=18" },
+  "dependencies": { "@smogon/calc": "0.12.0" }
+}
