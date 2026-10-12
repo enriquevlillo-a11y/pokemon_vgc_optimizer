@@ -116,12 +116,21 @@ class BotReglas(Player):
     def _control_velocidad(self, battle, movimiento):
         propio_tw = SideCondition.TAILWIND in battle.side_conditions
         rival_tw = SideCondition.TAILWIND in battle.opponent_side_conditions
-        return valorar_control_velocidad(
+        tr = Field.TRICK_ROOM in battle.fields
+        activos = valorar_control_velocidad(
             movimiento,
             self._velocidades(battle.active_pokemon, "propio", propio_tw),
             self._velocidades(battle.opponent_active_pokemon, "rival", rival_tw),
-            trick_room=Field.TRICK_ROOM in battle.fields, tailwind=propio_tw,
+            trick_room=tr, tailwind=propio_tw,
         )
+        rivales = [m for m in battle.opponent_team.values() if not m.fainted] or battle.opponent_active_pokemon
+        equipo = valorar_control_velocidad(
+            movimiento,
+            self._velocidades([m for m in battle.team.values() if not m.fainted], "propio", propio_tw),
+            self._velocidades(rivales, "rival", rival_tw),
+            trick_room=tr, tailwind=propio_tw,
+        )
+        return 0.4 * activos + 0.6 * equipo
 
     def _amenaza(self, battle, objetivo, lado_objetivo):
         """Lo peor que le pueden hacer los rivales activos a ``objetivo`` (valor de golpe)."""
@@ -157,15 +166,18 @@ class BotReglas(Player):
         aliado = battle.active_pokemon[1 - i]
         if not hasattr(orden.order, "base_power"):  # cambio
             entra = orden.order
-            valor = -0.15
+            ofensiva = 0.0
             for r in battle.opponent_active_pokemon:
                 if r is None or r.fainted:
                     continue
                 s = self._set(entra, "propio")
-                mejor = max((valor_golpe(x, r.current_hp_fraction) for x in (
+                ofensiva += max((valor_golpe(x, r.current_hp_fraction) for x in (
                     self._dano(battle, entra, "propio", r, "rival", m) for m in (s or {}).get("movimientos", [])) if x), default=0)
-                valor += 0.3 * mejor
-            return valor, {}
+            recibe = self._amenaza(battle, entra, "propio")
+            if mon is None or mon.fainted:  # cambio forzado: elegir buen enfrentamiento
+                return 0.3 * ofensiva - 0.3 * recibe, {}
+            # Cambio voluntario: quien entra no ataca este turno y recibe el golpe.
+            return -0.3 + 0.1 * ofensiva + 0.6 * (self._amenaza(battle, mon, "propio") - recibe), {}
         mov = orden.order
         mid = mov.id
         mega = orden.mega
