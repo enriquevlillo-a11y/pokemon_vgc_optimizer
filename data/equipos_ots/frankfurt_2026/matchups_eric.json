@@ -1,0 +1,14 @@
+{
+  "fuente": "Vídeo de Eric Rios sobre su equipo de Frankfurt 2026 y reacción de PokéAlex a la final. Javier García (equipo de Michael Derveste) no se pudo identificar: seis jugadores llevaban ese mismo equipo.",
+  "equipo": "eric",
+  "matchups": [
+    {"rival": "sebastian", "jugador": "Sebastian Liu Li", "ronda": "Final", "veredicto": "desfavorable", "lideres_eric": [["volcarona", "garchomp"], ["garchomp", "gholdengo"]]},
+    {"rival": "eden", "jugador": "Eden Batchelor", "ronda": "Top 4", "veredicto": "favorable", "lideres_eric": [["raichu", "volcarona"], ["raichu", "gholdengo"]]},
+    {"rival": "juanma", "jugador": "Juan Manuel Odriozola", "ronda": "Top 8", "veredicto": "favorable", "lideres_eric": []},
+    {"rival": "pero", "jugador": "Francesco Pio Pero", "ronda": "Suizo", "veredicto": "sin dato", "lideres_eric": [["raichu", "gholdengo"]]},
+    {"rival": "holmer", "jugador": "Nick Holmer", "ronda": "Suizo", "veredicto": "sin dato", "lideres_eric": [["volcarona", "gholdengo"], ["rillaboom", "gholdengo"]]},
+    {"rival": "markl", "jugador": "Louis Markl", "ronda": "Suizo", "veredicto": "sin dato", "lideres_eric": [], "clave": "Raichu pega primero y paraliza; Volcarona con Tailwind si sale Salamence"},
+    {"rival": "wittenbeck", "jugador": "Max Wittenbeck", "ronda": "Suizo", "veredicto": "sin dato", "lideres_eric": [], "clave": "partida larga; gana Gholdengo acumulando Nasty Plot"},
+    {"rival": "lozano", "jugador": "Adrián Lozano", "ronda": "Suizo", "veredicto": "parejo (espejo)", "lideres_eric": [], "clave": "rotaciones de Fake Out y empates de velocidad"}
+  ]
+}
