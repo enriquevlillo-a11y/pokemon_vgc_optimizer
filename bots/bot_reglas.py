@@ -1,4 +1,4 @@
-"""Prototipo C1b: bot de reglas para dobles con cálculo de daño real.
+"""Bot C1b de reglas para dobles con cálculo de daño real.
 
 Cada turno puntúa cada acción de cada slot (daño esperado, KO, Fake Out,
 Protect, control de velocidad, apoyo, Mega) y elige la mejor combinación de
@@ -8,24 +8,22 @@ Conoce el equipo rival completo (hojas abiertas, como en VGC).
 
 import math
 import random
-import sys
-from pathlib import Path
-
-REPO = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO))
-
-from calculo import Calculadora, set_a_calculo, _especie  # noqa: E402
-from importar_showdown import normalizar_id  # noqa: E402
-from poke_env.battle.double_battle import DoubleBattle  # noqa: E402
-from poke_env.battle.field import Field  # noqa: E402
-from poke_env.battle.move_category import MoveCategory  # noqa: E402
-from poke_env.battle.pokemon_type import PokemonType  # noqa: E402
-from poke_env.battle.side_condition import SideCondition  # noqa: E402
-from poke_env.battle.weather import Weather  # noqa: E402
-from poke_env.player import Player  # noqa: E402
-from poke_env.player.battle_order import (  # noqa: E402
-    DoubleBattleOrder, PassBattleOrder, SingleBattleOrder,
+from calculo import set_a_calculo, _especie
+from importar_showdown import normalizar_id
+from velocidad import NATURALEZAS_LENTAS, NATURALEZAS_RAPIDAS, velocidad
+from poke_env.battle.double_battle import DoubleBattle
+from poke_env.battle.field import Field
+from poke_env.battle.move_category import MoveCategory
+from poke_env.battle.pokemon_type import PokemonType
+from poke_env.battle.side_condition import SideCondition
+from poke_env.battle.weather import Weather
+from poke_env.player import Player
+from poke_env.player.battle_order import (
+    DoubleBattleOrder, PassBattleOrder,
 )
+
+from .equipos import leer_equipo
+from .evaluacion import combinar, valor_golpe, valorar_control_velocidad, velocidad_efectiva
 
 CLIMAS = {Weather.SUNNYDAY: "Sun", Weather.DESOLATELAND: "Sun", Weather.RAINDANCE: "Rain",
           Weather.PRIMORDIALSEA: "Rain", Weather.SANDSTORM: "Sand", Weather.SNOW: "Snow",
@@ -34,31 +32,6 @@ TERRENOS = {Field.GRASSY_TERRAIN: "Grassy", Field.ELECTRIC_TERRAIN: "Electric",
             Field.MISTY_TERRAIN: "Misty", Field.PSYCHIC_TERRAIN: "Psychic"}
 SETUP = {"nastyplot", "swordsdance", "calmmind", "dragondance", "quiverdance", "bulkup"}
 REDIRECCION = {"followme", "ragepowder"}
-ETIQUETAS = {"HP": "hp", "Atk": "attack", "Def": "defense", "SpA": "special-attack",
-             "SpD": "special-defense", "Spe": "speed"}
-
-
-def leer_equipo(texto, datos):
-    """Texto Showdown -> {id base: entrada del repo (sin convertir)} en orden."""
-    equipo = {}
-    for bloque in texto.strip().split("\n\n"):
-        lineas = bloque.strip().splitlines()
-        especie, _, objeto = lineas[0].partition(" @ ")
-        entrada = {"nombre": _especie(especie.strip(), datos), "objeto": objeto.strip(),
-                   "movimientos": [], "puntos": {}}
-        for linea in lineas[1:]:
-            if linea.startswith("Ability: "):
-                entrada["habilidad"] = linea[9:]
-            elif linea.startswith("EVs: "):
-                for reparto in linea[5:].split(" / "):
-                    cantidad, stat = reparto.split()
-                    entrada["puntos"][ETIQUETAS[stat]] = int(cantidad)
-            elif linea.endswith(" Nature"):
-                entrada["naturaleza"] = linea[:-7]
-            elif linea.startswith("- "):
-                entrada["movimientos"].append(linea[2:])
-        equipo[entrada["nombre"]] = entrada
-    return equipo
 
 
 class BotReglas(Player):
@@ -114,17 +87,41 @@ class BotReglas(Player):
             self._cache[clave] = (r["porcentaje_min"] / 100, r["porcentaje_max"] / 100) if r.get("ok") else None
         return self._cache[clave]
 
-    @staticmethod
-    def _valor_golpe(rango, ps_frac, precision=1.0):
-        lo, hi = rango
-        media = (lo + hi) / 2
-        if lo >= ps_frac:
-            p_ko = 1.0
-        elif hi < ps_frac:
-            p_ko = 0.0
-        else:
-            p_ko = (hi - ps_frac) / (hi - lo)
-        return precision * (min(media, ps_frac) + 0.6 * p_ko)
+    def _velocidades(self, activos, lado, tailwind):
+        """Stats naturales Champions del set abierto + estado actual del combate."""
+        velocidades = []
+        for mon in activos:
+            if mon is None or mon.fainted:
+                continue
+            entrada = self._set(mon, lado)
+            if entrada is None:
+                continue
+            especie = _especie(entrada["especie"], self.calc.datos)
+            naturaleza = entrada["naturaleza"]
+            modificador = (1.1 if naturaleza in NATURALEZAS_RAPIDAS else
+                           0.9 if naturaleza in NATURALEZAS_LENTAS else 1.0)
+            stat = velocidad(especie, self.calc.datos,
+                             entrada["puntos"].get("spe", 0), modificador)
+            # poke-env distingue objeto desconocido de objeto consumido/retirado.
+            objeto = mon.item
+            if objeto == "unknown_item":
+                objeto = entrada.get("objeto")
+            velocidades.append(velocidad_efectiva(
+                stat, mon.boosts.get("spe", 0),
+                paralizado=bool(mon.status and mon.status.name == "PAR"),
+                tailwind=tailwind, scarf=normalizar_id(objeto or "") == "choicescarf",
+            ))
+        return velocidades
+
+    def _control_velocidad(self, battle, movimiento):
+        propio_tw = SideCondition.TAILWIND in battle.side_conditions
+        rival_tw = SideCondition.TAILWIND in battle.opponent_side_conditions
+        return valorar_control_velocidad(
+            movimiento,
+            self._velocidades(battle.active_pokemon, "propio", propio_tw),
+            self._velocidades(battle.opponent_active_pokemon, "rival", rival_tw),
+            trick_room=Field.TRICK_ROOM in battle.fields, tailwind=propio_tw,
+        )
 
     def _amenaza(self, battle, objetivo, lado_objetivo):
         """Lo peor que le pueden hacer los rivales activos a ``objetivo`` (valor de golpe)."""
@@ -140,7 +137,7 @@ class BotReglas(Player):
             for nombre in (s or {}).get("movimientos", []):
                 rango = self._dano(battle, r, lado_rival, objetivo, lado_objetivo, nombre)
                 if rango:
-                    peor = max(peor, self._valor_golpe(rango, objetivo.current_hp_fraction))
+                    peor = max(peor, valor_golpe(rango, objetivo.current_hp_fraction))
         return peor
 
     def _armor_tail_rival(self, battle):
@@ -165,7 +162,7 @@ class BotReglas(Player):
                 if r is None or r.fainted:
                     continue
                 s = self._set(entra, "propio")
-                mejor = max((self._valor_golpe(x, r.current_hp_fraction) for x in (
+                mejor = max((valor_golpe(x, r.current_hp_fraction) for x in (
                     self._dano(battle, entra, "propio", r, "rival", m) for m in (s or {}).get("movimientos", [])) if x), default=0)
                 valor += 0.3 * mejor
             return valor, {}
@@ -187,7 +184,7 @@ class BotReglas(Player):
                 if tgt in ("ALL_ADJACENT", "ALL") and aliado is not None and not aliado.fainted:
                     rango = self._dano(battle, mon, "propio", aliado, "propio", mov.id, mega or None)
                     if rango:
-                        valor -= 1.2 * self._valor_golpe(rango, aliado.current_hp_fraction)
+                        valor -= 1.2 * valor_golpe(rango, aliado.current_hp_fraction)
             for r in objetivos:
                 rango = self._dano(battle, mon, "propio", r, "rival", mov.id, mega or None)
                 if rango:
@@ -203,10 +200,8 @@ class BotReglas(Player):
             amenaza = self._amenaza(battle, mon, "propio")
             if mov.is_protect_move:
                 valor += 0.75 * amenaza if mon.protect_counter == 0 else -0.5
-            elif mid == "tailwind":
-                valor += 0.0 if SideCondition.TAILWIND in battle.side_conditions or Field.TRICK_ROOM in battle.fields else 0.55
-            elif mid == "trickroom":
-                valor += -0.6 if Field.TRICK_ROOM in battle.fields else 0.6
+            elif mid in ("tailwind", "trickroom"):
+                valor += self._control_velocidad(battle, mid)
             elif mid in SETUP:
                 valor += 0.45 if amenaza < 0.45 else 0.05
             elif mid == "helpinghand":
@@ -231,19 +226,8 @@ class BotReglas(Player):
             for nombre in (s or {}).get("movimientos", []):
                 rango = self._dano(battle, rival, "rival", propio, "propio", nombre)
                 if rango:
-                    peor = max(peor, self._valor_golpe(rango, propio.current_hp_fraction))
+                    peor = max(peor, valor_golpe(rango, propio.current_hp_fraction))
         return peor
-
-    @staticmethod
-    def _combinar(g1, g2):
-        total = 0.0
-        for objetivo in set(g1) | set(g2):
-            partes = [g[objetivo] for g in (g1, g2) if objetivo in g]
-            ps = partes[0][1]
-            lo = sum(p[0][0] * p[2] for p in partes)
-            hi = sum(p[0][1] * p[2] for p in partes)
-            total += BotReglas._valor_golpe((lo, hi), ps)
-        return total
 
     # ---------- decisiones ----------
     def choose_move(self, battle):
@@ -256,7 +240,7 @@ class BotReglas(Player):
             for o2, v2, g2 in puntuadas[1] or [(PassBattleOrder(), 0, {})]:
                 if not DoubleBattleOrder.join_orders([o1], [o2]):
                     continue
-                candidatas.append((v1 + v2 + self._combinar(g1, g2), o1, o2))
+                candidatas.append((v1 + v2 + combinar(g1, g2), o1, o2))
         if not candidatas:
             return self.choose_random_doubles_move(battle)
         candidatas.sort(key=lambda c: -c[0])

@@ -3,3 +3,4 @@ beautifulsoup4
 pytest
 json5
 streamlit
+poke-env==0.16.1
