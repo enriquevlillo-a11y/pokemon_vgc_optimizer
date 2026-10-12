@@ -123,11 +123,15 @@ class BotReglas(Player):
             self._velocidades(battle.opponent_active_pokemon, "rival", rival_tw),
             trick_room=tr, tailwind=propio_tw,
         )
-        rivales = [m for m in battle.opponent_team.values() if not m.fainted] or battle.opponent_active_pokemon
+        propios_vivos = [m for m in getattr(battle, "team", {}).values() if not m.fainted]
+        rivales_vivos = [m for m in getattr(battle, "opponent_team", {}).values() if not m.fainted]
+        if not propios_vivos or not rivales_vivos:
+            return activos
+        # Trick Room y Tailwind duran varios turnos: cuenta también la reserva.
         equipo = valorar_control_velocidad(
             movimiento,
-            self._velocidades([m for m in battle.team.values() if not m.fainted], "propio", propio_tw),
-            self._velocidades(rivales, "rival", rival_tw),
+            self._velocidades(propios_vivos, "propio", propio_tw),
+            self._velocidades(rivales_vivos, "rival", rival_tw),
             trick_room=tr, tailwind=propio_tw,
         )
         return 0.4 * activos + 0.6 * equipo

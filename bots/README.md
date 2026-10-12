@@ -87,6 +87,28 @@ negativo si predominan los rápidos. Vale 0 si ya está activo y repetirlo lo
 anularía. Tailwind vale `0,55 × max(0, B)`; vale 0 si ya lo tenemos o hay Trick
 Room. Sin pares, ambos valen 0. Los docstrings detallan la fórmula y los truncados.
 
+El bot mezcla dos balances: `0,4 × valor con los activos + 0,6 × valor con los
+miembros vivos de cada equipo` (los propios elegidos en el preview y los rivales
+vistos). Trick Room y Tailwind duran varios turnos, así que la reserva cuenta: con
+solo los activos, Sebastian casi nunca ponía Trick Room al liderar Farigiraf +
+Garchomp-Z, aunque su plan es Torkoal y Sylveon bajo Trick Room.
+
+## Cambios
+
+- Cambio forzado: `0,3 × daño que haría quien entra − 0,3 × daño que recibiría`.
+- Cambio voluntario: `−0,3 + 0,1 × daño que haría + 0,6 × (amenaza sobre el que sale −
+  amenaza sobre el que entra)`. Quien entra no ataca ese turno y se come el golpe.
+
+## Resultados (Eric vs Sebastian, 200 partidas por casilla, 2026-10-12)
+
+| Eric \ Sebastian | S1 (Incineroar + Farigiraf) | S2 (Farigiraf + Garchomp) |
+| --- | ---: | ---: |
+| E1 (Volcarona + Garchomp) | 73,0 % | 34,0 % |
+| E2 (Garchomp + Gholdengo) | 62,0 % | 36,5 % |
+
+Con su mejor plan (S2), Sebastian deja a Eric en torno al 35 %: matchup
+desfavorable para Eric, como dicen Eric y PokéAlex.
+
 ## Tests
 
 ```bash

@@ -241,3 +241,35 @@ def test_integracion_reglas_vs_aleatorio():
     victorias, total = asyncio.run(partidas())
     assert total == 10
     assert victorias >= 8, f"Reglas ganó {victorias}/{total}; se esperaban al menos 8"
+
+
+def test_trick_room_cuenta_la_reserva(datos):
+    """Un líder rápido no debe anular Trick Room si la reserva es lenta."""
+    pytest.importorskip("poke_env")
+    from bots.bot_reglas import BotReglas
+
+    bot = BotReglas.__new__(BotReglas)
+    bot.calc = Calculadora(datos=datos)
+
+    def par(nombre, naturaleza, velocidad):
+        entrada = {"nombre": nombre, "naturaleza": naturaleza, "puntos": {"speed": velocidad}}
+        s = set_a_calculo(entrada, datos, bot.calc.nombres)
+        return s, s
+
+    bot.sets = {("propio", "garchomp"): par("garchomp", "Jolly", 32),
+                ("propio", "torkoal"): par("torkoal", "Quiet", 0),
+                ("propio", "farigiraf"): par("farigiraf", "Quiet", 0),
+                ("rival", "gholdengo"): par("gholdengo", "Timid", 32),
+                ("rival", "volcarona"): par("volcarona", "Timid", 32)}
+    mon = lambda especie: SimpleNamespace(species=especie, fainted=False, boosts={}, status=None, item=None)
+    garchomp, torkoal, farigiraf = mon("garchomp"), mon("torkoal"), mon("farigiraf")
+    gholdengo, volcarona = mon("gholdengo"), mon("volcarona")
+    solo_activos = SimpleNamespace(active_pokemon=[garchomp, None], opponent_active_pokemon=[gholdengo, None],
+                                   side_conditions={}, opponent_side_conditions={}, fields={})
+    con_reserva = SimpleNamespace(**vars(solo_activos),
+                                  team={"a": garchomp, "b": torkoal, "c": farigiraf},
+                                  opponent_team={"x": gholdengo, "y": volcarona})
+    # Activos: Garchomp (169) > Gholdengo (149) -> -0,6. Con la reserva lenta
+    # (Torkoal, Farigiraf) el balance del equipo es positivo y el valor sube.
+    assert bot._control_velocidad(solo_activos, "trickroom") == pytest.approx(-0.6)
+    assert bot._control_velocidad(con_reserva, "trickroom") > bot._control_velocidad(solo_activos, "trickroom")
