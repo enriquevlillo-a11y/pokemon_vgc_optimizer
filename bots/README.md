@@ -127,3 +127,22 @@ websocket completa):
 ```bash
 SHOWDOWN_URL=ws://localhost:9000/showdown/websocket python -m pytest tests/test_bots.py
 ```
+
+## Team preview como juego (B1, prototipo)
+
+`bots/preview_juego.py` busca la mejor estrategia de preview de cada lado con
+*double oracle*: simula la tabla entre unos pocos planes (4 de 6 + pareja de
+líderes; 90 planes por equipo), resuelve el equilibrio de Nash de esa tabla y
+añade la mejor respuesta de cada lado entre sus 90 planes, hasta que nadie mejora.
+
+```
+python -m bots.preview_juego --n-casilla 40 --n-criba 8 --n-refino 30 --max-iter 5 --concurrencia 3 --salida b1.json
+```
+
+Primera prueba (Eric vs Sebastian, 2026-10-12, 6.279 partidas, 21 min con 2 núcleos):
+valor para Eric 33,4 %, pero **sin converger** (tras 5 iteraciones la mejor
+respuesta de cada lado aún mejora mucho: la cota para Eric va de ~16 % a ~72 %).
+Mezclas encontradas: Eric lidera siempre con Garchomp (con Rillaboom 55 %,
+Gholdengo 30 %, Volcarona 15 %); Sebastian, Garchomp + Sneasler 44 %,
+Incineroar + Sylveon 40 %, Sneasler + Sylveon 15 %. Hacen falta más iteraciones
+y más partidas por casilla para que el resultado sea fiable.
