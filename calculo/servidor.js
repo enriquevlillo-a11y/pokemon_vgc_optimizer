@@ -102,6 +102,8 @@ function resolver(peticion) {
     if (movimiento.category === 'Status' || !movimiento.bp) return respuesta;
     const resultado = calculate(gen, atacante, defensor, movimiento, field);
     const [min, max] = resultado.range();
+    // kochance() de calc rechaza rangos de cero (por ejemplo una inmunidad).
+    if (max === 0) return respuesta;
     return {...respuesta, min, max,
       porcentaje_min: min * 100 / defensor.maxHP(), porcentaje_max: max * 100 / defensor.maxHP(),
       ko: resultado.kochance().text, descripcion: resultado.desc()};
