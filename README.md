@@ -55,6 +55,53 @@ streamlit run app.py
 La aplicación permite elegir hasta seis Pokémon, inspeccionar sus roles y datos
 de uso, y comparar recomendaciones, afinidades y debilidades del equipo.
 
+### Editar sets y ver velocidades/cálculos
+
+En **Sets, velocidades y cálculos**, cada miembro tiene un desplegable **Editar
+set** con naturaleza, seis repartos de puntos, objeto, habilidad y cuatro
+movimientos. Parte del set probable de `sets.py`, con los ajustes de equipo de
+Item Clause y Fake Out; sin uso se emplea el set genérico. Las habilidades y
+movimientos proceden de los datos de la especie base y los objetos y nombres
+visibles de `nombres.json`. Los cambios se conservan en `st.session_state` por
+miembro y variante y se usan al descargar la exportación Showdown. **Volver al
+set probable** restaura los valores iniciales para el equipo actual.
+
+Cada stat admite de 0 a 32 puntos. Si la suma supera 66, aparece un aviso en
+vivo y se suspende el daño y la exportación hasta corregir el reparto; la
+comparación de velocidades sigue disponible.
+
+`analisis_set.velocidades_relevantes(set, datos, uso_smogon, n=20)` compara la
+velocidad del set con las 20 especies más usadas y el spread más común de su
+variante habitual. Aplica la piedra Mega y Choice Scarf del set propio; las
+amenazas usan `velocidad.velocidades_reales`, sin inferir Scarf ni habilidades.
+La tabla muestra el orden normal, con **Tailwind** solo para ti (×2), y bajo
+**Trick Room** (actúa primero el más lento; la igualdad sigue siendo empate).
+Los cortes buscan superar estrictamente al rival con tu naturaleza y objeto:
+«Faltan»/«Sobran» son puntos respecto a tu Spe actual. En Trick Room se indica
+cuántos quitar o el margen para añadir. «Imposible con esta naturaleza» significa
+que ningún valor entre 0 y 32 Spe alcanza ese corte. Se permite redistribuir
+otros stats para llegar al corte; si falta un spread rival, se muestra «sin datos».
+
+`analisis_set.calculos_clave(set, datos, uso_smogon, n=20)` enfrenta el set con
+los sets probables del top 20. Calcula todos los movimientos en ambos sentidos
+en una sola llamada a `Calculadora.calcular_lote` por miembro, y elige el de
+mayor daño máximo (mínimo como desempate). Muestra rango porcentual y texto de
+KO de la biblioteca. Verde indica OHKO/2HKO **garantizado** solo a tu favor;
+rojo, solo a favor del rival. Los cálculos usan Champions a nivel 50, Doubles,
+las formas Mega de las piedras y campo vacío, sin añadir clima, terreno,
+pantallas ni boosts. Los errores individuales aparecen en «Avisos».
+
+Para habilitar el daño, instala Node 18 o superior y ejecuta desde la raíz:
+
+```bash
+npm ci --prefix calculo
+```
+
+Si faltan Node o las dependencias de `calculo/node_modules`, la sección muestra
+ese comando y el resto de la app continúa funcionando. Las pruebas de daño real
+se omiten en ese caso; las de velocidad y edición siguen ejecutándose con
+`python -m pytest tests/test_analisis_set.py`.
+
 ## Cambiar de regulación
 
 Cada regulación tiene su definición en `data/regulaciones/<regulacion>.json` y
