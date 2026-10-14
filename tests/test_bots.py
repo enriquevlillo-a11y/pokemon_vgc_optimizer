@@ -273,3 +273,29 @@ def test_trick_room_cuenta_la_reserva(datos):
     # (Torkoal, Farigiraf) el balance del equipo es positivo y el valor sube.
     assert bot._control_velocidad(solo_activos, "trickroom") == pytest.approx(-0.6)
     assert bot._control_velocidad(con_reserva, "trickroom") > bot._control_velocidad(solo_activos, "trickroom")
+
+
+def test_no_guard_y_efectos_secundarios(datos):
+    """Mega Raichu-Y (No Guard) no falla Zap Cannon y la parálisis tiene valor."""
+    pytest.importorskip("poke_env")
+    from bots.bot_reglas import BotReglas
+    from poke_env.battle.move import Move
+    from poke_env.battle.pokemon_type import PokemonType
+
+    bot = BotReglas.__new__(BotReglas)
+    bot.calc = Calculadora(datos=datos)
+    raichu = {"nombre": "raichu", "naturaleza": "Timid", "objeto": "Raichunite Y",
+              "habilidad": "Lightning Rod", "movimientos": ["Zap Cannon"]}
+    bot.sets = {("propio", "raichu"): (set_a_calculo(raichu, datos, bot.calc.nombres),
+                                       set_a_calculo(raichu, datos, bot.calc.nombres, megaevolucionado=True))}
+    mon = SimpleNamespace(species="raichu")
+    assert not bot._no_guard(mon, mega=False)
+    assert bot._no_guard(mon, mega=True)
+
+    batalla = SimpleNamespace(active_pokemon=[None, None])
+    zap = Move("zapcannon", 9)
+    sano = SimpleNamespace(species="garchomp", status=None, types=[PokemonType.DRAGON], boosts={})
+    electrico = SimpleNamespace(species="raichu", status=None, types=[PokemonType.ELECTRIC], boosts={})
+    assert bot._valor_secundario(batalla, zap, sano, 1.0) == pytest.approx(0.25)
+    assert bot._valor_secundario(batalla, zap, sano, 0.5) == pytest.approx(0.125)
+    assert bot._valor_secundario(batalla, zap, electrico, 1.0) == 0

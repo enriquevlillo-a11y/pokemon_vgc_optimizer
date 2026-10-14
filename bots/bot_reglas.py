@@ -32,6 +32,8 @@ TERRENOS = {Field.GRASSY_TERRAIN: "Grassy", Field.ELECTRIC_TERRAIN: "Electric",
             Field.MISTY_TERRAIN: "Misty", Field.PSYCHIC_TERRAIN: "Psychic"}
 SETUP = {"nastyplot", "swordsdance", "calmmind", "dragondance", "quiverdance", "bulkup"}
 REDIRECCION = {"followme", "ragepowder"}
+PANTALLAS = {"reflect": SideCondition.REFLECT, "lightscreen": SideCondition.LIGHT_SCREEN,
+             "auroraveil": SideCondition.AURORA_VEIL}
 
 
 class BotReglas(Player):
@@ -70,17 +72,30 @@ class BotReglas(Player):
                 campo["terreno"] = TERRENOS[f]
         return campo
 
-    def _dano(self, battle, atk_mon, atk_lado, def_mon, def_lado, movimiento, mega_atk=None):
-        """Fracción media de PS máximos que quita y rango, o None si no aplica."""
+    def _dano(self, battle, atk_mon, atk_lado, def_mon, def_lado, movimiento, mega_atk=None, boosts_extra=None):
+        """Rango de daño como fracción de los PS máximos del defensor, o None si no aplica.
+
+        Tiene en cuenta las pantallas del lado defensor (Reflect, Light Screen,
+        Aurora Veil). ``boosts_extra`` suma boosts hipotéticos al atacante (setup).
+        """
         a, d = self._set(atk_mon, atk_lado, mega_atk), self._set(def_mon, def_lado)
         if a is None or d is None:
             return None
-        a = dict(a, boosts={k: v for k, v in atk_mon.boosts.items() if k in ("atk", "def", "spa", "spd", "spe") and v})
+        boosts = {k: v for k, v in atk_mon.boosts.items() if k in ("atk", "def", "spa", "spd", "spe") and v}
+        for k, v in (boosts_extra or {}).items():
+            boosts[k] = max(-6, min(6, boosts.get(k, 0) + v))
+        a = dict(a, boosts={k: v for k, v in boosts.items() if v})
         d = dict(d, boosts={k: v for k, v in def_mon.boosts.items() if k in ("atk", "def", "spa", "spd", "spe") and v})
         estado = atk_mon.status.name.lower() if atk_mon.status else ""
         if estado in ("brn", "par", "psn", "tox", "slp", "frz"):
             a["estado"] = estado
         campo = self._campo(battle)
+        lado_def = battle.side_conditions if def_lado == "propio" else battle.opponent_side_conditions
+        for condicion, clave_campo in ((SideCondition.REFLECT, "reflect"),
+                                       (SideCondition.LIGHT_SCREEN, "light_screen"),
+                                       (SideCondition.AURORA_VEIL, "aurora_veil")):
+            if condicion in lado_def:
+                campo[clave_campo] = True
         clave = (str(a), str(d), movimiento, str(campo))
         if clave not in self._cache:
             r = self.calc.calcular({"atacante": a, "defensor": d, "movimiento": movimiento, "campo": campo})
@@ -188,6 +203,8 @@ class BotReglas(Player):
         valor, golpes = 0.0, {}
         if mov.category != MoveCategory.STATUS and mov.base_power > 0:
             precision = mov.accuracy if isinstance(mov.accuracy, float) else 1.0
+            if self._no_guard(mon, mega):
+                precision = 1.0
             objetivos = []
             if orden.move_target in (-1, -2):
                 return -2.0, {}  # nunca atacar al compañero (salvo casos especiales futuros)
@@ -205,6 +222,8 @@ class BotReglas(Player):
                 rango = self._dano(battle, mon, "propio", r, "rival", mov.id, mega or None)
                 if rango:
                     golpes[id(r)] = (rango, r.current_hp_fraction, precision)
+                    if not self.solo_dano:
+                        valor += self._valor_secundario(battle, mov, r, precision)
             if mid == "fakeout":
                 if not mon.first_turn or self._armor_tail_rival(battle):
                     return -1.0, {}
@@ -218,12 +237,20 @@ class BotReglas(Player):
                 valor += 0.75 * amenaza if mon.protect_counter == 0 else -0.5
             elif mid in ("tailwind", "trickroom"):
                 valor += self._control_velocidad(battle, mid)
-            elif mid in SETUP:
-                valor += 0.45 if amenaza < 0.45 else 0.05
+            elif mov.boosts and mov.target is not None and mov.target.name == "SELF":
+                valor += self._valor_setup(battle, mon, mov.boosts, amenaza, mega)
             elif mid == "helpinghand":
                 valor += 0.25 if aliado is not None and not aliado.fainted else -1
             elif mid in REDIRECCION:
                 valor += 0.6 * self._amenaza(battle, aliado, "propio") if aliado is not None and not aliado.fainted else 0
+            elif mid in PANTALLAS:
+                lado = battle.side_conditions
+                if PANTALLAS[mid] in lado or (mid != "auroraveil" and SideCondition.AURORA_VEIL in lado):
+                    valor += -0.3
+                else:
+                    propios = [m for m in battle.active_pokemon if m is not None and not m.fainted]
+                    media = sum(self._amenaza(battle, m, "propio") for m in propios) / max(1, len(propios))
+                    valor += 0.15 + 0.4 * media
             elif mid == "partingshot":
                 valor += 0.25
             else:
@@ -231,6 +258,63 @@ class BotReglas(Player):
         if mega:
             valor += 0.05
         return valor, golpes
+
+    def _no_guard(self, mon, mega):
+        """True si el atacante (o su Mega, si megaevoluciona este turno) tiene No Guard."""
+        s = self._set(mon, "propio", True if mega else None)
+        return normalizar_id((s or {}).get("habilidad") or "") == "noguard"
+
+    def _valor_secundario(self, battle, mov, objetivo, precision):
+        """Valor de los efectos secundarios sobre un rival (parálisis, bajadas de stats).
+
+        Parálisis: 0,25 + 0,3 × lo que amenaza ese rival (le quita velocidad y a veces
+        el turno), si no tiene ya un estado y no es inmune (tipo Eléctrico). Bajadas de
+        stats: 0,1 por nivel, más si baja el stat con el que más daño hace.
+        Todo multiplicado por la probabilidad del efecto y la precisión.
+        """
+        valor = 0.0
+        for efecto in mov.secondary or []:
+            prob = efecto.get("chance", 100) / 100 * precision
+            if efecto.get("status") == "par":
+                if objetivo.status is None and PokemonType.ELECTRIC not in objetivo.types:
+                    valor += prob * (0.25 + 0.3 * self._amenaza_de(battle, objetivo))
+            for stat, niveles in (efecto.get("boosts") or {}).items():
+                if niveles < 0 and objetivo.boosts.get(stat, 0) > -6:
+                    peso = 0.1
+                    s = self._set(objetivo, "rival") or {}
+                    categorias = {self._categoria(m) for m in s.get("movimientos", [])}
+                    if (stat == "spa" and "special" in categorias) or (stat == "atk" and "physical" in categorias):
+                        peso = 0.15
+                    valor += prob * peso * -niveles
+        return valor
+
+    def _categoria(self, movimiento):
+        ficha = self.calc.movimientos.get(normalizar_id(movimiento), {})
+        return (ficha.get("categoria") or "").lower()
+
+    def _valor_setup(self, battle, mon, boosts, amenaza, mega):
+        """Valor de subir stats propios (Nasty Plot, Calm Mind, Swords Dance...).
+
+        Ganancia = cuánto más daño haría el próximo turno con los boosts (mejor
+        ataque contra el mejor objetivo) frente a ahora, por la probabilidad de
+        sobrevivir al turno (según la amenaza que recibe). Sin valor a partir de +4.
+        """
+        ofensivos = {k: v for k, v in boosts.items() if k in ("atk", "spa") and v > 0}
+        if not ofensivos or any(mon.boosts.get(k, 0) >= 4 for k in ofensivos):
+            return 0.05
+        s = self._set(mon, "propio", True if mega else None) or {}
+        ahora = despues = 0.0
+        for r in battle.opponent_active_pokemon:
+            if r is None or r.fainted:
+                continue
+            for nombre in s.get("movimientos", []):
+                r0 = self._dano(battle, mon, "propio", r, "rival", nombre, mega or None)
+                r1 = self._dano(battle, mon, "propio", r, "rival", nombre, mega or None, boosts_extra=boosts)
+                if r0 and r1:
+                    ahora = max(ahora, valor_golpe(r0, r.current_hp_fraction))
+                    despues = max(despues, valor_golpe(r1, r.current_hp_fraction))
+        riesgo = min(1.0, amenaza / (mon.current_hp_fraction + 0.6))
+        return 0.9 * max(0.0, despues - ahora) * (1 - riesgo) + 0.05
 
     def _amenaza_de(self, battle, rival):
         """Cuánto daño podría hacer ``rival`` a mi equipo activo (para Fake Out)."""
